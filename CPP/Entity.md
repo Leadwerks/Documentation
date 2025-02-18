@@ -38,6 +38,7 @@ This class serves as the foundation for all 3D objects in a world. It provides a
 | [GetCollisionType](Entity_GetCollisionType.md) | Method | returns the collision type |
 | [GetColor](Entity_GetColor.md) | Method | returns the entity color |
 | [GetCrouched](Entity_GetCrouched.md) | Method | returns the crouched state of a player |
+| [GetDecalLayers](Entity_GetDecalLayers.md) | Method | gets the decal filtering flags |
 | [GetDistance](Entity_GetDistance.md) | Method | calculates distance to another entity |
 | [GetHidden](Entity_GetHidden.md) | Method | returns the entity hide state |
 | [GetMass](Entity_GetMass.md) | Method | returns the entity mass |
@@ -63,6 +64,7 @@ This class serves as the foundation for all 3D objects in a world. It provides a
 | [SetCollisionType](Entity_SetCollisionType.md) | Method | sets the entity collision type |
 | [SetColor](Entity_SetColor.md) | Method | sets the entity color |
 | [SetDamping](Entity_SetDamping.md) | Method | sets the entity physics damping |
+| [SetDecalLayers](Entity_SetDecalLayers.md) | Method | sets the decal filtering flags |
 | [SetElasticity](Entity_SetElasticity.md) | Method | sets the entity physics elasticity |
 | [SetFriction](Entity_SetFriction.md) | Method | sets the entity physics friction |
 | [SetFog](Entity_SetFog.md) | Method | controls whether distance fog affects the entity |
