@@ -4,11 +4,12 @@ This method loads a heightmap onto the terrain.
 
 ## Syntax
 
-- bool **LoadHeightmap**([string]() path, number flags = LOAD_DEFAULT)
+- bool **LoadHeightmap**([string]() path, [Vec2](Vec2.md) range, number flags = LOAD_DEFAULT)
 
 | Parameter | Description |
 |---|---|
 | path | file path to load |
+| range | optional min and max elevation to rescale the heightmap |
 | flags | optional load flags |
 
 ## Returns
