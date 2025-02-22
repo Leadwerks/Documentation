@@ -4,11 +4,12 @@ This method loads a heightmap onto the terrain.
 
 ## Syntax
 
-- bool **LoadHeightmap**(const [WString](WString.md)& path, const LoadFlags flags = LOAD_DEFAULT)
+- bool **LoadHeightmap**(const [WString](WString.md)& path, const Vec2& range = NAN, const LoadFlags flags = LOAD_DEFAULT)
 
 | Parameter | Description |
 |---|---|
 | path | file path to load |
+| range | optional min and max elevation to rescale the heightmap |
 | flags | optional load flags |
 
 ## Returns
