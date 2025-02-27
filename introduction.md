@@ -26,7 +26,7 @@ If you purchased this software on Steam, the application will appear in your Ste
 If you received a Steam key, please follow these instructions to activate your purchase on Steam:
 - Launch the Steam client software and log into your Steam account.
 - Click the **Games** menu option at the top of the Steam client.
-- Choose **Activate a Product** on Steam...
+- Choose **Activate a Product on Steam**...
 - Follow the onscreen instructions to complete the process.
 
 ### Standalone
