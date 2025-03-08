@@ -61,19 +61,19 @@ local framebuffer = CreateFramebuffer(window)
 --Create world
 local world = CreateWorld()
 
+--Create camera
+local camera = CreateCamera(world, PROJECTION_ORTHOGRAPHIC)
+camera:SetPosition(framebuffer.size.x * 0.5, framebuffer.size.y * 0.5, 0)
+
 --Load a font
 local font = LoadFont("Fonts/arial.ttf")
 
 --Create user interface
-local ui = CreateInterface(world, font, framebuffer.size)
+local ui = CreateInterface(camera, font, framebuffer.size)
 
 --Create widget
 local sz = ui.background:ClientSize()
 local button = CreateButton("Button", sz.x / 2 - 75, sz.y / 2 - 15, 150, 30, ui.background)
-
---Create camera
-local camera = CreateCamera(world, PROJECTION_ORTHOGRAPHIC)
-camera:SetPosition(framebuffer.size.x * 0.5, framebuffer.size.y * 0.5, 0)
 
 while not window:KeyDown(KEY_ESCAPE) do
     while (PeekEvent()) do
