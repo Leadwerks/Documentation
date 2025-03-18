@@ -13,6 +13,10 @@ This function creates a new Thread object.
 | extra | extra value passed to the entrypoint function |
 | start | if set to true the thread will begin execution immediately, otherwise it will begin in the ready state |
 
+## Remarks
+
+You can use threads to execute your own calculations or for integration with third-party libraries. Leadwerks is already extensively multi-threaded. The user API commands should never be called on separate threads. Even if your code appears to run without problems, it will cause crashes when it is run on other computers.
+
 ## Returns
 
 Returns a new thread object.
