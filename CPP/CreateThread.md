@@ -65,7 +65,7 @@ int main(int argc, const char* argv[])
     starttime = Millisecs();
     for (int n = 0; n < threadcount; ++n)
     {
-       threads[n] = CreateThread(bind(CalcPrimeNumbers, range / threadcount * n, range / threadcount), true);
+       threads[n] = CreateThread(std::bind(CalcPrimeNumbers, range / threadcount * n, range / threadcount), true);
     }
     for (int n = 0; n < threadcount; ++n)
     {
