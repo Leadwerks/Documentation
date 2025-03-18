@@ -1,13 +1,13 @@
-# Thread::GetState #
+# Thread::GetState
 This method returns the thread's current state.
 
-## Syntax ##
+## Syntax
 - [ThreadState](Constants.md#ThreadState) **GetState**()
 
-## Returns ##
+## Returns
 The returned value may be THREAD_READY, THREAD_RUNNING, or THREAD_FINISHED.
 
-## Example ##
+## Example
 
 ```c++
 #include "Leadwerks.h"
