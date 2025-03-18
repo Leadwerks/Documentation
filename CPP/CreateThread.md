@@ -17,6 +17,8 @@ This function creates a new Thread object.
 
 You can use threads to execute your own calculations or for integration with third-party libraries. Leadwerks is already extensively multi-threaded. The user API commands should never be called on separate threads. Even if your code appears to run without problems, it will cause crashes when it is run on other computers.
 
+The best approach to multithreading is complete separation of data. The main thread should pass data to the auxillary thread and then retrieve a result, as the simple example below demonstrates.
+
 ## Returns
 
 Returns a new thread object.
