@@ -1,10 +1,10 @@
-## Collision
+# Collision
 
 Base class: [Object](Object.md)
 
 This class stores information about a collision.
 
-### Properties
+## Properties
 
 ##### entities : array<Entity, 2>
 colliding entities
