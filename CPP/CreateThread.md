@@ -31,7 +31,7 @@ Returns a new thread object.
 
 using namespace UltraEngine;
 
-void CalcPrimeNumbers(const int start, const int size)
+void CalcPrimeNumbers(const int start, const int size, std::vector<int>& results)
 {
     int i;
     for (int num = start; num <= start + size; num++) {
@@ -44,7 +44,7 @@ void CalcPrimeNumbers(const int start, const int size)
         }
         if (count == 0 && num != 1)
         {
-            //Print(num);
+            results.push_back(num);
         }
     }
 }
@@ -52,20 +52,22 @@ void CalcPrimeNumbers(const int start, const int size)
 int main(int argc, const char* argv[])
 {
     int range = 200000;
+    std::vector<int> results;
 
     Print("Single-threaded test:");
     auto starttime = Millisecs();
-    CalcPrimeNumbers(1, range);
+    CalcPrimeNumbers(1, range, results);
     auto elapsed = Millisecs() - starttime;
     Print(String(elapsed) + " milliseconds");
 
     int threadcount = 4;
     Print("Multi-threaded test (" + String(threadcount)+ " threads):");
+    std::vector<std::vector<int> > mresults(threadcount);
     vector<shared_ptr<Thread> > threads(threadcount);
     starttime = Millisecs();
     for (int n = 0; n < threadcount; ++n)
     {
-       threads[n] = CreateThread(std::bind(CalcPrimeNumbers, range / threadcount * n, range / threadcount), true);
+       threads[n] = CreateThread(std::bind(CalcPrimeNumbers, range / threadcount * n, range / threadcount, mresults[n]), true);
     }
     for (int n = 0; n < threadcount; ++n)
     {
