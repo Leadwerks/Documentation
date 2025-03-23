@@ -1,6 +1,7 @@
 {
   "info":
   {
-    "hello": true
+    "hello": true,
+    "driverFallback": true
   }
 }
