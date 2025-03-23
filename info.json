@@ -2,6 +2,7 @@
   "info":
   {
     "hello": true,
-    "driverFallback": true
+    "driverFallback": true,
+    "siteOffline": true
   }
 }
