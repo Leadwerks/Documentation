@@ -11,7 +11,7 @@ This method resizes a pixmap to make it larger or smaller.
 
 ## Returns
 
-If successful a new pixmap is returned, otherwise nil is retuend. Pixmaps that use compressed pixel formats cannot be resized directly, and must be converted to a format like RGBA or RGBA16 before resizing.
+If successful a new pixmap is returned, otherwise nil is returned. Pixmaps that use compressed pixel formats cannot be resized directly, and must be converted to a format like RGBA or RGBA16 before resizing.
 
 ## Example
 
