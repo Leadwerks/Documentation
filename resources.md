@@ -45,6 +45,8 @@
 - https://www.sketchfab.com
 - https://www.turbosquid.com
 - https://www.cgtrader.com
+- https://www.polypizza.com
+- https://kenney.nl/assets
 
 ## Sound
 
