@@ -1138,6 +1138,10 @@
                             "title": "ChangeDir",
                             "filename": "ChangeDir"
                         },
+                         {
+                            "title": "CreateDir",
+                            "filename": "CreateDir"
+                        },
                         {
                             "title": "CreateFile",
                             "filename": "CreateFile"
