@@ -12,4 +12,4 @@ This function creates a new folder on the user's hard drive, if it does not alre
 
 ## Returns
 
-Returns true if the folder was successfully created, or if it already existed, otherwise false is returned.
+Returns true if the folder was successfully created or if it already exists, otherwise false is returned.
