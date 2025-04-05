@@ -55,4 +55,5 @@
 - [Audio Hero](https://www.audiohero.com/)
 - [Epic Stock Media](https://epicstockmedia.com/)
 - https://www.soundrangers.com
-- https://incompetech.com/music/royalty-free/music.html
+- https://www.incompetech.com/music/royalty-free/music.html
+- https://www.freesound.org
