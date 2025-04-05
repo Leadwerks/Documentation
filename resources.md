@@ -1,6 +1,6 @@
 # Additional Resources
 
-## Textures
+## Materials
 * [AmbientCG](https://www.ambientcg.com/)
 * [FreePBR](https://www.freepbr.com/)
 * [Polyhaven](https://polyhaven.com/textures)
