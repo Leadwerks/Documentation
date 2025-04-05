@@ -23,7 +23,7 @@
 * https://itch.io/game-assets/free/tag-textures
 * https://www.poliigon.com/textures/free
 * https://cc0textures.com/
-* https://www.textures.com/premiumaccess1
+* https://www.textures.com
 * https://texturebox.com/
 * https://devga.me/free/3d-models-and-textures/
 * https://www.sharetextures.com/textures/
