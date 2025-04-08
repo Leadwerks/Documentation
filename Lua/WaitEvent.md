@@ -1,4 +1,4 @@
-## WaitEvent
+# WaitEvent
 
 This function waits until an event is available in the event queue and returns the oldest event.
 
