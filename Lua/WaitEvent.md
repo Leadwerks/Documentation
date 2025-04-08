@@ -4,7 +4,7 @@ This function waits until an event is available in the event queue and returns t
 
 ## Syntax
 
-[Event](Event) **WaitEvent**()
+[Event](Event.md) **WaitEvent**()
 
 ## Returns
 
