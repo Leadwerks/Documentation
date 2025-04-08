@@ -4,9 +4,7 @@ This function waits until an event is available in the event queue and returns t
 
 ## Syntax
 
-```lua
-function WaitEvent() -> Event
-```
+[Event](Event) **WaitEvent**()
 
 ## Returns
 
