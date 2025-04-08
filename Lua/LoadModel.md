@@ -20,7 +20,7 @@ Returns the loaded model if successful, otherwise nil is returned.
 
 ## Remarks
 
-Ultra Engine natively supports glTF, OBJ, and Leadwerks MDL files. JPEG and PNG texture files are loaded using the FITextureLoader plugin.
+Ultra Engine natively supports glTF, OBJ, and Leadwerks MDL files. MDL files with DDS textures will provide the fastest loading.
 
 ## Example
 
