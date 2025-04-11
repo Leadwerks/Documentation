@@ -9,7 +9,6 @@ The Ultra Engine entity component system allows you to easily add behavior to ga
 | [Copy](Component_Copy.md) | Method | makes a copy of the component, for copying entities |
 | [GetEntity](Component_GetEntity.md) | Method | retrieves the entity this component is attached to |
 | [Load](Component_Load.md) | Method | called when an actor is loaded or copied |
-| [Save](Component_Save.md) | Method | called when an actor is saved or copied |
 | [Start](Component_Start.md) | Method | called when a component is added |
 | [Update](Component_Update.md) | Method | called once each time [World::Update](World_Update.md) is called |
 
