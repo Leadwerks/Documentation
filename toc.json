@@ -200,10 +200,6 @@
                             "filename": "Component_Collide"
                         },
                         {
-                            "title": "Copy",
-                            "filename": "Component_Copy"
-                        },
-                        {
                             "title": "GetEntity",
                             "filename": "Component_GetEntity",
                             "hideFromLua": true
