@@ -213,10 +213,6 @@
                             "filename": "Component_Load"
                         },
                         {
-                            "title": "Save",
-                            "filename": "Component_Save"
-                        },
-                        {
                             "title": "Start",
                             "filename": "Component_Start"
                         },
