@@ -1652,20 +1652,8 @@
                             "filename": "Scene",
                             "topics": [
                                 {
-                                    "title": "CreateScene",
-                                    "filename": "CreateScene"
-                                },
-                                {
                                     "title": "LoadScene",
                                     "filename": "LoadScene"
-                                },
-                                {
-                                    "title": "Reload",
-                                    "filename": "Scene_Reload"
-                                },
-                                {
-                                    "title": "Save",
-                                    "filename": "Scene_Save"
                                 }
                             ]
                         },
