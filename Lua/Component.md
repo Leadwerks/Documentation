@@ -6,7 +6,6 @@ The Ultra Engine entity component system allows you to easily add behavior to ga
 | ----------- | --------------------- | ---------------------------------------------------------- |
 | entity      | [Entity](Entity.md) | entity this component is attached to |
 | [Collide](Component_Collide.md)  | Method                | called whenever a physics collision occurs                 |
-| [Copy](Component_Copy.md)     | Method                | makes a copy of the component, for copying entities        |
 | [Load](Component_Load.md)     | Method                | called when an actor is loaded or copied                   |
 | [Start](Component_Start.md)   | Method                | called when a component is added                           |
 | [Update](Component_Update.md) | Method                | called once each time [World:Update](World_Update.md) is called |
