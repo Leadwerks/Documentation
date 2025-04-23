@@ -18,6 +18,7 @@ The camera class is an entity used to render the world.
 | [Project](Camera_Project.md) | Method | projects a position from world to screen space |
 | [Render](Camera_Render.md) | Method | refreshes a camera view, for non-realtime cameras |
 | [SetBackfaceCulling](Camera_SetBackfaceCulling.md) | Method | overrides the backface culling mode of all objects |
+| [SetClearColor](Camera_SetClearColor.md) | Method | sets the color to clear the screen with |
 | [SetClearMode](Camera_SetClearMode.md) | Method | controls color and depth clearing |
 | [SetDepthPrepass](Camera_SetDepthPrepass.md) | Method | sets the camera depth pre-pass mode |
 | [SetFov](Camera_SetFov.md) | Method | sets the camera field of view |
