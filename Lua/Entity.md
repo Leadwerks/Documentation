@@ -71,6 +71,7 @@ This class serves as the foundation for all 3D objects in a world. It provides a
 | [SetMass](Entity_SetMass.md) | Method | sets the entity physical mass |
 | [SetMaterial](Entity_SetMaterial.md) | Method | applies a material to the entity |
 | [SetMatrix](Entity_SetMatrix.md) | Method | sets the entity 4x4 matrix |
+| [SetNavObstacle](Entity_SetNavObstacle.md) | Method | controls whether the entity interacts with navigation meshes |
 | [SetParent](Entity_SetParent.md) | Method | parents one entity to another |
 | [SetPhysicsMode](Entity_SetPhysicsMode.md) | Method | sets the entity physics behavior |
 | [SetPosition](Entity_SetPosition.md) | Method | sets the entity position in local or global space |
