@@ -309,6 +309,10 @@
                                     "filename": "Camera_Render"
                                 },
                                 {
+                                    "title": "SetClearColor",
+                                    "filename": "Camera_SetClearColor"
+                                },
+                                {
                                     "title": "SetClearMode",
                                     "filename": "Camera_SetClearMode"
                                 },
