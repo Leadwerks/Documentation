@@ -10,6 +10,7 @@ This entity emits light in a defined volume.
 | [GetFalloff](Light_GetFalloff.md) | Method | gets the light falloff mode |
 | [GetShadowMapSize](Light_GetShadowMapSize.md) | Method | returns the light shadow map dimensions |
 | [GetRange](Light_GetRange.md) | Method | returns the light maximum distance |
+| [SetCascadeDistance](Light_SetCascadeDistance.md) | Method | sets the light cascade distance |
 | [SetConeAngles](Light_SetConeAngles.md) | Method | sets the inner and outer cone angles of a spotlight |
 | [SetFalloff](Light_SetFalloff.md) | Method | sets the light falloff mode |
 | [SetRange](Light_SetRange.md) | Method | sets the light maximum distance |
