@@ -1,4 +1,4 @@
-# SetCascadeDistance
+# Light::SetCascadeDistance
 
 For directional lights, this method sets the distance that each cascaded shadow map partition covers.
 
