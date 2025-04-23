@@ -848,10 +848,14 @@
                         {
                             "title": "SetMass",
                             "filename": "Entity_SetMass"
-                        },
+                        },                        
                         {
                             "title": "SetMatrix",
                             "filename": "Entity_SetMatrix"
+                        },
+                        {
+                            "title": "SetNavObstacle",
+                            "filename": "Entity_SetNavObstacle"
                         },
                         {
                             "title": "SetParent",
