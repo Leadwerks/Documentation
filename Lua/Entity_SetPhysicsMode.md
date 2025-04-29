@@ -8,5 +8,5 @@ This method selects the entity physics behavior.
 
 | Parameter | Description |
 |---|---|
-| mode | physics mode, can be PHYSICS_NONE, PHYSICS_RIGIDBODY, or PHYSICS_PLAYER |
+| mode | physics mode, can be PHYSICS_DISABLED, PHYSICS_RIGIDBODY, or PHYSICS_PLAYER |
 
