@@ -690,6 +690,10 @@
                             "filename": "Entity_Copy"
                         },
                         {
+                            "title": "Detach",
+                            "filename": "Entity_Detach"
+                        },
+                        {
                             "title": "EmitSound",
                             "filename": "Entity_EmitSound"
                         },
