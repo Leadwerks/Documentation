@@ -53,9 +53,6 @@ local light = CreateBoxLight(world)
 light:SetRotation(45, 35, 0)
 light:SetRange(-10, 10)
 
--- Load FreeImage plugin
-local plugin = LoadPlugin("Plugins/FITextureLoader")
-
 -- Model by PixelMannen
 -- https://opengameart.org/content/fox-and-shiba
 local model = LoadModel(world, "https://github.com/UltraEngine/Documentation/raw/master/Assets/Models/Characters/Fox.glb")
