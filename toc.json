@@ -3007,6 +3007,10 @@
                                     "filename": "CreateBoxCollider"
                                 },
                                 {
+                                    "title": "CreateCapsuleCollider",
+                                    "filename": "CreateCapsuleCollider"
+                                },
+                                {
                                     "title": "CreateCompoundCollider",
                                     "filename": "CreateCompoundCollider"
                                 },
