@@ -4,10 +4,8 @@ This method sets the speaker pitch.
 
 ## Syntax 
 
-```lua
-function Speaker:SetPitch(pitch)
-```
+- **SetPitch**(number pitch)
 
-## Parameters
-
-- `pitch` (number): The pitch value to set for the speaker.
+| Parameter | Description |
+|---|---|
+| pitch | the pitch value to set |
