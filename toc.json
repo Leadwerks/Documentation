@@ -135,6 +135,10 @@
                                     "filename": "Speaker_GetPitch"
                                 },
                                 {
+                                    "title": "GetRange",
+                                    "filename": "Speaker_GetRange"
+                                },
+                                {
                                     "title": "GetState",
                                     "filename": "Speaker_GetState"
                                 },
@@ -161,6 +165,10 @@
                                 {
                                     "title": "SetLooping",
                                     "filename": "Speaker_SetLooping"
+                                },
+                                {
+                                    "title": "SetRange",
+                                    "filename": "Speaker_SetRange"
                                 },
                                 {
                                     "title": "SetPitch",
