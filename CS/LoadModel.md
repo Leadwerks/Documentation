@@ -22,8 +22,6 @@ Ultra Engine natively supports glTF, OBJ, and Leadwerks MDL files. JPEG and PNG 
 
 ## Example
 
-![Example](https://raw.githubusercontent.com/UltraEngine/Documentation/master/Images/loadplugin.jpg)
-
 ```csharp
 using System;
 using UltraEngine;
@@ -48,9 +46,6 @@ namespace Example
 
             //Create a framebuffer
             var framebuffer = Engine.CreateFramebuffer(window);
-
-            //Load FreeImage plugin
-            var plg = Engine.LoadPlugin("Plugins/FITextureLoader");
 
             //Load model
             //Cyber Samurai by Khoa Minh: https://sketchfab.com/3d-models/cyber-samurai-26ccafaddb2745ceb56ae5cfc65bfed5

@@ -34,9 +34,6 @@ If the pixmap format does not support blitting, then false is returned.
 ![](https://raw.githubusercontent.com/UltraEngine/Documentation/master/Images/pixmap_blit.png)
 
 ```lua
--- Load FreeImage plugin
-local plg = LoadPlugin("Plugins/FITextureLoader")
-
 -- Load pixmap
 local pixmap = LoadPixmap("https://github.com/UltraEngine/Documentation/raw/master/Assets/Materials/Brick/brickwall01.dds")
 

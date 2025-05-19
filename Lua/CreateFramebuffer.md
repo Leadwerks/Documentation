@@ -47,9 +47,6 @@ light:SetColor(2)
 local box = CreateBox(world)
 box:SetColor(0, 0, 1)
 
---Load the FreeImage plugin
-local plugin = LoadPlugin("Plugins/FITextureLoader")
-
 --Main loop
 while not window:Closed() and not window:KeyHit(KEY_ESCAPE) do
     --Rotate the model

@@ -33,9 +33,6 @@ class Program
         var box = UltraEngine.CreateBox(world);
         box.SetColor(0, 0, 1);
 
-        //Load the FreeImage plugin
-        var plugin = LoadPlugin("Plugins/FITextureLoader");
-
         //Main loop
         while (!window.Closed() && !window.KeyHit(KEY_ESCAPE))
         {

@@ -13,9 +13,6 @@ This example shows how a scene can be optimized to make non-moving objects stati
 ![Staticize Example](https://github.com/UltraEngine/Documentation/raw/master/Images/API_Entity_MakeStatic.gif)
 
 ```lua
--- Load the "FITextureLoader" plugin
-local plugin = LoadPlugin("Plugins/FITextureLoader")
-
 -- Get information about available displays
 local displays = GetDisplays()
 

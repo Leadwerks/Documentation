@@ -23,9 +23,6 @@ class Program
 {
     static void Main(string[] args)
     {
-        //Plugin for texture loading
-        var plugin = ResourceUtils.LoadPlugin("Plugins/FITextureLoader");
-
         //Get display
         var displays = DisplayUtils.GetDisplays();
 

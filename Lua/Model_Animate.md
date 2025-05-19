@@ -51,9 +51,6 @@ local ground = CreateBox(world, 10, 1, 10)
 ground:SetColor(0, 1, 0)
 ground:SetPosition(0, -0.5, 0)
 
--- Load FreeImage plugin
-local plugin = LoadPlugin("Plugins/FITextureLoader")
-
 -- Load a model
 local model = LoadModel(world, "https://github.com/UltraEngine/Documentation/raw/master/Assets/Models/Characters/Fox.glb")
 model:SetScale(0.05)

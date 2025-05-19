@@ -1,6 +1,3 @@
---IO plugins needed
-local plugin = LoadPlugin("Plugins/FITextureLoader.dll")
-
 --Load image
 local pixmap = LoadPixmap("Materials/77684-blocks18c_1.jpg")
 

@@ -130,13 +130,6 @@ using namespace UltraEngine;
 
 int main(int argc, const char* argv[])
 {
-    auto plugin = LoadPlugin("Plugins/FITextureLoader.*");
-    if (plugin == NULL)
-    {
-        Print("Failed to load FreeImage plugin.");
-        return 0;
-    }
-
     // Get the available displays
     auto displays = GetDisplays();
 

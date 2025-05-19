@@ -20,9 +20,6 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        // Load plugins
-        var plugin_svg = LoadPlugin("Plugins/SVG.*");
-
         // Get the displays
         var displays = GetDisplays();
 

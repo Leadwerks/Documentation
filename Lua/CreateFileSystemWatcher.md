@@ -45,7 +45,6 @@ OpenDir(path .. "/dirt01.jpg")
 -- Create FileSystemWatcher to detect changes to files
 local watcher = CreateFileSystemWatcher(path)
 
-local plugin = LoadPlugin("Plugins/FITextureLoader")
 local ui = CreateInterface(window)
 local panel = CreatePanel(0, 0, window:ClientSize().x, window:ClientSize().y, ui.background)
 local pixmap = LoadPixmap(path .. "/dirt01.jpg")

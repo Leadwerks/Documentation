@@ -13,9 +13,6 @@ using namespace UltraEngine;
 
 int main(int argc, const char* argv[])
 {
-    //Load FreeImage plugin
-    auto plg = LoadPlugin("Plugins/FITextureLoader.dll");
-
     //Initialize the GIS server
     String url = "http://webmap.lroc.asu.edu/";
     auto server = OpenGISServer(url);

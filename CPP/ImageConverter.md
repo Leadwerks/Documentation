@@ -27,18 +27,6 @@ int main(int argc, const char* argv[])
         }
     }
 
-    // Load the FreeImage plugin
-#ifdef _WIN64
-    auto plugin = LoadPlugin("Plugins/FITextureLoader.*");
-#else
-    auto plugin = LoadPlugin("Plugins (x86)/FITextureLoader.*");
-#endif
-    if (plugin == NULL)
-    {
-        Print("Failed to load FreeImage plugin.");
-        return 1;
-    }
-
     // Load the image
     auto pixmap = LoadPixmap(path);
     if (pixmap == NULL)

@@ -40,9 +40,6 @@ world:SetAmbientLight(0)
 --Create a framebuffer
 local framebuffer = CreateFramebuffer(window)
 
---Load FreeImage plugin
-local plg = LoadPlugin("Plugins/FITextureLoader")
-
 --Load model
 --Cyber Samurai by Khoa Minh: https://sketchfab.com/3d-models/cyber-samurai-26ccafaddb2745ceb56ae5cfc65bfed5
 local model = LoadModel(world, "https://github.com/UltraEngine/Documentation/raw/master/Assets/Models/Characters/cyber_samurai.glb")

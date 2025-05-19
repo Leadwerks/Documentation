@@ -52,9 +52,6 @@ int main(int argc, const char* argv[])
     light->SetRotation(45, 35, 0);
     light->SetRange(-10, 10);
 
-    //Load FreeImage plugin
-    auto plugin = LoadPlugin("Plugins/FITextureLoader");
-
     //Model by PixelMannen
     //https://opengameart.org/content/fox-and-shiba
     auto model = LoadModel(world, "https://github.com/UltraEngine/Documentation/raw/master/Assets/Models/Characters/Fox.glb");

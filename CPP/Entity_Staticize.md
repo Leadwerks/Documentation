@@ -20,9 +20,6 @@ using namespace UltraEngine;
 
 int main(int argc, const char* argv[])
 {
-    //Plugin for texture loading
-    auto plugin = LoadPlugin("Plugins/FITextureLoader");
-
     //Get display
     auto displays = GetDisplays();
 

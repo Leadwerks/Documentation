@@ -30,9 +30,6 @@ If the pixmap uses BC6H or BC7 compression then false is returned.
 ## Example
 
 ```lua
---IO plugins needed
-local plugin = LoadPlugin("Plugins/FITextureLoader.dll")
-
 --Load image
 local pixmap = LoadPixmap("https://raw.githubusercontent.com/UltraEngine/Documentation/master/Assets/Materials/scifiwall.jpg")
 

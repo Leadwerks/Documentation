@@ -12,9 +12,6 @@
 TODO
 
 ```lua
---Load plugin for texture loading
-local plugin = LoadPlugin("Plugins/Basis.*")
-
 --Get the primary display
 local displaylist = GetDisplays()
 local display = displaylist[1];

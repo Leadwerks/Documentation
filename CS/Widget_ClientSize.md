@@ -16,9 +16,6 @@ class Program
 {
     static void Main(string[] args)
     {
-        //Load plugins
-        var plugin_svg = Engine.LoadPlugin("Plugins/SVG.*");
-
         //Get the displays
         var displays = Engine.GetDisplays();
 

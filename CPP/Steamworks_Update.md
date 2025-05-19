@@ -25,9 +25,6 @@ int main(int argc, const char* argv[])
     }
 
     auto cl = ParseCommandLine(argc, argv);
-    
-    //Load FreeImage plugin (optional)
-    auto fiplugin = LoadPlugin("Plugins/FITextureLoader");
 
     //Get the displays
     auto displays = GetDisplays();

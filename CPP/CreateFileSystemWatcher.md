@@ -52,7 +52,6 @@ int main(int argc, const char* argv[])
     //Create FileSystemWatcher to detect changes to files
     auto watcher = CreateFileSystemWatcher(path);
 
-    auto plugin = LoadPlugin("Plugins/FITextureLoader");
     auto ui = CreateInterface(window);
     auto panel = CreatePanel(0, 0, window->ClientSize().x, window->ClientSize().y, ui->root);
     panel->SetPixmap(LoadPixmap(path + "/dirt01.jpg"));

@@ -39,9 +39,6 @@ using namespace UltraEngine;
 
 int main(int argc, const char* argv[])
 {
-    // Load FreeImage plugin
-    auto plg = LoadPlugin("Plugins/FITextureLoader");
-
     // Load pixmap
     auto pixmap = LoadPixmap("https://github.com/UltraEngine/Documentation/raw/master/Assets/Materials/Brick/brickwall01.dds");
 

@@ -13,9 +13,6 @@ Returns the widget size.
 ## Example
 
 ```lua
---Load plugins
-local plugin_svg = LoadPlugin("Plugins/SVG.*")
-
 --Get the displays
 local displays = GetDisplays()
 

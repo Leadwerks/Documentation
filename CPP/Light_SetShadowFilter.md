@@ -37,9 +37,6 @@ int main(int argc, const char* argv[])
 
 	//Create model with lots of extra polygons
 	auto ground = CreateBox(world, 10, 1, 10, 4, 4);
-	
-	//Plugin needed for PNG loading
-	auto plugin = LoadPlugin("Plugins/FITextureLoader.*");
 
 	//Load fan model
 	auto fan = LoadModel(world, "https://github.com/Leadwerks/Documentation/raw/master/Assets/Models/Fanblades/fanblades.glb");

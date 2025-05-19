@@ -34,9 +34,6 @@ int main(int argc, const char* argv[])
     //Create framebuffer
     auto framebuffer = CreateFramebuffer(window);
 
-    //Load plugin for texture loading
-    auto plugin = LoadPlugin("Plugins/FITextureLoader");
-
     //Create world
     auto world = CreateWorld();
 

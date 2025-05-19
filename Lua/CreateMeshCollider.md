@@ -28,9 +28,6 @@ local window = CreateWindow("Ultra Engine", 0, 0, 1280, 720, displays[1], WINDOW
 --Create framebuffer
 local framebuffer = CreateFramebuffer(window)
 
---Load plugin for texture loading
-local plugin = LoadPlugin("Plugins/FITextureLoader")
-
 --Create world
 local world = CreateWorld()
 
@@ -45,9 +42,6 @@ camera:SetClearColor(0.125)
 local light = CreateDirectionalLight(world)
 light:SetColor(2)
 light:SetRotation(45, 35, 0)
-
---Load FreeImage plugin
-local plugin = LoadPlugin("Plugins/FITextureLoader")
 
 --Load model
 local model = LoadModel(world, "https://github.com/UltraEngine/Documentation/raw/master/Assets/Models/Structures/wooden%20bridge.glb")

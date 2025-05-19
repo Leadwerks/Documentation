@@ -40,9 +40,6 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Load FreeImage plugin
-        var plg = LoadPlugin("Plugins/FITextureLoader");
-
         // Load pixmap
         var pixmap = LoadPixmap("https://github.com/UltraEngine/Documentation/raw/master/Assets/Materials/Brick/brickwall01.dds");
 

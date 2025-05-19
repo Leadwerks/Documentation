@@ -56,9 +56,6 @@ int main(int argc, const char* argv[])
     ground->SetColor(0, 1, 0);
     ground->SetPosition(0, -0.5, 0);
 
-    //Load FreeImage plugin
-    auto plugin = LoadPlugin("Plugins/FITextureLoader");
-
     //Load a model
     auto model = LoadModel(world, "https://github.com/UltraEngine/Documentation/raw/master/Assets/Models/Characters/Fox.glb");
     model->SetScale(0.05);

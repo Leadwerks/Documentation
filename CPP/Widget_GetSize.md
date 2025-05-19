@@ -19,9 +19,6 @@ using namespace UltraEngine;
 
 int main(int argc, const char* argv[])
 {
-    //Load plugins
-    auto plugin_svg = LoadPlugin("Plugins/SVG.*");
-
     //Get the displays
     auto displays = GetDisplays();
 

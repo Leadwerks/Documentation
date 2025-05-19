@@ -48,9 +48,6 @@ int main(int argc, const char* argv[])
     light->SetRotation(45, 35, 0);
     light->SetRange(-10, 10);
 
-    //Load FreeImage plugin
-    auto plugin = LoadPlugin("Plugins/FITextureLoader");
-
     //Load a model
     auto model = LoadModel(world, "https://github.com/UltraEngine/Documentation/raw/master/Assets/Models/Characters/Fox.glb");
     model->SetScale(0.05);

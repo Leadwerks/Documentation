@@ -46,9 +46,6 @@ void main(const char* args, const int argc)
     auto box = CreateBox(world);
     box->SetColor(0, 0, 1);
 
-    //Load the FreeImage plugin
-    auto plugin = LoadPlugin("Plugins/FITextureLoader");
-
     //Main loop
     while (!window->Closed() and !window->KeyHit(KEY_ESCAPE))
     {

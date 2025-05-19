@@ -44,13 +44,6 @@ if the [Resize](Buffer_Resize.md) method is called on a StreamBuffer object, no 
 -- 
 ---------------------------------------------------------------------------------------------------
 
--- Load FreeImage plugin
-local plugin = LoadPlugin("Plugins/FITextureLoader")
-if plugin == nil then
-    Print("Failed to load FreeImage plugin.")
-    return
-end
-
 -- Load heightmap data
 local stream = ReadFile("https://github.com/UltraEngine/Documentation/raw/master/Assets/Terrain/1024.r16")
 local streambuffer = CreateStreamBuffer(stream, 0, stream:GetSize())
