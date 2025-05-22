@@ -6,6 +6,11 @@ Base class: [Object](Object.md)
 
 | Property | Type | Description |
 | --- | --- | --- |
+| color | [Vec4](Vec4.md) | Read-only tile color |
+| position | [Vec3](Vec3.md) | Read-only tile position |
+| rotation | float | Read-only tile rotation |
+| scale | [Vec2](Vec2.md) | Read-only tile scale |
+| text | [WString](WString.md) | Read-only tile text |
 | [GetClipRegion](Tile_GetClipRegion.md) | Method | Sets the tile clipping rectangle |
 | [GetColor](Tile_GetColor.md) | Method | Gets the file color |
 | [GetOrder](Tile_GetOrder.md) | Method | Gets the file sort order |
