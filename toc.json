@@ -2101,6 +2101,10 @@
                                     "hideFromLua": true
                                 },
                                 {
+                                    "title": "Disable",
+                                    "filename": "Widget_Disable"
+                                },
+                                {
                                     "title": "Draw",
                                     "filename": "Widget_Draw",
                                     "hideFromLua": true
@@ -2109,6 +2113,10 @@
                                     "title": "DoubleClick",
                                     "filename": "Widget_DoubleClick",
                                     "hideFromLua": true
+                                },
+                                {
+                                    "title": "Enable",
+                                    "filename": "Widget_Enable"
                                 },
                                 {
                                     "title": "GainFocus",
