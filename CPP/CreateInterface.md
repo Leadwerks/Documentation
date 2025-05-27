@@ -5,12 +5,12 @@ This function creates a new graphical user interface for desktop applications or
 ## Syntax
 
 - shared_ptr<[Interface](Interface.md)\> **CreateInterface**(shared_ptr<[Window](Window.md)\> window)
-- shared_ptr<[Interface](Interface.md)\> **CreateInterface**(shared_ptr<[World](World.md)\> world, shared_ptr<[Font](Font.md)\> font, [iVec2](iVec2.md)\> size)
+- shared_ptr<[Interface](Interface.md)\> **CreateInterface**(shared_ptr<[Camera](Camera.md)\> camera, shared_ptr<[Font](Font.md)\> font, [iVec2](iVec2.md)\> size)
 
 | Parameter | Description |
 | --- | --- |
 | window | window to create the user interface on |
-| world | world to create the interface in, for 3D graphics |
+| camera | camera to create the interface in, for 3D graphics |
 | font | font to use, for 3D graphics |
 | size | interface dimensions, for 3D graphics |
 
