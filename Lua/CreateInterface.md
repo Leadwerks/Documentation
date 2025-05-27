@@ -129,7 +129,7 @@ light:SetRange(-10, 10)
 light:SetColor(Vec4(4, 4, 4, 1))
 
 -- Create user interface
-local ui = CreateInterface(world, font, iVec2(256))
+local ui = CreateInterface(camera, font, iVec2(256))
 ui:SetRenderLayers(2)
 
 -- Create widget
@@ -201,7 +201,7 @@ light:SetArea(10,10)
 local font = LoadFont("Fonts/arial.ttf")
 
 --Create user interface
-local ui = CreateInterface(world, font, framebuffer.size)
+local ui = CreateInterface(camera, font, framebuffer.size)
 ui:SetRenderLayers(2)
 ui.background:SetColor(0,0,0,0.5)
 
