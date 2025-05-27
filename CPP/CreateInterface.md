@@ -98,7 +98,7 @@ int main(int argc, const char* argv[])
     auto font = LoadFont("Fonts/arial.ttf");
 
     //Create user interface with a semi-transparent background
-    auto ui = CreateInterface(world, font, framebuffer->size);
+    auto ui = CreateInterface(camera, font, framebuffer->size);
     ui->background->SetColor(0, 0, 0, 0.5);
 
     //Create widget
@@ -187,7 +187,7 @@ int main(int argc, const char* argv[])
     light->SetColor(4);
 
     //Create user interface
-    auto ui = CreateInterface(world, font, iVec2(256));
+    auto ui = CreateInterface(camera, font, iVec2(256));
     ui->SetRenderLayers(2);
 
     //Create widget
