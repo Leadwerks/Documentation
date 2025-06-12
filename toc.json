@@ -16,7 +16,7 @@
                     "filename": "editor",
                     "topics": [
                         {
-                            "title": "Asset Browser",
+                            "title": "Project Panel",
                             "filename": "assetbrowser"
                         },
                         {
