@@ -22,6 +22,24 @@ In the Model Editor, you can also work with any embedded materials and textures 
 
 ![Model Editor - Materials and Textures](https://github.com/UltraEngine/Documentation/blob/master/Images/modeleditor2.png?raw=true)
 
+#### Colliders
+
+In order for a 3D model to be reactive to physical collisions with other objects, it must have a collision shape set. You can assign a collision shape by selecting the top-most node in the model hierarchy. In the Physics properties, there is a drop-down box you can use to select a collider shape. The editor will attempt to choose the best size to make the collider fit the model, but you can adjust the offset, rotation, and size of the collider manually if it is necessary.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/boxcollider.png?raw=true)
+
+A box or convex hull collider works best for most objects.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/hullcollider.png?raw=true)
+
+The Mesh collider just uses the object's own geometry for the collision shape. This provides an exact match between visual and physical geometry, but it may not be ideal for detailed models, since more details shapes will cause the physics system to slow down. Additionally, objects using a mesh collider are always static in the world. Other objects can bump off of them, but the object using the mesh collider will remain still in the world.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/meshcollider.png?raw=true)
+
+For more complex shapes, the convex decomposition tool may be a better choice than a mesh collider. To open the tool, select the **Tools > Convex Decomposition** menu item.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/hullcollider2.png?raw=true)
+
 ### Material Assets
 
 For material assets, the Asset Editor's properties tab provides access to all material settings and associated textures, enabling you to fine-tune the appearance and behavior of materials.
