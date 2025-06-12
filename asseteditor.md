@@ -22,6 +22,12 @@ In the Model Editor, you can also work with any embedded materials and textures 
 
 ![Model Editor - Materials and Textures](https://github.com/UltraEngine/Documentation/blob/master/Images/modeleditor2.png?raw=true)
 
+#### Convert Textures to DDS
+
+Often times models that come in glTF and FBX format will use PNG and sometimes JPG files for textures. These image files are slow-loading because mipmaps have to be generated at load time. They also use more video memory because they get stored in an uncompressed pixel format in memory. You can optimize these models by selecting the **Tools > Convert Texture to DDS** menu item. This will convert all image files into optimized DDS textures using the appropriate compression format for each image. The resulting texture files will load faster and usually use less video memory.
+
+When you are done with this step, save the model as a Leadwerks MDL file, since other model file formats may not support DDS textures.
+
 #### Colliders
 
 In order for a 3D model to be reactive to physical collisions with other objects, it must have a collision shape set. You can assign a collision shape by selecting the top-most node in the model hierarchy. In the Physics properties, there is a drop-down box you can use to select a collider shape. The editor will attempt to choose the best size to make the collider fit the model, but you can adjust the offset, rotation, and size of the collider manually if it is necessary.
@@ -58,11 +64,13 @@ Once you have reduced the mesh to your liking, you can press the **Apply** butto
 
 When you are done adding LODs, save the model as a Leadwerks .mdl file. Other model file formats do not support LODs.
 
-#### Convert Textures to DDS
+#### Imposters
 
-Often times models that come in glTF and FBX format will use PNG and sometimes JPG files for textures. These image files are slow-loading because mipmaps have to be generated at load time. They also use more video memory because they get stored in an uncompressed pixel format in memory. You can optimize these models by selecting the **Tools > Convert Texture to DDS** menu item. This will convert all image files into optimized DDS textures using the appropriate compression format for each image. The resulting texture files will load faster and usually use less video memory.
+You can generate an imposter for any 3D model, but these are usually used with trees. An imposter is a set of images drawn from one direction that are adjusted based on the angle between the object and the viewer. This can reduce complex objects to just a single plane made up of two triangles, greatly increasing the rendering performance of large scenes with many objects.
 
-When you are done with this step, save the model as a Leadwerks MDL file, since other model file formats may not support DDS textures.
+To run this operation, select the **Tools > Generate Imposter** menu item. It may take a few moments to complete the task. The resulting imposter mesh will be added as the last LOD shown in the model hierarchy.
+
+When you are done adding an imposter, save the model as a Leadwerks .mdl file. Other model file formats do not support this feature.
 
 ### Material Assets
 
