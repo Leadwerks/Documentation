@@ -54,3 +54,4 @@ Subdivision works with faces that have any number of sides.
 
 ## Materials
 
+The materials list allows you to view all materials that are in use on the selected faces. Usually only one material will appear in the list, but multiple materials can be added and blended on a per-vertex basis with the [Material Painter](materialpainter.md) tool. The face panel allows you to inspect faces closely to see exactly which materials they are using, and perform additional fine-tuning if needed.
