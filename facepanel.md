@@ -42,7 +42,15 @@ Bevelled edges are an easy way to give your scene a more professional look.
 
 ## Subdivision
 
+Faces can be subdivided with the Subdivision setting. This is useful for material painting, which operates on a per-vertex level.
 
+![](https://github.com/Leadwerks/Documentation/blob/master/Images/subd.png?raw=true)
+
+Face subdivision is also useful when tessellation is in use. The GPU tessellation shader has a limited number of times it can subdivide polygons on the GPU, so you should try to keep a vertex spacing of about one meter across faces if a material tessellation with will be used.
+
+Subdivision works with faces that have any number of sides.
+
+![](https://github.com/Leadwerks/Documentation/blob/master/Images/subd2.png?raw=true)
 
 ## Materials
 
