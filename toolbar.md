@@ -5,31 +5,40 @@ The Toolbar is a dynamic control center that provides quick access to some of th
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/toobar.png?raw=true)
 
 ## File Operations
+
 On the left side of the Toolbar, you'll find standard file operations, including:
 
 - **New**: Create a new project or scene.
-
 - **Open**: Load an existing map into the editor.
-
 - **Save**: Save your current project or scene, ensuring that your progress is preserved.
-
 - **Undo and Redo**: These buttons allow you to reverse or redo recent actions, helping you navigate through your editing history.
 
-## Mouse Tools
+## Edit Operations
 
-In the middle section of the Toolbar, you'll discover a set of buttons that control the current mouse tool in use. These tools enable you to manipulate and interact with objects in your scene. The available mouse tools include:
+The next group contains buttons for common editing operations.
 
-- **Translation**: Use this tool to move objects in the 3D space.
+- **Cut**: Removes and copies the selected objects.
+- **Copy**: Copies the selected objects, but leaves them intact.
+- **Paste**: Creates a new instance of any previously copied objects.
+- **Delete**: Removes the selected objects from the scene.
 
-- **Rotation**: Rotate objects to achieve the desired orientation.
+## Undo Operations
 
-- **Scaling**: Adjust the size and proportions of objects.
+The next group contains buttons to undo and redo the last editing step. These buttons will be disabled if the current state of the program does not allow the operation, for example, if it is a new scene and nothing has been created yet.
 
-- **Vertex**: The Vertex Mouse Tool is ideal for working at the vertex level, offering fine-grained control over brush objects.
+## Zoom Operations
 
-- **Face**: Select the Face Mouse Tool to interact with brush faces. This can be used to adjust both texture mapping properties and brush geometry.
+The next group contains buttons to zoom in and out in the current viewport.
 
-- **Terrain**: The Terrain Mouse Tool is used for terrain editing, allowing you to sculpt and paint landscapes.
+## Object Button
+
+The object button is a special control used to activate the object creation tool and select an object to make.
+
+When you click the arrow on the left side of the button, or just click the button when it is already in the selected state, a panel will appear below showing all the objects you can create.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/objectpanel.png?raw=true)
+
+
 
 ## Side Panel and Console
 
