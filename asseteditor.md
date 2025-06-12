@@ -1,16 +1,16 @@
 # Asset Editor
 
-The Asset Editor is a dedicated workspace for interacting with and editing various assets within Ultra Engine. Here's an overview of how it works:
+Each asset file you open in the editor will open in its own window. You can have multiple assets of the same or different types open at the same time.
 
 ## Opening Assets
 
-To access the Asset Editor, simply double-click the desired asset in the [Asset Browser](assetbrowser.md). This action will open the asset in a new tab within the Asset Editor window.
+To access the Asset Editor, simply double-click the desired asset in the [Project Panel](assetbrowser.md). This action will open the asset in a new Asset Editor window.
 
 ![Asset Editor](https://github.com/UltraEngine/Documentation/blob/master/Images/modeleditor.png?raw=true)
 
 ## Asset-Specific Views
 
-The appearance and available features within the Asset Editor window may vary based on the type of asset you've opened:
+The appearance and available features within the Asset Editor window may vary based on the type of asset you've opened.
 
 ### Model Assets
 
