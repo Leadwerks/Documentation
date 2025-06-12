@@ -8,7 +8,11 @@ Press the **Create** button to create a new project. On the next screen you can 
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/newproject.png?raw=true)
 
-Upon launching a project in the Ultra Engine editor, you'll be greeted with the interface shown below:
+Press the **Next** button and wait a moment for the new project to be created.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/newproject2.png?raw=true)
+
+You can now click on the new project in the list, and the editor will open the project.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/defaultview.png?raw=true)
 
