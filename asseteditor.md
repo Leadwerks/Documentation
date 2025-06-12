@@ -8,13 +8,13 @@ To access the Asset Editor, simply double-click the desired asset in the [Projec
 
 ![Asset Editor](https://github.com/UltraEngine/Documentation/blob/master/Images/modeleditor.png?raw=true)
 
-## Asset-Specific Views
+## Asset-specific Views
 
 The appearance and available features within the Asset Editor window may vary based on the type of asset you've opened.
 
 ### Model Assets
 
-When a model asset is opened, two tabs appear in the Asset Editor window. If the model includes animations, you'll find an animation bar at the bottom of the window, complete with controls for selecting and playing animations.
+When a model file is opened, two tabs appear in the Asset Editor window. If the model includes animations, you'll find an animation bar at the bottom of the window, complete with controls for selecting and playing animations.
 
 ![Model Editor](https://github.com/UltraEngine/Documentation/blob/master/Images/modeleditor.png?raw=true)
 
