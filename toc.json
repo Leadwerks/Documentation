@@ -13,6 +13,7 @@
             "topics": [
                 {
                     "title": "Editor",
+                    "filename": "editor"
                     "topics": [
                         {
                             "title": "Asset Browser",
