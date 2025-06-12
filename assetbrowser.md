@@ -20,4 +20,6 @@ To open a file, simply double-click its icon. If the file format is supported by
 ### File Previews
 Hovering your mouse pointer over a file thumbnail triggers a convenient popup preview. This preview displays a larger view of the file, along with its name and additional relevant information. This feature aids in quickly identifying files without the need to open them, enhancing your workflow efficiency.
 
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/filepreview.png?raw=true)
+
 With its intuitive interface and powerful features, the Asset Browser is an indispensable tool for managing your project's assets and streamlining your workflow.
