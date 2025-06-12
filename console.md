@@ -41,4 +41,8 @@ If you need to examine the value of a variable within the Lua virtual machine, y
 program
 ```
 
-When the Enter key is pressed, the value _userdata_ is printed, indicating that program is a C++ class exposed to Lua.
+When the Enter key is pressed, the value _userdata_ is printed, indicating that program is a C++ class exposed to Lua. This variable, only present when the editor is running, stores the main object containing all the editor features. For example, here is an alternative way to maximize the program window:
+
+```lua
+program.window:Maximize()
+```
