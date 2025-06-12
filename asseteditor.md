@@ -42,6 +42,18 @@ For more complex shapes, the convex decomposition tool may be a better choice th
 
 Since the resulting collider is made of convex hulls, the object will be physically reactive in the world.
 
+#### Mesh Reduction
+
+The model editor interface includes a tool for reducing mesh detail. To access this tool, select the **Tools > Mesh Reduction** menu item. When this tool is active, a wireframe overlay will be displayed on the model, for easy viewing of the mesh topology.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/lod0.png?raw=true)
+
+The slider at the top of the window allows you to adjust the detail, to try to reach a desired number of polygons.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/lod1.png?raw=true)
+
+Once you have reduced the mesh to your liking, you can press the **Apply** button to apply your changes to the base model, or press **Add LOD** to add the reduced detail mesh as a new level-of-detail model. LODs are reduced detail versions of a model that are swapped out when the viewer is further away, since not as much detail is visible from a distance. Using models with LODs can help improve rendering performance and framerates in complex scenes with many detailed objects.
+
 ### Material Assets
 
 For material assets, the Asset Editor's properties tab provides access to all material settings and associated textures, enabling you to fine-tune the appearance and behavior of materials.
