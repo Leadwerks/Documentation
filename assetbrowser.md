@@ -1,4 +1,4 @@
-# Asset Browser
+# Project Panel
 
 The Asset Browser is a versatile tool designed to simplify your project management tasks. It offers a user-friendly interface, which is split into two main sections for efficient navigation and file exploration.
 
