@@ -36,9 +36,11 @@ The Mesh collider just uses the object's own geometry for the collision shape. T
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/meshcollider.png?raw=true)
 
-For more complex shapes, the convex decomposition tool may be a better choice than a mesh collider. To open the tool, select the **Tools > Convex Decomposition** menu item.
+For more complex shapes, the convex decomposition tool may be a better choice than a mesh collider. To open the tool, select the **Tools > Convex Decomposition** menu item. A window will open with many settings you can adjust to get the right shape. The resulting collider will be made of multiple objects, but each object will be a convex hull shape. With a little experimentation you can get a collider shape that matches the mesh geometry closely but isn't too complex.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/hullcollider2.png?raw=true)
+
+Since the resulting collider is made of convex hulls, the object will be physically reactive in the world.
 
 ### Material Assets
 
