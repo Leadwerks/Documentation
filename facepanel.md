@@ -22,9 +22,23 @@ The Face Panel also provides alignment options that simplify the task of alignin
 
 The Face Panel empowers you to manage and fine-tune texture mapping on your brush faces, enhancing the visual quality of your map and streamlining the texturing process.
 
-## Bevel
+## Edges
 
+If the edge size setting is set to be greater than zero, the face will have a skirt of polygons added around its perimeter. This is useful for both bevelled edges and tessellation with displacement.
 
+## Bevels
+
+You can set a face to use smooth bevelled edges, using a technique called edge-turn normals.
+
+You can see the difference in the two objects below. The first box has sharp edges, with the bevel feature disabled.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/sharpedges.png?raw=true)
+
+The second image shows the same box with the edge size set to 4 cm and bevels enabled for each face.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/softedges.png?raw=true)
+
+Bevelled edges are an easy way to give your scene a more professional look.
 
 ## Subdivision
 
