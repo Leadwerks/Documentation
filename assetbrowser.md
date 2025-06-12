@@ -1,6 +1,6 @@
 # Project Panel
 
-The Asset Browser is a versatile tool designed to simplify your project management tasks. It offers a user-friendly interface, which is split into two main sections for efficient navigation and file exploration.
+The project panel is split into an upper area for navigating between different subfolders in your game's directory, and a lower area that displays file thumbnails.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/assetbrowser.png?raw=true)
 
