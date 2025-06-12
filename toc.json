@@ -32,10 +32,6 @@
                             "filename": "facepanel"
                         },
                         {
-                            "title": "Objects Panel",
-                            "filename": "objectspanel"
-                        },
-                        {
                             "title": "Options Window",
                             "filename": "optionswindow"
                         },
