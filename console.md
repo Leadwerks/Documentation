@@ -31,7 +31,7 @@ A garbage collection sweep will be executed after each command you enter into th
 box = nil
 ```
 
-The program viewports are also redrawn after each command is executed.
+The program viewports are also redrawn after each command is executed, so that we can immediately see any effect our commands had on the scene.
 
 ## Inspecting Variable Values
 
