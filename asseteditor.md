@@ -42,6 +42,8 @@ For more complex shapes, the convex decomposition tool may be a better choice th
 
 Since the resulting collider is made of convex hulls, the object will be physically reactive in the world.
 
+When you are done adjusting the collision shape, save the model as a Leadwerks .mdl file. Other model file formats do not support collider shapes.
+
 #### Mesh Reduction
 
 The model editor interface includes a tool for reducing mesh detail. To access this tool, select the **Tools > Mesh Reduction** menu item. When this tool is active, a wireframe overlay will be displayed on the model, for easy viewing of the mesh topology.
@@ -53,6 +55,14 @@ The slider at the top of the window allows you to adjust the detail, to try to r
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/lod1.png?raw=true)
 
 Once you have reduced the mesh to your liking, you can press the **Apply** button to apply your changes to the base model, or press **Add LOD** to add the reduced detail mesh as a new level-of-detail model. LODs are reduced detail versions of a model that are swapped out when the viewer is further away, since not as much detail is visible from a distance. Using models with LODs can help improve rendering performance and framerates in complex scenes with many detailed objects.
+
+When you are done adding LODs, save the model as a Leadwerks .mdl file. Other model file formats do not support LODs.
+
+#### Convert Textures to DDS
+
+Often times models that come in glTF and FBX format will use PNG and sometimes JPG files for textures. These image files are slow-loading because mipmaps have to be generated at load time. They also use more video memory because they get stored in an uncompressed pixel format in memory. You can optimize these models by selecting the **Tools > Convert Texture to DDS** menu item. This will convert all image files into optimized DDS textures using the appropriate compression format for each image. The resulting texture files will load faster and usually use less video memory.
+
+When you are done with this step, save the model as a Leadwerks MDL file, since other model file formats may not support DDS textures.
 
 ### Material Assets
 
