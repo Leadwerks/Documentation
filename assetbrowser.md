@@ -16,9 +16,13 @@ The bottom panel of the Asset Browser showcases thumbnail representations of all
 
 You can define specific file extensions to be excluded from the browser using the "File Type Blacklist" field, in the Project Settings area. This setting can be configured within the [options window](optionswindow.md). By default, files that use the extension .bin and .meta will not be shown, in order to eliminate visual clutter from your view.
 
+### Other Controls
+
+Above the directory area is a row of controls, including a button with an add sign ('+'), a filter text entry field, and a slider for controlling the file thumbnail size. The filter text entry field supports wildcards, so you can enter *.mat into this field to only view material files, for example. Clearing this text will restore the default view to show all files.
+
 ### Opening Files
 
-To open a file, simply double-click its icon. If the file format is supported by Ultra Engine, it will be launched in an [asset editor](asseteditor.md) window, providing you with an environment for editing and enhancing the asset. In cases where the file format is not directly supported, it will be opened using your system's default program associated with that specific file type.
+To open a file, simply double-click its icon. If the file format is supported by Leadwerks, it will be launched in an [asset editor](asseteditor.md) window, providing you with an interface for viewing and editing the asset. Code files will be opened in the integrated [IDE](ide.md) In cases where the file format is not directly supported, it will be opened using your system's default program associated with that specific file type.
 
 ### File Previews
 
