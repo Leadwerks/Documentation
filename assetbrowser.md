@@ -18,7 +18,11 @@ You can define specific file extensions to be excluded from the browser using th
 
 ### Other Controls
 
-Above the directory area is a row of controls, including a button with an add sign ('+'), a filter text entry field, and a slider for controlling the file thumbnail size. The filter text entry field supports wildcards, so you can enter *.mat into this field to only view material files, for example. Clearing this text will restore the default view to show all files.
+Above the directory area is a row of controls, including a button with an add sign ('+'), a filter text entry field, and a slider for controlling the file thumbnail size.
+
+The '+' button will open a popup menu that allows you to easily create a new folder, material, code component, or shader family.
+
+The filter text entry field supports wildcards, so you can enter *.mat into this field to only view material files, for example. Clearing this text will restore the default view to show all files.
 
 ### Opening Files
 
