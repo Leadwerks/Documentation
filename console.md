@@ -1,30 +1,44 @@
 # Console
 
-The Console is a valuable tool for monitoring the program's log, warnings, and error messages. It provides insight into the operation of Ultra Engine and helps you identify and troubleshoot issues as they arise.
+The Console is a valuable tool for monitoring the program's log, warnings, and error messages. It provides insight into the operation of editor and helps you identify and troubleshoot issues as they arise.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/console.png?raw=true)
 
 ## Executing Lua Commands
 
-You can also utilize the Console to execute Lua commands directly within the editor. To do so, follow these steps:
+You can also utilize the Console to execute Lua commands directly within the editor. For example, you can copy and paste the following line of Lua code into the entry field:
 
-1. In the entry field at the bottom of the Console, enter your Lua command.
+```lua
+Notify("Hello, world!")
+```
 
-   For example, you can copy and paste the following line of Lua code into the entry field:
+Press the "Enter" key to execute the command and see the result.
 
-   ```lua
-   Notify("Hello, world!")
-   ```
-   
-2. Press the "Enter" key to execute the command.
+The console will even support mult-line blocks of Lua code:
 
-This feature allows you to quickly test and run Lua scripts within the editor environment, making it a powerful tool for scripting and testing functionalities.
+```lua
+box = CreateBox(program.world)
+box:SetColor(1,0,0)
+```
 
-Inspecting Variable Values
-If you need to examine the value of a variable within the Lua virtual machine, you can achieve this easily in the Console:
+This feature allows you to quickly test and run Lua scripts within the editor environment.
 
-1. Type the variable name into the entry field by itself.
+## Garbage Collection
 
-2. Press the "Enter" key.
+A garbage collection sweep will be executed after each command you enter into the console. For example, if you set the box variable from the last example to nil, the box will disappear.
 
-The Console will display the current value of the specified variable, aiding in the debugging and understanding of your Lua scripts.
+```
+box = nil
+```
+
+The program viewports are also redrawn after each command is executed.
+
+## Inspecting Variable Values
+
+If you need to examine the value of a variable within the Lua virtual machine, you can do so by typing the variable name into the entry field by itself, and then pressing the Enter key. Here is an example:
+
+```
+program
+```
+
+When the Enter key is pressed, the value _userdata_ is printed, indicating that program is a C++ class exposed to Lua.
