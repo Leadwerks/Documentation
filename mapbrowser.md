@@ -1,4 +1,4 @@
-# Map Browser
+# Scene Browser
 
 The Map Browser is an essential component of Ultra Engine's user interface, providing a streamlined approach to managing and inspecting the elements of your 3D scene.
 
