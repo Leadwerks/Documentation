@@ -22,9 +22,9 @@ The main window contains a top toolbar, four viewports for scene visualization, 
 
 [Console](console.md): The console in the bottom panel provides program information including logs, warnings, and errors. It also provides a text input field you can use to execute commands with Lua script.
 
-**Side Bar**: This left-side bar contains buttons to select a mouse tool. The bottom of the bar also includes buttons to open the [videos](videos.md) and log into your Leadwerks account.
+**Left-side Bar**: This left-side bar contains buttons to select a mouse tool. The bottom of the bar also includes buttons to open the [videos](videos.md) and log into your Leadwerks account.
 
-**Side Panel**: This right-side panel contains a tab control that lets you switch between several sub-panels.
+**Right-side Panel**: This right-side panel contains a tab control that lets you switch between several sub-panels.
 
 - [Project](assetbrowser.md): The **Project** tab displays your game's directory, and lets you view files and navigate through the project folders.
 
