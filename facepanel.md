@@ -38,6 +38,10 @@ The second image shows the same box with the edge size set to 4 cm and bevels en
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/softedges.png?raw=true)
 
+Edges will only be bevelled if both the adjacent faces have the bevel setting enabled. In the image below, the top and left faces have bevels enabled, but the face on the right does not. The edge between the top and left faces is rounded, but the other visible edges are sharp.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/bevelexample.jpg?raw=true)
+
 Bevelled edges are an easy way to give your scene a more professional look.
 
 ## Subdivision
