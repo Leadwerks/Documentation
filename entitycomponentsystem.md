@@ -38,3 +38,46 @@ Press the **OK** button to create the new component, and a new code file will be
 ### C++ Projects
 
 If your project uses C++, then the new .cpp and .h file will be automatically inserted into your Visual Studio project, so they will be included in the game next time you compile it.
+
+### Component Properties
+
+You can expose component code values as editable fields that appears in the component properties. This is done by adding extra information in a code comment on the line where the value is declared.
+
+The first value must be a name to show in the editor, surrounded by quotation marks.
+
+For most values, the default value declared in the code is enough to figure out what kind of value it is.
+
+To display a dropdown box with different options, add a list of items in quotation marks, separated by commas, with the list surrounded by brackets.
+
+To display a color selecter, add the word COLOR after the display name. This will display an RGB or RGBA selecter, depending on what type of value is declared in the code.
+
+```lua
+MyComponent.integervalue = 0--"Integer value"
+MyComponent.floatvalue = 0.0--"Float value"
+MyComponent.stringvalue = ""--"String value"
+MyComponent.booleanvalue = false--"Boolean value"
+MyComponent.optionvalue = 0--"Option value" ["Option 1", "Option 2", "Option 3"]
+MyComponent.entityvalue = nil--"Entity value"
+MyComponent.pathvalue = ""--"Path value" SOUND
+MyComponent.vec2value = Vec2(0,0)--"Vec2 value"
+MyComponent.vec3value = Vec3(0,0,0)--"Vec3 value"
+MyComponent.vec4value = Vec4(0,0,0,0)--"Vec4 value"
+MyComponent.rgbvalue = Vec3(1,1,1)--"RGB value" COLOR
+MyComponent.rgbavalue = Vec4(1,1,1,1)--"RGBA value" COLOR
+```
+Any time your code is modified, the code will be analyzed and the results will be stored in the associated JSON file, from which the editor will load properties to display. This file will always be auto-generated, so there is no need to edit its contents.
+
+### Component Inputs and Outputs
+
+Component functions can be exposed for use in the [flowgraph editor](flowgrapheditor.md) by adding a commend after the function declaration. The following values can be used:
+- **in**: The function can accept inputs to active it
+- **out**: The function can be connected to another function it will active after execution
+- **inout**: The function will act as both an input and an output
+
+```lua
+function MyComponent:Activate()--inout
+	self.active = true
+end
+```
+
+
