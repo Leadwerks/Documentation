@@ -1,8 +1,6 @@
 # Vegetation
 
-The vegetation tool can be accessed by selecting the [Terrain Panel](terrainpanel.md) and then selecting the **Vegetaion** tool in the Tool drop-down box.
-
-The vegetation tool lets you paint trees, plants, rocks, and other items onto a landscape to quickly create entire forests.
+The vegetation tool lets you paint trees, plants, rocks, and other items onto a landscape to quickly create entire forests. It can be accessed by selecting the [Terrain Panel](terrainpanel.md) and then selecting the **Vegetaion** tool in the Tool drop-down box.
 
 Like terrain materials, vegetation is separated into separate layers, each with its own properties. Each layer can contain one or more variations. These are usually different versions of a model that help to create a more random look to the scene and prevent repetition. The variations are randomly selected by the vegetation system.
 
