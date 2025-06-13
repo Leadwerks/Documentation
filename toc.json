@@ -68,6 +68,10 @@
                             "filename": "publisher"
                         },
                         {
+                            "title": "Render Tools",
+                            "filename": "render"
+                        },                        
+                        {
                             "title": "Scene Panel",
                             "filename": "mapbrowser"
                         },                        
