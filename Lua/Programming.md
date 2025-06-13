@@ -8,6 +8,8 @@ The integrated [script editor](scripteditor) is recommended for most users, and 
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/ide.png?raw=true)
 
+If you are using the integrated script editor, the rest of this article does not apply to you,
+
 ## Using Visual Studio Code
 
 If you prefer, it is possible to use Visual Studio Code for Lua programming. To begin programming with Lua and Visual Studio Code, follow these steps:
