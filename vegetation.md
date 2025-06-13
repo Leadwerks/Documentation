@@ -38,20 +38,22 @@ Each vegetation layer has the following adjustable properties.
 
 ## Vegetation Variation Properties
 
+Each vegetation layer variation has the following properties that can be adjusted independently from other layer variations.
+
 **Model**: Selects the model to use for the variation.
 
 **Alignment**: You can choose center (the default) mode, per-vertex, or rotate to normal.
 
-**Pick mode**:
+**Pick mode**: Controls the pick mode of the instances, for ray casting operations.
 
-**Weight**:
+**Weight**: A percentage value indicating how likely this variation is to appear. This can be used to ensure that a very unique variation of a model that stands out a lot will get used less frequently. The weights of all layer variations will be normalized automatically.
 
-**LOD range**:
+**LOD range**: This provides control over the distances at which the instances will change LODs, if the model contains multiple levels of detail.
 
-**View range**:
+**View range**: This controls the maximum distance beyond which the instances will disappear from view.
 
-**Shadow**:
+**Shadow**: This can be used to enable or disable shadows on the model.
 
-**Collision**:
+**Collision**: This indicates whether the instances are collidable with physics. To be interactive, the model must also include a collider.
 
-**Nav obstacle**:
+**Nav obstacle**: This indicates whether instances of the model interact with the navigation mesh system. To be interactive, the model must also include a collider.
