@@ -18,7 +18,7 @@ Once the vegetation layer is added, you can begin painting it onto the landscape
 
 If you hold the **Control** key while painting, the vegetation tool will act as an eraser to remove instances from the terrain.
 
-## Vegetation Layer Properties
+## Layer Properties
 
 Each vegetation layer has the following adjustable properties.
 
@@ -36,7 +36,7 @@ Each vegetation layer has the following adjustable properties.
 
 **Max height**: The maximum terrain height, in meters, below which vegetation instances can appear. This can be used to create a tree line, above which no trees can grow.
 
-## Vegetation Variation Properties
+## Variation Properties
 
 Each vegetation layer variation has the following properties that can be adjusted independently from other layer variations.
 
