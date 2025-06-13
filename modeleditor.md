@@ -84,6 +84,8 @@ Animations can be selected in the model panel, and two properties will be shown 
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/animationproperties.png?raw=true)
 
+After making changes to a model's animation properties, you should save the model as a Leadwerks MDL file. At this time, only Leadwerks MDL files will include animation information when they are saved.
+
 ### Extract Animation
 
 Sometimes a 3D model file will come with all animations stored in a single sequence. The extract animation tool allows you to copy part of an animation sequence into a new sequence.
@@ -91,5 +93,3 @@ Sometimes a 3D model file will come with all animations stored in a single seque
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/extractanimation.png?raw=true)
 
 You can set the first and last frames to include, and press the **Apply** button to add a new sequence with those frames. If the **Trim this sequence** checkbox is checked, then the existing animation sequence will be modified instead.
-
-After making changes to a model's animation properties, you should save the model as a Leadwerks MDL file. At this time, only Leadwerks MDL files will include animation information when they are saved.
