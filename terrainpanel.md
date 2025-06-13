@@ -13,6 +13,8 @@ The Terrain Panel offers a range of essential tools for editing and enhancing te
 
 - **Paint Tool**: The Paint Tool is used for applying material layers to the terrain. It allows you to select a material layer and paint it onto the terrain, defining the surface's visual characteristics. You can control the tool radius and strength using sliders to achieve precise results.
 
+- [Vegetation Tool](vegetation,md): The vegetation tool allows you to paint instances of vegetation onto the landscape.
+
 ## Material Layer Management
 In the Terrain Panel, you'll find a Material Layer List, which displays all the material layers currently in use on the terrain. Each material layer can be customized in the following ways:
 
