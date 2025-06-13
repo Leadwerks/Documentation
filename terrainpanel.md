@@ -1,6 +1,6 @@
 # Terrain Panel
 
-The Terrain Panel is a specialized interface that becomes accessible when using the terrain mouse tool ![](https://github.com/UltraEngine/Documentation/blob/master/Images/terraintool.png?raw=true) is in use. It provides a comprehensive set of tools and controls for working with terrains in your project.
+The Terrain Panel will be vislble when the terrain mouse tool ![](https://github.com/UltraEngine/Documentation/blob/master/Images/terraintool.png?raw=true) is in use. It provides a comprehensive set of tools and controls for working with terrains in your project.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/terrainpanel.png?raw=true)
 
