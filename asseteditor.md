@@ -68,7 +68,9 @@ When you are done adding LODs, save the model as a Leadwerks .mdl file. Other mo
 
 You can generate an imposter for any 3D model, but these are usually used with trees. An imposter is a set of images drawn from one direction that are adjusted based on the angle between the object and the viewer. This can reduce complex objects to just a single plane made up of two triangles, greatly increasing the rendering performance of large scenes with many objects.
 
-To run this operation, select the **Tools > Generate Imposter** menu item. It may take a few moments to complete the task. The resulting imposter mesh will be added as the last LOD shown in the model hierarchy.
+To run this operation, select the **Tools > Generate Imposter** menu item. It may take a few moments to complete the task. The resulting imposter mesh will be added as the last LOD shown in the model hierarchy. The editor will save three array textures, storing the base color, normals, and metallic-roughness values for each pixel, when viewed from a series of different angles.
+
+![Asset Editor](https://github.com/UltraEngine/Documentation/blob/master/Images/imposter.png?raw=true)
 
 When you are done adding an imposter, save the model as a Leadwerks .mdl file. Other model file formats do not support this feature.
 
