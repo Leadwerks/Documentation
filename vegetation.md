@@ -15,7 +15,7 @@ Once the vegetation layer is added, you can begin painting it onto the landscape
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/vegetationpaint.png?raw=true)
 
 If you hold the **Control** key while painting, the vegetation tool will act as an eraser to remove instances from the terrain.
-
+ 
 ## Layer Properties
 
 Each vegetation layer has the following adjustable properties.
