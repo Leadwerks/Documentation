@@ -17,7 +17,7 @@
                     "topics": [
                         {
                             "title": "Account Window",
-                            "filename": "account"
+                            "filename": "accountwindow"
                         },
                         {
                             "title": "Asset Editor",
