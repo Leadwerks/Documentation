@@ -36,6 +36,10 @@
                             "filename": "flowgrapheditor"
                         },
                         {
+                            "title": "IDE",
+                            "filename": "ide"
+                        },
+                        {
                             "title": "Material Editor",
                             "filename": "materialeditor"
                         },
