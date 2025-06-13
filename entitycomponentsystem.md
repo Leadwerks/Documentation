@@ -18,33 +18,33 @@ Components are stored in source code files located in one of the subfolders foun
 The default project template includes many components to perform common actions in games.
 
 ### AI Components
-**Monster**: This provides simple behavior for an enemy with a melee attack.
+- **Monster**: This provides simple behavior for an enemy with a melee attack.
 
 ### Appearance Components
 
-**ChangeEmission**: This allows an input to modify the emission color of the entity.
+- **ChangeEmission**: This allows an input to modify the emission color of the entity.
 
-**ChangeVisibility**: This allows an input to hide or show the entity.
+- **ChangeVisibility**: This allows an input to hide or show the entity.
 
 ### Logic Components
 
-**Relay**: This accepts an input and will trigger an output, after a user-defined period of time has passed.
+- **Relay**: This accepts an input and will trigger an output, after a user-defined period of time has passed.
 
 ### Motion Components
 
-**Mover**: This provides continuous linear motion or rotation.
+- **Mover**: This provides continuous linear motion or rotation.
 
 ### Physics Components
 
-**Impulse**: 
+- **Impulse**: 
 
-**SlidingDoor**: 
+- **SlidingDoor**: 
 
-**SwingingDoor**: 
+- **SwingingDoor**: 
 
 ### Player Components
 
-**CameraControls**: 
+- **CameraControls**: 
 
 
 ## User-Created Components
