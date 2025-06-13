@@ -78,11 +78,11 @@ The model editor provides tools for common animation operations.
 
 Animations can be selected in the model panel, and two properties will be shown in the area below.
 
-![](https://github.com/UltraEngine/Documentation/blob/master/Images/animationproperties.png?raw=true)
-
 **Name**: The name of the animation. Animation sequences are often missing names, so adding them here can help identify which sequence is which.
 
 **Speed**: This adjusts the default playback speed of the animation.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/animationproperties.png?raw=true)
 
 ### Extract Animation
 
