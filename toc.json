@@ -40,10 +40,6 @@
                             "filename": "flowgrapheditor"
                         },
                         {
-                            "title": "Script Editor",
-                            "filename": "scripteditor"
-                        },
-                        {
                             "title": "Material Editor",
                             "filename": "materialeditor"
                         },
@@ -78,7 +74,11 @@
                         {
                             "title": "Scene Panel",
                             "filename": "mapbrowser"
-                        },                        
+                        },
+                        {
+                            "title": "Script Editor",
+                            "filename": "scripteditor"
+                        },
                         {
                             "title": "Terrain Panel",
                             "filename": "terrainpanel"
