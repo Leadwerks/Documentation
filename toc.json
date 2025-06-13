@@ -102,7 +102,11 @@
                         {
                             "title": "Viewports",
                             "filename": "viewports"
-                        }
+                        },
+                        {
+                            "title": "World Settings",
+                            "filename": "worldsettings"
+                        }                        
                     ]
                 },
                 {
