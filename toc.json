@@ -16,10 +16,6 @@
                     "filename": "editor",
                     "topics": [
                         {
-                            "title": "Project Panel",
-                            "filename": "assetbrowser"
-                        },
-                        {
                             "title": "Asset Editor",
                             "filename": "asseteditor"
                         },
@@ -36,10 +32,6 @@
                             "filename": "facepanel"
                         },
                         {
-                            "title": "Options Window",
-                            "filename": "optionswindow"
-                        },
-                        {
                             "title": "Material Editor",
                             "filename": "materialeditor"
                         },
@@ -50,6 +42,14 @@
                         {
                             "title": "Model Editor",
                             "filename": "modeleditor"
+                        },                        
+                        {
+                            "title": "Options Window",
+                            "filename": "optionswindow"
+                        },
+                        {
+                            "title": "Project Panel",
+                            "filename": "assetbrowser"
                         },
                         {
                             "title": "Project Manager",
