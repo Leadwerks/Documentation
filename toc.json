@@ -72,6 +72,10 @@
                             "filename": "toolbar"
                         },
                         {
+                            "title": "Vertex Panel",
+                            "filename": "vertexpanel"
+                        },
+                        {
                             "title": "Viewports",
                             "filename": "viewports"
                         }
