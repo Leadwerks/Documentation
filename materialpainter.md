@@ -24,4 +24,4 @@ Painted materials work with tessellation and displacement. If a material uses di
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/materialpaint3.jpg?raw=true)
 
-By default, displacement is disabled on edge vertices, to prevent cracks from forming. If needed you can adjust this behavior with the [Vertex Tool](vertextool.md).
+By default, displacement is disabled on edge vertices, to prevent cracks from forming. If needed you can adjust this behavior in the [Vertex Panel](vertexpanel.md).
