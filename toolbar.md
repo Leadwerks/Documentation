@@ -70,4 +70,4 @@ The next group contains buttons to change the viewport layout. You can select a 
 
 ## Window Layout Buttons
 
-The last group of buttons is aligned to the right side of the toolbar and allows you to quickly show and hide the bottom console and the left-side panel.
+The last group of buttons is aligned to the right side of the toolbar and allows you to quickly show and hide the bottom [console](console.md) and the left-side panel.
