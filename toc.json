@@ -28,6 +28,10 @@
                             "filename": "console"
                         },
                         {
+                            "title": "Downloads Manager",
+                            "filename": "downloadsmanager"
+                        },
+                        {
                             "title": "Face Panel",
                             "filename": "facepanel"
                         },
