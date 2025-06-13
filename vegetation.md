@@ -16,6 +16,26 @@ Once the vegetation layer is added, you can begin painting it onto the landscape
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/vegetationpaint.png?raw=true)
 
+If you hold the **Control** key while painting, the vegetation tool will act as an eraser to remove instances from the terrain.
+
+## Vegetation Layer Properties
+
+**Name**:
+
+**Seed**:
+
+**Density**:
+
+**Min slope**:
+
+**Max slope**:
+
+**Min height**:
+
+**Max height**:
+
+## Vegetation Variation Properties
+
 **Model**: Selects the model to use for the variation.
 
 **Alignment**: You can choose center (the default) mode, per-vertex, or rotate to normal.
