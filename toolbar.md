@@ -2,7 +2,7 @@
 
 The Toolbar is a dynamic control center that provides quick access to some of the most commonly used functions within the program. It's designed for user convenience and efficient workflow. Here's a detailed breakdown of its features and functions:
 
-![](https://github.com/UltraEngine/Documentation/blob/master/Images/toobar.png?raw=true)
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/toolbar.png?raw=true)
 
 ## File Operations
 
