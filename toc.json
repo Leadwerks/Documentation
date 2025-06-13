@@ -40,8 +40,8 @@
                             "filename": "flowgrapheditor"
                         },
                         {
-                            "title": "IDE",
-                            "filename": "ide"
+                            "title": "Script Editor",
+                            "filename": "scripteditor"
                         },
                         {
                             "title": "Material Editor",
