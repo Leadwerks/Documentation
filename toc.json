@@ -40,10 +40,6 @@
                             "filename": "optionswindow"
                         },
                         {
-                            "title": "Scene Browser",
-                            "filename": "mapbrowser"
-                        },
-                        {
                             "title": "Material Editor",
                             "filename": "materialeditor"
                         },
@@ -59,6 +55,10 @@
                             "title": "Project Manager",
                             "filename": "projectmanager"
                         },
+                        {
+                            "title": "Scene Panel",
+                            "filename": "mapbrowser"
+                        },                        
                         {
                             "title": "Terrain Panel",
                             "filename": "terrainpanel"
