@@ -13,6 +13,20 @@ One entity may only have one instance of any specific component attached to it; 
 
 Components are stored in source code files located in one of the subfolders found in the Source/Components directory.
 
+## Adding Components
+
+To add a component to an entity, press the **Add Component** button at the bottom of the [scene panel](mapbrowser.md).
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/addcomponent.png?raw=true)
+
+A dialog will appear that shows a list of components to choose from, separated into categories.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/addcomponent2.png?raw=true)
+
+Double-click on the component you want to add, and it will appear as a new group in the entity properties.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/addcomponent3.png?raw=true)
+
 ## Stock Components
 
 The default project template includes many components to perform common actions in games.
@@ -67,20 +81,6 @@ The default project template includes many components to perform common actions 
 - **Bullet**:
 
 - **FPSGun**: 
-
-## Adding Components
-
-To add a component to an entity, press the **Add Component** button at the bottom of the [scene panel](mapbrowser.md).
-
-![](https://github.com/UltraEngine/Documentation/blob/master/Images/addcomponent.png?raw=true)
-
-A dialog will appear that shows a list of components to choose from, separated into categories.
-
-![](https://github.com/UltraEngine/Documentation/blob/master/Images/addcomponent2.png?raw=true)
-
-Double-click on the component you want to add, and it will appear as a new group in the entity properties.
-
-![](https://github.com/UltraEngine/Documentation/blob/master/Images/addcomponent3.png?raw=true)
 
 ## User-Created Components
 
