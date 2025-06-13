@@ -70,8 +70,8 @@ Any time your code is modified, the code will be analyzed and the results will b
 ### Component Inputs and Outputs
 
 Component functions can be exposed for use in the [flowgraph editor](flowgrapheditor.md) by adding a commend after the function declaration. The following values can be used:
-- **in**: The function can accept inputs to active it
-- **out**: The function can be connected to another function it will active after execution
+- **in**: The function can accept inputs that will trigger the function to be executed
+- **out**: The function can be connected to another function it will trigger after execution
 - **inout**: The function will act as both an input and an output
 
 ```lua
