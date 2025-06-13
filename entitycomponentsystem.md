@@ -13,7 +13,21 @@ One entity may only have one instance of any specific component attached to it; 
 
 Components are stored in source code files located in one of the subfolders found in the Source/Components directory.
 
-## Creating Components
+## Adding Components
+
+To add a component to an entity, press the **Add Component** button.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/addcomponent.png?raw=true)
+
+A dialog will appear that shows a list of components to choose from, separated into categories.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/addcomponent2.png?raw=true)
+
+Double-click on the component you want to add, and it will appear as a new group in the entity properties.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/addcomponent3.png?raw=true)
+
+## Creating New Components
 
 To create a new component, press the '+' button at the top of the [scene panel](mapbrowser.md) interface, and select the **Add Component** popup menu item. A dialog will appear that allows you to enter a name for the component and select the group it belongs in.
 
