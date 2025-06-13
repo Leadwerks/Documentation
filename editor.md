@@ -27,15 +27,11 @@ The main window contains a top toolbar, four viewports for scene visualization, 
 **Right-side Panel**: This right-side panel contains a tab control that lets you switch between several sub-panels.
 
 - [Project](assetbrowser.md): The **Project** tab displays your game's directory, and lets you view files and navigate through the project folders.
-
 - [Scene](mapbrowser.md): The **Scene** tab lets you explore all objects within the current scene and view and edit their properties.
 
 Additionally, depending on your selected mouse tool the following interfaces may appear in the side panel:
 
 - [Face](facepanel.md): The **Face** tab offers control over texture mapping and other properties for selected faces.
-
 - [Vertex](Vertex.md): The **Vertex** tab offers control over displacement settings on a per-vertex basis.
-
 - [Terrain](terrainpanel.md): The **Terrain** provides an interface for editing terrain heightmaps, painting material layers, adding vegetation to the terrain.
-
 - [Material Painter](materialpainter.md): The **Material Painter** provides an interface for editing terrain heightmaps, painting material layers, adding vegetation to the terrain.
