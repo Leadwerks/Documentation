@@ -10,7 +10,7 @@ The integrated [script editor](scripteditor) is recommended for most users, and 
 
 ## Using Visual Studio Code
 
-To begin programming with Lua and Visual Studio Code, follow these steps:
+If you prefer, it is possible to use Visual Studio Code for Lua programming. To begin programming with Lua and Visual Studio Code, follow these steps:
 
 1. **Install Visual Studio Code:** Lua development for Ultra Engine is most convenient when using Visual Studio Code. If you don't have it installed, you can download it from [Visual Studio Code](https://code.visualstudio.com).
 
