@@ -1,4 +1,4 @@
-## Material Editor
+# Material Editor
 
 The properties tab provides access to all material settings and associated textures, enabling you to fine-tune the appearance and behavior of materials.
 
