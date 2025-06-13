@@ -32,6 +32,10 @@
                             "filename": "facepanel"
                         },
                         {
+                            "title": "Flowgraph Editor",
+                            "filename": "flowgrapheditor"
+                        },
+                        {
                             "title": "Material Editor",
                             "filename": "materialeditor"
                         },
