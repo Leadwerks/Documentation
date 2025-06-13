@@ -4,7 +4,7 @@ The vegetation tool lets you paint trees, plants, rocks, and other items onto a 
 
 Like terrain materials, vegetation is separated into separate layers, each with its own properties. Each layer can contain one or more variations. These are usually different versions of a model that help to create a more random look to the scene and prevent repetition. The variations are randomly selected by the vegetation system.
 
-The vegetation system can support very large numbers of objects with minimal memory usage and faster performance.
+The vegetation system can support very large numbers of objects with minimal memory usage and fast performance.
 
 ## Adding Vegetation Layers
 
