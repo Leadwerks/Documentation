@@ -20,19 +20,21 @@ If you hold the **Control** key while painting, the vegetation tool will act as 
 
 ## Vegetation Layer Properties
 
-**Name**:
+Each vegetation layer has the following adjustable properties.
 
-**Seed**:
+**Name**: The name displayed in the vegetation layer list.
 
-**Density**:
+**Seed**: A random seed for calculating the orientation of instances. You can change this value to produce a different orientation for all instances in the layer.
 
-**Min slope**:
+**Density**: The average distance between instances in the layer. You can use this to spread instances apart, or pack them more tightly together.
 
-**Max slope**:
+**Min slope**: The minimum terrain slope, in degrees, above which instances can appear. This can be used to only make cliff rocks appear on the sides of hills, for example.
 
-**Min height**:
+**Max slope**: The maximum terrain slope, in degrees, below which instances can appear. This can be used to prevent grass from growing on the side of a cliff, for example.
 
-**Max height**:
+**Min height**: The minimum terrain height, in meters, above which vegetation instances can appear. This can prevent plants from growing underwater, for example.
+
+**Max height**: The maximum terrain height, in meters, below which vegetation instances can appear. This can be used to create a tree line, above which no trees can grow.
 
 ## Vegetation Variation Properties
 
