@@ -46,6 +46,27 @@ The default project template includes many components to perform common actions 
 
 - **CameraControls**: 
 
+- **FPSPlayer**:
+
+- **VRPlayer**: 
+
+### Sound Components
+
+- **AmbientNoise**:
+
+- **ImpactNoise**: 
+
+### Triggers
+
+- **CollisionTrigger**:
+
+- **PushButton**: 
+
+### Weapons
+
+- **Bullet**:
+
+- **FPSGun**: 
 
 ## User-Created Components
 
