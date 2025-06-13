@@ -15,7 +15,7 @@ Components are stored in source code files located in one of the subfolders foun
 
 ## Adding Components
 
-To add a component to an entity, press the **Add Component** button.
+To add a component to an entity, press the **Add Component** button at the bottom of the [scene panel](mapbrowser.md).
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/addcomponent.png?raw=true)
 
