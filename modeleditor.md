@@ -36,6 +36,10 @@ Since the resulting collider is made of convex hulls, the object will be physica
 
 When you are done adjusting the collision shape, save the model as a Leadwerks .mdl file. Other model file formats do not support collider shapes.
 
+### Loading Collision Shapes from Files
+
+If you have modeled a low-poly version of an object for collision and have it stored in another file, you can load this by selecting the **File > Load Collider** menu item. This will load another model as a mesh collider.
+
 ## Mesh Reduction
 
 The model editor interface includes a tool for reducing mesh detail. To access this tool, select the **Tools > Mesh Reduction** menu item. When this tool is active, a wireframe overlay will be displayed on the model, for easy viewing of the mesh topology.
@@ -49,6 +53,10 @@ The slider at the top of the window allows you to adjust the detail, to try to r
 Once you have reduced the mesh to your liking, you can press the **Apply** button to apply your changes to the base model, or press **Add LOD** to add the reduced detail mesh as a new level-of-detail model. LODs are reduced detail versions of a model that are swapped out when the viewer is further away, since not as much detail is visible from a distance. Using models with LODs can help improve rendering performance and framerates in complex scenes with many detailed objects.
 
 When you are done adding LODs, save the model as a Leadwerks .mdl file. Other model file formats do not support LODs.
+
+### Loading LODs from Files
+
+If you have modeled a low-poly version of an object and have it stored in another file, you can load as an LOD by selecting the **File > Load LOD** menu item. This will load another model and add the geometry as a new LOD.
 
 ## Imposters
 
