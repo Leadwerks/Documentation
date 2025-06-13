@@ -1,10 +1,10 @@
 # Vegetation
 
+The vegetation tool can be accessed by selecting the [Terrain Panel](terrainpanel.md) and then selecting the **Vegetaion** tool in the Tool drop-down box.
+
 The vegetation tool lets you paint trees, plants, rocks, and other items onto a landscape to quickly create entire forests.
 
 Like terrain materials, vegetation is separated into separate layers, each with its own properties. Each layer can contain one or more variations. These are usually different versions of a model that help to create a more random look to the scene and prevent repetition. The variations are randomly selected by the vegetation system.
-
-Each vegetation layer variation has its own properties that can be adjusted.
 
 ## Adding Vegetation Layers
 
@@ -47,6 +47,10 @@ Each vegetation layer variation has the following properties that can be adjuste
 The per-vertex mode is useful for making grass align precisely to the terrain.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/vegetationvertexalignment.jpg?raw=true)
+
+The rotate-to-normal model is useful for making rocks rotate to the slope of the terrain they are resting on.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/vegetationnormalalignment.jpg?raw=true)
 
 **Pick mode**: Controls the pick mode of the instances, for ray casting operations.
 
