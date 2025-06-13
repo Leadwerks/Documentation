@@ -16,7 +16,7 @@ To begin paint, press the **Browse** button and select a material to use. You ca
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/materialpaint1.jpg?raw=true)
 
-Materials are painted per vertex. By default, primitive objects are created with the only vertices in their corners. You can increase the subdivision of a face using the [Face Tool](facetool.md), which will give you more vertices to work with, so that you can create a more interesting appearance.
+Materials are painted per vertex. By default, primitive objects are created with the only vertices in their corners. You can increase the subdivision of a face using the [Face Tool](facepanel.md), which will give you more vertices to work with, so that you can create a more interesting appearance.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/materialpaint2.jpg?raw=true)
 
