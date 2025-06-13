@@ -46,7 +46,7 @@ When used appropriately, bevelled edges are an easy way to give your scene a mor
 
 ## Subdivision
 
-Faces can be subdivided with the Subdivision setting. This is useful for material painting, which operates on a per-vertex level.
+Faces can be subdivided with the Subdivision setting. This is useful for [material painting](materialpainter.md), which operates on a per-vertex level.
 
 ![](https://github.com/Leadwerks/Documentation/blob/master/Images/subd.png?raw=true)
 
