@@ -26,7 +26,7 @@ The filter text entry field supports wildcards, so you can enter *.mat into this
 
 ### Opening Files
 
-To open a file, simply double-click its icon. If the file format is supported by Leadwerks, it will be launched in an [asset editor](asseteditor.md) window, providing you with an interface for viewing and editing the asset. Code files will be opened in the integrated [IDE](ide.md) In cases where the file format is not directly supported, it will be opened using your system's default program associated with that specific file type.
+To open a file, simply double-click its icon. If the file format is supported by Leadwerks, it will be launched in a [model editor](modeleditor.md), [material editor](materialeditor,md), or [texture editor](textureeditor.md) window, providing you with an interface for viewing and editing the asset. Code files will be opened in the integrated [IDE](ide.md) In cases where the file format is not directly supported, it will be opened using your system's default program associated with that specific file type.
 
 ### File Previews
 
