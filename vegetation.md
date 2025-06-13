@@ -44,6 +44,10 @@ Each vegetation layer variation has the following properties that can be adjuste
 
 **Alignment**: You can choose center (the default) mode, per-vertex, or rotate to normal.
 
+The per-vertex mode is useful for making grass align precisely to the terrain.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/vegetationvertexalignment.jpg?raw=true)
+
 **Pick mode**: Controls the pick mode of the instances, for ray casting operations.
 
 **Weight**: A percentage value indicating how likely this variation is to appear. This can be used to ensure that a very unique variation of a model that stands out a lot will get used less frequently. The weights of all layer variations will be normalized automatically.
