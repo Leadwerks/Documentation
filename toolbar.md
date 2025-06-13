@@ -11,7 +11,6 @@ On the left side of the Toolbar, you'll find standard file operations, including
 - **New**: Create a new project or scene.
 - **Open**: Load an existing map into the editor.
 - **Save**: Save your current project or scene, ensuring that your progress is preserved.
-- **Undo and Redo**: These buttons allow you to reverse or redo recent actions, helping you navigate through your editing history.
 
 ## Edit Operations
 
