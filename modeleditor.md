@@ -69,3 +69,27 @@ To run this operation, select the **Tools > Generate Imposter** menu item. It ma
 ![Asset Editor](https://github.com/UltraEngine/Documentation/blob/master/Images/imposter_orm.png?raw=true)
 
 When you are done adding an imposter, save the model as a Leadwerks .mdl file. Other model file formats do not support this feature.
+
+## Animation Tools
+
+The model editor provides tools for common animation operations.
+
+### Animation Properties
+
+Animations can be selected in the model panel, and two properties will be shown in the area below.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/animationproperties.png?raw=true)
+
+**Name**: The name of the animation. Animation sequences are often missing names, so adding them here can help identify which sequence is which.
+
+**Speed**: This adjusts the default playback speed of the animation.
+
+### Extract Animation
+
+Sometimes a 3D model file will come with all animations stored in a single sequence. The extract animation tool allows you to copy part of an animation sequence into a new sequence.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/extractanimation.png?raw=true)
+
+You can set the first and last frames to include, and press the **Apply** button to add a new sequence with those frames. If the **Trim this sequence** checkbox is checked, then the existing animation sequence will be modified instead.
+
+After making changes to a model's animation properties, you should save the model as a Leadwerks MDL file. At this time, only Leadwerks MDL files will include animation information when they are saved.
