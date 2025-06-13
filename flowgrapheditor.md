@@ -21,3 +21,7 @@ To connect two objects, click the mouse left button on an output function, drag 
 You can remove connections by clicking on the input function, dragging the connection away, and releasing the mouse while it is hovered over an empty area.
 
 When the game is run and the input function is executed, it will trigger the output function. The exact behavior of these functions depends on the code contained in the component.
+
+## Removing Entities
+
+You can remove an entity from the flowgraph by right-clicking on it and select the **Remove** popup menu.
