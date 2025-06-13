@@ -13,7 +13,41 @@ One entity may only have one instance of any specific component attached to it; 
 
 Components are stored in source code files located in one of the subfolders found in the Source/Components directory.
 
-## Adding Components
+## Stock Components
+
+The default project template includes many components to perform common actions in games.
+
+#### AI
+**Monster**: This provides simple behavior for an enemy with a melee attack.
+
+#### Appearance
+
+**ChangeEmission**: This allows an input to modify the emission color of the entity.
+
+**ChangeVisibility**: This allows an input to hide or show the entity.
+
+#### Logic
+
+**Relay**: This accepts an input and will trigger an output, after a user-defined period of time has passed.
+
+#### Motion
+
+**Mover**: This provides continuous linear motion or rotation.
+
+#### Physics
+
+**Impulse**: 
+
+**SlidingDoor**: 
+
+**SwingingDoor**: 
+
+#### Player
+
+**CameraControls**: 
+
+
+## User-Created Components
 
 To add a component to an entity, press the **Add Component** button at the bottom of the [scene panel](mapbrowser.md).
 
