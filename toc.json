@@ -92,6 +92,10 @@
                             "filename": "toolbar"
                         },
                         {
+                            "title": "Vegetation Painter",
+                            "filename": "vegetation"
+                        },                        
+                        {
                             "title": "Vertex Panel",
                             "filename": "vertexpanel"
                         },
