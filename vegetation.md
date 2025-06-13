@@ -4,6 +4,8 @@ The vegetation tool lets you paint trees, plants, rocks, and other items onto a 
 
 Like terrain materials, vegetation is separated into separate layers, each with its own properties. Each layer can contain one or more variations. These are usually different versions of a model that help to create a more random look to the scene and prevent repetition. The variations are randomly selected by the vegetation system.
 
+The vegetation system can support very large numbers of objects with minimal memory usage and faster performance.
+
 ## Adding Vegetation Layers
 
 To add a new vegation layer to the terrain, press the **Add** button at the bottom of the vegetation panel. Select the **Add Layer** popup menu. An file open dialog will appear, allowing you to browse to and select a model file to use for the vegetation layer. If you select multiple model files with the file open dialog, each model will be added as a variation in the new layer.
