@@ -1,8 +1,12 @@
 # World Settings
 
+
+
+## Environment Settings
+
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/worldsettings.png?raw=true)
 
-## Fog
+## Fog Settings
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/worldsettings2.png?raw=true)
 
