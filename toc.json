@@ -48,6 +48,10 @@
                             "filename": "materialeditor"
                         },
                         {
+                            "title": "Material Painter",
+                            "filename": "materialpainter"
+                        },
+                        {
                             "title": "Model Editor",
                             "filename": "modeleditor"
                         },
