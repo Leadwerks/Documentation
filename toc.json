@@ -32,7 +32,7 @@
                             "filename": "downloadsmanager"
                         },
                         {
-                            "title": "Face Panel",
+                            "title": "Face Tool",
                             "filename": "facepanel"
                         },
                         {
@@ -92,12 +92,12 @@
                             "filename": "toolbar"
                         },
                         {
-                            "title": "Vegetation Painter",
+                            "title": "Vegetation",
                             "filename": "vegetation"
                         },                        
                         {
-                            "title": "Vertex Panel",
-                            "filename": "vertexpanel"
+                            "title": "Vertex Tool",
+                            "filename": "vertextool"
                         },
                         {
                             "title": "Viewports",
