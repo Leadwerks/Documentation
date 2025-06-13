@@ -70,7 +70,9 @@ You can generate an imposter for any 3D model, but these are usually used with t
 
 To run this operation, select the **Tools > Generate Imposter** menu item. It may take a few moments to complete the task. The resulting imposter mesh will be added as the last LOD shown in the model hierarchy. The editor will save three array textures, storing the base color, normals, and metallic-roughness values for each pixel, when viewed from a series of different angles.
 
-![Asset Editor](https://github.com/UltraEngine/Documentation/blob/master/Images/imposter.png?raw=true)
+![Asset Editor](https://github.com/UltraEngine/Documentation/blob/master/Images/imposter_color.png?raw=true) 
+![Asset Editor](https://github.com/UltraEngine/Documentation/blob/master/Images/imposter_normal.png?raw=true) 
+![Asset Editor](https://github.com/UltraEngine/Documentation/blob/master/Images/imposter_orm.png?raw=true)
 
 When you are done adding an imposter, save the model as a Leadwerks .mdl file. Other model file formats do not support this feature.
 
