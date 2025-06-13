@@ -12,6 +12,10 @@ To add a new vegation layer to the terrain, press the **Add** button at the bott
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/vegetationlayer.png?raw=true)
 
+Once the vegetation layer is added, you can begin painting it onto the landscape. With the vegetation layer or a variation selected in the list, click and hold the left mouse button on the terrain. Drag the mouse across the terrain to create instances of your layer.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/vegetationpaint.png?raw=true)
+
 **Model**: Selects the model to use for the variation.
 
 **Alignment**: You can choose center (the default) mode, per-vertex, or rotate to normal.
