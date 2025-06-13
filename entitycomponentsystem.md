@@ -32,3 +32,9 @@ Double-click on the component you want to add, and it will appear as a new group
 To create a new component, press the '+' button at the top of the [scene panel](mapbrowser.md) interface, and select the **Add Component** popup menu item. A dialog will appear that allows you to enter a name for the component and select the group it belongs in.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/newcomponent.png?raw=true)
+
+Press the **OK** button to create the new component, and a new code file will be added in the appropriate directory, along with an associated JSON file.
+
+### C++ Projects
+
+If your project uses C++, then the new .cpp and .h file will be automatically inserted into your Visual Studio project, so they will be included in the game next time you compile it.
