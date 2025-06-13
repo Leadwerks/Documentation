@@ -4,11 +4,11 @@ Lua is a versatile scripting language widely employed in a multitude of games, r
 
 ## Using the Integrated Script Editor
 
-The integrated [script editor](scripteditor) is recommended for most users, and doesn't require any additional software to be installed.
+The integrated [script editor](scripteditor.md) is recommended for most users, and doesn't require any additional software to be installed.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/ide.png?raw=true)
 
-If you are using the integrated script editor, you do not need to read the rest of this article.
+If you are using the integrated script editor, you do not need to read the rest of this article, and you can proceed to the first Lua programming tutorial.
 
 ## Using Visual Studio Code
 
