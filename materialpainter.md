@@ -20,7 +20,7 @@ Materials are painted per vertex. By default, primitive objects are created with
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/materialpaint2.jpg?raw=true)
 
-Painted materials work with tessellation and displacement. If a material uses displacement, and tessellation is enabled in the user options, then painted materials will produce geometry details popping out of a surface.
+Painted materials work with tessellation and displacement. If a material uses displacement, and tessellation is enabled in the user options, then painted materials will produce geometry details popping out of a surface, which can look incredible.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/materialpaint3.jpg?raw=true)
 
