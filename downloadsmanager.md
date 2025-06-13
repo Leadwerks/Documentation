@@ -10,7 +10,7 @@ To open the interface, press the **Downloads** button in the left-side bar.
 
 To download an asset, click on the item thumbnail and the detail view will appear. Press the **Install** button to download and install the item into the current project.
 
-If you are not already logged into your Leadwerks account, you will be prompted to do so in the [account window](accountwindow.md).
+If you are not already logged into your Leadwerks account, you will be prompted to do so in the [account window](accountwindow.md). You must be logged into your Leadwerks account to download assets.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/downloadsmanager2.png?raw=true)
 
