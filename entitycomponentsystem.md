@@ -68,7 +68,7 @@ The default project template includes many components to perform common actions 
 
 - **FPSGun**: 
 
-## User-Created Components
+## Adding Components
 
 To add a component to an entity, press the **Add Component** button at the bottom of the [scene panel](mapbrowser.md).
 
@@ -82,7 +82,7 @@ Double-click on the component you want to add, and it will appear as a new group
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/addcomponent3.png?raw=true)
 
-## Creating New Components
+## User-Created Components
 
 To create a new component, press the '+' button at the top of the [scene panel](mapbrowser.md) interface, and select the **Add Component** popup menu item. A dialog will appear that allows you to enter a name for the component and select the group it belongs in.
 
