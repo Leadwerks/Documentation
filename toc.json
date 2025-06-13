@@ -40,6 +40,14 @@
                             "filename": "mapbrowser"
                         },
                         {
+                            "title": "Material Editor",
+                            "filename": "materialeditor"
+                        },
+                        {
+                            "title": "Model Editor",
+                            "filename": "modeleditor"
+                        },
+                        {
                             "title": "Project Manager",
                             "filename": "projectmanager"
                         },
@@ -47,6 +55,10 @@
                             "title": "Terrain Panel",
                             "filename": "terrainpanel"
                         },
+                        {
+                            "title": "Texture Editor",
+                            "filename": "textureeditor"
+                        },                        
                         {
                             "title": "Toolbar",
                             "filename": "toolbar"
