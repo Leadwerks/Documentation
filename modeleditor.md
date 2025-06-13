@@ -1,6 +1,6 @@
 # Model Editor
 
-When a model file is opened, two tabs appear in the Asset Editor window. If the model includes animations, you'll find an animation bar at the bottom of the window, complete with controls for selecting and playing animations.
+When a model file is opened, two tabs appear in the side panel. If the model includes animations, you'll find an animation bar at the bottom of the window, complete with controls for selecting and playing animations.
 
 ![Model Editor](https://github.com/UltraEngine/Documentation/blob/master/Images/modeleditor.png?raw=true)
 
