@@ -20,10 +20,6 @@
                             "filename": "accountwindow"
                         },
                         {
-                            "title": "Asset Editor",
-                            "filename": "asseteditor"
-                        },
-                        {
                             "title": "Console",
                             "filename": "console"
                         },
