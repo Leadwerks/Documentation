@@ -52,12 +52,12 @@
                             "filename": "optionswindow"
                         },
                         {
-                            "title": "Project Panel",
-                            "filename": "assetbrowser"
-                        },
-                        {
                             "title": "Project Manager",
                             "filename": "projectmanager"
+                        },
+                        {
+                            "title": "Project Panel",
+                            "filename": "assetbrowser"
                         },
                         {
                             "title": "Scene Panel",
