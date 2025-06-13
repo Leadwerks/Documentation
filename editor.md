@@ -34,6 +34,8 @@ Additionally, depending on your selected mouse tool the following interfaces may
 
 - [Face](facepanel.md): The **Face** tab offers control over texture mapping and other properties for selected faces.
 
+- [Vertex](Vertex.md): The **Vertex** tab offers control over displacement settings on a per-vertex basis.
+
 - [Terrain](terrainpanel.md): The **Terrain** provides an interface for editing terrain heightmaps, painting material layers, adding vegetation to the terrain.
 
 - [Material Painter](materialpainter.md): The **Material Painter** provides an interface for editing terrain heightmaps, painting material layers, adding vegetation to the terrain.
