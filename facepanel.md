@@ -42,7 +42,7 @@ Edges will only be bevelled if both the adjacent faces have the bevel setting en
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/bevelexample.jpg?raw=true)
 
-Bevelled edges are an easy way to give your scene a more professional look.
+When used appropriately, bevelled edges are an easy way to give your scene a more professional look.
 
 ## Subdivision
 
