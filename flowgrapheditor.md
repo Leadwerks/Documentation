@@ -7,3 +7,6 @@ The flowgraph editor provides an interface for visual editor of scene events. Th
 ## Adding Objects to the Flowgraph
 
 You can click and drag any object from the [scene tree](mapbrowser.md) into the flowgraph window to make it accessible in the flowgraph interface.
+
+The purpose of the flowgraph editor is to connect inputs and outputs between [components](entitycomponentsystem.md), so you really only want to add entities to the flowgraph editor if they have components you want to connect.
+
