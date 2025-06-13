@@ -8,7 +8,7 @@ The integrated [script editor](scripteditor) is recommended for most users, and 
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/ide.png?raw=true)
 
-If you are using the integrated script editor, the rest of this article does not apply to you,
+If you are using the integrated script editor, you do not need to read the rest of this article.
 
 ## Using Visual Studio Code
 
