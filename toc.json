@@ -64,6 +64,10 @@
                             "filename": "assetbrowser"
                         },
                         {
+                            "title": "Publish Dialog",
+                            "filename": "publisher"
+                        },
+                        {
                             "title": "Scene Panel",
                             "filename": "mapbrowser"
                         },                        
