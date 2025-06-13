@@ -20,10 +20,7 @@ The main window contains a top toolbar, four viewports for scene visualization, 
 
 [Toolbar](toolbar.md): Located at the top, the toolbar contains many buttons for them most frequently-used actions you are likely to use. This includes opening and saving scenes, undo and redo, as well as many other buttons to edit the scene or adjust your view.
 
-[Console](console.md): The console in the bottom panel provides program information including logs, warnings, and errors. It also provides a text input field you can use to execute commands with Lua script. For example, trying copying this text into the console and then press the enter button to execute it:
-```lua
-Notify("Hallo!")
-```
+[Console](console.md): The console in the bottom panel provides program information including logs, warnings, and errors. It also provides a text input field you can use to execute commands with Lua script.
 
 **Side Bar**: This left-side bar contains buttons to select a mouse tool. The bottom of the bar also includes buttons to open the [videos](videos.md) and log into your Leadwerks account.
 
