@@ -10,6 +10,6 @@ In the screenshot below, the box on the left allows displacement on its edge ver
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/vertexautodisplacement.jpg?raw=true)
 
-If we force vertices to use displacement on a box with adjacent faces, we can see cracks forming in the geometry.
+If we force vertices to use displacement on a box with adjacent faces, we can see cracks along the edges.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/tesscracks.jpg?raw=true)
