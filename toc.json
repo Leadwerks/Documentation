@@ -40,6 +40,10 @@
                             "filename": "flowgrapheditor"
                         },
                         {
+                            "title": "Lighting",
+                            "filename": "lighting"
+                        },
+                        {
                             "title": "Material Editor",
                             "filename": "materialeditor"
                         },
