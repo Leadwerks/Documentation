@@ -1,4 +1,4 @@
-# Editor Interface
+# Leadwerks Editor
  
 The first time you run Leadwerks, the [project manager](projectmanager.md) will appear. If this is your first time running the program ever, there will be no projects listed in the window.
 
