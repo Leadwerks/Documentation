@@ -50,37 +50,37 @@ The default project template includes many components to perform common actions 
 
 ### Physics Components
 
-- **Impulse**: 
+- **Impulse**: When triggered, this component will apply a force to an object over a defined period of time.
 
-- **SlidingDoor**: 
+- **SlidingDoor**: Creates a slider joint and acts as a sliding door.
 
-- **SwingingDoor**: 
+- **SwingingDoor**: Creates a hinge joint and acts as a swinging door.
 
 ### Player Components
 
-- **CameraControls**: 
+- **CameraControls**: Provides simple "free-look" camera rotation and movement.
 
-- **FPSPlayer**:
+- **FPSPlayer**: Provides a first-person controller with compatibility with optional weapons.
 
-- **VRPlayer**: 
+- **VRPlayer**: Basic VR player controls.
 
 ### Sound Components
 
-- **AmbientNoise**:
+- **AmbientNoise**: Plays a noise originating from the entity.
 
-- **ImpactNoise**: 
+- **ImpactNoise**: Plays a noise when a collision occurs.
 
 ### Triggers
 
-- **CollisionTrigger**:
+- **CollisionTrigger**: Triggers an output when the object collides with anything.
 
-- **PushButton**: 
+- **PushButton**: The first-person player component can activate this to trigger an output.
 
 ### Weapons
 
-- **Bullet**:
+- **Bullet**: For use with weapons, a basic projectile.
 
-- **FPSGun**: 
+- **FPSGun**: View model weapon, compatible with the first-person player.
 
 ## User-Created Components
 
