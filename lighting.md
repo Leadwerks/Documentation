@@ -47,3 +47,5 @@ This looks better, but there is a sharp line on the floor where the environment 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/probe5.jpg?raw=true)
 
 You can adjust the padding on each edge of the probe volume individually, for fine control over the probe's appearance. Use this to transition more smoothly between indoor and outdoor areas, or to blend the border region between two probe volumes.
+
+The brightness of indirect lighting can be further adjusted with the **GI Transmission** setting found in the [world settings](worldsettings.md) dialog.
