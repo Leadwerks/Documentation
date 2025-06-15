@@ -27,3 +27,5 @@ Each scene in the editor can display a single directional light. The properties 
 ## Indirect Lighting
 
 Indirect lighting is achieved through the use of volumeitric environment probes. Each environment probe renders two cubemaps, for specular and diffuse reflections, and distributes the reflection over a box area.
+
+To update indirect lighting, select the **Tools > Build Global Illumination** menu item.
