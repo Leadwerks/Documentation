@@ -2,9 +2,7 @@
 
 Leadwerks 5 is available on Steam or as a standalone from our store.
 
-## Installation
-
-### On Steam
+## On Steam
 
 If you purchased this software on Steam, the application will appear in your Steam library when you open the Steam client software.
 
@@ -14,7 +12,7 @@ If you received a Steam key, please follow these instructions to activate your p
 - Choose **Activate a Product on Steam**...
 - Follow the onscreen instructions to complete the process.
 
-### Standalone
+## Standalone
 
 The following installation instructions only apply if you own a license for the standalone version of Leadwerks 5.
 
