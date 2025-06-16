@@ -18,13 +18,13 @@ The translation mouse tool also includes all the functionality of the selection 
 
 ## Rotation Tool
 
-The rotation mouse tool allows you to easily move objects in the scene.
+The rotation mouse tool allows you to easily rotate objects.
 
 The rotation mouse tool also includes all the functionality of the selection tool.
 
 ## Scale Tool
 
-The scale mouse tool allows you to easily resize objects in the scene.
+The scale mouse tool allows you to easily resize objects.
 
 The scale mouse tool also includes all the functionality of the selection tool.
 
