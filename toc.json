@@ -16,6 +16,7 @@
             "openstate": true,
             "useLanguage": false,
             "topics": [
+                {
                     "title": "Crash Course",
                     "topics": [
                         {
