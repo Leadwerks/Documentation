@@ -2,16 +2,6 @@
 
 Leadwerks 5 is available on Steam or as a standalone from our store.
 
-## System Requirements
-
-- Nvidia GEForce 420 or AMD Radeon RX 5300M
-- Windows 10 or 11
-- [Microsoft Visual C++ Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)
-
-#### Additional Recommended Software
-
-- [Microsoft Visual Studio Community Edition](https://visualstudio.microsoft.com/#vs-section) is used for C++ programming.
-
 ## Installation
 
 ### On Steam
