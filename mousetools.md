@@ -26,16 +26,24 @@ The rotation mouse tool allows you to easily rotate objects.
 
 The rotation mouse tool also includes all the functionality of the selection tool.
 
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/rotationtool.gif?raw=true)
+
 ## Scale Tool
 
 The scale mouse tool allows you to easily resize objects.
 
 The scale mouse tool also includes all the functionality of the selection tool.
 
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/scaletool.gif?raw=true)
+
 ## Face Tool
 
 The face mouse tool allows you to move primitive faces to change the geometry of objects.
 
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/facetool.gif?raw=true)
+
 ## Vertex Tool
 
 The vertex mouse tool allows you to move primitive vertices to change the geometry of objects.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/vertextool.gif?raw=true)
