@@ -10,13 +10,15 @@ You can select multiple objects, or deselect one object at a time, by holding th
 
 You can draw a selection area by holding the **Shift key**, then clicking and holding the **left mouse button** and dragging the mouse.
 
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/selectiontool.gif?raw=true)
+
 ## Translation Tool
 
 The translation mouse tool allows you to easily move objects in the scene.
 
 The translation mouse tool also includes all the functionality of the selection tool.
 
-![Asset Editor](https://github.com/UltraEngine/Documentation/blob/master/Images/movetool.gif?raw=true)
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/movetool.gif?raw=true)
 
 ## Rotation Tool
 
