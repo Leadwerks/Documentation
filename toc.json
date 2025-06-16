@@ -24,8 +24,8 @@
                             "filename": "projectcreation"
                         },
                         {
-                            "title": "Viewport Controls",
-                            "filename": "viewpanel"
+                            "title": "Viewport Navigation",
+                            "filename": "viewports"
                         },
                         {
                             "title": "Creating Objects",
