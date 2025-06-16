@@ -28,8 +28,8 @@
                             "filename": "viewports"
                         },
                         {
-                            "title": "Creating Objects",
-                            "filename": "create"
+                            "title": "Creating Primitives",
+                            "filename": "primitives"
                         },
                         {
                             "title": "Entity Properties",
