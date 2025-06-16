@@ -1,22 +1,8 @@
 # Leadwerks Editor
  
-The first time you run Leadwerks, the [project manager](projectmanager.md) will appear. If this is your first time running the program ever, there will be no projects listed in the window.
-
-![](https://github.com/UltraEngine/Documentation/blob/master/Images/startup.png?raw=true)
-
-Press the **Create** button to create a new project. On the next screen you can enter the project name, change the location on your computer, and select the programming language and type of project you want to create.
-
-![](https://github.com/UltraEngine/Documentation/blob/master/Images/newproject.png?raw=true)
-
-Press the **Next** button and wait a moment for the new project to be created.
-
-![](https://github.com/UltraEngine/Documentation/blob/master/Images/newproject2.png?raw=true)
-
-You can now click on the new project in the list, and the editor will open the project.
+The main editor window contains a top toolbar, four viewports for scene visualization, the bottom console, a bar on the left side with several buttons, and a right-side panel with several tabbed panels.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/defaultview.png?raw=true)
-
-The main window contains a top toolbar, four viewports for scene visualization, the bottom console, a bar on the left side with several buttons, and a right-side panel with several tabbed panels.
 
 [Toolbar](toolbar.md): Located at the top, the toolbar contains many buttons for them most frequently-used actions you are likely to use. This includes opening and saving scenes, undo and redo, as well as many other buttons to edit the scene or adjust your view.
 
