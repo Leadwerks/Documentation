@@ -66,6 +66,10 @@
                         {
                             "title": "Creating Events",
                             "filename": "flowgraphevents"
+                        },
+                        {
+                            "title": "Pathfinding and Navigation",
+                            "filename": "navmesh"
                         }
                     ]
                 },
