@@ -16,7 +16,6 @@
             "openstate": true,
             "useLanguage": false,
             "topics": [
-                {
                     "title": "Crash Course",
                     "topics": [
                         {
@@ -63,6 +62,7 @@
                             "title": "Adding Components",
                             "filename": "create"
                         }
+                    ]
                 },
                 {
                     "title": "Editor",
