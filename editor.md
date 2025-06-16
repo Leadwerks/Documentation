@@ -1,6 +1,6 @@
 # Leadwerks Editor
  
-The main editor window contains a top toolbar, four viewports for scene visualization, the bottom console, a bar on the left side with several buttons, and a right-side panel with several tabbed panels.
+The main editor window contains a top toolbar, four viewports for scene visualization, the bottom console, a bar on the left side with a column of buttons, and a right-side panel with several tabbed panels.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/defaultview.png?raw=true)
 
