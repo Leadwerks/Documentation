@@ -12,6 +12,8 @@ If you received a Steam key, please follow these instructions to activate your p
 - Choose **Activate a Product on Steam**...
 - Follow the onscreen instructions to complete the process.
 
+Some web-based features require a free [https://www.leadwerks.com/community/register/](Leadwerks account) to use.
+
 ## Standalone
 
 The following installation instructions only apply if you own a license for the standalone version of Leadwerks 5.
