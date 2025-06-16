@@ -32,6 +32,10 @@
                             "filename": "primitives"
                         },
                         {
+                            "title": "Mouse Tools",
+                            "filename": "mousetools"
+                        },                        
+                        {
                             "title": "Entity Properties",
                             "filename": "create"
                         },
