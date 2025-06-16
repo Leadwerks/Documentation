@@ -16,6 +16,8 @@ The translation mouse tool allows you to easily move objects in the scene.
 
 The translation mouse tool also includes all the functionality of the selection tool.
 
+![Asset Editor](https://github.com/UltraEngine/Documentation/blob/master/Images/movetool.gif?raw=true)
+
 ## Rotation Tool
 
 The rotation mouse tool allows you to easily rotate objects.
