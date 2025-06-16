@@ -13,3 +13,5 @@ Press the **Next** button and wait a moment for the new project to be created.
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/newproject2.png?raw=true)
 
 You can now click on the new project in the list, and the editor will open the project.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/defaultview.png?raw=true)
