@@ -20,11 +20,11 @@ PBR materials are a complex blend of data layers compacted into different color 
 
 To get started, you can obtain free PBR images from websites like [ambientCG](https://www.ambientcg.com) and [Polyhaven](https://www.polyhaven.com). In this example, we will use a texture set featuring a rusted metallic surface.
 
-1. [Download the texture pack](https://github.com/UltraEngine/Documentation/raw/master/Assets/Materials/pbrtextures.zip) and extract its contents into your Ultra Engine project. The extracted images will look like this:
+1. [Download the texture pack](https://github.com/UltraEngine/Documentation/raw/master/Assets/Materials/pbrtextures.zip) and extract its contents into your Leadwerks project. The extracted images will look like this:
 
    ![Texture Pack](https://github.com/UltraEngine/Documentation/blob/master/Images/pbrtextures.png?raw=true)
 
-2. In the Ultra Engine editor, navigate to this folder in the [asset browser](assetbrowser.md). Right-click on the file *MetalPlates013_1K-PNG_Color.png*, select the *Generate Material* menu item, and wait for the editor to identify the different image files, combine channels, and compress the images into optimized texture files.
+2. In the Leadwerks editor, navigate to this folder in the [asset browser](assetbrowser.md). Right-click on the file *MetalPlates013_1K-PNG_Color.png*, select the *Generate Material* menu item, and wait for the editor to identify the different image files, combine channels, and compress the images into optimized texture files.
 
    ![Material Generation](https://github.com/UltraEngine/Documentation/blob/master/Images/pbrgenmaterial.png?raw=true)
 
@@ -72,7 +72,7 @@ In practice, most basic materials without metal/roughness maps will use 100% rou
 
 ## PBR Lighting
 
-Ultra Engine achieves direct lighting through point, spot, directional, and box lights, each utilizing a different lighting equation to simulate light sources with texture-based shadows (shadow maps). Highly metallic objects are less affected by direct lighting because of their high reflectivity, primarily reflecting the environment.
+Leadwerks achieves direct lighting through point, spot, directional, and box lights, each utilizing a different lighting equation to simulate light sources with texture-based shadows (shadow maps). Highly metallic objects are less affected by direct lighting because of their high reflectivity, primarily reflecting the environment.
 
 Indirect lighting is accomplished with a combination of world environment textures and local environment probes. Since PBR materials accurately reflect their surroundings, having high-quality reflection data is essential.
 
