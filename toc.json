@@ -44,8 +44,8 @@
                             "filename": "materials"
                         },                        
                         {
-                            "title": "Importing 3D Models",
-                            "filename": "create"
+                            "title": "3D Models",
+                            "filename": "models"
                         },
                         {
                             "title": "Adding a 3D Model to the Scene",
