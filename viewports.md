@@ -16,4 +16,4 @@ Each viewport can be configured to display a 3D perspective view or any of the a
 
 - **Free-Look Mode**: In any 3D perspective viewport, you can enter a free-look mode by pressing and holding the **right mouse button**. This mode enables you to look around by moving the mouse and navigate using the **WASD keys** for forward, left, backward, and right movements. Holding the **E and Q** keys will move the camera up and down. You can also use the **mouse wheel** for zooming in orthographic viewports or controlling the camera's forward/backwards movement in 3D perspective viewports. You can press and hold the **Shift key** to accelerate these movements.
 
-- **Grid Size Adjustment**: You can easily adjust the grid size for precise object placement by pressing the **"[" and "]" keys**.
+- **Grid Size Adjustment**: You can easily adjust the grid size for precise object placement by pressing the **[ and ] keys**.
