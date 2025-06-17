@@ -42,6 +42,8 @@ The face mouse tool allows you to move primitive faces to change the geometry of
 
 In the 3D viewport, you can move faces along the X and Z axes. If you hold the **Alt key** you can move faces along the Y axis.
 
+When the vertex tool is in use, additional properties are available in the [face panel](facepanel).
+
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/facetool.gif?raw=true)
 
 ## Vertex Tool
@@ -49,5 +51,7 @@ In the 3D viewport, you can move faces along the X and Z axes. If you hold the *
 The vertex mouse tool allows you to move primitive vertices to change the geometry of objects.
 
 In the 3D viewport, you can move vertices along the X and Z axes. If you hold the **Alt key** you can move vertices along the Y axis.
+
+When the vertex tool is in use, additional properties are available in the [vertex panel](vertexpanel).
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/vertextool.gif?raw=true)
