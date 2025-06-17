@@ -62,7 +62,7 @@ All entities display the object name and have the following properties in common
 
 **Gravity**: if set to true the entity will be affected by gravity.
 
-## Type=specific Properties
+## Type-specific Properties
 
 Some entities have special properties that only appear for that type of object.
 
@@ -88,7 +88,21 @@ Some entities have special properties that only appear for that type of object.
 
 **Tiles**: number of navmesh tiles, in the X and Z directions.
 
+**Tile resolution**: number of along each edge of a tile.
 
+**Voxel size**: size of each voxel, in meters.
+
+**Height**: maximum height of the navmesh.
+
+**Max edge length**: Maximum edge length that is allowed to form, for navmesh polygons.
+
+**Agent radius**: radius of the navigation agent the navmesh is meant to be used with.
+
+**Agent height**: height of the navigation agent the navmesh is meant to be used with.
+
+**Step height**: maximum steppable height, for stairs and other features.
+
+**Max slope**: maximum slope the navigation agents can walk up, in degrees.
 
 ### Probe Properties
 
@@ -101,9 +115,3 @@ Some entities have special properties that only appear for that type of object.
 **View mode**: sprite view mode, can be default or billboard.
 
 **Size**: sprite size.
-
-
-
-
-
-
