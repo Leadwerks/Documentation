@@ -40,10 +40,14 @@ The scale mouse tool also includes all the functionality of the selection tool.
 
 The face mouse tool allows you to move primitive faces to change the geometry of objects.
 
+In the 3D viewport, you can move faces along the X and Z axes. If you hold the **Alt key** you can move faces along the Y axis.
+
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/facetool.gif?raw=true)
 
 ## Vertex Tool
 
 The vertex mouse tool allows you to move primitive vertices to change the geometry of objects.
+
+In the 3D viewport, you can move vertices along the X and Z axes. If you hold the **Alt key** you can move vertices along the Y axis.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/vertextool.gif?raw=true)
