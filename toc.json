@@ -48,17 +48,13 @@
                             "filename": "models"
                         },
                         {
-                            "title": "Adding a 3D Model to the Scene",
-                            "filename": "create"
-                        },
-                        {
-                            "title": "Adding Lights",
-                            "filename": "create"
-                        },                        
+                            "title": "Lighting",
+                            "filename": "lighting"
+                        },                       
                         {
                             "title": "Adding a Player",
                             "filename": "create"
-                        },
+                        },                        
                         {
                             "title": "Running the Game",
                             "filename": "create"
@@ -104,10 +100,6 @@
                         {
                             "title": "Flowgraph Editor",
                             "filename": "flowgrapheditor"
-                        },
-                        {
-                            "title": "Lighting",
-                            "filename": "lighting"
                         },
                         {
                             "title": "Material Editor",
