@@ -18,4 +18,4 @@ Each viewport can be configured to display a 3D perspective view or any of the a
 
 - **Grid Size Adjustment**: You can easily adjust the grid size for precise object placement by pressing the **[ and ] keys**.
 
-![](https://github.com/UltraEngine/Documentation/blob/master/Images/viewportnavitation.gif?raw=true)
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/viewportnavigation.gif?raw=true)
