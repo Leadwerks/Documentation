@@ -19,3 +19,7 @@ To create a primitive, press the **object creation button** in the toolbar to ac
 In any of the viewports, click and hold the **left mouse button**. Drag the mouse with the button pressed to begin drawing the outline of the new object. You can further adjust the boundaries by resizing the edges or moving the shape. Press the **Enter** key to create the new object, or press the **right mouse button** and select the **Create** popup menu.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/createbox.gif?raw=true)
+
+Some primitives will show a window with additional parameters that can be adjusted before the object is created.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/createcylinder.png?raw=true)
