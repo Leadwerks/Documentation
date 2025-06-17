@@ -40,3 +40,22 @@ All entities display the object name and have the following properties in common
 
 **Decal layers**: Bitwise flag value indicating the entity decal layers.
 
+**View range**: The maximum distance the entity is visible from.
+
+## Physics Properties
+
+**Mass**: entity mass, in kilograms.
+
+**Collision type**: entity collision type.
+
+**Pick mode**: entity pick mode, can be mesh, collider, or none.
+
+**Friction**: entity static and kinetic friction values.
+
+**Damping**: entity linear and angular damping values.
+
+**Elasticity**: entity "bounciness" value.
+
+**Nav obstacle**: if set to true, the entity's collider will contribute to any navigation meshes that are built.
+
+**Gravity**: if set to true the entity will be affected by gravity.
