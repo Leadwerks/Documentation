@@ -104,6 +104,36 @@ Some entities have special properties that only appear for that type of object.
 
 **Max slope**: maximum slope the navigation agents can walk up, in degrees.
 
+### Particle Properties
+
+**Particle count**: number of particles in the system.
+
+**Emission shape**: shape the particles are emitted from, can be ellipsoid or box.
+
+**Emission area**: dimensions of the particle emission shape.
+
+**Burst frequency**: how often a particle is emitted.
+
+**Burst quantity**: number of particles that appear per burst event.
+
+**Start color**: particle starting color.
+
+**End color**: particle end color.
+
+**Velocity**: particle velocity.
+
+**Acceleration**: particle acceleration.
+
+**Size**: particle X and Y size.
+
+**Radius**: particle start and end radius.
+
+**Turbulence**: particle change in velocity each step.
+
+**Rotation speed**: particle rotation speed.
+
+**Alignment**: particle alignment, can be billboard or velocity.
+
 ### Probe Properties
 
 **Fade lower**: distance over which the edge of each axis in the negative direction fades in, in centimeters.
