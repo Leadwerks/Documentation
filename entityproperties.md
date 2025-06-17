@@ -4,144 +4,109 @@ The lower half of the [scene panel](scenepanel.md) displays properties for all s
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/entityproperties.png?raw=true)
 
-## General Properties
+Certainly! Here's the formatted list of properties, all structured in markdown tables similar to the transform properties at the beginning:
 
-All entities display the object name and have the following properties in common.
+## Transform Properties
 
-### Transform Properties
-
-**Position**: 3D position in space, in centimeters
-
-**Rotation**: Euler rotation, in degrees
-
-**Scale**: Entity scale
+| Property | Description |
+|------------|--------------|
+| Position | 3D position in space, in centimeters |
+| Rotation | Euler rotation, in degrees |
+| Scale | Entity scale |
 
 ### Appearance Properties
 
-**Color**: RGBA entity color
-
-**Brightness**: A color intensity factor that can be used to increase brightness beyond the 255 limit the color properties uses.
-
-**Emission**: Entity emission color. This will only be visible when a material with an emission texture is in use.
-
-**Cast shadows**: If enabled, the entity will cast shadows.
-
-**Static reflection**: If enabled, the entity will appear in reflection probe cubemaps when they are rendered.
-
-**Hidden**: If enabled, the entity will be invisible and have no collision.
-
-**Static**: If enabled, the entity will be made static when the scene is loaded in the game.
-
-**Texture offset**: This provides a UV offset for scrolling the texture coordinates.
-
-**Texture scale**: This provides a UV scale for resizing the texture coordinates.
-
-**Tags**: Comma-separated list of tags that can be used together with the [World::GetTaggedEntities](World_GetTaggedEntities) command.
-
-**Render layers**: Bitwise flag value indicating the entity render layers.
-
-**Decal layers**: Bitwise flag value indicating the entity decal layers.
-
-**View range**: The maximum distance the entity is visible from.
+| Property | Description |
+|------------|--------------|
+| Color | RGBA entity color |
+| Brightness | A color intensity factor that can be used to increase brightness beyond the 255 limit the color properties use |
+| Emission | Entity emission color. Visible when using a material with an emission texture |
+| Cast shadows | If enabled, the entity will cast shadows |
+| Static reflection | If enabled, the entity appears in reflection probe cubemaps when rendered |
+| Hidden | If enabled, the entity is invisible and has no collision |
+| Static | If enabled, the entity will be made static when the scene loads |
+| Texture offset | UV offset for scrolling the texture coordinates |
+| Texture scale | UV scale for resizing the texture coordinates |
+| Tags | Comma-separated list of tags for use with World::GetTaggedEntities |
+| Render layers | Bitwise flag indicating the entity's render layers |
+| Decal layers | Bitwise flag indicating the entity's decal layers |
+| View range | Max distance the entity is visible from |
 
 ### Physics Properties
 
-**Mass**: entity mass, in kilograms.
-
-**Collision type**: entity collision type.
-
-**Pick mode**: entity pick mode, can be mesh, collider, or none.
-
-**Friction**: entity static and kinetic friction values.
-
-**Damping**: entity linear and angular damping values.
-
-**Elasticity**: entity "bounciness" value.
-
-**Nav obstacle**: if set to true, the entity's collider will contribute to any navigation meshes that are built.
-
-**Gravity**: if set to true the entity will be affected by gravity.
+| Property | Description |
+|------------|--------------|
+| Mass | Entity mass in kilograms |
+| Collision type | Entity collision type |
+| Pick mode | Mesh, collider, or none |
+| Friction | Static and kinetic friction values |
+| Damping | Linear and angular damping values |
+| Elasticity | Bounciness value |
+| Nav obstacle | If true, collider contributes to navigation meshes |
+| Gravity | If true, affected by gravity |
 
 ## Type-specific Properties
 
-Some entities have special properties that only appear for that type of object.
-
 ### Camera Properties
 
-**Range**: camera near and far range.
-
-**Field of view**: camera FOV value, in degrees.
-
-**Clear color**: camera background color used if no skybox is set.
+| Property | Description |
+|------------|--------------|
+| Range | Near and far range of the camera |
+| Field of view | Camera FOV in degrees |
+| Clear color | Background color if no skybox is set |
 
 ### Light Properties
 
-**Range**: near and far light range. The near range is used for the camera when a shadow map is rendered.
-
-**Shadowmap size**: shadow map resolution the light uses, if it casts a shadow.
-
-**Falloff mode**: Light falloff mode, can be linear or inverse square, for a more abrupt falloff.
-
-**Cone angles**: for spotlights, this controls the cone angle at which the cone begins to fade in, and the cone angle at which it reaches maximum brightness.
+| Property | Description |
+|------------|--------------|
+| Range | Near and far light range; near used for shadow map rendering |
+| Shadowmap size | Resolution of the shadow map if casting shadows |
+| Falloff mode | Linear or inverse square falloff |
+| Cone angles | For spotlights: fade-in cone angle and maximum brightness cone angle |
 
 ### Navigation Mesh Properties
 
-**Tiles**: number of navmesh tiles, in the X and Z directions.
-
-**Tile resolution**: number of along each edge of a tile.
-
-**Voxel size**: size of each voxel, in meters.
-
-**Height**: maximum height of the navmesh.
-
-**Max edge length**: Maximum edge length that is allowed to form, for navmesh polygons.
-
-**Agent radius**: radius of the navigation agent the navmesh is meant to be used with.
-
-**Agent height**: height of the navigation agent the navmesh is meant to be used with.
-
-**Step height**: maximum steppable height, for stairs and other features.
-
-**Max slope**: maximum slope the navigation agents can walk up, in degrees.
+| Property | Description |
+|------------|--------------|
+| Tiles | Number of navmesh tiles in X and Z |
+| Tile resolution | Number of units along each tile edge |
+| Voxel size | Size of each voxel in meters |
+| Height | Max height of the navmesh |
+| Max edge length | Max allowed edge length for navmesh polygons |
+| Agent radius | Navigation agent radius |
+| Agent height | Navigation agent height |
+| Step height | Max height for stairs and steps |
+| Max slope | Max slope in degrees that agents can walk up |
 
 ### Particle Properties
 
-**Particle count**: number of particles in the system.
-
-**Emission shape**: shape the particles are emitted from, can be ellipsoid or box.
-
-**Emission area**: dimensions of the particle emission shape.
-
-**Burst frequency**: how often a particle is emitted.
-
-**Burst quantity**: number of particles that appear per burst event.
-
-**Start color**: particle starting color.
-
-**End color**: particle end color.
-
-**Velocity**: particle velocity.
-
-**Acceleration**: particle acceleration.
-
-**Size**: particle X and Y size.
-
-**Radius**: particle start and end radius.
-
-**Turbulence**: particle change in velocity each step.
-
-**Rotation speed**: particle rotation speed.
-
-**Alignment**: particle alignment, can be billboard or velocity.
+| Property | Description |
+|------------|--------------|
+| Particle count | Number of particles |
+| Emission shape | Shape of particle emission: ellipsoid or box |
+| Emission area | Dimensions of emission shape |
+| Burst frequency | How often particles are emitted |
+| Burst quantity | Particles per burst |
+| Start color | Initial particle color |
+| End color | Final particle color |
+| Velocity | Particle velocity |
+| Acceleration | Particle acceleration |
+| Size | Particle size (X and Y) |
+| Radius | Start and end radius of particles |
+| Turbulence | Change in velocity each step |
+| Rotation speed | Speed of particle rotation |
+| Alignment | Billboard or velocity alignment |
 
 ### Probe Properties
 
-**Fade lower**: distance over which the edge of each axis in the negative direction fades in, in centimeters.
-
-**Fade upper**: distance over which the edge of each axis in the positive direction fades in, in centimeters.
+| Property | Description |
+|------------|--------------|
+| Fade lower | Fading distance in negative axis, in centimeters |
+| Fade upper | Fading distance in positive axis, in centimeters |
 
 ### Sprite Properties
 
-**View mode**: sprite view mode, can be default or billboard.
-
-**Size**: sprite size.
+| Property | Description |
+|------------|--------------|
+| View mode | Default or billboard |
+| Size | Sprite size |
