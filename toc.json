@@ -52,24 +52,12 @@
                             "filename": "lighting"
                         },                       
                         {
-                            "title": "Adding a Player",
-                            "filename": "create"
+                            "title": "Entity Component System",
+                            "filename": "entitycomponentsystem"
                         },                        
                         {
                             "title": "Running the Game",
-                            "filename": "create"
-                        },
-                        {
-                            "title": "Adding Components",
-                            "filename": "create"
-                        },
-                        {
-                            "title": "Creating Events",
-                            "filename": "flowgraphevents"
-                        },
-                        {
-                            "title": "Pathfinding and Navigation",
-                            "filename": "navmesh"
+                            "filename": "rungame"
                         }
                     ]
                 },
