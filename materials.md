@@ -1,10 +1,18 @@
 # Materials
 
-Ultra Engine employs physically-based rendering (PBR) to achieve next-generation visual quality with realistic lighting. PBR combines various material and environmental settings to create realistic surface appearances.
+Leadwerks employs physically-based rendering (PBR) to achieve next-generation visual quality with realistic lighting. PBR combines various material and environmental settings to create realistic surface appearances.
+
+## Material Files
+
+Leadwerks uses a JSON-based file format for material with the extension .mat. These can be opened in the [material editor](materialeditor.md), edited, and resaved to update the files.
 
 ## Embedded Model Materials
 
-Model materials in Ultra Engine are embedded in the model file, and can be modified in the [asset window](asseteditor.md). Standalone material files are only needed for brushes, terrain, and sprites.
+Some glTF files used material embedded in the file. These can be modified in the [model editor](modeleditor.md).
+
+## Downloading Materials
+
+You can access thousands of free ready-to-use materials with the [downloads manager](downloadsmanager.md). This should be your first stop when searching for the materials you want to use.
 
 ## Creating Materials
 
@@ -29,8 +37,8 @@ The material generation algorithm performs the following steps:
 - The base/diffuse map is converted into an optimized BC7 format and saved as a DDS file.
 - The normal map is converted into an optimized BC5 format and saved as a DDS file. BC5 removes the Z-axis from the normal to make room for more data on the other two components, with the Z-axis reconstructed in the fragment shader. BC5 is the only compressed texture format suitable for normal maps.
 - If available, the metalness and roughness maps are combined into the green and blue channels of a single texture and saved in BC7 format. If a metalness map is found, the material's metalness setting is set to 1.0.
-- If an ambient occlusion map is present and a metalness roughness map exists, the ambient occlusion data is packed into the red channel of the metalness/roughness map. Otherwise, the ambient occlusion map will be saved as a single texture in BC4 format for compressing single-channel images.
-- If a displacement map is found, it will be saved in an uncompressed single-channel image. Texture compression should not be used with displacement maps.
+- Ambient occlusion data is packed into the red channel of the metalness/roughness map.
+- If a displacement map is found, it will be saved in an uncompressed single-channel image. Texture compression should never be used with displacement maps.
 
 The table below shows the optimal layout for material texture data:
 
@@ -41,7 +49,6 @@ The table below shows the optimal layout for material texture data:
 | 2, 5 | occlusion / roughness / metallic | BC7 | ambient occlusion | roughness | metalness | -- |
 | 3 | displacement | R8 | height | -- | -- | -- |
 | 4 | emission | BC7 | emission red | emission green | emission blue | -- |
-| 5 | occlusion (alone) | BC4 | ambient occlusion | -- | -- | -- |
 
 While manually adjusting these settings would be very time-consuming, the built-in material generation tool can create optimized materials from raw images in seconds. You can modify the suffixes used by the material generation feature in the program options, specifically in the *Material Generation* settings.
 
