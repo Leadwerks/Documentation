@@ -8,7 +8,7 @@ The selection tool only selects objects, and does not perform any editing. You c
 
 You can select multiple objects, or deselect one object at a time, by holding the **Control key** when clicking to select.
 
-You can draw a selection area by clicking and holding the **left mouse button** and dragging the mouse.
+You can draw a selection area by clicking and holding the **left mouse button** and dragging the mouse. A transparent rectangle will appear. When you release the mouse, all objects that intersect the bounds you drew will be selected.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/selectiontool.gif?raw=true)
 
