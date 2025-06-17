@@ -4,9 +4,11 @@ The lower half of the [scene panel](scenepanel.md) displays properties for all s
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/entityproperties.png?raw=true)
 
+## General Properties
+
 All entities display the object name and have the following properties in common.
 
-## Transform Properties
+### Transform Properties
 
 **Position**: 3D position in space, in centimeters
 
@@ -14,7 +16,7 @@ All entities display the object name and have the following properties in common
 
 **Scale**: Entity scale
 
-## Appearance Properties
+### Appearance Properties
 
 **Color**: RGBA entity color
 
@@ -42,7 +44,7 @@ All entities display the object name and have the following properties in common
 
 **View range**: The maximum distance the entity is visible from.
 
-## Physics Properties
+### Physics Properties
 
 **Mass**: entity mass, in kilograms.
 
@@ -59,3 +61,49 @@ All entities display the object name and have the following properties in common
 **Nav obstacle**: if set to true, the entity's collider will contribute to any navigation meshes that are built.
 
 **Gravity**: if set to true the entity will be affected by gravity.
+
+## Type=specific Properties
+
+Some entities have special properties that only appear for that type of object.
+
+### Camera Properties
+
+**Range**: camera near and far range.
+
+**Field of view**: camera FOV value, in degrees.
+
+**Clear color**: camera background color used if no skybox is set.
+
+### Light Properties
+
+**Range**: near and far light range. The near range is used for the camera when a shadow map is rendered.
+
+**Shadowmap size**: shadow map resolution the light uses, if it casts a shadow.
+
+**Falloff mode**: Light falloff mode, can be linear or inverse square, for a more abrupt falloff.
+
+**Cone angles**: for spotlights, this controls the cone angle at which the cone begins to fade in, and the cone angle at which it reaches maximum brightness.
+
+### Navigation Mesh Properties
+
+**Tiles**: number of navmesh tiles, in the X and Z directions.
+
+
+
+### Probe Properties
+
+**Fade lower**: distance over which the edge of each axis in the negative direction fades in, in centimeters.
+
+**Fade upper**: distance over which the edge of each axis in the positive direction fades in, in centimeters.
+
+### Sprite Properties
+
+**View mode**: sprite view mode, can be default or billboard.
+
+**Size**: sprite size.
+
+
+
+
+
+
