@@ -78,10 +78,6 @@
                             "filename": "downloadsmanager"
                         },
                         {
-                            "title": "Entity Component System",
-                            "filename": "entitycomponentsystem"
-                        },
-                        {
                             "title": "Face Panel",
                             "filename": "facepanel"
                         },
