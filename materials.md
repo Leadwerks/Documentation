@@ -1,4 +1,4 @@
-# Physically-based Materials
+# Materials
 
 Ultra Engine employs physically-based rendering (PBR) to achieve next-generation visual quality with realistic lighting. PBR combines various material and environmental settings to create realistic surface appearances.
 
