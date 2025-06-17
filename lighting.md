@@ -38,13 +38,9 @@ We can improve the appearance by adding an environment probe in the enclosed are
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/probe2.jpg?raw=true)
 
-![](https://github.com/UltraEngine/Documentation/blob/master/Images/probe3.jpg?raw=true)
-
 This looks better, but there is a sharp line on the floor where the environment probe volume begins. We can soften this boundary by adjusting the padding values in the probe settings, available in the [scene panel](mapbriwser.md),
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/probe4.jpg?raw=true)
-
-![](https://github.com/UltraEngine/Documentation/blob/master/Images/probe5.jpg?raw=true)
 
 You can adjust the padding on each edge of the probe volume individually, for fine control over the probe's appearance. Use this to transition more smoothly between indoor and outdoor areas, or to blend the border region between two probe volumes.
 
