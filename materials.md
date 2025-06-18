@@ -6,6 +6,10 @@ Leadwerks employs physically-based rendering (PBR) to achieve next-generation vi
 
 Leadwerks uses a JSON-based file format for material with the extension .mat. These can be opened in the [material editor](materialeditor.md), edited, and resaved to update the files.
 
+## Editing Materials
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/editmaterial.png?raw=true)
+
 ## Embedded Model Materials
 
 Some glTF files used material embedded in the file. These can be modified in the [model editor](modeleditor.md).
