@@ -1,5 +1,7 @@
 # Mouse Tools
 
+www.youtube.com/watch?v=6KMr6fNg9f8
+
 The left-side bar contains buttons for various mouse tools you can use to edit objects in your scene.
 
 ## Selection Tool
