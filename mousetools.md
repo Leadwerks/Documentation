@@ -24,6 +24,8 @@ The translation mouse tool also includes all the functionality of the selection 
 
 The rotation mouse tool allows you to easily rotate objects.
 
+If you hold the **Shift key** while moving and object, a new copy of the selected objects will be created and moved.
+
 The rotation mouse tool also includes all the functionality of the selection tool.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/rotationtool.gif?raw=true)
