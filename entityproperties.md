@@ -1,5 +1,7 @@
 # Entity Properties
 
+www.youtube.com/watch?v=LA8QQt8RwhI
+
 The lower half of the [scene panel](scenepanel.md) displays properties for all selected objects.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/entityproperties.png?raw=true)
