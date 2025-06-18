@@ -1,5 +1,7 @@
 # Project Creation
 
+https://www.youtube.com/watch?v=yt9f-IZhIr8
+
 The first time you run Leadwerks, the [project manager](projectmanager.md) will appear. If this is your first time running the program ever, there will be no projects listed in the window.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/startup.png?raw=true)
