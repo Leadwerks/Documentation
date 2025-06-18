@@ -1,6 +1,6 @@
 # Getting Started
 
-www.youtube.com/watch?v=yt9f-YYbFPMu1vpg
+www.youtube.com/watch?v=YYbFPMu1vpg
 
 The first time you run Leadwerks, the [project manager](projectmanager.md) will appear. If this is your first time running the program ever, there will be no projects listed in the window.
 
