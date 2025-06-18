@@ -24,10 +24,6 @@
                             "filename": "projectcreation"
                         },
                         {
-                            "title": "Viewport Navigation",
-                            "filename": "viewports"
-                        },
-                        {
                             "title": "Creating Primitives",
                             "filename": "primitives"
                         },
