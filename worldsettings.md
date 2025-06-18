@@ -54,7 +54,7 @@ The effect panel allows you to add post-processing effects to the scene, and to 
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/worldsettings3.png?raw=true)
 
-The following post-processing effects are provided by default:
+The following post-processing effects are provided:
 - Autoexposure
 - Bloom
 - DOF
