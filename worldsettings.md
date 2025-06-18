@@ -55,12 +55,13 @@ The effect panel allows you to add post-processing effects to the scene, and to 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/worldsettings3.png?raw=true)
 
 The following post-processing effects are provided:
-- Autoexposure
-- Bloom
-- DOF
-- GaussianBlur
-- Godrays
-- Grayscale
-- SSAO
-- Tonemapping
-- VolumetricLighting
+
+  - Autoexposure – Adjusts scene brightness dynamically for consistent lighting.
+  - Bloom – Creates a glow around bright areas for a luminous effect.
+  - Depth of Field (DOF) – Blurs objects based on distance to focus attention.
+  - Gaussian Blur – Softens the entire image or regions smoothly.
+  - Godrays – Light beams radiate through obstacles, adding drama.
+  - Grayscale – Converts the scene to black-and-white.
+  - SSAO – Adds subtle shadows in corners and contact points for depth.
+  - Tonemapping – Balances HDR colors for natural or cinematic look.
+  - Volumetric Lighting – Simulates light scattering through particles like fog.
