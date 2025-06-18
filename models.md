@@ -21,3 +21,5 @@ To insert an instance of a model into your scene, just click and hold on the fil
 You can double-click on a model file icon to open it in the [model editor](modeleditor.md). This interface provides a variety of tools to adjust model files. You can save the model when you are done editing, to overwrite the original file and store your changes.
 
 Typically, your workflow should involve moving 3D models from other file formats and resaving as Leadwerks MDLs, as this format supports many features others do not.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/modeleditor.gif?raw=true)
