@@ -1,10 +1,10 @@
 # Viewports
 
-The View Panel takes up mpst of the main window and serves as the gateway to the program's viewports, which allow visualizing and interacting with your 3D environment.
+The View Panel takes up mpst of the main window and contains four viewports, which allow visualizing and interacting with your 3D scene.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/viewpanel.png?raw=true)
 
-By default, the View Panel is subdivided into four viewports showing three orthographic views and a 3D perspective view.
+By default, the View Panel is divided into four viewports showing three orthographic views and a 3D perspective view.
 
 You can customize the View Panel to show three, two, or just a single viewport, depending on your preference.
 
