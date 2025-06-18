@@ -1,4 +1,4 @@
-# Project Creation
+# Getting Started
 
 www.youtube.com/watch?v=yt9f-IZhIr8
 
