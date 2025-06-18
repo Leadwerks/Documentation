@@ -120,6 +120,27 @@ MyComponent.vec4value = Vec4(0,0,0,0)--"Vec4 value"
 MyComponent.rgbvalue = Vec3(1,1,1)--"RGB value" COLOR
 MyComponent.rgbavalue = Vec4(1,1,1,1)--"RGBA value" COLOR
 ```
+
+Here is the same thing in a C++ header file:
+```cpp
+class MyComponent : public BaseComponent
+{
+public: 
+    int integervalue = 0;//"Integer value"
+    float floatvalue = 0.0f;//"Float value"
+    WString stringvalue = "";//"String value"
+    bool booleanvalue = false;//"Boolean value"
+    int optionvalue = 0;//"Option value" ["Option 1", "Option 2", "Option 3"]
+    std::shared_ptr<Entity> entityvalue;//"Entity value"
+    WString pathvalue;//"Path value" SOUND
+    Vec2 vec2value = Vec2(0,0);//"Vec2 value"
+    Vec3 vec3value = Vec3(0,0,0);//"Vec3 value"
+    Vec4 vec4value = Vec4(0,0,0,0);//"Vec4 value"
+    Vec3 rgbvalue = Vec3(1,1,1);//"RGB value" COLOR
+    Vec4 rgbavalue = Vec4(1,1,1,1);//"RGBA value" COLOR
+};
+```
+
 Any time your code is modified, the code will be analyzed and the results will be stored in the associated JSON file, from which the editor will load properties to display. This file will always be auto-generated, so there is no need to edit its contents.
 
 ### Component Inputs and Outputs
