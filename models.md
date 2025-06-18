@@ -14,6 +14,8 @@ To import a 3D model into your project, simply copy all files into your game's f
 
 To insert an instance of a model into your scene, just click and hold on the file thumbnail with the **left mouse button**. Drag and mouse into any of the viewports and release the mouse button when you are hovered over the spot you wish to place the model.
 
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/addmodel.gif?raw=true)
+
 ## Editing Models
 
 You can double-click on a model file icon to open it in the [model editor](modeleditor.md). This interface provides a variety of tools to adjust model files. You can save the model when you are done editing, to overwrite the original file and store your changes.
