@@ -9,7 +9,7 @@ Leadwerks uses a JSON-based file format for material with the extension .mat. Th
 ## Editing Materials
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/editmaterial.gif?raw=true)
-
+ 
 ## Embedded Model Materials
 
 Some glTF files used material embedded in the file. These can be modified in the [model editor](modeleditor.md).
