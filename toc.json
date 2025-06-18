@@ -50,14 +50,18 @@
                         {
                             "title": "Lighting",
                             "filename": "lighting"
-                        },                       
+                        },     
+                        {
+                            "title": "Terrain",
+                            "filename": "terrain"
+                        },   
+                        {
+                            "title": "Vegetation",
+                            "filename": "vegetation"
+                        },
                         {
                             "title": "Entity Component System",
                             "filename": "entitycomponentsystem"
-                        },                        
-                        {
-                            "title": "Running the Game",
-                            "filename": "rungame"
                         }
                     ]
                 },
