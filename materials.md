@@ -46,7 +46,7 @@ The table below shows the optimal layout for material texture data:
 |---|---|---|---|---|---|---|
 | 0 | base | BC7 | base red | base green | base blue | base alpha |
 | 1 | normal | BC5 | nx | ny | -- | -- |
-| 2, 5 | occlusion / roughness / metallic | BC7 | ambient occlusion | roughness | metalness | -- |
+| 2 | occlusion / roughness / metallic | BC7 | ambient occlusion | roughness | metalness | -- |
 | 3 | displacement | R8 | height | -- | -- | -- |
 | 4 | emission | BC7 | emission red | emission green | emission blue | -- |
 
