@@ -36,8 +36,31 @@ The fog settings panel provides control over the scene fog levels.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/worldsettings2.png?raw=true)
 
+**Color**: Fog color.
+
+**Density**: Maximum fog alpha blend value.
+
+**Start range**: Distance at which the fog first appears.
+
+**End range**: Distance at which the fog reaches its maximum density.
+
+**Start angle**: Angle in the sky at which the fog begins to fade.
+
+**End angle**: Angle in the sky at which the fog disappears.
+
 ## Post-processing Effects
 
 The effect panel allows you to add post-processing effects to the scene, and to change the order the effects are applied in.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/worldsettings3.png?raw=true)
+
+The following post-processing effects are provided by default:
+- Autoexposure
+- Bloom
+- DOF
+- GaussianBlur
+- Godrays
+- Grayscale
+- SSAO
+- Tonemapping
+- VolumetricLighting
