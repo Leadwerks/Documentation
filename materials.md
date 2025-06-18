@@ -8,6 +8,8 @@ Leadwerks uses a JSON-based file format for material with the extension .mat. Th
 
 ## Editing Materials
 
+If you double-click on a material icon in the [project panel](projectpanel.md) the file will be opened in the [material editor](materialeditor.md).
+
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/editmaterial.gif?raw=true)
  
 ## Embedded Model Materials
