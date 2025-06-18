@@ -74,7 +74,7 @@ In practice, most basic materials without metal/roughness maps will use 100% rou
 
 Leadwerks achieves direct lighting through point, spot, directional, and box lights, each utilizing a different lighting equation to simulate light sources with texture-based shadows (shadow maps). Highly metallic objects are less affected by direct lighting because of their high reflectivity, primarily reflecting the environment.
 
-Indirect lighting is accomplished with a combination of world environment textures and local environment probes. Since PBR materials accurately reflect their surroundings, having high-quality reflection data is essential.
+Indirect lighting is accomplished with a combination of world environment textures and local [environment probes](lighting.md). Since PBR materials accurately reflect their surroundings, having high-quality reflection data is essential.
 
 Reflections play a significant role in physically-based materials. Without diffuse and specular environment maps set for the world, materials may appear dark.
 
@@ -84,7 +84,7 @@ When you add diffuse and specular reflection maps to the world, the scene become
 
    ![Reflection Added](https://github.com/UltraEngine/Documentation/blob/master/Images/pbrsky.jpg?raw=true)
 
-To achieve the best results, combine diffuse and specular reflection maps for the world with environment probes for indoor spaces.
+To achieve the best results, combine diffuse and specular reflection maps for the world with [environment probes](lighting.md) for indoor spaces.
 
    ![Best Results](https://github.com/UltraEngine/Documentation/blob/master/Images/pbrprobe.jpg?raw=true)
 
