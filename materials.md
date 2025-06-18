@@ -4,11 +4,9 @@ Leadwerks employs physically-based rendering (PBR) to achieve next-generation vi
 
 ## Material Files
 
-Leadwerks uses a JSON-based file format for material with the extension .mat. These can be opened in the [material editor](materialeditor.md), edited, and resaved to update the files.
+Leadwerks uses a JSON-based file format for material with the extension .mat.
 
-## Editing Materials
-
-If you double-click on a material icon in the [project panel](projectpanel.md) the file will be opened in the [material editor](materialeditor.md).
+If you double-click on a material icon in the [project panel](projectpanel.md) the file will be opened in the [material editor](materialeditor.md) where you can edit the material and save your changes to update the file.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/editmaterial.gif?raw=true)
  
