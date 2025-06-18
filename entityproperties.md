@@ -4,8 +4,6 @@ The lower half of the [scene panel](scenepanel.md) displays properties for all s
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/entityproperties.png?raw=true)
 
-Certainly! Here's the formatted list of properties, all structured in markdown tables similar to the transform properties at the beginning:
-
 ## Transform Properties
 
 | Property | Description |
@@ -110,3 +108,7 @@ Certainly! Here's the formatted list of properties, all structured in markdown t
 |------------|--------------|
 | View mode | Default or billboard |
 | Size | Sprite size |
+
+## Add Component Button
+
+At the very bottom of the entity properties panel is a button that allows you to add a component to all selected entities. See the [entity component system](entitycomponentsystem) for more detail.
