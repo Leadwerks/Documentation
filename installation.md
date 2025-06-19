@@ -1,6 +1,6 @@
 # Installation
 
-Leadwerks 5 is available on Steam or as a standalone build from our store.
+Leadwerks 5 is available on Steam or as a standalone build from [our store](https://www.leadwerks.com/community/store/category/1-software/).
 
 ## System Requirements
 
