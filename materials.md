@@ -91,5 +91,3 @@ When you add diffuse and specular reflection maps to the world, the scene become
 To achieve the best results, combine diffuse and specular reflection maps for the world with [environment probes](lighting.md) for indoor spaces.
 
    ![Best Results](https://github.com/UltraEngine/Documentation/blob/master/Images/pbrprobe.jpg?raw=true)
-
-Optimal reflection data results in stunning and realistic visuals for your games.
