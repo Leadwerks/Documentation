@@ -6,8 +6,6 @@ There are two types of lighting in Leadwerks. Direct lighting is fully dynamic, 
 
 Direct lighting in Leadwerks 5 includes several types of light sources that can be placed within the scene to illuminate objects dynamically. These lights interact with objects in real-time, casting shadows that adapt as the scene changes.
 
-![](https://github.com/UltraEngine/Documentation/blob/master/Images/sunlight.jpg?raw=true)
-
 ### Point Lights
 
 Point lights emit light equally in all directions from a single point in space, similar to a bare light bulb or a torch. They store their shadow data in a cube shadow map, requiring six passes to be rendered any time the shadow is updated.
@@ -31,6 +29,8 @@ Box lights are good for simulating a directional light in an enclosed area, like
 A directional lights simulates the sun or the moon. Cascaded shadow maps are used to draw the directional light shadow in several partitions distributed around the viewer.
 
 Each scene in the editor can display a single directional light. The properties of the light can be controlled in the [world settings](worldsettings.md) interface.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/sunlight.jpg?raw=true)
 
 ## Indirect Lighting
 
