@@ -41,6 +41,10 @@
                             "filename": "materials"
                         },                        
                         {
+                            "title": "UV Mapping",
+                            "filename": "uvmapping"
+                        },
+                        {
                             "title": "3D Models",
                             "filename": "models"
                         },
