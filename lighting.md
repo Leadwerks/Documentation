@@ -6,17 +6,25 @@ There are two types of lighting in Leadwerks. Direct lighting is fully dynamic, 
 
 Direct lighting in Leadwerks 5 includes several types of light sources that can be placed within the scene to illuminate objects dynamically. These lights interact with objects in real-time, casting shadows that adapt as the scene changes.
 
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/sunlight.jpg?raw=true)
+
 ### Point Lights
 
 Point lights emit light equally in all directions from a single point in space, similar to a bare light bulb or a torch. They store their shadow data in a cube shadow map, requiring six passes to be rendered any time the shadow is updated.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/pointlight.jpg?raw=true)
 
 ### Spot Lights
 
 Spot lights simulation a flashlight or streetlight, with defined cone angles at which the light starts to fade out, and when the light cone terminates completely. Spot lights are relatively cheaper to render than points lights because they only require the surrounding area to be drawn in a single pass.
 
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/spotlight.jpg?raw=true)
+
 ### Box Lights
 
 Box lights are good for simulating a directional light in an enclosed area, like light streaming in a window. Box lights are relatively cheaper to render than points lights because they only require the surrounding area to be drawn in a single pass.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/boxlight.jpg?raw=true)
 
 ### Directional Lights
 
