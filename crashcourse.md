@@ -4,4 +4,4 @@ Hello, and welcome to Leadwerks 5! This series of articles in intended to get yo
 
 Strap yourself in and proceed to the [first lesson](projectcreation.md) when ready!
 
-![](https://raw.githubusercontent.com/Leadwerks/Documentation/refs/heads/master/Images/rpg.jpg)
+![](https://raw.githubusercontent.com/Leadwerks/Documentation/refs/heads/master/Images/fps.jpg)
