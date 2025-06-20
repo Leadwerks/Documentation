@@ -34,6 +34,8 @@ Each scene in the editor can display a single directional light. The properties 
 
 ## Indirect Lighting
 
+Indirect lighting can be achieved for the entire scene using a set of environment maps. You can use an environment probe to generate a small set of environment maps that are displays on objects within a probe's volume, for localized indirect lighting.
+
 ### Environment Maps
 
 
