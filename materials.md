@@ -9,14 +9,14 @@ Leadwerks uses a JSON-based file format for material with the extension .mat.
 If you double-click on a material icon in the [project panel](projectpanel.md) the file will be opened in the [material editor](materialeditor.md) where you can modify the material. When you are done, just save your changes to update the file.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/editmaterial.gif?raw=true)
- 
-## Embedded Model Materials
-
-Some glTF files used material embedded in the file. These can be modified in the [model editor](modeleditor.md).
 
 ## Downloading Materials
 
-You can access thousands of free ready-to-use materials with the [downloads manager](downloadsmanager.md). This should be your first stop when searching for the materials you want to use.
+You can access thousands of free ready-to-use materials with the [downloads manager](downloadsmanager.md). There's a good chance we already have the type of material you are looking for, so this should be your first stop when searching for the materials you want to use.
+
+## Embedded Model Materials
+
+Some glTF files used material embedded in the file. These can be modified in the [model editor](modeleditor.md).
 
 ## Creating Materials
 
