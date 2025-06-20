@@ -45,8 +45,8 @@
                             "filename": "materials"
                         },                        
                         {
-                            "title": "UV Mapping",
-                            "filename": "uvmapping"
+                            "title": "Texture Mapping",
+                            "filename": "texturemapping"
                         },
                         {
                             "title": "Material Painting",
