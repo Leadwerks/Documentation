@@ -71,7 +71,11 @@
                         {
                             "title": "Entity Component System",
                             "filename": "entitycomponentsystem"
-                        }
+                        },
+                        {
+                            "title": "Flowgraph Events",
+                            "filename": "flowgraphevents"
+                        }                        
                     ]
                 },
                 {
