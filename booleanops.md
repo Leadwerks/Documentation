@@ -10,4 +10,6 @@ The use the carve tool, simply position one primitive so that it overlaps anothe
 
 ## Hollow
 
+To use the hollow tool, select the object you want to make hollow, then click the **Tools > Hollow** menu item. The grid size in the active viewport will be used for the hollow thickness.
+
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/hollow.gif?raw=true)
