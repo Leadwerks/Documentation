@@ -31,7 +31,11 @@
                         {
                             "title": "Mouse Tools",
                             "filename": "mousetools"
-                        },                        
+                        },
+                        {
+                            "title": "Boolean Operations",
+                            "filename": "booleanops"
+                        },                         
                         {
                             "title": "Entity Properties",
                             "filename": "entityproperties"
