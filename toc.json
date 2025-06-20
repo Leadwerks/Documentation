@@ -45,6 +45,10 @@
                             "filename": "uvmapping"
                         },
                         {
+                            "title": "Material Painting",
+                            "filename": "materialpainting"
+                        },                        
+                        {
                             "title": "3D Models",
                             "filename": "models"
                         },
