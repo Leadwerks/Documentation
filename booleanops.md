@@ -10,3 +10,4 @@ The use the carve tool, simply position one primitive so that it overlaps anothe
 
 ## Hollow
 
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/hollow.gif?raw=true)
