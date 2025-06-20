@@ -13,3 +13,6 @@ When the texture lock setting is disabled, texture mapping on primitives will st
 When the texture lock setting is enabled, texture mapping on primitives will stay aligned to an object when it moves.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/texturelock.gif?raw=true)
+
+## Face Tool
+
