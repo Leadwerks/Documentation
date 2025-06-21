@@ -1,6 +1,6 @@
-# Leadwerks 5 Documentation
+# Leadwerks Game Studio Documentation
 
-Welcome to the Leadwerks 5 / Ultra Engine documentation. I will teach you how to create your own games that look great and run fast, and have fun doing it.
+Welcome to the Leadwerks Game Studio / Ultra Engine documentation. I will teach you how to create your own games that look great and run fast, and have fun doing it.
 
 I recommend you start with the [Leadwerks 5 Crash Course](https://www.leadwerks.com/learn/crashcourse).
 
