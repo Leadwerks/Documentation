@@ -1,5 +1,7 @@
 # Material Painting
 
+www.youtube.com/watch?v=8I1Rbs1C-hE
+
 The material painter tool allows you to paint materials across level geometry to add detail and make the scene more interesting.
 
 To access this tool, select the Material Painter button in the left-side bar. The tool options will appear in the right-side panel.
