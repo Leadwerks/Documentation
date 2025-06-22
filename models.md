@@ -1,5 +1,7 @@
 # 3D Models
 
+www.youtube.com/watch?v=PNzHP8Oo7Lo
+
 Leadwerks can load 3D models from Khronos glTF, Wavefront OBJ formats, as well as its own proprietary MDL format. FBX files can be converted to MDL format in the editor.
 
 ## Downloading 3D Models
