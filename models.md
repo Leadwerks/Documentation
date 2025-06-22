@@ -23,3 +23,9 @@ You can double-click on a model file icon to open it in the [model editor](model
 Typically, your workflow should involve moving 3D models from other file formats and resaving as Leadwerks MDLs, as this format supports many features others do not.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/modeleditor.gif?raw=true)
+
+## Colliders
+
+## LODs
+
+
