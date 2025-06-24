@@ -38,7 +38,11 @@ Indirect lighting can be achieved for the entire scene using a set of environmen
 
 ### Environment Maps
 
-Environment maps are a set of three cubemaps that provide indirect lighting to the entire scene. These are typically stored in the same folder and consist of files named _skybox.dds_, _diffuse.dds_, and _specular.dds_. You can download many environment map sets in the [downloads manager](downloadsmanager.md) or generate a new set from an HDRI panorama image using the tool opened by the **Scripting > Utilities > Hdri to PBR** menu.
+Environment maps are a set of three cubemaps that provide indirect lighting to the entire scene. These are typically stored in the same folder and consist of files named _skybox.dds_, _diffuse.dds_, and _specular.dds_. You can download many environment map sets in the [downloads manager](downloadsmanager.md). Environment maps are assigned to the scene in the [world settings](worldsettings.md) dialog.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/worldsettings.png?raw=true)
+
+You can also generate a new set from an HDRI panorama image using the tool opened by the **Scripting > Utilities > Hdri to PBR** menu.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/hdritopbr.png?raw=true)
 
