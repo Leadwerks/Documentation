@@ -130,11 +130,3 @@ For grass, the following settings are recommended:
     Max slope: 60
 
 With a little experimentation you can easily create beautiful outdoor scenery with the Leadwerks vegetation system.
-
-
-## Vegetation Materials
-Models that are meant to be used as vegetation layers should have vegetation shaders specified in their material files.  This will allow the engine to apply effects like making grass cling to the landscape, or making leaves wave in the wind.  The vegetation shaders can be set in the material editor shader settings.  If no vegetation shaders are specified, the default shaders will be used.
-
-
-## Conclusion
-In this tutorial we learned how easy it is to create terrain in Leadwerks and add texture layers to quickly make realistic outdoor scenes.  Now is a good time to take a few minutes to play around with different terrain settings and see what you can come up with.
