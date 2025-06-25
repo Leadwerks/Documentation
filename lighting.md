@@ -32,6 +32,12 @@ Each scene in the editor can display a single directional light. The properties 
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/sunlight.jpg?raw=true)
 
+### Static Shadow Cache
+
+If a point, spot, or box light is made static, either by marking it as such in the editor, or calling the [Entity::Staticize](Entity_Staticize.md) method, the light will create an extra shadow map in which all static objects in the surrounding area are rendered. When a dynamic object moves, the light will render all dynamic objects on top of a copy of the static shadow data, reducing the number of polygons that have to be drawn. For example, if a 2000-poly characters walks through a room tha consists of 20,000 static polygons, when a point light is updated only the character would have to be rendered, resulting in a polygon render count of just 12,000 instead of 132,000.
+
+Be aware that the shadow static cache itself does incur a performance penalty, and will perform worse than a dynamic light if the polygon savings is not significant. It's best to test both cases to determine the fastest method to use.
+
 ## Indirect Lighting
 
 Indirect lighting can be achieved for the entire scene using a set of environment maps. You can use an environment probe to generate a small set of environment maps that are displays on objects within a probe's volume, for localized indirect lighting.
