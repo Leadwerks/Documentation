@@ -6,11 +6,11 @@ To create a terrain, select the **Terrain Tool** in the lef-side bar. A Terrain 
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/createterrain.png?raw=true)
 
-The terrain is now visible as a flat white surface.  When you hover your mouse over the terrain, a new mouse tool will appear that lets us modify the terrain.  We can switch back to object selection at any time by pressing the Select Object button in the object bar on the left side of the main window.  We can switch back to terrain editing mode by pressing the Edit Terrain button below this.
+The terrain is now visible as a flat white surface.  When you hover your mouse over the terrain, a new mouse tool will appear that lets us modify the terrain.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/newterrain.png?raw=true)
 
-In the terrain editor, your first option is the tool selector. This lets you choose the terrain tool you are going to use to edit the terrain.  The first setting is "Sculpt" which can be used to raise and lower the terrain, to create hills.
+Let's add a material to make the terrain more easily visible. Press the **Add** button to add a material to the terrain. If you don't have one yet, you can download any of the ground materials in the [downloads manager](downloadsmanager.md).
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/newterrain2.png?raw=true)
 
