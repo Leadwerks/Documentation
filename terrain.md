@@ -2,7 +2,9 @@
 Leadwerks has a built-in clipmap terrain system, complete with tools for sculpting and painting terrain.  We can use these tools to create expansive outdoor environments, and we'll learn how to do exactly that in this tutorial.
 
 ## Creating Terrain
-To create a terrain, select the Terrain tab in the side panel.  Here you can choose a heightmap size.  Let's use the default size of 1024x1024 and press the Create button to create a new terrain.
+To create a terrain, select the **Terrain Tool** in the lef-side bar. A Terrain tab will appear on the right-side panel. Here you can choose a heightmap size.  Let's use the default size of 512x512 and press the **Create** button to create a new terrain.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/createterrain.png?raw=true)
 
 The terrain is now visible as a flat white surface.  When you hover your mouse over the terrain, a new mouse tool will appear that lets us modify the terrain.  We can switch back to object selection at any time by pressing the Select Object button in the object bar on the left side of the main window.  We can switch back to terrain editing mode by pressing the Edit Terrain button below this.
 
