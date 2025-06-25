@@ -43,6 +43,8 @@ You can import heightmaps into leadwerks from 16-bit RAW files.  (Image file for
 ## Painting
 The painting tool in Leadwerks make it is easy to get a great looking terrain in just a few minutes.  Take a look at the "Layers" section below the terrain tool settings.  Each layer can have a diffuse, normal, and displacement map.  If you right-click on the Diffuse tree node under layer one, a popup menu will appear.  Select the Select File popup menu item and choose the "savannah_dirt.tex" file.  When you press the Open button, the texture will be added to the first terrain layer.  Because this is the bottom layer, it will appear everywhere on the terrain.
 
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/paintterrain.gif?raw=true)
+
 We can also add a normal map to the layer to make the terrain appear more detailed.  Below you will see a closeup of the terrain before the normal map is added on the left, and an image with the normal map on the right.  Which one looks better to you?
 
 Now let's add a second layer.  Set the diffuse texture on layer two to the file "savannah_rockwall.tex" and set the normal map to "savannah_rockwalldot3.tex".  Your layers should now look like the image below.
