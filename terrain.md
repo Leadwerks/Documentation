@@ -10,7 +10,7 @@ The terrain is now visible as a flat white surface.  When you hover your mouse o
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/newterrain.png?raw=true)
 
-Let's add a material to make the terrain more easily visible. Press the **Add** button to add a material to the terrain. If you don't have one yet, you can download any of the ground materials in the [downloads manager](downloadsmanager.md).
+Let's add a material to make the terrain more easily visible. Press the **Add** button below the material list to add a material to the terrain. If you don't have one yet, you can download any of the ground materials in the [downloads manager](downloadsmanager.md).
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/newterrain2.png?raw=true)
 
