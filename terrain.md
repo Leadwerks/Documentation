@@ -19,6 +19,8 @@ Sculpting terrain is easy and fluid in Leadwerks Editor. If you move the mouse o
 
 If you hold down the left mouse button and move the mouse, you will start building up the terrain. Try it out by making a small hill. Holding down the control key whilst pressing the mouse will lower the terrain. Try removing the hill that you just created.
 
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/sculptterrain.gif?raw=true)
+
 The inner and outer radius of the terrain tool can be adjusted to get different effects.  The distance between the inner and outer radii will cause hills to appear either smoother or steeper and more cliff-like. Set the outer radius to 20 to cover a larger area. Now set the inner radius to 0.9. Make a large hill on the terrain by holding down the left mouse button on the terrain and moving the mouse around.
 
 Now change the inner radius to 0.1 and create another hill next to the first one. Notice how the second hill has a very smooth slope, while the first hill has slopes that are almost vertical.
