@@ -1,12 +1,14 @@
-Terrain
+# Terrain
 Leadwerks has a built-in clipmap terrain system, complete with tools for sculpting and painting terrain.  We can use these tools to create expansive outdoor environments, and we'll learn how to do exactly that in this tutorial.
-Creating Terrain
+
+# Creating Terrain
 To create a terrain, select the Terrain tab in the side panel.  Here you can choose a heightmap size.  Let's use the default size of 1024x1024 and press the Create button to create a new terrain.
 
 The terrain is now visible as a flat white surface.  When you hover your mouse over the terrain, a new mouse tool will appear that lets us modify the terrain.  We can switch back to object selection at any time by pressing the Select Object button in the object bar on the left side of the main window.  We can switch back to terrain editing mode by pressing the Edit Terrain button below this.
 
 In the terrain editor, your first option is the tool selector. This lets you choose the terrain tool you are going to use to edit the terrain.  The first setting is "Sculpt" which can be used to raise and lower the terrain, to create hills.
-Sculpt
+
+## Sculpt
 Sculpting terrain is easy and fluid in Leadwerks Editor. If you move the mouse over the terrain you will see a white and yellow circle. These two circles define the inner and outer radius of the terrain tool's magic.
 
 If you hold down the left mouse button and move the mouse, you will start building up the terrain. Try it out by making a small hill. Holding down the control key whilst pressing the mouse will lower the terrain. Try removing the hill that you just created.
@@ -18,13 +20,17 @@ Now change the inner radius to 0.1 and create another hill next to the first one
 The strength setting determines how much the terrain is affected by the terrain tool. For adding small details to the terrain you will want a lower strength. If you want to create large mountains instantly, use a higher strength.
 
 The height property determines the vertical scaling of the terrain.  If we make a hill higher and higher, we'll eventually reach a "ceiling" we can't go above.  The terrain height setting lets us alter the maximum height of the terrain so we can create higher mountains.  Change the height to 200. This will affect the terrain instantly. Our mountain is now twice as high.
-Smooth
+
+## Smooth
 We can smooth terrain with the smoothing tool. Select the "Smooth" tool and set the inner radius to 0.5. Now try smoothing out the steep hill you made. The higher the strength the faster the smoothing process goes
-Flatten
+
+## Flatten
 The flatten tool is used to adjust terrain to one height.  It's very useful for making plateaus, which are an area of flat raised ground.  Select the 'Flatten" tool and set the outer brush radius to five.  Move your mouse so it is hovering over the top of your steep hill. Now hold down the mouse and start dragging the mouse towards lower ground. The terrain underneath the mouse will raise up to the same height you first clicked on, but won't go above this height.  If you move too quickly or if the strength setting is low, the terrain will rise, but will not reach the same height.
-Importing a Heightmap
+
+## Importing a Heightmap
 You can import heightmaps into leadwerks from 16-bit RAW files.  (Image file formats are not supported because the limited resolution causes visual artifacts.)  There are many external tools that can be used to generate heightmaps.  One such tool is L3DT and it can be downloaded for free.  Let's import a heightmap made with this tool.  Press the Import button in the terrain editor and select the file "terrain.r16", which is found ine tutorial samples project base directory.  Press the Open button and the height data will be loaded into your terrain.
-Painting
+
+## Painting
 The painting tool in Leadwerks make it is easy to get a great looking terrain in just a few minutes.  Take a look at the "Layers" section below the terrain tool settings.  Each layer can have a diffuse, normal, and displacement map.  If you right-click on the Diffuse tree node under layer one, a popup menu will appear.  Select the Select File popup menu item and choose the "savannah_dirt.tex" file.  When you press the Open button, the texture will be added to the first terrain layer.  Because this is the bottom layer, it will appear everywhere on the terrain.
 
 We can also add a normal map to the layer to make the terrain appear more detailed.  Below you will see a closeup of the terrain before the normal map is added on the left, and an image with the normal map on the right.  Which one looks better to you?
@@ -51,7 +57,8 @@ Because of the gradient in temperature over different altitudes, snow typically 
 This looks better, but we're not done yet.  Snow usually slides down slopes and accumulates on flat surfaces.  If we set a maximum angle the snow can't appear above, we'll get a more realistic distribution of snow.  Just set the Max Slope value to 25 degrees and enjoy your snowy results.
 
 Now that is looking good!
-Displacement Maps
+
+## Displacement Maps
 We can use displacement maps to add more detail to the terrain and make it look really good.  Set the diplacement map of layer three (the snow layer) to the file "mountain_snowdispl.tex".  Your final layers will look like the image below.
 
 When a displacement map is specified, the terrain renderer will use it to adjust the way texture layers transition.  Compare the images below showing the original terrain above, and the snow layer with a displacement map below that.  Which one looks more detailed?
@@ -111,9 +118,9 @@ For grass, the following settings are recommended:
 With a little experimentation you can easily create beautiful outdoor scenery with the Leadwerks vegetation system.
 
 
-Vegetation Materials
+## Vegetation Materials
 Models that are meant to be used as vegetation layers should have vegetation shaders specified in their material files.  This will allow the engine to apply effects like making grass cling to the landscape, or making leaves wave in the wind.  The vegetation shaders can be set in the material editor shader settings.  If no vegetation shaders are specified, the default shaders will be used.
 
 
-Conclusion
+## Conclusion
 In this tutorial we learned how easy it is to create terrain in Leadwerks and add texture layers to quickly make realistic outdoor scenes.  Now is a good time to take a few minutes to play around with different terrain settings and see what you can come up with.
