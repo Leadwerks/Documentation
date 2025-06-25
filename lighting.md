@@ -1,6 +1,6 @@
 # Lighting
 
-There are two types of lighting in Leadwerks. Direct lighting is fully dynamic, using shadow maps to display moving shadows that change as objects move. Indirect lighting simulates bounce lighting around the scene, and is static, which provides the best performance possible.
+There are two types of lighting in Leadwerks. Direct lighting is fully dynamic, using shadow maps to display moving shadows that change as objects move. Indirect lighting simulates bounced lighting around the scene, and is static, providing the best performance possible.
 
 ## Direct Lighting
 
