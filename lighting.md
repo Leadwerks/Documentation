@@ -46,6 +46,10 @@ You can also generate a new set from an HDRI panorama image using the tool opene
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/hdritopbr.png?raw=true)
 
+Setting the skybox environment map will cause the cubemap to appear in the background of the scene in the perspective viewport, and when you run the game.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/skybox.png?raw=true)
+
 ### Environment Probes
 
 Indirect lighting is achieved through the use of volumeitric environment probes. Each environment probe renders two cubemaps, for specular and diffuse reflections, and distributes the reflection over a box area.
