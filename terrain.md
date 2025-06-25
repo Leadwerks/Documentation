@@ -32,6 +32,8 @@ The height property determines the vertical scaling of the terrain.  If we make 
 ## Smooth
 We can smooth terrain with the smoothing tool. Select the "Smooth" tool and set the inner radius to 0.5. Now try smoothing out the steep hill you made. The higher the strength the faster the smoothing process goes
 
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/smoothterrain.gif?raw=true)
+
 ## Flatten
 The flatten tool is used to adjust terrain to one height.  It's very useful for making plateaus, which are an area of flat raised ground.  Select the 'Flatten" tool and set the outer brush radius to five.  Move your mouse so it is hovering over the top of your steep hill. Now hold down the mouse and start dragging the mouse towards lower ground. The terrain underneath the mouse will raise up to the same height you first clicked on, but won't go above this height.  If you move too quickly or if the strength setting is low, the terrain will rise, but will not reach the same height.
 
