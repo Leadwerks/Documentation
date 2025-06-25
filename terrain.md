@@ -35,6 +35,8 @@ We can smooth terrain with the smoothing tool. Select the "Smooth" tool and set 
 ## Flatten
 The flatten tool is used to adjust terrain to one height.  It's very useful for making plateaus, which are an area of flat raised ground.  Select the 'Flatten" tool and set the outer brush radius to five.  Move your mouse so it is hovering over the top of your steep hill. Now hold down the mouse and start dragging the mouse towards lower ground. The terrain underneath the mouse will raise up to the same height you first clicked on, but won't go above this height.  If you move too quickly or if the strength setting is low, the terrain will rise, but will not reach the same height.
 
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/flattenterrain.gif?raw=true)
+
 ## Importing a Heightmap
 You can import heightmaps into leadwerks from 16-bit RAW files.  (Image file formats are not supported because the limited resolution causes visual artifacts.)  There are many external tools that can be used to generate heightmaps.  One such tool is L3DT and it can be downloaded for free.  Let's import a heightmap made with this tool.  Press the Import button in the terrain editor and select the file "terrain.r16", which is found ine tutorial samples project base directory.  Press the Open button and the height data will be loaded into your terrain.
 
