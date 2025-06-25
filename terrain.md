@@ -12,6 +12,8 @@ The terrain is now visible as a flat white surface.  When you hover your mouse o
 
 In the terrain editor, your first option is the tool selector. This lets you choose the terrain tool you are going to use to edit the terrain.  The first setting is "Sculpt" which can be used to raise and lower the terrain, to create hills.
 
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/newterrain2.png?raw=true)
+
 ## Sculpt
 Sculpting terrain is easy and fluid in Leadwerks Editor. If you move the mouse over the terrain you will see a white and yellow circle. These two circles define the inner and outer radius of the terrain tool's magic.
 
