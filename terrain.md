@@ -77,4 +77,4 @@ Finally, let's add some snow at the top of the hills. Add the material "Material
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/terrainsnow.png?raw=true)
 
-
+Finally, you can set the skybox, specular, and diffuse environment maps to those found in the Materials/Environment/DaySkyHDRI011B folder, and adjust the sun settings in the [world settings](worldsettings) dialog, to get the exact look that you want.
