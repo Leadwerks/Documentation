@@ -57,7 +57,7 @@ Install the "Sample Terrain" in the Environment category of the [downloads manag
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/sampleterrain.jpg?raw=true)
 
-First, create a new 512x512 terrain. Once this is created, press the **Add** button and select the _512.r16_ file found in the _Heightmaps_ folder in your project.
+First, create a new 512x512 terrain. Once this is created, press the **Add** button and select the _512.r16_ file found in the _Heightmaps_ folder in your project. Set the terrain vertical scale to 14000 meters to stretch the heightmap vertically.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/terrainheightmap.png?raw=true)
 
