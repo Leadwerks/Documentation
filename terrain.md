@@ -53,7 +53,9 @@ The painting tool in Leadwerks make it is easy to get a great looking terrain in
 
 ## Sample Terrain
 
-Download the "Sample Terrain" in the Environment category of the [downloads manager](downloadsmanager.md).
+Install the "Sample Terrain" in the Environment category of the [downloads manager](downloadsmanager.md). We're going to learn how to build this terrain, one step at a time.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/sampleterrain.jpg?raw=true)
 
 Now let's add a second layer.  Set the diffuse texture on layer two to the file "savannah_rockwall.tex" and set the normal map to "savannah_rockwalldot3.tex".  Your layers should now look like the image below.
 
