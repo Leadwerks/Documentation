@@ -65,7 +65,7 @@ Now let's add a base material layer. Click the **Add** button and select the fil
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/terrainbase.png?raw=true)
 
-Next we will add a layer of rocks for the sides of hills. Add the material "Materials\Rock\Rock_Wall_01.mat" the the terrain. Set the minimum slope to 35 degrees and then press the **Fill** button. This will paint the layer at every spot on the terrain that is more steep than 35 degrees.
+Next we will add a layer of rocks for the sides of hills. Add the material "Materials\Rock\Rock_Wall_01.mat" the the terrain. Set the minimum slope to 35 degrees and then press the **Fill** button. This will paint the layer at every spot on the terrain that is more steep than 35 degrees. Set the UV scale to 4.0 to make the rocks appear bigger.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/terrainrock.png?raw=true)
 
