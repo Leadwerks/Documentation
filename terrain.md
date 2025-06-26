@@ -57,22 +57,23 @@ Install the "Sample Terrain" in the Environment category of the [downloads manag
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/sampleterrain.jpg?raw=true)
 
-First, create a new 512x512 terrain. Once this is created, press the **Add** button and select the 512.r16 file found in the _Heightmaps_ folder in your project.
+First, create a new 512x512 terrain. Once this is created, press the **Add** button and select the _512.r16_ file found in the _Heightmaps_ folder in your project.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/terrainheightmap.png?raw=true)
 
-Now let's add a base material layer.  Set the diffuse texture on layer two to the file "Ground\Soil_Ground_22.mat" and set the normal map to "savannah_rockwalldot3.tex".  Your layers should now look like the image below.
+Now let's add a base material layer. Click the **Add** button and select the file "Materials\Ground\Soil_Ground_22.mat".
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/terrainbaselayer.png?raw=true)
 
+Next we will add a layer of rocks for the sides of hills. Add the material "Materials\Rock\Rock_Wall_01.mat" the the terrain. Set the minimum slope to 35 degrees and then press the **Fill** button. This will paint the layer at every spot on the terrain that is more steep than 35 degrees.
+
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/terrainrock.png?raw=true)
 
-
-
-All terrain layers above the first one must be painted onto the terrain to make them appear.  Select the "Paint" tool and set the terrain tool outer radius to a very large value.  Make sure you have layer two selected below, then click and drag the mouse across the terrain.  You will see the rock texture appearing everywhere you paint with your brush.
+Next we will add a grass layer. Add the material "Materials/Ground/sparse_grass.mat" to the terrain. Set the maximum slope to 15 degrees and press the **Fill** button.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/terraingrass.png?raw=true)
 
+Finally, let's add some snow at the top of the hills. Add the material "Materials/Ground/snow008A.mat" to the terrain. Set the maximum slope to 15 degrees. Next, set the minimum height to 75 meters. Press the **Fill** button and snow will appear on top of the hills.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/terrainsnow.png?raw=true)
 
