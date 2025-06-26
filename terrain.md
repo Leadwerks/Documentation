@@ -65,7 +65,15 @@ Now let's add a base material layer.  Set the diffuse texture on layer two to th
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/terrainbaselayer.png?raw=true)
 
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/terrainrock.png?raw=true)
+
+
+
 All terrain layers above the first one must be painted onto the terrain to make them appear.  Select the "Paint" tool and set the terrain tool outer radius to a very large value.  Make sure you have layer two selected below, then click and drag the mouse across the terrain.  You will see the rock texture appearing everywhere you paint with your brush.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/terraingrass.png?raw=true)
+
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/terrainsnow.png?raw=true)
+
 
