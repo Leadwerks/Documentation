@@ -67,6 +67,9 @@ Now let's add a base material layer.  Set the diffuse texture on layer two to th
 
 All terrain layers above the first one must be painted onto the terrain to make them appear.  Select the "Paint" tool and set the terrain tool outer radius to a very large value.  Make sure you have layer two selected below, then click and drag the mouse across the terrain.  You will see the rock texture appearing everywhere you paint with your brush.
 
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/terraingrass.png?raw=true)
+
+
 Fill in the entire terrain with the rock texture.  If the process is taking too long, just increase the terrain tool outer radius to make it go faster.
 Leadwerks performs terrain modification on the graphics card.  Parallel processing makes the Leadwerks  terrain tool super fast even when editing huge terrains.
 Layer Properties
