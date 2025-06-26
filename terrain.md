@@ -44,7 +44,7 @@ You can import heightmaps into leadwerks from 16-bit RAW files.  (Image file for
 
 Download this file: [512.r16](https://github.com/Leadwerks/Documentation/raw/refs/heads/master/Assets/Terrain/512.r16)
 
-Press the Import button in the terrain editor and select the file "terrain.r16", which is found ine tutorial samples project base directory.  Press the Open button and the height data will be loaded into your terrain.
+Press the **Load** button in the terrain editor and select the file "512.r16" that you downloaded.  Press the Open button and the height data will be loaded into your terrain.
 
 ## Painting
 The painting tool in Leadwerks make it is easy to get a great looking terrain in just a few minutes.  Take a look at the "Layers" section below the terrain tool settings.  Each layer can have a diffuse, normal, and displacement map.  If you right-click on the Diffuse tree node under layer one, a popup menu will appear.  Select the Select File popup menu item and choose the "savannah_dirt.tex" file.  When you press the Open button, the texture will be added to the first terrain layer.  Because this is the bottom layer, it will appear everywhere on the terrain.
