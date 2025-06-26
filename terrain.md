@@ -59,7 +59,7 @@ Install the "Sample Terrain" in the Environment category of the [downloads manag
 
 First, create a new 512x512 terrain. Once this is created, press the **Add** button and select the 512.r16 file found in the _Heightmaps_ folder in your project.
 
-![](https://github.com/UltraEngine/Documentation/blob/master/Images/terrainheightmap.jpg?raw=true)
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/terrainheightmap.png?raw=true)
 
 Now let's add a second layer.  Set the diffuse texture on layer two to the file "savannah_rockwall.tex" and set the normal map to "savannah_rockwalldot3.tex".  Your layers should now look like the image below.
 
