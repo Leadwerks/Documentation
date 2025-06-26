@@ -61,7 +61,9 @@ First, create a new 512x512 terrain. Once this is created, press the **Add** but
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/terrainheightmap.png?raw=true)
 
-Now let's add a second layer.  Set the diffuse texture on layer two to the file "savannah_rockwall.tex" and set the normal map to "savannah_rockwalldot3.tex".  Your layers should now look like the image below.
+Now let's add a base material layer.  Set the diffuse texture on layer two to the file "Ground\Soil_Ground_22.mat" and set the normal map to "savannah_rockwalldot3.tex".  Your layers should now look like the image below.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/terrainbaselayer.png?raw=true)
 
 All terrain layers above the first one must be painted onto the terrain to make them appear.  Select the "Paint" tool and set the terrain tool outer radius to a very large value.  Make sure you have layer two selected below, then click and drag the mouse across the terrain.  You will see the rock texture appearing everywhere you paint with your brush.
 
