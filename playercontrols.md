@@ -1,4 +1,4 @@
-# Adding The Player
+# Adding the Player
 
 www.youtube.com/watch?v=Eiznn-zF6Ok
 
