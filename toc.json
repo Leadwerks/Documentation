@@ -48,7 +48,10 @@
                             "title": "Lighting",
                             "filename": "lighting"
                         },
-                        
+                        {
+                            "title": "Player Controls",
+                            "filename": "playercontrols"
+                        },
                         {
                             "title": "Materials",
                             "filename": "materials"
