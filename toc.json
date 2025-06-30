@@ -41,6 +41,15 @@
                             "filename": "entityproperties"
                         },
                         {
+                            "title": "3D Models",
+                            "filename": "models"
+                        },
+                        {
+                            "title": "Lighting",
+                            "filename": "lighting"
+                        },
+                        
+                        {
                             "title": "Materials",
                             "filename": "materials"
                         },                        
@@ -52,14 +61,6 @@
                             "title": "Material Painting",
                             "filename": "materialpainting"
                         },                        
-                        {
-                            "title": "3D Models",
-                            "filename": "models"
-                        },
-                        {
-                            "title": "Lighting",
-                            "filename": "lighting"
-                        },     
                         {
                             "title": "Terrain",
                             "filename": "terrain"
