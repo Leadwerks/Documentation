@@ -41,16 +41,16 @@
                             "filename": "entityproperties"
                         },
                         {
+                            "title": "Lighting",
+                            "filename": "lighting"
+                        },
+                        {
                             "title": "Player Controls",
                             "filename": "playercontrols"
                         },
                         {
                             "title": "3D Models",
                             "filename": "models"
-                        },
-                        {
-                            "title": "Lighting",
-                            "filename": "lighting"
                         },
                         {
                             "title": "Materials",
