@@ -16,6 +16,18 @@ Create four more walls to enclose the area.
 
 ![](https://raw.githubusercontent.com/Leadwerks/Documentation/refs/heads/master/Images/walls.png)
 
+Now add another box on top to make the ceiling. It should be 1024x1024 cm and 32 cm high:
+
+![](https://raw.githubusercontent.com/Leadwerks/Documentation/refs/heads/master/Images/ceiling.png)
+
+Select the point light object in the object creation drop-down panel.
+
+![](https://raw.githubusercontent.com/Leadwerks/Documentation/refs/heads/master/Images/playertestlight0.png)
+
+Add a point light to the center of the room. In the [entity properties](entityproperties.png) dialog, set the light far range to 6 meters.
+
+![](https://raw.githubusercontent.com/Leadwerks/Documentation/refs/heads/master/Images/playertestlight.png)
+
 Now select the **Pivot** object from the object dialog.
 
 ![](https://raw.githubusercontent.com/Leadwerks/Documentation/refs/heads/master/Images/createpivot.png)
@@ -28,9 +40,13 @@ Add a **FPSPlayer** component to the pivot.
 
 ![](https://raw.githubusercontent.com/Leadwerks/Documentation/refs/heads/master/Images/playercomponent.png)
 
+Since this is an indoor scene, you can remove the specular and diffuse PBR reflection maps in thee [world settings](worldsettings.md) dialog.
+
 You can also set the skybox to the _Materials\\Environment\\Default\\default.dds_ file using the [world settings](worldsettings.md) dialog.
 
-![](https://raw.githubusercontent.com/Leadwerks/Documentation/refs/heads/master/Images/playersky.png)
+![](https://raw.githubusercontent.com/Leadwerks/Documentation/refs/heads/master/Images/removeenvmaps.gif)
+
+![](https://raw.githubusercontent.com/Leadwerks/Documentation/refs/heads/master/Images/playertestlight2.png)
 
 You're now ready to run the game. Select the **Game > Run** menu item to launch the game. If you are using a Lua project, the game is ready to run. If you are using a C++ project, then you must compile the Visual Studio project before the game executable will be available.
 
