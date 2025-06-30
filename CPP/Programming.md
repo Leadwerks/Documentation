@@ -29,7 +29,7 @@ To start your C++ programming journey with Ultra Engine, follow these steps:
 
 ![Compile and Run](https://raw.githubusercontent.com/UltraEngine/Documentation/master/Images/vs.png)
 
-On Windows, Ultra Engine uses an environment variable to specify the location of header and library files. This will be created automatically by the standalone installer, or you may asked for permission to add it during project creation. You can also add an environment variable manually called "ULTRAENGINE" and set its value to your install location (typically "C:\Program Files\Ultra Engine").
+On Windows, Leadwerks uses an environment variable to specify the location of header and library files. This will be created automatically by the standalone installer, or you may asked for permission to add it during project creation. You can also add an environment variable manually called "LEADWERKS" and set its value to your install location (typically "C:\Program Files (x86)\Steam\steamapps\common\Leadwerks" or "C:\Program Files\Leadwerks").
 
 ## Exploring Examples
 
