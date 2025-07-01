@@ -4,6 +4,8 @@ www.youtube.com/watch?v=PKcLxcp1O2s
 
 Leadwerks provides tools to easily adjust texture mapping on primitives.
 
+You can download the material used in this tutorial [here](https://www.leadwerks.com/community/files/file/3589-11-scifi-materials/) or with the [downloads manager](downloadsmanager.md).
+
 ## Texture Lock
 
 When the texture lock setting is disabled, texture mapping on primitives will stay aligned to the world when an object moves.
