@@ -17,6 +17,7 @@ This class serves as the foundation for all 3D objects in a world. It provides a
 | quaternion | [xQuat](xQuat.md) | read-only rotation |
 | rotation | [xVec3](xVec3.md) | read-only Euler rotation |
 | scale | [xVec3](xVec3.md) | read-only scale |
+| speakers | std::list<std::shared_ptr<Speaker> >& speakers | read-only list of managed speakers created by a call to [EmitSound](Entity_EmitSound.md) |
 | tags | set<[WString](WString.md)> | read-only container of tags |
 | velocity | [xVec3](xVec3.md) | read-only linear velocity |
 | [AddComponent](Entity_AddComponent.md) | Method | adds an entity component |
