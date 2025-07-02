@@ -2,6 +2,8 @@
 
 www.youtube.com/watch?v=7iZue7odgYI
 
+You can download the sample scene [here](https://www.leadwerks.com/community/files/file/3587-sample-terrain/) or in the [downloads manager](downloadsmanager.md).
+
 Leadwerks has a built-in clipmap terrain system, complete with tools for sculpting and painting terrain.  We can use these tools to create expansive outdoor environments, and we'll learn how to do exactly that in this tutorial.
 
 ## Creating Terrain
