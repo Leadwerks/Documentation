@@ -2,7 +2,7 @@
 
 www.youtube.com/watch?v=eK2jYjCRah8
 
-You can download a sample scene for this tutorial [here](https://www.leadwerks.com/community/files/file/3590-lighting-sample/).
+You can download a sample scene for this tutorial [here](https://www.leadwerks.com/community/files/file/3590-lighting-sample/) or in the [downloads manager](downloadsmanager.md).
 
 There are two types of lighting in Leadwerks. Direct lighting is fully dynamic, using shadow maps to display moving shadows that change as objects move. Indirect lighting simulates bounced lighting around the scene, and is static, providing the best performance possible.
 
