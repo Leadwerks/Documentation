@@ -1,4 +1,7 @@
 # Terrain
+
+www.youtube.com/watch?v=7iZue7odgYI
+
 Leadwerks has a built-in clipmap terrain system, complete with tools for sculpting and painting terrain.  We can use these tools to create expansive outdoor environments, and we'll learn how to do exactly that in this tutorial.
 
 ## Creating Terrain
