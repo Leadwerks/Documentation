@@ -449,6 +449,10 @@
                                     "filename": "Camera_SetFov"
                                 },
                                 {
+                                    "title": "SetMsaa",
+                                    "filename": "Camera_SetMsaa"
+                                },                                
+                                {
                                     "title": "SetOrder",
                                     "filename": "Camera_SetOrder"
                                 },
