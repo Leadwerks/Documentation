@@ -12,4 +12,4 @@ This method can be used to enable mutli-sample antialiasing.
 
 ## Remarks
 
-Not all hardware supports 32x antialiasing. In practice, 0, 2, and 4 are the only values you will need, as higher values will cause much slower performance.
+Not all hardware supports 32x antialiasing. For real-time applications, 0, 2, and 4 are the only values you will need, as higher values will cause much slower performance.
