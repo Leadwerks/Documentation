@@ -57,6 +57,3 @@ You can quickly explore C++ programming in Ultra Engine by trying out example pr
 
 3. **Compile and Run:**
    - Compile and run your project in Visual Studio, and the example will be displayed.
-
-This guide will help you kickstart your C++ development with Ultra Engine, enabling you to create games and simulations with ease.
-
