@@ -70,5 +70,28 @@ end
 ```
 Save the script and run the game again, and you can hold the T key to make the green box turn.
 
-## FlowGraph Editor
+## Flowgraph Editor
 
+The flowgraph editor allows you to make connections between component inputs and outputs, to set up complex sequences of events. Open the scene "flowgraph.map". Press the **Flowgraph Editor** button in the left-side bar to view the flowgraph editor interface.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/flowgraphexample.png?raw=true)
+
+The interface shows a connection between the two trigger field Collide outputs and the Open input on the corresponding door. When you run the game, stepping into the invisible trigger volume will cause each door to open.
+
+You can add a custom input to the component we previously created. Just open the file "Source\Components\Motion\CustomComponent.lua" and add this function anywhere in the file. The "in" comment after the function declaration will tell the editor the function can be used as an input in the code editor:
+
+```lua
+function CustomComponent:Turn()--in
+	self.entity:Turn(self.rotationspeed)
+end
+```
+
+Select the green box in the middle of the scene and switch to the flowgraph editor. You can drag the box into the flowgraph view to add it into the interface.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/addentitytoflowgraph.gif?raw=true)
+
+You can drag a connection from the Collide output of both the trigger fields to the Turn input on the box.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/connect.gif?raw=true)
+
+When you run the game now, stepping into the invisible trigger fields will open the corresponding door, but will also cause the green box to rotate.
