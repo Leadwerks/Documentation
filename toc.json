@@ -75,11 +75,7 @@
                         {
                             "title": "Components",
                             "filename": "components"
-                        },
-                        {
-                            "title": "Flowgraph Events",
-                            "filename": "flowgraphevents"
-                        }                        
+                        }                    
                     ]
                 },
                 {
