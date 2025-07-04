@@ -73,7 +73,7 @@
                             "filename": "vegetation"
                         },
                         {
-                            "title": "Components",
+                            "title": "Entity Components",
                             "filename": "components"
                         }                    
                     ]
