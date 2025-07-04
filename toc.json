@@ -73,8 +73,8 @@
                             "filename": "vegetation"
                         },
                         {
-                            "title": "Entity Component System",
-                            "filename": "entitycomponentsystem"
+                            "title": "Components",
+                            "filename": "components"
                         },
                         {
                             "title": "Flowgraph Events",
@@ -98,6 +98,10 @@
                             "title": "Downloads Manager",
                             "filename": "downloadsmanager"
                         },
+                        {
+                            "title": "Entity Component System",
+                            "filename": "entitycomponentsystem"
+                        },                        
                         {
                             "title": "Face Panel",
                             "filename": "facepanel"
