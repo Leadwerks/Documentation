@@ -45,7 +45,7 @@ MyComponent.rgbavalue = Vec4(1,1,1,1)--"RGBA value" COLOR
 ```
 ## Component Inputs and Outputs
 
-You can mark component methods as inputs or outputs for use with the [flowgraph editor](entitycomponentsystem.md) by adding a comment after the function declaration:
+You can mark component methods as inputs or outputs for use with the [flowgraph editor](flowgrapheditor.md) by adding a comment after the function declaration:
 
 ```lua
 function MyComponent.MyInputFunction()--in
