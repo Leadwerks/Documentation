@@ -210,7 +210,15 @@
                         {
                             "title": "Functions",
                             "filename": "Functions"
-                        }                         
+                        },
+                        {
+                            "title": "Components",
+                            "filename": "codecomponents"
+                        },
+                        {
+                            "title": "Debugging",
+                            "filename": "debugging"
+                        }
                     ]
                 }
             ]
