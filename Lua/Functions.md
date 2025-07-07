@@ -14,7 +14,7 @@ end
 The function keyword indicates the start of a function declaration, and is followed by the name, which in this case is "MyFunction".  We can put any code inside the function.  The example below declares a function called "SayHello" which prints the string "Hello!" whenever it is called.  Note that the function code only gets called when the function is called.  The function code is not executafed before then::
 ```lua
 function SayHello()
-	print("Hello!")
+	Print("Hello!")
 end
 
 SayHello()
