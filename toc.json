@@ -181,47 +181,47 @@
                         {
                             "title": "Code Comments",
                             "filename": "CodeComments",
-                            "notincpp": true
+                            "hideFromCPP": true
                         },
                         {
                             "title": "Variables",
                             "filename": "Variables",
-                            "notincpp": true
+                            "hideFromCPP": true
                         },
                         {
                             "title": "\"if\" Statements",
                             "filename": "IfStatements",
-                            "notincpp": true
+                            "hideFromCPP": true
                         },
                         {
                             "title": "Operators",
                             "filename": "Operators",
-                            "notincpp": true
+                            "hideFromCPP": true
                         },
                         {
                             "title": "Loops",
                             "filename": "Loops",
-                            "notincpp": true
+                            "hideFromCPP": true
                         },
                         {
                             "title": "Tables",
                             "filename": "Tables",
-                            "notincpp": true
+                            "hideFromCPP": true
                         },
                         {
                             "title": "Functions",
                             "filename": "Functions",
-                            "notincpp": true
+                            "hideFromCPP": true
                         },
                         {
                             "title": "Components",
                             "filename": "Components",
-                            "notincpp": true
+                            "hideFromCPP": true
                         },
                         {
                             "title": "Debugging",
                             "filename": "Debugging",
-                            "notincpp": true
+                            "hideFromCPP": true
                         }
                     ]
                 }
