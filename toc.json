@@ -180,39 +180,48 @@
                         },
                         {
                             "title": "Code Comments",
-                            "filename": "CodeComments"
+                            "filename": "CodeComments",
+                            "notincpp": true
                         },
                         {
                             "title": "Variables",
-                            "filename": "Variables"
+                            "filename": "Variables",
+                            "notincpp": true
                         },
                         {
                             "title": "\"if\" Statements",
-                            "filename": "IfStatements"
+                            "filename": "IfStatements",
+                            "notincpp": true
                         },
                         {
                             "title": "Operators",
-                            "filename": "Operators"
+                            "filename": "Operators",
+                            "notincpp": true
                         },
                         {
                             "title": "Loops",
-                            "filename": "Loops"
+                            "filename": "Loops",
+                            "notincpp": true
                         },
                         {
                             "title": "Tables",
-                            "filename": "Tables"
+                            "filename": "Tables",
+                            "notincpp": true
                         },
                         {
                             "title": "Functions",
-                            "filename": "Functions"
+                            "filename": "Functions",
+                            "notincpp": true
                         },
                         {
                             "title": "Components",
-                            "filename": "Components"
+                            "filename": "Components",
+                            "notincpp": true
                         },
                         {
                             "title": "Debugging",
-                            "filename": "Debugging"
+                            "filename": "Debugging",
+                            "notincpp": true
                         }
                     ]
                 }
