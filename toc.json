@@ -185,8 +185,7 @@
                         },
                         {
                             "title": "Code Comments",
-                            "filename": "CodeComments",
-                            "notincpp": true
+                            "filename": "CodeComments"
                         }
                     ]
                 }
