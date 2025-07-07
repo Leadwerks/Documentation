@@ -16,6 +16,8 @@ The editor will create two new files in the appropriate folder. The Lua file con
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/newcomponent3.png?raw=true)
 
+## Component Properties
+
 The new component will include example properties of every supported type.
 ```lua
 MyComponent.integervalue = 0--"Integer value"
@@ -41,4 +43,5 @@ MyComponent.pathvalue = ""--"Path value" SOUND
 MyComponent.rgbvalue = Vec3(1,1,1)--"RGB value" COLOR
 MyComponent.rgbavalue = Vec4(1,1,1,1)--"RGBA value" COLOR
 ```
+## Component Inputs and Outputs
 
