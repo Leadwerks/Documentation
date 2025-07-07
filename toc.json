@@ -5,12 +5,7 @@
             "openstate": false,
             "filename": "introduction",
             "useLanguage": false
-        },
-        {
-            "title": "Installation",
-            "filename": "installation",
-            "useLanguage": false
-        },        
+        },       
         {
             "title": "Tutorials",
             "openstate": true,
