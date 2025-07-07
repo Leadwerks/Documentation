@@ -186,7 +186,11 @@
                         {
                             "title": "Code Comments",
                             "filename": "CodeComments"
-                        }
+                        },
+                        {
+                            "title": "Variables",
+                            "filename": "Variables"
+                        }                        
                     ]
                 }
             ]
