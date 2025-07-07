@@ -42,12 +42,12 @@ local framebuffer = CreateFramebuffer(window)
 
 --Load model
 --Cyber Samurai by Khoa Minh: https://sketchfab.com/3d-models/cyber-samurai-26ccafaddb2745ceb56ae5cfc65bfed5
-local model = LoadModel(world, "https://github.com/UltraEngine/Documentation/raw/master/Assets/Models/Characters/cyber_samurai.glb")
+local model = LoadModel(world, "https://github.com/Leadwerks/Documentation/raw/master/Assets/Models/Characters/cyber_samurai.glb")
 model:Turn(0, 180, 0, true)
 
 --Environment maps
-local specmap = LoadTexture("https://github.com/UltraEngine/Assets/raw/main/Materials/Environment/footprint_court/specular.dds")
-local diffmap = LoadTexture("https://github.com/UltraEngine/Assets/raw/main/Materials/Environment/footprint_court/diffuse.dds")
+local specmap = LoadTexture("https://github.com/Leadwerks/Documentation/raw/master/Assets/Materials/Environment/footprint_court/specular.dds")
+local diffmap = LoadTexture("https://github.com/Leadwerks/Documentation/raw/master/Assets/Materials/Environment/footprint_court/diffuse.dds")
 world:SetEnvironmentMap(diffmap, ENVIRONMENTMAP_BACKGROUND)
 world:SetEnvironmentMap(specmap, ENVIRONMENTMAP_SPECULAR)
 world:SetEnvironmentMap(diffmap, ENVIRONMENTMAP_DIFFUSE)
