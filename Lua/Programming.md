@@ -4,7 +4,7 @@ Lua is a versatile scripting language widely employed in a multitude of games, r
 
 ## Using the Integrated Script Editor
 
-The integrated [script editor](scripteditor.md) is recommended for most users, and doesn't require any additional software to be installed. The script editor will open any time you double-click on a code file in the [project panel](assetbrowser.md).
+The integrated [script editor](scripteditor.md) is recommended for most users, and doesn't require any additional software to be installed. The script editor will open any time you double-click on a code file in the [project panel](assetbrowser.md), or you can select the **Scripting > Script Editor** item in the main menu.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/ide.png?raw=true)
 
