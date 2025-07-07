@@ -34,7 +34,7 @@ PrintUpper("Functions can be fun.")
 You can send multiple arguments to a function by separating them with a comma:
 ```lua
 function CombineAndPrintUpper(text1,text2)
-	print(string.upper((text1))..string.upper((text2)))
+	Print(string.upper((text1))..string.upper((text2)))
 end
 CombineAndPrintUpper("Hello, ","how are you?")
 ```
@@ -67,7 +67,7 @@ Declaring a table function is done like so
 ```lua
 MyTable = {}
 function MyTable:SayHello()
-	print("Hello!")
+	Print("Hello!")
 end
 
 MyTable:SayHello()
@@ -77,7 +77,7 @@ A table function is called with the table variable first, followed by a colon ("
 MyTable = {}
 MyTable.health = 100
 function MyTable:PrintHealth()
-print(self.health)
+	Print(self.health)
 end
 
 MyTable:PrintHealth()
@@ -87,7 +87,7 @@ Note that the table variable and function name must be joined by a colon (":"), 
 MyTable = {}
 MyTable.health = 100
 function MyTable:PrintHealth()
-	print(self.health)
+	Print(self.health)
 end
 
 MyTable.PrintHealth()
