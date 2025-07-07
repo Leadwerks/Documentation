@@ -1,13 +1,13 @@
 # Functions
 
-Functions are a reusable bit of code that can be called anywhere in your program.
+Functions are a reusable bit of code that can be called anywhere from in your program.
 
 ## Function Declarations
 
 A function declaration looks like the code below:
 ```lua
 function MyFunction()
---function code goes here.
+	--function code goes here.
 end
 ```
 
