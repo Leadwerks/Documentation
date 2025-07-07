@@ -8,6 +8,8 @@ The integrated [script editor](scripteditor.md) is recommended for most users, a
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/ide.png?raw=true)
 
+The [programming reference](https://www.leadwerks.com/learn/LoadModel?lang=lua) includes examples for most commands. To run an example, just copy the code from the example section of the page, and paste it into the file Source\Main.lua, overwriting its contents.
+
 If you are using the integrated script editor, you do not need to read the rest of this article, and you can proceed to the first Lua programming tutorial.
 
 ## Using Visual Studio Code
