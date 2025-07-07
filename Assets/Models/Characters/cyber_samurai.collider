@@ -1,4 +1,10 @@
 "collider"
 {
-    
+    "parts":
+    [
+        {
+            "shape": "BOX",
+            "size": [1,1,1]
+        }
+    ]
 }
