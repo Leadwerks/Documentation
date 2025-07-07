@@ -12,7 +12,7 @@ In the New Component dialog, select the group you want to place your component i
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/newcomponent2.png?raw=true)
 
-The editor will create two new files in the appropriate folder. The "CustomComponent.lua" file contains your component code. The "CustomComponent.json" file contains component definitions extracted from the code file, and tells the editor what editable properties the code file contains.
+The editor will create two new files in the appropriate folder. The Lua file contains your component code. The JSON file contains component definitions extracted from the code file, and tells the editor what editable properties the code file contains.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/newcomponent3.png?raw=true)
 
