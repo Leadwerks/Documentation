@@ -182,6 +182,11 @@
                         {
                             "title": "Getting Started",
                             "filename": "Programming"
+                        },
+                        {
+                            "title": "Code Comments",
+                            "filename": "CodeComments",
+                            "notincpp": true
                         }
                     ]
                 }
