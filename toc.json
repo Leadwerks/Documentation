@@ -213,11 +213,11 @@
                         },
                         {
                             "title": "Components",
-                            "filename": "codecomponents"
+                            "filename": "Components"
                         },
                         {
                             "title": "Debugging",
-                            "filename": "debugging"
+                            "filename": "Debugging"
                         }
                     ]
                 }
