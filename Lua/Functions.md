@@ -44,21 +44,23 @@ CombineAndPrintUpper("Hello, ","how are you?")
 Functions can also return a value to the code that is calling them.  The function below accepts an argument, adds one to it, then returns the result:
 ```lua
 function AddOne(num)
-	return num+1
+	return num + 1
 end
+
 n = AddOne(2)
-print(n)
+Print(n)
 ```
 One special feature of Lua is that a function can actually return multiple values.  In the example below, two values are returned and assigned to two different variables:
 ```lua
 function AddOneAndSubtractOne(num)
-	return num+1, num-1
+	return num + 1, num - 1
 end
+
 --Whoa!
 x,y = AddOneAndSubtractOne(2)
 
-print(x)
-print(y)
+Print(x)
+Print(y)
 ```
 ## Functions in Tables
 
