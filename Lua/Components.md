@@ -38,9 +38,6 @@ MyComponent.health = 100 -- "Health"
 In the case of file paths and colors, the type must be specified after the display name. For file path properties, you can specific SOUND, MODEL, MATERIAL, TEXTURE, or PREFAB to control what file types the file selection dialog will display.
 ```lua
 MyComponent.pathvalue = ""--"Path value" SOUND
-MyComponent.vec2value = Vec2(0,0)--"Vec2 value"
-MyComponent.vec3value = Vec3(0,0,0)--"Vec3 value"
-MyComponent.vec4value = Vec4(0,0,0,0)--"Vec4 value"
 MyComponent.rgbvalue = Vec3(1,1,1)--"RGB value" COLOR
 MyComponent.rgbavalue = Vec4(1,1,1,1)--"RGBA value" COLOR
 ```
