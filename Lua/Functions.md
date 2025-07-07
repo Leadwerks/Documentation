@@ -25,7 +25,7 @@ SayHello()
 You can pass optional values to a function to be used in its code.  These values are called "arguments" or "parameters".  In the example below, a function is declared which accepts one argument and performs an action:
 ```lua
 function PrintUpper(text)
-	print(string.upper(text))
+	Print(string.upper(text))
 end
 
 PrintUpper("Functions can be fun.")
