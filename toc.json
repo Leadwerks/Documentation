@@ -194,7 +194,23 @@
                         {
                             "title": "\"if\" Statements",
                             "filename": "IfStatements"
-                        }
+                        },
+                        {
+                            "title": "Operators",
+                            "filename": "Operators"
+                        },
+                        {
+                            "title": "Loops",
+                            "filename": "Loops"
+                        },
+                        {
+                            "title": "Tables",
+                            "filename": "Tables"
+                        },
+                        {
+                            "title": "Functions",
+                            "filename": "Functions"
+                        }                         
                     ]
                 }
             ]
