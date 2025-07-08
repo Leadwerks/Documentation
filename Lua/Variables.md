@@ -104,7 +104,7 @@ Boolean are a very simple data type that can only have two values, true and fals
 playerIsReady = true
 ```
 
-## Nil
+## nil
 Until a value is assigned to a variable, all variables are equal to nil. Nil means "no value". It is [u]not[/u] the same thing as zero, because zero is an actual number. Nil means "nothing".
 Converting Data Types
 We can convert values to different data types very easily in Lua. Sometimes this is done automatically. If we print a number value, for example, it automatically gets converted to a string that is printed to the program output. Sometimes we need to explicitly force conversion of one data type to another. This can be achieved with the Lua functions tonumber() and tostring().
