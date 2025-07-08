@@ -1,5 +1,7 @@
 # Code Comments
 
+www.youtube.com/watch?v=J70jEln0gPQ
+
 Welcome to the easiest tutorial ever.  We're just going to talk a little but about code comments, why we add them, and how to use them.  Commenting out code is a way to remove it so that it gets ignored by the game.  The code will still be in your script file, but will not be read by the Lua script interpreter.
 
 ## Why We Comment
