@@ -1,4 +1,7 @@
 # Variables
+
+www.youtube.com/watch?v=SejxDcQhwuw
+
 A variable is a named value in a program that stores a piece of information. Let's take a look at the definition of the word "variable", as provided by [dictionary.com](https://www.dictionary.com/browse/variable):
 
 > adjective
