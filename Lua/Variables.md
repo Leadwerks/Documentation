@@ -154,4 +154,4 @@ Local variables are great because they let us use the same name in different pla
 
 ## Conclusion
 
-You're starting to build some pretty advanced knowledge that's good not only for games, but computer science in general! (Now would be a good time to brag to your parents about how smart video games are making you.) If any of this wasn't clear or you don't understand something, feel free to let us know in the comments below.
+You're starting to build some pretty advanced knowledge that's good not only for games, but computer science in general! (Now would be a good time to brag to your parents about how smart video games are making you.) If any of this wasn't clear or you don't understand something, feel free to let us know on the forum, and we'll try to help you.
