@@ -89,6 +89,54 @@ if a ~= 5 then
 end
 ```
 
+## Logical Operators
+
+We have some logical operators that are very useful in if statements.
+
+### and
+
+The **and** operator allows you to combine two conditions into one. Both conditions must be true for the combined condition to be met.
+
+```lua
+a = 1
+b = 2
+if a > 0 and b > 0 then
+        Print("Both a and b are greater than zero")
+end
+```
+
+### or
+
+The **or** operator allows you to combine two conditions into one. One or both conditions must be true for the combined condition to be met.
+
+```lua
+a = 1
+b = -2
+if a > 0 or b > 0 then
+        Print("Either a or b are greater than zero")
+end
+```
+
+### not
+
+The **not** operator can be used with boolean values.
+
+```lua
+b = false
+if not b then
+        Print("b is not true")
+end
+```
+
+This operator is just shorthand for testing if something equals false:
+
+```lua
+b = false
+if b == false then
+        Print("b is not true")
+end
+```
+
 ## Bitwise Operators
 
 Okay, now things are going to get a little weird. Computers use a lot of power-of-two numbers. Power-of-two numbers are what you get if you start with one and just keep multiplying by two:
