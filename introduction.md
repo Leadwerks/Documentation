@@ -1,8 +1,8 @@
 # Leadwerks 5 Documentation
 
-Welcome to the Leadwerks 5 / Ultra Engine documentation. This will teach you everything you need to know to use the software. This is the first place to look for answers, and if you have further questions, you can ask on the [forum](https://www.leadwerks.com/community) or on our [Discord]([https://www.leadwerks.com/discord](https://discord.gg/qTVR55BgGt)) server.
+Welcome to the Leadwerks 5 / Ultra Engine documentation. This will teach you everything you need to know to use the software. This is the first place to look for answers, and if you have further questions, you can ask on the [forum](https://www.leadwerks.com/community) or on our [Discord](https://discord.gg/qTVR55BgGt) server.
 
-YouTube and ChatGPT will not give you useful information.
+**YouTube and ChatGPT will not give you useful information on using Leadwerks.**
 
 I recommend you start with the [Crash Course](https://www.leadwerks.com/learn/projectcreation) series of tutorials.
 
