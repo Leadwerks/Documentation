@@ -13,27 +13,38 @@ end
 
 The example below can be pasted into your "Main.lua" script file to see how while loops work.  When you run this example (select the Game > Debug menu item in the script editor menu) it will keep looping until the space key is pressed.  Even clicking on the game window won't close it because you have to press Space to exit the loop:
 ```lua
---Create a window
-window = Window:Create()
+--Get the displays
+local displays = GetDisplays()
 
---Create a framebuffer
-context = CreateFramebuffer(window)
+-- Create a window
+local window = CreateWindow("Leadwerks", 0, 0, 1280, 720, displays[1], WINDOW_CENTER | WINDOW_TITLEBAR)
 
---Create a world
-world = CreateWorld()
+-- Create a world
+local world = CreateWorld()
 
---Create a camera
-camera = CreateCamera(world)
+-- Create a framebuffer
+local framebuffer = CreateFramebuffer(window)
 
---While loop
-while window:KeyHit(Key.Escape)==false do
+-- Create a camera
+local camera = CreateCamera(world)
+camera:SetClearColor(0.125)
+camera:SetPosition(0, 0, -2)
 
-  --Update the world
-  world:Update()
+-- Create a light
+local light = CreateBoxLight(world)
+light:SetRotation(45, 35, 0)
+light:SetRange(-10, 10)
+light:SetColor(2)
 
-  --Render the world
-  world:Render(framebuffer)
+-- Create a model
+local model = CreateBox(world)
+model:SetColor(0, 0, 1)
 
+-- Main loop
+while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
+    model:Turn(0, 1, 0)
+    world:Update()
+    world:Render(framebuffer)
 end
 ```
 
