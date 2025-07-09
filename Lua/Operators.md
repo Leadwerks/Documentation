@@ -10,6 +10,7 @@ The equals operator is a test to see if two values are equal.  This does not ass
 
 ```lua
 n = 2
+
 if n == 2 then
         Print("n equals 2")
 end
@@ -19,6 +20,7 @@ The equals operator can be used with any data type, including strings and boolea
 
 ```lua
 name = "Fred"
+
 if name == "Fred" then
         Print("The name's Fred")
 end
@@ -32,6 +34,7 @@ Remember, birds don't eat a lot, so the number where his beak points is smaller.
 
 ```lua
 a = 1
+
 if a < 2 then
         Print("a is less than 2")
 end
@@ -45,6 +48,7 @@ Remember, alligators eat a lot, so the number where his mouth points is bigger. 
 
 ```lua
 a = 1
+
 if a > 0 then
         Print("a is greater than 0")
 end
@@ -58,6 +62,7 @@ Here is an example of its usage:
 
 ```lua
 a = 1
+
 if a <= 1 then
         Print("a is less than or equal to 1")
 end
@@ -71,6 +76,7 @@ Here is an example of its usage:
 
 ```lua
 a = 1
+
 if a >= 1 then
         Print("a is greater than or equal to 1")
 end
@@ -84,6 +90,7 @@ Here is an example of its usage:
 
 ```lua
 a = 1
+
 if a ~= 5 then
         Print("a does not equal 5")
 end
@@ -100,6 +107,7 @@ The **and** operator allows you to combine two conditions into one. Both conditi
 ```lua
 a = 1
 b = 2
+
 if a > 0 and b > 0 then
         Print("Both a and b are greater than zero")
 end
@@ -112,6 +120,7 @@ The **or** operator allows you to combine two conditions into one. One or both c
 ```lua
 a = 1
 b = -2
+
 if a > 0 or b > 0 then
         Print("Either a or b are greater than zero")
 end
@@ -123,6 +132,7 @@ The **not** operator can be used with boolean values.
 
 ```lua
 b = false
+
 if not b then
         Print("b is not true")
 end
@@ -132,8 +142,20 @@ This operator is just shorthand for testing if something equals false:
 
 ```lua
 b = false
+
 if b == false then
         Print("b is not true")
+end
+```
+
+You can also use the not operator to flip the value of a boolean variable:
+
+```lua
+b = false
+b = not b
+
+if b then
+        Print("b is true")
 end
 ```
 
