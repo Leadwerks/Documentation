@@ -1,5 +1,7 @@
 # Operators
 
+www.youtube.com/watch?v=s20coGsx5nc
+
 In this lesson we'll review all the logical operators that are available to use in Lua.  Operators are special expessions that can be used to determine the relationship of two values.  They are often used in "if" statements to execute code when a condition is met.
 
 ## Equals
