@@ -1,5 +1,7 @@
 # "if" Statements
 
+www.youtube.com/watch?v=JCUZtwh0f-k
+
 An "if" statement is used to check if a condition is met. The program will execute branching logic based on the state of the condition tested.
 
 The syntax for an "if" statement looks like this:
