@@ -89,7 +89,7 @@ if a ~= 5 then
 end
 ```
 
-## Logical Operators
+## Bitwise Operators
 
 Okay, now things are going to get a little weird. Computers use a lot of power-of-two numbers. Power-of-two numbers are what you get if you start with one and just keep multiplying by two:
 > 1 x 2 = 2  
@@ -114,7 +114,7 @@ Let's try another. What power-of-two numbers can we add together to make the num
 
 This works with all positive power-of-two numbers, into infinity.
 
-### Logical OR
+### Bitwise OR
 
 Sometimes programmers like to use this super power to combine multiple values into a single variable using something called the logical OR operator:
 ```lua
@@ -134,7 +134,7 @@ CreateWindow("My Window", 0, 0, 800, 600, display, WINDOW_CENTER | WINDOW_TITLEB
 
 The window will be created using the WINDOW_CENTER and the WINDOW_TITLEBAR styles.
 
-### Logical AND
+### Bitwise AND
 
 If logical OR combines values, logical AND allows us to detect combined values. In the example below, we know the number three is made up of two and one, so two is the value the two sides of the operator have in common.
 
