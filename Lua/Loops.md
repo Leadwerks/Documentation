@@ -1,6 +1,6 @@
 # Loops
 
-Loops allow you to execute the same code without rewriting it over and over.  This helps structure your program.  It's important to understand how while and for loops work in Lua, so let's jump right in. Hold onto your hats because things are about to get...loopy!
+Loops allow you to execute the same code without rewriting it over and over.  This helps structure your program.  It's important to understand how while and for loops work in Lua, so let's jump right in. Hold onto your hats because things are about to get a bit...loopy!
 
 ## While Loops
 
