@@ -31,15 +31,17 @@ To start your C++ programming journey with Ultra Engine, follow these steps:
 
 ## Environment Variable
 
-On Windows, Leadwerks uses an environment variable to specify the location of header and library files. This will be created automatically by the standalone installer, or you may asked for permission to add it during project creation.
+On Windows, Leadwerks uses an environment variable to specify the location of header and library files. This will be created automatically by the standalone installer, or you may asked for permission to add it during project creation. You must click OK when prompted, and allow admin access to make the required changes. If you do not do this, the compiler will not be able to locate required files.
+
+![Project Files](https://raw.githubusercontent.com/Leadwerks/Documentation/master/Images/envvarprompt.png)
 
 You can also add an environment variable manually called "LEADWERKS" and set its value to your install location. To access Windows environment variables, run the **System Properties** app.
 
-![Project Files](https://raw.githubusercontent.com/UltraEngine/Documentation/master/Images/systemproperties.png)
+![Project Files](https://raw.githubusercontent.com/Leadwerks/Documentation/master/Images/systemproperties.png)
 
 Press the **Enviurnment Variables** button. If it does not already exist, you can add a system variable. For the Steam version of Leadwerks, the default path is "C:\Program Files (x86)\Steam\steamapps\common\Leadwerks". For the standalone version, the default path is "C:\Program Files\Leadwerks". These paths may be different if you installed Steam or Leadwerks to different directories.
 
-![Project Files](https://raw.githubusercontent.com/UltraEngine/Documentation/master/Images/environmentvariables.png)
+![Project Files](https://raw.githubusercontent.com/Leadwerks/Documentation/master/Images/environmentvariables.png)
 
 Use of an environment variable makes it easier for developers to share C++ projects across different computers.
 
