@@ -1,6 +1,6 @@
 # Functions
 
-Functions are a reusable bit of code that can be called anywhere from in your program, once they are declared.
+Functions are a reusable bit of code that can be called anywhere from in your program, once they are declared. Instead of writing the same code in 20 different places, you can just make a function that can be called any time you need it.
 
 ## Function Declarations
 
