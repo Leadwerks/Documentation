@@ -41,7 +41,7 @@ Print(MyVariable)
 ```
 
 ## Data Types
-Lua is a **dynamically typed*** language. This means that a variable can hold any kind of value. This includes numbers, strings, booleans, tables, and objects. In this lesson we will learn about the first three data types and save the others for later.
+Lua is a **dynamically typed** language. This means that a variable can hold any kind of value. This includes numbers, strings, booleans, tables, and objects. In this lesson we will learn about the first three data types and save the others for later.
 
 ```lua
 health = 100 --number
@@ -56,6 +56,7 @@ health = 100
 health = "Full"
 ```
 
+### Get Type
 If you ever want to know the type of a value, you can use the type Lua function, as in the example below:
 
 ```lua
