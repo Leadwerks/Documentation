@@ -137,21 +137,7 @@ for n = 1, #t do
 	Print(t[n])
 end
 ```
-And that's all there is to it!  Now you know the basics of how to store your game's information.  You can run the code below to see an example in action.
-```lua
---Create a new table
-mytable={}
-
---Insert some items into the table
-table.insert(mytable,"Thing 1")
-table.insert(mytable,"Thing 2")
-table.insert(mytable,"Thing 3")
-
---Iterate through all fields in numerical order
-for key,value in ipairs(mytable) do
-	print(key.." = "..value)
-end
-```
+And that's all there is to it!  Now you know the basics of how to store your game's information.
 
 ## Conclusion
 
