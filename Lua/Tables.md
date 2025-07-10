@@ -1,5 +1,7 @@
 # Tables
 
+www.youtube.com/watch?v=Bqi_YF6lQhc
+
 A Lua table is an associative array object that can store information.  This is a powerful feature of the Lua programming language that is very useful for games.  In this lesson we'll learn everything there is to know about tables.
 
 ## Creating Tables
