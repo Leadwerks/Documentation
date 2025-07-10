@@ -74,22 +74,6 @@ mytable.color = "Red"
 mytable.color = nil
 ```
 
-## Tables as Arrays
-
-Sometimes you might want to have a table that acts like an array.  The easiest way to do this is to insert items into the last index of the table.  We can do this with this table.insert() function.  To get the length of a table, just add the hashtag character before the table:
-```lua
---Create a new table
-mytable={}
-
---Insert some items into the table
-table.insert(mytable,"Thing 1")
-table.insert(mytable,"Thing 2")
-table.insert(mytable,"Thing 3")
-
---Print the length of the table
-print(#mytable)
-```
-
 ## Iterating Through Tables
 Sometimes you might not know what all the keys of a table are, and so you don't know what to look for.  To loop through all the fields a table contains, you can use a for loop as shown below:
 ```lua
@@ -122,6 +106,23 @@ for key,value in ipairs(mytable) do
 	print(key.." = "..value)
 end
 ```
+
+## Tables as Arrays
+
+Sometimes you might want to have a table that acts like an array.  The easiest way to do this is to insert items into the last index of the table.  We can do this with this table.insert() function.  To get the length of a table, just add the hashtag character before the table:
+```lua
+--Create a new table
+mytable={}
+
+--Insert some items into the table
+table.insert(mytable,"Thing 1")
+table.insert(mytable,"Thing 2")
+table.insert(mytable,"Thing 3")
+
+--Print the length of the table
+print(#mytable)
+```
+
 If you know your table only includes numeric keys, you can iterate through it like an array:
 ```lua
 --Create a new table
@@ -137,7 +138,7 @@ for n = 1, #t do
 	Print(t[n])
 end
 ```
-And that's all there is to it!  Now you know the basics of how to store your game's information.
+And that's all there is to it!  Now you know how to store your game's information in an easy-to-access manner.
 
 ## Conclusion
 
