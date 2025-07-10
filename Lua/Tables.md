@@ -47,7 +47,7 @@ Or you can use numbers in brackets and treat the table like an array:
 speech={}
 
 --Set the index 0 field to "Hello"
-speech[0] = "Hello"
+speech[1] = "Hello"
 ```
 
 You can even make tables of tables, as the example below demonstrates:
