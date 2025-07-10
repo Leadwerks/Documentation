@@ -204,6 +204,11 @@
                             "hideFromCPP": true
                         },
                         {
+                            "title": "Debugging",
+                            "filename": "Debugging",
+                            "hideFromCPP": true
+                        },                        
+                        {
                             "title": "Tables",
                             "filename": "Tables",
                             "hideFromCPP": true
@@ -216,11 +221,6 @@
                         {
                             "title": "Components",
                             "filename": "Components",
-                            "hideFromCPP": true
-                        },
-                        {
-                            "title": "Debugging",
-                            "filename": "Debugging",
                             "hideFromCPP": true
                         }
                     ]
