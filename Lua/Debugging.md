@@ -1,5 +1,7 @@
 # Debugging
 
+www.youtube.com/watch?v=uVNQvg-xKmg
+
 Sometimes our code doesn't work the way we think it should be working. When that happens there's almost always a good reason for it. It's important that we be able to look at what our program is doing so we can find out what is wrong.  Debugging allows us to do that by pausing the program execution and displaying all the variables in the program, as it's running.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/luadebugging.gif?raw=true)
