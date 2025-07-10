@@ -141,4 +141,4 @@ And that's all there is to it!  Now you know the basics of how to store your gam
 
 ## Conclusion
 
-Lua tables are the magic that makes the language so flexible and great for games.  It's important to understand this feature, so don't hesitate to ask any questions you have in the forum or on our Discord server.
+Tables are the magic that makes the Lua language so flexible and great for games.  It's important to understand this feature, so don't hesitate to ask any questions you have in the forum or on our Discord server.
