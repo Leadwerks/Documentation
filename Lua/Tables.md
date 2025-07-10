@@ -91,24 +91,7 @@ for key,value in pairs(mytable) do
 end
 ```
 
-The pairs() function in Lua will iterate through a table sorted alphabetically.  If you have a numbered table and want to iterate through it in sequential order, instead just use the ipairs() function:
-```lua
---Create a new table
-mytable={}
-
---Insert some items into the table
-table.insert(mytable,"Thing 1")
-table.insert(mytable,"Thing 2")
-table.insert(mytable,"Thing 3")
-
---Iterate through all fields in numerical order
-for key,value in ipairs(mytable) do
-	print(key.." = "..value)
-end
-```
-
 ## Tables as Arrays
-
 Sometimes you might want to have a table that acts like an array.  The easiest way to do this is to insert items into the last index of the table.  We can do this with this table.insert() function.  To get the length of a table, just add the hashtag character before the table:
 ```lua
 --Create a new table
