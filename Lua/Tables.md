@@ -122,7 +122,21 @@ for key,value in ipairs(mytable) do
 	print(key.." = "..value)
 end
 ```
+If you know your table only includes numeric keys, you can iterate through it like an array:
+```lua
+--Create a new table
+t = {}
 
+--Insert some items into the table
+t.insert(mytable, "Thing 1")
+t.insert(mytable, "Thing 2")
+t.insert(mytable, "Thing 3")
+
+--Iterate through all fields in numerical order
+for n = 1, #t do
+	Print(t[n])
+end
+```
 And that's all there is to it!  Now you know the basics of how to store your game's information.  You can run the code below to see an example in action.
 ```lua
 --Create a new table
