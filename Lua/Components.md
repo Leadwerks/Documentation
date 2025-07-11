@@ -1,5 +1,7 @@
 # Components
 
+www.youtube.com/watch?v=OjQDJKFnYq0
+
 The Leadwerks Entity Component System (ECS) uses Lua code and tables to attach properties and functions to entities in your game.
 
 ## Creating Components
