@@ -18,36 +18,7 @@ The editor will create two new files in the appropriate folder. The Lua file con
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/myplayercomponent2.png?raw=true)
 
-## Component Properties
-
-The new component will include example properties of every supported type.
-```lua
-MyComponent.integervalue = 0--"Integer value"
-MyComponent.floatvalue = 0.0--"Float value"
-MyComponent.stringvalue = ""--"String value"
-MyComponent.booleanvalue = false--"Boolean value"
-MyComponent.optionvalue = 0--"Option value" ["Option 1", "Option 2", "Option 3"]
-MyComponent.entityvalue = nil--"Entity value"
-MyComponent.pathvalue = ""--"Path value" SOUND
-MyComponent.vec2value = Vec2(0,0)--"Vec2 value"
-MyComponent.vec3value = Vec3(0,0,0)--"Vec3 value"
-MyComponent.vec4value = Vec4(0,0,0,0)--"Vec4 value"
-MyComponent.rgbvalue = Vec3(1,1,1)--"RGB value" COLOR
-MyComponent.rgbavalue = Vec4(1,1,1,1)--"RGBA value" COLOR
-```
-In most cases, the editor can detect the value assigned to the property and infer the type from that. All you need to do is add the display name for the property in quotes, and the editor will detect it:
-```lua
-MyComponent.health = 100 -- "Health"
-```
-In the case of file paths and colors, the type must be specified after the display name. For file path properties, you can specific SOUND, MODEL, MATERIAL, TEXTURE, or PREFAB to control what file types the file selection dialog will display.
-```lua
-MyComponent.pathvalue = ""--"Path value" SOUND
-MyComponent.rgbvalue = Vec3(1,1,1)--"RGB value" COLOR
-MyComponent.rgbavalue = Vec4(1,1,1,1)--"RGBA value" COLOR
-```
-## Component Inputs and Outputs
-
-You can mark component methods as inputs or outputs for use with the [flowgraph editor](flowgrapheditor.md) by adding a comment after the function declaration:
+Open the MyPlayer.lua code file in the script editor and replace it with this code:
 
 ```lua
 MyPlayer = {}
@@ -78,6 +49,16 @@ end
 RegisterComponent("MyPlayer", MyPlayer)
 return MyPlayer
 ```
+
+Now we need to create a simple scene to test the component in. Create a large flat box for the floor. Create a small box for the player, change the color to make it stand out, and add your new component to it. Finally, add a camera that points down at a 45 degree angle, so that it can see most of the floor. You can also set the skybox to the default sky in the [world properties](worldsettings.md) dialog, if you wish.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/myplayercomponent3.png?raw=true)
+
+Once your scene is set up, you can run the game to try your new component. You should be able to control the player box with the arrow keys.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/myplayercomponent4.png?raw=true)
+
+Now let's change the component so that it automatically creates a camera and updates it each frame, to follow the player. Delete the camera from your scene and replace the component code with this:
 
 ```lua
 MyPlayer = {}
@@ -118,3 +99,4 @@ end
 RegisterComponent("MyPlayer", MyPlayer)
 return MyPlayer
 ```
+When you run the game, the camera will follow the player around as you move with the arrow keys.
