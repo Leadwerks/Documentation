@@ -60,3 +60,45 @@ function MyComponent.MyInputAndOutputFunction()--inout
   
 end
 ```
+
+```lua
+MyPlayer = {}
+MyPlayer.name = "MyPlayer"
+
+MyPlayer.speed = 0.02--"Speed"
+MyPlayer.cameradistance = 2--"Camera distance"
+
+function MyPlayer:Start()
+
+	self.camera = CreateCamera(self.entity.world)
+
+end
+
+function MyPlayer:Update()
+
+	--Get the game window
+	local window = ActiveWindow()
+	if window == nil then return end
+
+	--Player controls
+	local movex = 0
+	local movez = 0
+	
+	if window:KeyDown(KEY_LEFT) then movex = movex - self.speed end
+	if window:KeyDown(KEY_RIGHT) then movex = movex + self.speed end
+
+	if window:KeyDown(KEY_DOWN) then movez = movez - self.speed end
+	if window:KeyDown(KEY_UP) then movez = movez + self.speed end
+	
+	self.entity:Move(movex, 0, movez)
+
+	--Update camera
+	self.camera:SetPosition(self.entity:GetPosition())
+	self.camera:SetRotation(45,0,0)
+	self.camera:Move(0,0,-self.cameradistance)
+
+end
+ 
+RegisterComponent("MyPlayer", MyPlayer)
+return MyPlayer
+```
