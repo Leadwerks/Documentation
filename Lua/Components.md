@@ -1,4 +1,4 @@
-<img width="359" height="179" alt="image" src="https://github.com/user-attachments/assets/d08e56ff-8eeb-4a03-9776-5ef66dee7b5b" /># Components
+# Components
 
 www.youtube.com/watch?v=OjQDJKFnYq0
 
@@ -100,3 +100,5 @@ RegisterComponent("MyPlayer", MyPlayer)
 return MyPlayer
 ```
 When you run the game, the camera will follow the player around as you move with the arrow keys.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/myplayercomponent6.gif?raw=true)
