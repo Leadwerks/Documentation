@@ -1,4 +1,4 @@
-# Components
+<img width="359" height="179" alt="image" src="https://github.com/user-attachments/assets/d08e56ff-8eeb-4a03-9776-5ef66dee7b5b" /># Components
 
 www.youtube.com/watch?v=OjQDJKFnYq0
 
@@ -12,11 +12,11 @@ To create a new component, press the '+' button that appears below the **Scene**
 
 In the New Component dialog, select the group you want to place your component in and enter the name for your new component:
 
-![](https://github.com/UltraEngine/Documentation/blob/master/Images/newcomponent2.png?raw=true)
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/myplayercomponent.png?raw=true)
 
 The editor will create two new files in the appropriate folder. The Lua file contains your component code. The JSON file contains component definitions extracted from the code file, and tells the editor what editable properties the code file contains.
 
-![](https://github.com/UltraEngine/Documentation/blob/master/Images/newcomponent3.png?raw=true)
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/myplayercomponent2.png?raw=true)
 
 ## Component Properties
 
@@ -50,17 +50,33 @@ MyComponent.rgbavalue = Vec4(1,1,1,1)--"RGBA value" COLOR
 You can mark component methods as inputs or outputs for use with the [flowgraph editor](flowgrapheditor.md) by adding a comment after the function declaration:
 
 ```lua
-function MyComponent.MyInputFunction()--in
-  
-end
+MyPlayer = {}
+MyPlayer.name = "MyPlayer"
 
-function MyComponent.MyOutputFunction()--out
-  
-end
+MyPlayer.speed = 0.02--"Speed"
 
-function MyComponent.MyInputAndOutputFunction()--inout
-  
+function MyPlayer:Update()
+
+	--Get the game window
+	local window = ActiveWindow()
+	if window == nil then return end
+
+	--Player controls
+	local movex = 0
+	local movez = 0
+	
+	if window:KeyDown(KEY_LEFT) then movex = movex - self.speed end
+	if window:KeyDown(KEY_RIGHT) then movex = movex + self.speed end
+
+	if window:KeyDown(KEY_DOWN) then movez = movez - self.speed end
+	if window:KeyDown(KEY_UP) then movez = movez + self.speed end
+	
+	self.entity:Move(movex, 0, movez)
+
 end
+ 
+RegisterComponent("MyPlayer", MyPlayer)
+return MyPlayer
 ```
 
 ```lua
@@ -71,9 +87,7 @@ MyPlayer.speed = 0.02--"Speed"
 MyPlayer.cameradistance = 2--"Camera distance"
 
 function MyPlayer:Start()
-
 	self.camera = CreateCamera(self.entity.world)
-
 end
 
 function MyPlayer:Update()
