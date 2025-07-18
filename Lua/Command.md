@@ -17,7 +17,7 @@ Returns the result of the command.
 
 ## Remarks
 
-On the Windows operating system the command output will be piped to a file stored in the system "ProgramData/Ultra Engine" directory. This file should be deleted if the command output contains any sensitive information.
+On the Windows operating system the command output will be piped to a file stored in the system "ProgramData/Leadwerks" directory. This file should be deleted if the command output contains any sensitive information.
 
 ## Example
 
