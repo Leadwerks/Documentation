@@ -4,11 +4,11 @@ This method sends an event to an interface to be evaluated.
 
 ## Syntax
 
-- **ProcessEvent**([Event](Event) ev)
+- **ProcessEvent**([Event](Event.md) event)
 
 | Parameter | Description |
 |---|---|
-| ev | event to be evaluated |
+| event | event to be evaluated |
 
 ## Remarks
 
