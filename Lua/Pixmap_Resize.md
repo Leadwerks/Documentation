@@ -4,9 +4,10 @@ This method resizes a pixmap to make it larger or smaller.
 
 ## Syntax
 
-- **Resize**(number width, number height)
+[Pixmap](Pixmap.md) **Resize**(number width, number height)
 
 | Parameter | Description |
+|---|---|
 | width, height | The dimensions for resizing the pixmap |
 
 ## Returns
