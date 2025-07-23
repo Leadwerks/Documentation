@@ -4,7 +4,7 @@ This method adds an audio filter to the speaker.
 
 ## Syntax
 
-- **Speaker:SetFilter**(filter: AudioFilter, index: number = 0): void
+- **Speaker:SetFilter**(AudioFilter filter, number index = 0)
 
 ### Parameters
 
