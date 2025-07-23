@@ -4,8 +4,8 @@ This method will align one axis of an entity along a specified vector in global 
 
 ## Syntax
 
-- void **AlignToVector**(number x, number y, number z, number axis = 2, number rate = 1.0, number roll = 0.0)
-- void **AlignToVector**([xVec3](xVec3.md) v, number axis = 2, number rate = 1.0, number roll = 0.0)
+- **AlignToVector**(number x, number y, number z, number axis = 2, number rate = 1.0, number roll = 0.0)
+- **AlignToVector**([xVec3](xVec3.md) v, number axis = 2, number rate = 1.0, number roll = 0.0)
 
 | Parameter | Description |
 | --- | --- |
