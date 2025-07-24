@@ -4,4 +4,4 @@ This method sets the entity's collision shape for physics.
 
 ## Syntax
 
-- **SetCollider**([Collider](Collision.md) collision)
+- **SetCollider**([Collider](Collider.md) collision)
