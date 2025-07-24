@@ -7,7 +7,7 @@ This class serves as the foundation for all 3D objects in a world. It provides a
 | Property | Type | Description |
 |---|---|---|
 | extra | [Object](Object.md) | user-defined object |
-| kids | [table](https://www.lua.org/manual/5.4/manual.html#6.6) | read-only array of child entities |
+| kids | Entity[] | read-only array of child entities |
 | matrix | [xMat4](xMat4.md) | read-only 4x4 matrix |
 | name | [string](https://www.lua.org/manual/5.4/manual.html#6.4) | entity name |
 | omega | [xVec3](xVec3.md) | read-only angular velocity |
@@ -18,7 +18,7 @@ This class serves as the foundation for all 3D objects in a world. It provides a
 | rotation | [xVec3](xVec3.md) | read-only Euler rotation |
 | scale | [xVec3](xVec3.md) | read-only scale |
 | speakers | [table](https://www.lua.org/manual/5.4/manual.html#6.6) | read-only list of managed speakers created by a call to [EmitSound](Entity_EmitSound.md) |
-| tags | [table](https://www.lua.org/manual/5.4/manual.html#6.6) | read-only container of tags |
+| tags | string[] | read-only container of tags |
 | velocity | [xVec3](xVec3.md) | read-only linear velocity |
 | [AddComponent](Entity_AddComponent.md) | Method | adds an entity component |
 | [AddForce](Entity_AddForce.md) | Method | apply linear force to the entity |
