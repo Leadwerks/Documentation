@@ -1,5 +1,7 @@
 # Mesh:AddPrimitive
 
+Base class: [Mesh](Mesh.md)
+
 This method add a single line, triangle, or quad to the mesh.
 
 ## Syntax
