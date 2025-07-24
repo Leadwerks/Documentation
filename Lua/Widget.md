@@ -6,10 +6,11 @@ This class handle user interface elements. A variety of widget types are support
 
 | Property | Type | Description |
 |---|---|---|
-| items | [table](https://www.lua.org/manual/5.4/manual.html#6.6) | read-only items list |
-| kids | [table](https://www.lua.org/manual/5.4/manual.html#6.6) | read-only container of child widgets |
+| items | [WidgetItem](WidgetItem.md)[] | read-only items list |
+| kids | [Widget](Widget.md)[] | read-only container of child widgets |
+| position | [iVec2](iVec2.md) | read-only widget position |
 | size | [iVec2](iVec2.md) | read-only widget size |
-| text | [string](https://www.lua.org/manual/5.4/manual.html#6.4) | read-only widget text |
+| text | string | read-only widget text |
 | [AddItem](Widget_AddItem.md) | Method | adds a widget item |
 | [AddNode](Widget_AddNode.md) | Method | adds a node to a treeview widget |
 | [ClearItems](Widget_ClearItems.md) | Method | removes all widget items |
