@@ -7,7 +7,7 @@ This class serves as the foundation for all 3D objects in a world. It provides a
 | Property | Type | Description |
 |---|---|---|
 | extra | [Object](Object.md) | user-defined object |
-| kids | Entity[] | read-only array of child entities |
+| kids | [Entity](Entity.md)[] | read-only array of child entities |
 | matrix | [xMat4](xMat4.md) | read-only 4x4 matrix |
 | name | [string](https://www.lua.org/manual/5.4/manual.html#6.4) | entity name |
 | omega | [xVec3](xVec3.md) | read-only angular velocity |
@@ -17,7 +17,7 @@ This class serves as the foundation for all 3D objects in a world. It provides a
 | quaternion | [xQuat](xQuat.md) | read-only rotation |
 | rotation | [xVec3](xVec3.md) | read-only Euler rotation |
 | scale | [xVec3](xVec3.md) | read-only scale |
-| speakers | [table](https://www.lua.org/manual/5.4/manual.html#6.6) | read-only list of managed speakers created by a call to [EmitSound](Entity_EmitSound.md) |
+| speakers | [Speaker](Speaker.md)[] | read-only list of managed speakers created by a call to [EmitSound](Entity_EmitSound.md) |
 | tags | string[] | read-only container of tags |
 | velocity | [xVec3](xVec3.md) | read-only linear velocity |
 | [AddComponent](Entity_AddComponent.md) | Method | adds an entity component |
