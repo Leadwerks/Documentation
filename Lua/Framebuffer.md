@@ -2,7 +2,7 @@
 
 This class provides an interface for displaying 3D graphics on the screen.
 
-Base class: [Object](Object)
+Base class: [Object](Object.md)
 
 | Property | Type | Description |
 |---|---|---|
