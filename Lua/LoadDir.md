@@ -22,7 +22,8 @@ Returns an array of file names found within the directory. The array will be emp
 local path = CurrentDir()
 
 local dir = LoadDir(path)
-for _, file in ipairs(dir) do
+for n = 1, #dir do
+    local file = dir[n]
     Print("Name: " .. file)
     Print("Type: " .. tostring(FileType(file)))
     Print("Time: " .. tostring(FileTime(file)))
