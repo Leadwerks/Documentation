@@ -4,7 +4,8 @@ The button widget can be used to create push buttons, checkboxes, radio buttons,
 
 ## Syntax
 
-- [Widget](Widget.md) **CreateButton**([string](https://www.lua.org/manual/5.4/manual.html#6.4) text, number x, number y, number width, number height, [Widget](Widget.md) parent, number style = BUTTON_DEFAULT)
+- [Widget](Widget.md) **CreateButton**([string](https://www.lua.org/manual/5.4/manual.html#6.4) text, number x, number y, number width, number height, [Widget](Widget.md) parent)
+- [Widget](Widget.md) **CreateButton**([string](https://www.lua.org/manual/5.4/manual.html#6.4) text, number x, number y, number width, number height, [Widget](Widget.md) parent, number style)
 
 | Parameter | Description |
 | --- | --- |
