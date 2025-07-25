@@ -7,7 +7,7 @@ This class is used to control the appearance of rendered surfaces.
 | Property | Type | Description |
 |---|---|---|
 | color | [Vec4](Vec4) | read-only material color |
-| textures | [table](https://www.lua.org/manual/5.4/manual.html#6.6) | read-only list of material textures |
+| textures | [Texture](Texture)[16] | read-only list of material textures |
 | [GetColor](Material_GetColor.md) | Method | gets the material color |
 | [GetMetalness](Material_GetMetalness.md) | Method | gets the material metalness |
 | [GetRoughness](Material_GetRoughness.md) | Method | gets the material rougness |
