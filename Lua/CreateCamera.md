@@ -4,7 +4,8 @@ This function creates a new camera entity.
 
 ## Syntax
 
-- [Camera](Camera.md) **CreateCamera**([World](World.md) world, number projectionmode = PROJECTION_PERSPECTIVE)
+- [Camera](Camera.md) **CreateCamera**([World](World.md) world)
+- [Camera](Camera.md) **CreateCamera**([World](World.md) world, number projectionmode)
 
 | Parameter | Description |
 |---|---|
