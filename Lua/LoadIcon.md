@@ -4,8 +4,10 @@ This functions loads a vector image from a file path or stream.
 
 ## Syntax
 
-- [Icon](Icon.md) **LoadIcon**([string](https://www.lua.org/manual/5.4/manual.html#6.4) path, number flags = LOAD_DEFAULT)
-- [Icon](Icon.md) **LoadIcon**([Stream](Stream.md) stream, number flags = LOAD_DEFAULT)
+- [Icon](Icon.md) **LoadIcon**([string](https://www.lua.org/manual/5.4/manual.html#6.4) path)
+- [Icon](Icon.md) **LoadIcon**([string](https://www.lua.org/manual/5.4/manual.html#6.4) path, number flags)
+- [Icon](Icon.md) **LoadIcon**([Stream](Stream.md) stream)
+- [Icon](Icon.md) **LoadIcon**([Stream](Stream.md) stream, number flags)
 
 | Parameter | Description |
 |---|---|
