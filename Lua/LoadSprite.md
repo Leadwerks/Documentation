@@ -4,8 +4,10 @@ This function loads a texture, creates a sprite with the dimensions of the textu
 
 ## Syntax
 
-- [Sprite](Sprite.md) **LoadSprite**([World](World.md) world, [WString](WString.md) path, number flags = LOAD_DEFAULT)
-- [Sprite](Sprite.md) **LoadSprite**([World](World.md) world, [Stream](Stream.md) stream, number flags = LOAD_DEFAULT)
+- [Sprite](Sprite.md) **LoadSprite**([World](World.md) world, [WString](WString.md) path)
+- [Sprite](Sprite.md) **LoadSprite**([World](World.md) world, [WString](WString.md) path, number flags)
+- [Sprite](Sprite.md) **LoadSprite**([World](World.md) world, [Stream](Stream.md) stream)
+- [Sprite](Sprite.md) **LoadSprite**([World](World.md) world, [Stream](Stream.md) stream, number flags)
 
 | Parameter | Description |
 |---|---|
