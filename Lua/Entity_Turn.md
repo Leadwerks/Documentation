@@ -4,9 +4,12 @@ This method turns an entity. This will produce smooth rotation free from Gimbal 
 
 ## Syntax
 
+- **Turn**(number pitch, number yaw, number roll)
+- **Turn**(number pitch, number yaw, number roll, boolean global)
+- **Turn**([xVec3](xVec3.md) rotation)
+- **Turn**([xVec3](xVec3.md) rotation, boolean global)
+- **Turn**([xQuat](xQuat.md) rotation)
 - **Turn**([xQuat](xQuat.md) rotation, boolean global = false)
-- **Turn**([xVec3](xVec3.md) rotation, boolean global = false)
-- **Turn**(number pitch, number yaw, number roll, boolean global = false)
 
 | Parameter | Description |
 | --- | --- |
