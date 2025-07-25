@@ -1,8 +1,10 @@
 # LoadSound
 
 ## Syntax
-- function **LoadSound**(path: [string](https://www.lua.org/manual/5.3/manual.html#3.1) or nil, flags: [number](https://www.lua.org/manual/5.3/manual.html#3.4)) : [Sound](Sound.md)
-- function **LoadSound**(stream: userdata, flags: [number](https://www.lua.org/manual/5.3/manual.html#3.4)) : [Sound](Sound.md)
+- [Sound](Sound.md) **LoadSound**(string path)
+- [Sound](Sound.md) **LoadSound**(string path, number flags)
+- [Sound](Sound.md) **LoadSound**([Stream](Stream.md) stream)
+- [Sound](Sound.md) **LoadSound**([Stream](Stream.md) stream, number flags)
 
 |Parameter|Description|
 |-|-|
