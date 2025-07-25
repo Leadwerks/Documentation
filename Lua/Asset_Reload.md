@@ -4,6 +4,7 @@ This method reloads an asset from a file on the disk. If changes were made to th
 
 ## Syntax
 
+- **Reload**()
 - **Reload**(number flags)
 
 | Parameter | Description |
