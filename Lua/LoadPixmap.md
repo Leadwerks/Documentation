@@ -4,8 +4,10 @@ This function loads a pixmap from a file path or stream.
 
 ## Syntax
 
-- [Pixmap](Pixmap.md) **LoadPixmap**([string](https://www.lua.org/manual/5.4/manual.html#6.4) path, number flags = LOAD_DEFAULT)
-- [Pixmap](Pixmap.md) **LoadPixmap**([Stream](Stream.md), number flags = LOAD_DEFAULT)
+- [Pixmap](Pixmap.md) **LoadPixmap**([string](https://www.lua.org/manual/5.4/manual.html#6.4) path)
+- [Pixmap](Pixmap.md) **LoadPixmap**([string](https://www.lua.org/manual/5.4/manual.html#6.4) path, number flags)
+- [Pixmap](Pixmap.md) **LoadPixmap**([Stream](Stream.md))
+- [Pixmap](Pixmap.md) **LoadPixmap**([Stream](Stream.md), number flags)
 
 | Parameter | Description |
 |---|---|
