@@ -4,8 +4,8 @@ This method attaches an entity to a model bone or a navigation agent. This provi
 
 ## Syntax
 
-- **Entity:Attach**(agent: [NavAgent](NavAgent))
-- **Entity:Attach**(model: [Model](Model), bone: [Bone](Bone))
+- **Entity:Attach**([NavAgent](NavAgent.md) navagent)
+- **Entity:Attach**([Model](Model.md) model, [Bone](Bone.md) bone)
 
 | Parameter | Description |
 | --- | --- |
