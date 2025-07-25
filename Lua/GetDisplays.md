@@ -4,7 +4,7 @@ This function retrieves a list of hardware monitors that are currently in use.
 
 ## Syntax
 
-- [table](https://www.lua.org/manual/5.4/manual.html#6.6) **GetDisplays**()
+- [Display](Display)[] **GetDisplays**()
 
 ## Returns
 
