@@ -258,7 +258,8 @@
                             "topics": [
                                 {
                                     "title": "GetHandle",
-                                    "filename": "Sound_GetHandle"
+                                    "filename": "Sound_GetHandle",
+                                    "hideFromLua": true
                                 },
                                 {
                                     "title": "GetLength",
@@ -284,7 +285,8 @@
                                 },
                                 {
                                     "title": "GetHandle",
-                                    "filename": "Speaker_GetHandle"
+                                    "filename": "Speaker_GetHandle",
+                                    "hideFromLua": true
                                 },
                                 {
                                     "title": "GetPitch",
@@ -1958,7 +1960,8 @@
                                 },
                                 {
                                     "title": "GetHandle",
-                                    "filename": "Window_GetHandle"
+                                    "filename": "Window_GetHandle",
+                                    "hideFromLua": true
                                 },
                                 {
                                     "title": "GetHidden",
