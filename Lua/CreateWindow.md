@@ -4,8 +4,10 @@ This function is used to create a new window.
 
 ## Syntax
 
-- [Window](Window.md) **CreateWindow**([string](https://www.lua.org/manual/5.4/manual.html#6.4) title, number x, number y, number width, number height, [Display](Display.md) display, number style = WINDOW_DEFAULT)
-- [Window](Window.md) **CreateWindow**([string](https://www.lua.org/manual/5.4/manual.html#6.4) title, number x, number y, number width, number height, [Window](Window.md) parent, number style = WINDOW_DEFAULT)
+- [Window](Window.md) **CreateWindow**([string](https://www.lua.org/manual/5.4/manual.html#6.4) title, number x, number y, number width, number height, [Display](Display.md) display)
+- [Window](Window.md) **CreateWindow**([string](https://www.lua.org/manual/5.4/manual.html#6.4) title, number x, number y, number width, number height, [Display](Display.md) display, number style)
+- [Window](Window.md) **CreateWindow**([string](https://www.lua.org/manual/5.4/manual.html#6.4) title, number x, number y, number width, number height, [Window](Window.md) parent)
+- [Window](Window.md) **CreateWindow**([string](https://www.lua.org/manual/5.4/manual.html#6.4) title, number x, number y, number width, number height, [Window](Window.md) parent, number style)
 
 | Parameter | Description |
 | ------ | ------ |
