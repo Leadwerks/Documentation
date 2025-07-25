@@ -4,6 +4,7 @@ This method loads a heightmap onto the terrain.
 
 ## Syntax
 
+- bool **LoadHeightmap**([string]() path, [Vec2](Vec2.md) range)
 - bool **LoadHeightmap**([string]() path, [Vec2](Vec2.md) range, number flags = LOAD_DEFAULT)
 
 | Parameter | Description |
