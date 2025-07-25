@@ -4,7 +4,8 @@ This method writes a string to the stream at the current position.
 
 ## Syntax
 
-- **WriteString**([string](https://www.lua.org/manual/5.4/manual.html#6.4) s, boolean terminate = true)
+- **WriteString**([string](https://www.lua.org/manual/5.4/manual.html#6.4) s)
+- **WriteString**([string](https://www.lua.org/manual/5.4/manual.html#6.4) s, boolean terminate)
 
 | Parameter | Description |
 |---|---|
