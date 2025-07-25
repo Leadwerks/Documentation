@@ -9,12 +9,12 @@ This method causes an animation sequence to play.
 - **Animate**(number sequence, number speed, number blendtime, number mode)
 - **Animate**(number sequence, number speed, number blendtime, number mode, number frame)
 - **Animate**(number sequence, number speed, number blendtime, number mode, number frame, number track)
-- **Animate**(string sequence)
-- **Animate**(string sequence, number speed)
-- **Animate**(string sequence, number speed, number blendtime)
-- **Animate**(string sequence, number speed, number blendtime, number mode)
-- **Animate**(string sequence, number speed, number blendtime, number mode, number frame)
-- **Animate**(string sequence, number speed, number blendtime, number mode, number frame, number track)
+- **Animate**(string name)
+- **Animate**(string name, number speed)
+- **Animate**(string name, number speed, number blendtime)
+- **Animate**(string name, number speed, number blendtime, number mode)
+- **Animate**(string name, number speed, number blendtime, number mode, number frame)
+- **Animate**(string name, number speed, number blendtime, number mode, number frame, number track)
 
 | Parameter | Description |
 | ---- | ----------- |
