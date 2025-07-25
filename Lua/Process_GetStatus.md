@@ -4,7 +4,7 @@ This method returns the current status of a running process.
 
 ## Syntax 
 
-#### ProcessStatus Process:GetStatus()
+- number Process:**GetStatus**()
 
 ## Returns
 
