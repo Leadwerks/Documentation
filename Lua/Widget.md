@@ -8,6 +8,7 @@ This class handle user interface elements. A variety of widget types are support
 |---|---|---|
 | items | [WidgetItem](WidgetItem.md)[] | read-only items list |
 | kids | [Widget](Widget.md)[] | read-only container of child widgets |
+| parent | [Widget](Widget.md) | read-only widget parent |
 | position | [iVec2](iVec2.md) | read-only widget position |
 | size | [iVec2](iVec2.md) | read-only widget size |
 | text | string | read-only widget text |
