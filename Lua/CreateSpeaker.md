@@ -4,7 +4,7 @@ This function creates a new speaker object.
 
 ## Syntax
 
-- Speaker CreateSpeaker(sound)
+- [Speaker](Speaker.md) CreateSpeaker([Sound](Sound.md))
 
 | Parameter | Description |
 |---|---|
