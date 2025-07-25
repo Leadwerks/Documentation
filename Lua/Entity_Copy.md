@@ -4,7 +4,9 @@ This method returns a unique copy of the entity. Resources such as model meshes 
 
 ## Syntax
 
-- [Entity](Entity.md) **Copy**([World](World.md) world, boolean recursive = true, boolean callstart = true)
+- [Entity](Entity.md) **Copy**([World](World.md) world)
+- [Entity](Entity.md) **Copy**([World](World.md) world, boolean recursive)
+- [Entity](Entity.md) **Copy**([World](World.md) world, boolean recursive, boolean callstart)
 
 | Parameter | Description |
 | --- | --- |
