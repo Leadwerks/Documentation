@@ -4,7 +4,6 @@ This function creates a brush with a box shape.
 
 ## Syntax
 
-- [Brush](Brush.md) **CreateBrush**([World](World.md) world, number size = 1)
 - [Brush](Brush.md) **CreateBrush**([World](World.md) world, number width, number height, number depth)
 
 | Parameter | Description |
