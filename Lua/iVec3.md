@@ -4,9 +4,9 @@ This class describes a three-dimensional integer vector.
 
 | Property | Type | Description |
 |-|-|-|
-| x | number | x component of the vector |
-| y | number | y component of the vector |
-| z | number | z component of the vector |
+| x | integer | x component of the vector |
+| y | integer | y component of the vector |
+| z | integer | z component of the vector |
 | iVec3 | function | iVec3(number x)
 | iVec3 | function | iVec3(number x, number y, number z) |
 
