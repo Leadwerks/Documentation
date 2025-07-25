@@ -4,7 +4,8 @@ The textfield widget is an editable input box. It will emit a WIDGETACTION event
 
 ## Syntax
 
-- [Widget](Widget.md) **CreateTextField**(number x, number y, number width, number height, [Widget](Widget.md) parent, number style = TEXTFIELD_DEFAULT)
+- [Widget](Widget.md) **CreateTextField**(number x, number y, number width, number height, [Widget](Widget.md) parent)
+- [Widget](Widget.md) **CreateTextField**(number x, number y, number width, number height, [Widget](Widget.md) parent, number style)
 
 | Parameter | Description |
 | --- | --- |
