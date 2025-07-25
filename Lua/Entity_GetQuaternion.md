@@ -4,7 +4,8 @@ This method retrieves the entity rotation as a quaternion.
 
 ## Syntax
 
-- [xQuat](xQuat.md) **GetQuaternion**(boolean global = false)
+- [xQuat](xQuat.md) **GetQuaternion**()
+- [xQuat](xQuat.md) **GetQuaternion**(boolean global)
 
 | Parameter | Description |
 |---|---|
