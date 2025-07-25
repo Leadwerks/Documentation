@@ -4,8 +4,11 @@ This method can be used to colorize a visible entity such as a model or light.
 
 ## Syntax
 
+- **SetColor**([Vec4](Vec4.md) color)
 - **SetColor**([Vec4](Vec4.md) color, boolean recursive = false)
+- **SetColor**(number r, number g, number b)
 - **SetColor**(number r, number g, number b, boolean recursive = false)
+- **SetColor**(number luminance)
 - **SetColor**(number luminance, boolean recursive = false)
 
 | Parameter | Description |
