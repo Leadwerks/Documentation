@@ -4,7 +4,8 @@ This method saves the model to a file, in [glTF](https://www.khronos.org/gltf/) 
 
 ## Syntax
 
-- boolean **Save**([string](https://www.lua.org/manual/5.4/manual.html#6.4) path, number flags = SAVE_DEFAULT)
+- boolean **Save**([string](https://www.lua.org/manual/5.4/manual.html#6.4) path)
+- boolean **Save**([string](https://www.lua.org/manual/5.4/manual.html#6.4) path, number flags)
 
 | Parameter | Description |
 |---|---|
