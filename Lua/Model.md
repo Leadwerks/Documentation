@@ -8,8 +8,8 @@ Ultra Engine natively supports loading and saving of models in the [glTF](https:
 
 | Property | Type | Description |
 |---|---|---|
-| lods | [table](https://www.lua.org/manual/5.4/manual.html#6.6) | read-only array of Lods |
-| skeleton | [Skeleton](Skeleton.md) | read-only skeleton object |
+| lods | [Lod](Lod.md)[] | read-only array of Lods |
+| skeleton | [Skeleton](Skeleton.md)[] | read-only skeleton object |
 | [AddMesh](Model_AddMesh.md) | Method | adds a new mesh to the model |
 | [AddLod](Model_AddLod.md) | Method | adds a new level-of-detail to the model |
 | [Animate](Model_Animate.md) | Method | animates the model |
