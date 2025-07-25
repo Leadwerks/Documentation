@@ -9,7 +9,7 @@ This method turns an entity. This will produce smooth rotation free from Gimbal 
 - **Turn**([xVec3](xVec3.md) rotation)
 - **Turn**([xVec3](xVec3.md) rotation, boolean global)
 - **Turn**([xQuat](xQuat.md) rotation)
-- **Turn**([xQuat](xQuat.md) rotation, boolean global = false)
+- **Turn**([xQuat](xQuat.md) rotation, boolean global)
 
 | Parameter | Description |
 | --- | --- |
