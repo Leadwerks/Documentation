@@ -9,7 +9,7 @@ The mesh class is a collection of vertices and polygons that form visible surfac
 | bounds | [Aabb](Aabb.md) | read-only mesh bounding box |
 | extra | [Object](Object.md) | user-defined object |
 | material | [Material](Material.md) | read-only mesh material |
-| materials | table | read-only mesh materials array |
+| materials | [Material](Material.md)[4] | read-only mesh materials array |
 | name | [string](https://www.lua.org/manual/5.4/manual.html#6.4) | user-defined name |
 | type | number | read-only mesh primitive type |
 | [AddPrimitive](Mesh_AddPrimitive.md) | Method | adds a new polygon to the mesh |
