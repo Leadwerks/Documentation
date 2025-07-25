@@ -8,8 +8,10 @@ The engine uses a left-handed coordinate system. The X axis points to the right,
 
 ## Syntax
 
-- **SetPosition**([xVec3](xVec3.md) position, boolean global = false)
-- **SetPosition**(number x, number y, number z, global = false)
+- **SetPosition**([xVec3](xVec3.md) position)
+- **SetPosition**(number x, number y, number z)
+- **SetPosition**([xVec3](xVec3.md) position, boolean global)
+- **SetPosition**(number x, number y, number z, boolean global)
 
 | Parameter | Description |
 | ------ | ------ |
