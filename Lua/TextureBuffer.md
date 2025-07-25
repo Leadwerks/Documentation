@@ -7,6 +7,7 @@ This class is used for render-to-texture operations.
 | Property | Type | Description |
 |---|---|---|
 | size | [iVec2](iVec2.md) | read-only dimensions |
+| textures | [Texture](Texture.md)[8] | read-only texture attachments |
 | [CountColorAttachments](TextureBuffer_CountColorAttachments.md) | Method | returns the number of color attachments |
 | [GetColorAttachment](TextureBuffer_GetColorAttachment.md) | Method | returns the color attachment |
 | [GetDepthAttachment](TextureBuffer_GetDepthAttachment.md) | Method | returns the depth attachment |
