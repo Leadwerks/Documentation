@@ -4,7 +4,8 @@ This function loads a package from an archive file.
 
 ## Syntax
 
-- [Package](Package.md) **LoadPackage**([string](https://www.lua.org/manual/5.4/manual.html#6.4) path, number flags = LOAD_DEFAULT)
+- [Package](Package.md) **LoadPackage**([string](https://www.lua.org/manual/5.4/manual.html#6.4) path)
+- [Package](Package.md) **LoadPackage**([string](https://www.lua.org/manual/5.4/manual.html#6.4) path, number flags)
 
 | Parameter | Description |
 |---|---|
