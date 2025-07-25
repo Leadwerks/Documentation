@@ -6,7 +6,9 @@ This function displays a message dialog box with the options "OK" and "Cancel".
 
 ## Syntax
 
-- int **Confirm**([string](https://www.lua.org/manual/5.4/manual.html#6.4) message, [string](https://www.lua.org/manual/5.4/manual.html#6.4) title = "", boolean serious = false)
+- int **Confirm**([string](https://www.lua.org/manual/5.4/manual.html#6.4) message)
+- int **Confirm**([string](https://www.lua.org/manual/5.4/manual.html#6.4) message, [string](https://www.lua.org/manual/5.4/manual.html#6.4) title)
+- int **Confirm**([string](https://www.lua.org/manual/5.4/manual.html#6.4) message, [string](https://www.lua.org/manual/5.4/manual.html#6.4) title, boolean serious)
 
 | Parameter | Description |
 | --- | --- |
