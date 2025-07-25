@@ -3,7 +3,12 @@ This function opens a file browser dialog and lets the user select a file to ope
 
 ## Syntax
 
-- [string](https://www.lua.org/manual/5.4/manual.html#6.4) **RequestFile**([string](https://www.lua.org/manual/5.4/manual.html#6.4) title = "Open File", [string](https://www.lua.org/manual/5.4/manual.html#6.4) file = "", [string](https://www.lua.org/manual/5.4/manual.html#6.4) filetypes = "All Files:*", number defaulttype = 1, boolean save = false)
+- [string](https://www.lua.org/manual/5.4/manual.html#6.4) **RequestFile**()
+- [string](https://www.lua.org/manual/5.4/manual.html#6.4) **RequestFile**([string](https://www.lua.org/manual/5.4/manual.html#6.4) title)
+- [string](https://www.lua.org/manual/5.4/manual.html#6.4) **RequestFile**([string](https://www.lua.org/manual/5.4/manual.html#6.4) title, [string](https://www.lua.org/manual/5.4/manual.html#6.4) file)
+- [string](https://www.lua.org/manual/5.4/manual.html#6.4) **RequestFile**([string](https://www.lua.org/manual/5.4/manual.html#6.4) title, [string](https://www.lua.org/manual/5.4/manual.html#6.4) file, [string](https://www.lua.org/manual/5.4/manual.html#6.4) filetypes)
+- [string](https://www.lua.org/manual/5.4/manual.html#6.4) **RequestFile**([string](https://www.lua.org/manual/5.4/manual.html#6.4) title, [string](https://www.lua.org/manual/5.4/manual.html#6.4) file, [string](https://www.lua.org/manual/5.4/manual.html#6.4) filetypes, number defaulttype)
+- [string](https://www.lua.org/manual/5.4/manual.html#6.4) **RequestFile**([string](https://www.lua.org/manual/5.4/manual.html#6.4) title, [string](https://www.lua.org/manual/5.4/manual.html#6.4), [string](https://www.lua.org/manual/5.4/manual.html#6.4) filetypes, number defaulttype, boolean save)
 
 | Parameter | Description |
 | ----- | ----- |
