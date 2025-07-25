@@ -4,7 +4,8 @@ This method adds a new face to a brush.
 
 ## Syntax
 
-- [Face](Face.md) **AddFace**([Material](Material.md) material = `nil`)
+- [Face](Face.md) **AddFace**()
+- [Face](Face.md) **AddFace**([Material](Material.md) material)
 
 | Parameter | Description |
 |---|---|
