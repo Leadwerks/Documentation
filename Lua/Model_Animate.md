@@ -3,8 +3,18 @@
 This method causes an animation sequence to play.
 
 ## Syntax
-- **Animate**(number sequence = 0, number speed = 1.0f, number blendtime = 250, number mode = ANIMATION_LOOP, number frame = 0, number track = 0)
-- **Animate**([string](https://www.lua.org/manual/5.4/manual.html#6.4) sequence, number speed = 1.0f, number blendtime = 250, number mode = ANIMATION_LOOP, number frame = 0, number track = 0)
+- **Animate**(number sequence)
+- **Animate**(number sequence, number speed)
+- **Animate**(number sequence, number speed, number blendtime)
+- **Animate**(number sequence, number speed, number blendtime, number mode)
+- **Animate**(number sequence, number speed, number blendtime, number mode, number frame)
+- **Animate**(number sequence, number speed, number blendtime, number mode, number frame, number track)
+- **Animate**(string sequence)
+- **Animate**(string sequence, number speed)
+- **Animate**(string sequence, number speed, number blendtime)
+- **Animate**(string sequence, number speed, number blendtime, number mode)
+- **Animate**(string sequence, number speed, number blendtime, number mode, number frame)
+- **Animate**(string sequence, number speed, number blendtime, number mode, number frame, number track)
 
 | Parameter | Description |
 | ---- | ----------- |
