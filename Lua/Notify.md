@@ -4,7 +4,9 @@ This function displays a message box.
 
 ## Syntax
 
-- **Notify**([string](https://www.lua.org/manual/5.4/manual.html#6.4) message, [string](https://www.lua.org/manual/5.4/manual.html#6.4) title = "", boolean serious = false)
+- **Notify**([string](https://www.lua.org/manual/5.4/manual.html#6.4) message)
+- **Notify**([string](https://www.lua.org/manual/5.4/manual.html#6.4) message, [string](https://www.lua.org/manual/5.4/manual.html#6.4) title)
+- **Notify**([string](https://www.lua.org/manual/5.4/manual.html#6.4) message, [string](https://www.lua.org/manual/5.4/manual.html#6.4) title, boolean serious)
 
 | Parameter | Description |
 | ----- | ----- |
