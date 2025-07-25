@@ -4,8 +4,8 @@ This method gets all the layers in use on the terrain at the specified coordinat
 
 ## Syntax
 
-- [table](https://www.lua.org/manual/5.4/manual.html#6.6) **GetLayers**(number x, number y)
-- [table](https://www.lua.org/manual/5.4/manual.html#6.6) **GetLayers**([iVec2](iVec2.md))
+- [number](number)[4] **GetLayers**(number x, number y)
+- [number](number)[4] **GetLayers**([iVec2](iVec2.md))
 
 | Parameter | Description |
 |---|---|
