@@ -6,7 +6,7 @@ This class provides an interface for querying and managing hardware monitors.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| graphicsmodes | [table](https://www.lua.org/manual/5.4/manual.html#6.6) | read-only array of available screen resolutions |
+| graphicsmodes | [iVec3](iVec3.md)[] | read-only array of available screen resolutions |
 | position | [iVec2](iVec2.md) | read-only screen position on the virtual desktop |
 | scale | number | read-only DPI scaling value |
 | size | [iVec2](iVec2.md) | read-only screen dimensions |
