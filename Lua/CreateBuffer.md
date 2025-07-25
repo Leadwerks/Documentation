@@ -6,9 +6,9 @@ This function creates a new memory buffer object.
 
 - [Buffer](Buffer.md) **CreateBuffer**(number size)
 
-Paramater | Description |
--|-
-size | size of the allocated memory block
+| Paramater | Description |
+|---|---|
+| size | size of the allocated memory block |
 
 ## Returns
 
