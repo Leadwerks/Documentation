@@ -4,7 +4,7 @@ This method returns an array of screen capture images that have been recorded by
 
 ## Syntax
 
-- [table](https://www.lua.org/manual/5.4/manual.html#6.6) **GetCaptures**()
+- [Pixmap](Pixmap.md)[] **GetCaptures**()
 
 ## Returns
 
