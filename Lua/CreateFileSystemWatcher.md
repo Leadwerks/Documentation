@@ -4,7 +4,8 @@ This function can be used to create an object that monitors a specified director
 
 ## Syntax
 
-- [FileSystemWatcher](FileSystemWatcher.md) **CreateFileSystemWatcher**([string](https://www.lua.org/manual/5.4/manual.html#6.4) path, boolean recursive = true)
+- [FileSystemWatcher](FileSystemWatcher.md) **CreateFileSystemWatcher**([string](https://www.lua.org/manual/5.4/manual.html#6.4) path)
+- [FileSystemWatcher](FileSystemWatcher.md) **CreateFileSystemWatcher**([string](https://www.lua.org/manual/5.4/manual.html#6.4) path, boolean recursive)
 
 | Parameter | Description |
 |---|---|
