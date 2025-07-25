@@ -4,7 +4,8 @@ This method sets the entity 4x4 matrix, which describes its position, rotation, 
 
 ## Syntax
 
-- **SetMatrix**([xMat4](xMat4.md) matrix, boolean global = true)
+- **SetMatrix**([xMat4](xMat4.md) matrix)
+- **SetMatrix**([xMat4](xMat4.md) matrix, boolean global)
 
 | Parameter | Description |
 |---|---|
