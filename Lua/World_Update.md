@@ -4,7 +4,11 @@ This method updates timing, physics, and other systems. This should be called on
 
 ## Syntax
 
-- **Update**(number frequency = 60, number threads = 0, number iterations = 0, number substeps = 1)
+- **Update**()
+- **Update**(number frequency)
+- **Update**(number frequency, number threads)
+- **Update**(number frequency, number threads, number iterations)
+- **Update**(number frequency, number threads, number iterations, number substeps)
 
 | Parameter | Description |
 | --- | --- |
