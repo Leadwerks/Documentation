@@ -4,7 +4,8 @@ This function loads a post-processing effect from a file.
 
 ## Syntax
 
-- [PostEffect](PostEffect.md) **LoadPostEffect**([string](https://www.lua.org/manual/5.4/manual.html#6.4) path, number flags = LOAD_DEFAULT)
+- [PostEffect](PostEffect.md) **LoadPostEffect**([string](https://www.lua.org/manual/5.4/manual.html#6.4) path)
+- [PostEffect](PostEffect.md) **LoadPostEffect**([string](https://www.lua.org/manual/5.4/manual.html#6.4) path, number flags)
 
 | Parameter | Description |
 |-----------|-------------|
