@@ -4,6 +4,7 @@ This method searches for a bone in the skeleton with the specified name.
 
 ## Syntax
 
+- [Bone](Bone.md) **FindBone**([string](https://www.lua.org/manual/5.4/manual.html#6.4) name)
 - [Bone](Bone.md) **FindBone**([string](https://www.lua.org/manual/5.4/manual.html#6.4) name, boolean cased = false)
 
 | Parameter | Description |
