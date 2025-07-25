@@ -4,7 +4,8 @@ The text area widget is a read-only multiline text display. If the WORDWRAP styl
 
 ## Syntax
 
-- [Widget](Widget.md) **CreateTextArea**(number x, number y, number width, number height, [Widget](Widget.md) parent, number style = TEXTAREA_DEFAULT)
+- [Widget](Widget.md) **CreateTextArea**(number x, number y, number width, number height, [Widget](Widget.md) parent)
+- [Widget](Widget.md) **CreateTextArea**(number x, number y, number width, number height, [Widget](Widget.md) parent, number style)
 
 | Parameter | Description |
 | --- | --- |
