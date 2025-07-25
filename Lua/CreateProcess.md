@@ -4,7 +4,8 @@ This function launches an external executable and returns a handle that can be u
 
 ## Syntax
 
-[Process](Process.md) **CreateProcess**([string](https://www.lua.org/manual/5.4/manual.html#6.1) path, [string](https://www.lua.org/manual/5.4/manual.html#6.1) arguments)
+- [Process](Process.md) **CreateProcess**([string](https://www.lua.org/manual/5.4/manual.html#6.1) path)
+- [Process](Process.md) **CreateProcess**([string](https://www.lua.org/manual/5.4/manual.html#6.1) path, [string](https://www.lua.org/manual/5.4/manual.html#6.1) arguments)
 
 | Parameter | Description |
 |---|---|
