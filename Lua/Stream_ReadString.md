@@ -4,7 +4,8 @@ This method reads a string from the stream at the current position. The string w
 
 ## Syntax
 
-- [string](https://www.lua.org/manual/5.4/manual.html#6.4) **ReadString**(number maxlength = 0)
+- [string](https://www.lua.org/manual/5.4/manual.html#6.4) **ReadString**()
+- [string](https://www.lua.org/manual/5.4/manual.html#6.4) **ReadString**(number maxlength)
 
 | Parameter | Description |
 |---|---|
