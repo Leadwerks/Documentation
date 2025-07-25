@@ -4,7 +4,8 @@ This function loads the contents of a directory and returns an array of files.
 
 ## Syntax
 
-- [table](https://www.lua.org/manual/5.4/manual.html#6.6) **LoadDir**([string](https://www.lua.org/manual/5.4/manual.html#6.4) path, boolean packages = true)
+- string[] **LoadDir**(string path)
+- string[] **LoadDir**(string path, boolean packages)
 
 | Parameter | Description |
 |---|---|
