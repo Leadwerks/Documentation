@@ -4,8 +4,10 @@ This method repositions an entity relative to its parent orientation.
 
 ## Syntax
 
-- **Translate**([xVec3](xVec3.md) translation, boolean global = false)
-- **Translate**(number x, number y, number z, boolean global = false)
+- **Translate**(number x, number y, number z)
+- **Translate**(number x, number y, number z, boolean global)
+- **Translate**([xVec3](xVec3.md) translation)
+- **Translate**([xVec3](xVec3.md) translation, boolean global)
 
 | Parameter | Description |
 |---|---|
