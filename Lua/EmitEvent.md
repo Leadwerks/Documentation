@@ -5,7 +5,10 @@ This function adds an event to the event queue and triggers any callbacks added 
 ## Syntax
 
 - boolean **EmitEvent**([Event](Event.md))
-- boolean **EmitEvent**(number id, [Object](Object.md) source, number data = 0, number x = 0, number y = 0, number width = 0, number height = 0, [Object](Object.md) extra = nil, [string](https://www.lua.org/manual/5.4/manual.html#6.4) text = "")
+- boolean **EmitEvent**(number id, [Object](Object.md) source, number data)
+- boolean **EmitEvent**(number id, [Object](Object.md) source, number data, number x, number y, number width, number height)
+- boolean **EmitEvent**(number id, [Object](Object.md) source, number data, number x, number y, number width, number height, [Object](Object.md) extra)
+- boolean **EmitEvent**(number id, [Object](Object.md) source, number data, number x, number y, number width, number height, [Object](Object.md) extra, [string](https://www.lua.org/manual/5.4/manual.html#6.4) text)
 
 | Parameter | Description |
 | --- | --- |
