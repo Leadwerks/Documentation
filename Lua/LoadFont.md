@@ -4,8 +4,10 @@ This function loads a font from a file path or stream.
 
 ## Syntax
 
-- [Font](Font.md) **LoadFont**([string]([WString.md](https://www.lua.org/manual/5.4/manual.html#6.4)) path, number flags = LOAD_DEFAULT)
-- [Font](Font.md) **LoadFont**([Stream](Stream.md) stream, number flags = LOAD_DEFAULT)
+- [Font](Font.md) **LoadFont**([string]([WString.md](https://www.lua.org/manual/5.4/manual.html#6.4)) path)
+- [Font](Font.md) **LoadFont**([string]([WString.md](https://www.lua.org/manual/5.4/manual.html#6.4)) path, number flags)
+- [Font](Font.md) **LoadFont**([Stream](Stream.md) stream)
+- [Font](Font.md) **LoadFont**([Stream](Stream.md) stream, number flags)
 
 | Parameter | Description |
 |---|---|
