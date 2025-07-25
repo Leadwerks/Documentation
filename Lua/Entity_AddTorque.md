@@ -4,8 +4,10 @@ This method adds physical torque to the entity, measured in Newton metres.
 
 ## Syntax
 
-- void **AddTorque**([xVec3](xVec3.md) torque, boolean global = true)
-- void **AddTorque**(number x, number y, number z, boolean global = true)
+- void **AddTorque**(number x, number y, number z)
+- void **AddTorque**(number x, number y, number z, boolean global)
+- void **AddTorque**([xVec3](xVec3.md) torque)
+- void **AddTorque**([xVec3](xVec3.md) torque, boolean global)
 
 | Parameter | Description |
 | - | - |
