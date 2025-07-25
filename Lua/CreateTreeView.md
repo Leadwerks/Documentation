@@ -12,7 +12,8 @@ The SORT style can be used to automatically sort treeview nodes alphabetically.
 
 ## Syntax
 
-- [Widget](Widget.md) **CreateTreeView**(number x, number y, number width, number height, [Widget](Widget.md) parent, number style = TREEVIEW_DEFAULT)
+- [Widget](Widget.md) **CreateTreeView**(number x, number y, number width, number height, [Widget](Widget.md) parent)
+- [Widget](Widget.md) **CreateTreeView**(number x, number y, number width, number height, [Widget](Widget.md) parent, number style)
 
 | Parameter | Description |
 | --- | --- |
