@@ -4,6 +4,7 @@ This method saves the object to a file.
 
 ## Syntax
 
+- boolean **Save**([string](https://www.lua.org/manual/5.4/manual.html#6.4) path)
 - boolean **Save**([string](https://www.lua.org/manual/5.4/manual.html#6.4) path, number flags)
 
 | Parameter | Description |
