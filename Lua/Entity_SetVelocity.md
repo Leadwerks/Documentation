@@ -4,8 +4,10 @@ This method sets the velocity of an entity.
 
 ## Syntax
 
-- **SetVelocity**(number x, number y, number z, boolean global = true)
-- **SetVelocity**([xVec3](xVec3.md) velocity, boolean global = true)
+- **SetVelocity**(number x, number y, number z)
+- **SetVelocity**(number x, number y, number z, boolean global)
+- **SetVelocity**([xVec3](xVec3.md) velocity)
+- **SetVelocity**([xVec3](xVec3.md) velocity, boolean global)
 
 | Parameter | Description |
 | --- | --- |
