@@ -4,7 +4,7 @@ This function retrieves a list of hardware monitors that are currently in use.
 
 ## Syntax
 
-- [Display](Display)[] **GetDisplays**()
+- [Display](Display.md)[] **GetDisplays**()
 
 ## Returns
 
