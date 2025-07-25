@@ -2,7 +2,7 @@
 
 This method plays a sound once and returns a speaker object.
 
-- function **Sound:Play**()
+- **Play**()
 
 ## Returns
 
