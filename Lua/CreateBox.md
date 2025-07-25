@@ -4,8 +4,11 @@ This function creates a new box model with a physics collider.
 
 ## Syntax
 
+- [Model](Model.md) CreateBox([World](World.md) world)
+- [Model](Model.md) CreateBox([World](World.md) world, number size)
+- [Model](Model.md) CreateBox([World](World.md) world, number width, number height, number depth)
+- [Model](Model.md) CreateBox([World](World.md) world, number width, number height, number depth, number xsegs = 1, number ysegs = 1, number zsegs = 1)
 - [Model](Model.md) CreateBox([World](World.md) world, number width, number height, number depth, number xsegs = 1, number ysegs = 1, number zsegs = 1, number type = MESH_TRIANGLES)
-- [Model](Model.md) CreateBox([World](World.md) world, number size = 1)
 
 | Parameter | Description |
 |---|---|
