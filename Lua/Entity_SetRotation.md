@@ -6,8 +6,10 @@ This method sets the rotation of an entity in 3-dimensional space, using local o
 
 - **SetRotation**(number pitch, number yaw, number roll)
 - **SetRotation**(number pitch, number yaw, number roll, boolean global)
-- **SetRotation**([xVec3](xVec3.md) rotation, boolean global = false)
-- **SetRotation**([xQuat](xQuat.md) rotation, boolean global = false)
+- **SetRotation**([xVec3](xVec3.md) rotation)
+- **SetRotation**([xVec3](xVec3.md) rotation, boolean global)
+- **SetRotation**([xQuat](xQuat.md) rotation)
+- **SetRotation**([xQuat](xQuat.md) rotation, boolean global)
 
 | Parameter | Description |
 | ------ | ------ |
