@@ -4,6 +4,7 @@ The slider widget adjusts an integer value within a defined range. Three differe
 
 ## Syntax
 
+- [Widget](Widget.md) **CreateSlider**(number x, number y, number width, number height, [Widget](Widget.md) parent)
 - [Widget](Widget.md) **CreateSlider**(number x, number y, number width, number height, [Widget](Widget.md) parent, number style = SLIDER_DEFAULT)
 
 | Parameter | Description |
