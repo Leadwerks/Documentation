@@ -4,7 +4,8 @@ This function loads a file from a path and returns a stream.
 
 ## Syntax
 
-- [Stream](Stream.md) **ReadFile**([string](https://www.lua.org/manual/5.4/manual.html#6.4) path, number flags = LOAD_DEFAULT)
+- [Stream](Stream.md) **ReadFile**([string](https://www.lua.org/manual/5.4/manual.html#6.4) path)
+- [Stream](Stream.md) **ReadFile**([string](https://www.lua.org/manual/5.4/manual.html#6.4) path, number flags)
 
 | Parameter | Descriptio   |
 |--|--|
