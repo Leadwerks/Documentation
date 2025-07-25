@@ -5,7 +5,7 @@ This function creates a Panel widget. The Panel widget is a rectangular area for
 ## Syntax
 
 - [Widget](Widget.md) **CreatePanel**(number x, number y, number width, number height, [Widget](Widget.md) parent)
-- [Widget](Widget.md) **CreatePanel**(number x, number y, number width, number height, [Widget](Widget.md) parent, number style = PANEL_DEFAULT)
+- [Widget](Widget.md) **CreatePanel**(number x, number y, number width, number height, [Widget](Widget.md) parent, number style)
 
 | Parameter | Description |
 |---|---|
