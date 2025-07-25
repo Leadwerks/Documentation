@@ -4,7 +4,9 @@ This function loads an entity from a prefab file.
 
 ## Syntax
 
-- [Entity](Entity.md) **LoadPrefab**([World](World.md) world, string path, number flags = LOAD_DEFAULT, [Object](Object.md) extra = nil)
+- [Entity](Entity.md) **LoadPrefab**([World](World.md) world, string path)
+- [Entity](Entity.md) **LoadPrefab**([World](World.md) world, string path, number flags)
+- [Entity](Entity.md) **LoadPrefab**([World](World.md) world, string path, number flags, [Object](Object.md) extra)
 
 | Parameter | Description |
 |---|---|
