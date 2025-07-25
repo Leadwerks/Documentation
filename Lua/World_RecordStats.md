@@ -4,7 +4,7 @@ This method is used to enable or disable statistics recording. Statistics record
 
 ## Syntax
 
-- RecordStats(boolean record)
+- **RecordStats**(boolean record)
 
 | Parameter | Description |
 |---|---|
