@@ -4,7 +4,8 @@ This function adds an item to any widget that displays a list of items.
 
 ## Syntax
 
-- number **AddItem**([string](https://www.lua.org/manual/5.4/manual.html#6.4) text, boolean selected = false)
+- number **AddItem**([string](https://www.lua.org/manual/5.4/manual.html#6.4) text)
+- number **AddItem**([string](https://www.lua.org/manual/5.4/manual.html#6.4) text, boolean selected)
 
 | Parameter | Description |
 |---|---|
