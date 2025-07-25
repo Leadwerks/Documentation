@@ -4,8 +4,10 @@ This function loads a texture from a file or open stream.
 
 ## Syntax
 
-- **LoadTexture**([string](https://www.lua.org/manual/5.4/manual.html#6.4) path, number flags = LOAD_DEFAULT)
-- **LoadTexture**([Stream](Stream.md), number flags = LOAD_DEFAULT)
+- **LoadTexture**([string](https://www.lua.org/manual/5.4/manual.html#6.4) path)
+- **LoadTexture**([string](https://www.lua.org/manual/5.4/manual.html#6.4) path, number flags)
+- **LoadTexture**([Stream](Stream.md))
+- **LoadTexture**([Stream](Stream.md), number flags)
 
 | Parameter | Description |
 | ------ | ------ |
