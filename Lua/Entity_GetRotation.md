@@ -4,7 +4,8 @@ This method retrieves the entity's rotation.
 
 ## Syntax
 
-- [xVec3](xVec3.md) **GetRotation**(boolean global = false)
+- [xVec3](xVec3.md) **GetRotation**()
+- [xVec3](xVec3.md) **GetRotation**(boolean global)
 
 | Parameter | Description |
 | --- | --- |
