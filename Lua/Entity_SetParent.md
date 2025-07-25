@@ -4,7 +4,8 @@ This method retrieves an entity's parent, if it exists.
 
 ## Syntax
 
-- **SetParent**([Entity](Entity.md) parent, boolean global = true)
+- **SetParent**([Entity](Entity.md) parent)
+- **SetParent**([Entity](Entity.md) parent, boolean global)
 
 | Parameter | Description |
 | ------ | ------ |
