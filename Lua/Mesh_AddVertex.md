@@ -8,7 +8,10 @@ This methods adds a new vertex to the mesh.
 - number **AddVertex**(number x, number y, number z, number nx, number ny, number nz)
 - number **AddVertex**(number x, number y, number z, number nx, number ny, number nz, number u, number v)
 - number **AddVertex**(number x, number y, number z, number nx, number ny, number nz, number u, number v, number displacement)
-- number **AddVertex**([Vec3](Vec3.md) position, [Vec3](Vec3.md) normal = 0, [Vec2](Vec2.md) texcoords = 0, number displacement = 1)
+- number **AddVertex**([Vec3](Vec3.md) position)
+- number **AddVertex**([Vec3](Vec3.md) position, [Vec3](Vec3.md) normal)
+- number **AddVertex**([Vec3](Vec3.md) position, [Vec3](Vec3.md) normal, [Vec2](Vec2.md) texcoords)
+- number **AddVertex**([Vec3](Vec3.md) position, [Vec3](Vec3.md) normal, [Vec2](Vec2.md) texcoords, number displacement)
 
 | Parameter | Description |
 |---|---|
