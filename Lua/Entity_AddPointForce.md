@@ -4,8 +4,10 @@ This method applies a force, measured in Newtons, to an entity at a specified po
 
 ## Syntax
 
-- void **AddPointForce**(number fx, number fy, number fz, number x, number y, number z, boolean global = true)
-- void **AddPointForce**([xVec3](xVec3.md) force, [xVec3](xVec3.md) position, boolean global = true)
+- void **AddPointForce**(number fx, number fy, number fz, number x, number y, number z)
+- void **AddPointForce**(number fx, number fy, number fz, number x, number y, number z, boolean global)
+- void **AddPointForce**([xVec3](xVec3.md) force, [xVec3](xVec3.md) position)
+- void **AddPointForce**([xVec3](xVec3.md) force, [xVec3](xVec3.md) position, boolean global)
 
 | Parameter | Description |
 | --- | --- |
