@@ -7,7 +7,7 @@ The world class is a container for entities.
 | Property | Type | Description |
 |---|---|---|
 | animationstats | [AnimationStats](AnimationStats.md) | animation system statistics |
-| collisions | [table](https://www.lua.org/manual/5.4/manual.html#6.6) | read-only list of collisions recorded in previous physics update |
+| collisions | [Collision](Collision.md)[] | read-only list of collisions recorded in previous physics update |
 | frequency | number | read-only update frequency |
 | physicsstats | [PhysicsStats](PhysicsStats.md) | physics statistics |
 | renderstats | [RenderStats](RenderStats.md) | rendering statistics |
