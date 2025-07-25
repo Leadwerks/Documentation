@@ -5,7 +5,7 @@ The label widget displays a read-only block of text.
 ## Syntax
 
 - [Widget](Widget.md) **CreateLabel**([string](https://www.lua.org/manual/5.4/manual.html#6.4) text, number x, number y, number width, number height, [Widget](Widget.md) parent)
-- [Widget](Widget.md) **CreateLabel**([string](https://www.lua.org/manual/5.4/manual.html#6.4) text, number x, number y, number width, number height, [Widget](Widget.md) parent, number style = LABEL_DEFAULT)
+- [Widget](Widget.md) **CreateLabel**([string](https://www.lua.org/manual/5.4/manual.html#6.4) text, number x, number y, number width, number height, [Widget](Widget.md) parent, number style)
 
 | Parameter | Description |
 |---|---|
