@@ -3,7 +3,9 @@
 This function creates a new BufferStream object that allows read and writing to a block of memory as if it were a file.
 
 ## Syntax
-- shared_ptr<[BufferStream](BufferStream.md)\> **CreateBufferStream**(shared_ptr<[Buffer](Buffer.md)\> data = NULL, const [WString](WString.md)& path = "")
+- shared_ptr<[BufferStream](BufferStream.md)\> **CreateBufferStream**()
+- shared_ptr<[BufferStream](BufferStream.md)\> **CreateBufferStream**(shared_ptr<[Buffer](Buffer.md)\> data)
+- shared_ptr<[BufferStream](BufferStream.md)\> **CreateBufferStream**(shared_ptr<[Buffer](Buffer.md)\> data, const [WString](WString.md)& path)
 
 | Parameter | Description |
 | --- | --- |
