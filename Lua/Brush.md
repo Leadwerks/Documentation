@@ -6,7 +6,7 @@ This class provides an interface for building level geometry with constructive s
 
 | Property | Type | Description |
 |---|---|---|
-| faces | [table](https://www.lua.org/manual/5.4/manual.html#6.6) | read-only array of faces |
+| faces | [Face](Face.md)[] | read-only array of faces |
 | [AddFace](Brush_AddFace.md) | Method | adds a new face to the brush | 
 | [AddVertex](Brush_AddVertex.md) | Method | add a new vertex to the brush | 
 | [Build](Brush_Build.md) | Method | updates texture mapping, physics collider, and visible meshes | 
