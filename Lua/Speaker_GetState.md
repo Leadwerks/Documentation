@@ -4,7 +4,7 @@ This method gets the speaker state.
 
 ## Syntax
 
-- `state = Speaker:GetState()`
+- number **GetState**()
 
 ## Returns
 
