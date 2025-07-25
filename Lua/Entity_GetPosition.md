@@ -4,7 +4,8 @@ This function returns the entity position.
 
 ## Syntax
 
-- [xVec3](xVec3.md) **GetPosition**(boolean global = false)
+- [xVec3](xVec3.md) **GetPosition**()
+- [xVec3](xVec3.md) **GetPosition**(boolean global)
 
 | Parameter | Description |
 |---|---|
