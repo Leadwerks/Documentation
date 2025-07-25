@@ -4,7 +4,7 @@ This method retrieves all entities in the world with the specified tag.
 
 ## Syntax
 
-- [table](https://www.lua.org/manual/5.4/manual.html#6.6) **GetTaggedEntities**([string](https://www.lua.org/manual/5.4/manual.html#6.4) tag)
+- [Entity](Entity.md)[] **GetTaggedEntities**([string](https://www.lua.org/manual/5.4/manual.html#6.4) tag)
 
 | Parameter | Description |
 |---|---|
