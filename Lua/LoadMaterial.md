@@ -3,8 +3,11 @@
 This function loads a material from a file or open stream.
 
 ## Syntax
-- [Material](Material.md) **LoadMaterial**([string](https://www.lua.org/manual/5.4/manual.html#6.4) path, number flags = LOAD_DEFAULT)
-- [Material](Material.md) **LoadMaterial**([Stream](Stream.md) stream, number flags = LOAD_DEFAULT)
+
+- [Material](Material.md) **LoadMaterial**([string](https://www.lua.org/manual/5.4/manual.html#6.4) path)
+- [Material](Material.md) **LoadMaterial**([string](https://www.lua.org/manual/5.4/manual.html#6.4) path, number flags)
+- [Material](Material.md) **LoadMaterial**([Stream](Stream.md) stream)
+- [Material](Material.md) **LoadMaterial**([Stream](Stream.md) stream, number flags)
 
 | Parameter | Description |
 | ------ | ------ |
