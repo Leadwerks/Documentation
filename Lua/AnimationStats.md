@@ -4,7 +4,7 @@ This class contains information about the animation threads. To enable statistic
 
 | Property | Type | Description |
 | ----- | ----- | ----- |
-|	bones | number | Number of bones updated in the previous frame. |
-|	skeletons | number | Number of skeletons updated in the previous frame. |
+| bones | number | Number of bones updated in the previous frame. |
+| skeletons | number | Number of skeletons updated in the previous frame. |
 | threads | number | Number of animation threads currently in use. |
-|	time | number | Combined time taken to update animations, in milliseconds. |
+| time | number | Combined time taken to update animations, in milliseconds. |
