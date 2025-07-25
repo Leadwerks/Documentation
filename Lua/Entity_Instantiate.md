@@ -4,7 +4,9 @@ This method returns an instanced copy of the entity. Resources such as model mes
 
 ## Syntax
 
-- [Entity](Entity.md) **Instantiate**([World](World.md) world, boolean recursive = true, boolean callstart = true)
+- [Entity](Entity.md) **Instantiate**([World](World.md) world)
+- [Entity](Entity.md) **Instantiate**([World](World.md) world, boolean recursive)
+- [Entity](Entity.md) **Instantiate**([World](World.md) world, boolean recursive, boolean callstart)
 
 | Parameter | Description |
 | --- | --- |
