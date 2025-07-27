@@ -13,7 +13,7 @@ The text area widget is a read-only multiline text display. If the WORDWRAP styl
 | width | widget width |
 | height | widget height |
 | parent | parent widget |
-| style | textfield style, can be TEXTAREA_DEFAULT or TEXTAREA_WORDWRAP |
+| style | textarea style, can be TEXTAREA_DEFAULT, TEXTAREA_WORDWRAP, or TEXTAREA_AUTOSCROLL |
 
 ## Returns
 
