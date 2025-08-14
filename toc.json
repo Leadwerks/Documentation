@@ -1826,6 +1826,10 @@
                             "filename": "Scene",
                             "topics": [
                                 {
+                                    "title": "GetEntity",
+                                    "filename": "Scene_GetEntity"
+                                },                                
+                                {
                                     "title": "LoadScene",
                                     "filename": "LoadScene"
                                 }
