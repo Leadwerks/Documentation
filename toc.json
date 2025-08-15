@@ -1963,6 +1963,10 @@
                                     "filename": "Window_FlushMouse"
                                 },
                                 {
+                                    "title": "GetFramebuffer",
+                                    "filename": "Window_GetFramebuffer"
+                                },
+                                {
                                     "title": "GetHandle",
                                     "filename": "Window_GetHandle",
                                     "hideFromLua": true
