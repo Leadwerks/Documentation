@@ -18,6 +18,7 @@ Base class: [Object](Object)
 | [FlushMouse](Window_FlushMouse.md) | Method | resets the mouse button press states |
 | [GetHandle](Window_GetHandle.md) | Method | returns the system window object |
 | [GetHidden](Window_GetHidden.md) | Method | gets the window visibility |
+| [GetFramebuffer](Window_GetFramebuffer.md) | Method | gets the window framebuffer |
 | [GetMouseAxis](Window_GetMouseAxis.md) | Method | returns the raw mouse input |
 | [GetMousePosition](Window_GetMousePosition.md) | Method | gets the current mouse position |
 | [GetPosition](Window_GetPosition.md) | Method | returns the window screen position |
