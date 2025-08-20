@@ -4,7 +4,7 @@ This method can be used to check for the presence of a tag.
 
 ## Syntax
 
-- bool **HasTag**(const [Wstring](WString.md) tag)
+- bool **HasTag**(const [WString](WString.md) tag)
 
 | Parameter | Description |
 |---|---|
