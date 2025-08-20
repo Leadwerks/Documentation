@@ -105,7 +105,7 @@ When you run the game, the camera will follow the player around as you move with
 
 ## Common Properties
 
-The stock scripts included in a new project make assumptions about some commonly used properties many types of objects may make use of. These are not strict rules you have to follow, but when scripts follow these guidelines they can provide interoperability with other scripts, even if they were written by different people who are unaware of each other's work.
+The stock scripts included in a new project make assumptions about some commonly used properties many types of objects may make use of. These are not strict rules you have to follow, but when scripts follow these guidelines they will enjoy greater interoperability with other community-created scripts.
 
 | Name | Type | Description |
 |---|---|---|
