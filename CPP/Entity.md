@@ -55,6 +55,7 @@ This class serves as the foundation for all 3D objects in a world. It provides a
 | [GetUuid](Entity_GetUuid.md) | Method | returns the entity's unique identifier |
 | [GetVelocity](Entity_GetVelocity.md) | Method | returns the entity linear velocity |
 | [GetWorld](Entity_GetWorld.md) | Method | returns the world the entity resides in |
+| [HasTag](Entity_HasTag.md) | Method | returns true if the entity includes the specified tag |
 | [Instantiate](Entity_Instantiate.md) | Method | creates an instanced copy of the entity |
 | [Listen](Entity_Listen.md) | Method | uses the entity for sound spatialization |
 | [Move](Entity_Move.md) | Method | moves the entity |
