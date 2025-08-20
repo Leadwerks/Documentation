@@ -102,3 +102,21 @@ return MyPlayer
 When you run the game, the camera will follow the player around as you move with the arrow keys.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/myplayercomponent6.gif?raw=true)
+
+## Common Properties
+
+The stock scripts included in a new project make assumptions about some commonly used properties many types of objects may make use of. These are not strict rules you have to follow, but when scripts follow these guidelines they can provide interoperability with other scripts, even if they were written by different people who are unaware of each other's work.
+
+| Name | Type | Description |
+|---|---|---|
+| camera | [Camera](Camera.md) | usually for player controllers, this is a camera created in code and associated with the entity. |
+| health | integer | if greater than zero, the object is alive, if zero or less the object is dead. If this is nil the object is inanimate. |
+| score | integer | general-purpose score value |
+| team | integer | number indicating an object's team affiliation. It is generally understood that 0 means good, 1 means bad, and 2 means neutral, but you can set up whatever team values you want. |
+
+Thw following methods are commonly used in entity scripts and can provide increased interoperability in your scripts:
+
+| Name | Type | Syntax | Description |
+|---|---|---|---|
+| Damage | function | Damage(integer amount, [Entity](Entity.md) attacker) | Applies damage to an object. The _attacker_ argument may be nil. |
+| Kill | function | Kill([Entity](Entity.md) attacker) | Applies damage to an object. The _attacker_ argument may be nil. |
