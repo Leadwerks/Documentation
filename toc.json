@@ -960,6 +960,10 @@
                             "filename": "Entity_GetWorld"
                         },
                         {
+                            "title": "HasTag",
+                            "filename": "Entity_HasTag"
+                        },
+                        {
                             "title": "Instantiate",
                             "filename": "Entity_Instantiate"
                         },
