@@ -114,7 +114,7 @@ The stock scripts included in a new project make assumptions about some commonly
 | score | integer | general-purpose score value |
 | team | integer | number indicating an object's team affiliation. It is generally understood that 0 means good, 1 means bad, and 2 means neutral, but you can set up whatever team values you want. |
 
-Thw following methods are commonly used in entity scripts and can provide increased interoperability in your scripts:
+The following methods are commonly used in entity scripts and can provide increased interoperability in your scripts:
 
 | Name | Syntax | Description |
 |---|---|---|
