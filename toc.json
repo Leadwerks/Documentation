@@ -5,7 +5,105 @@
             "openstate": false,
             "filename": "introduction",
             "useLanguage": false
-        },       
+        },
+        {
+            "title": "Editor",
+            "filename": "editor",
+            "topics": [
+                {
+                    "title": "Account Window",
+                    "filename": "accountwindow"
+                },
+                {
+                    "title": "Console",
+                    "filename": "console"
+                },
+                {
+                    "title": "Downloads Manager",
+                    "filename": "downloadsmanager"
+                },
+                {
+                    "title": "Entity Component System",
+                    "filename": "entitycomponentsystem"
+                },                        
+                {
+                    "title": "Face Panel",
+                    "filename": "facepanel"
+                },
+                {
+                    "title": "Flowgraph Editor",
+                    "filename": "flowgrapheditor"
+                },
+                {
+                    "title": "Material Editor",
+                    "filename": "materialeditor"
+                },
+                {
+                    "title": "Material Painter",
+                    "filename": "materialpainter"
+                },
+                {
+                    "title": "Model Editor",
+                    "filename": "modeleditor"
+                },                        
+                {
+                    "title": "Options Window",
+                    "filename": "optionswindow"
+                },
+                {
+                    "title": "Project Manager",
+                    "filename": "projectmanager"
+                },
+                {
+                    "title": "Project Panel",
+                    "filename": "assetbrowser"
+                },
+                {
+                    "title": "Publish Dialog",
+                    "filename": "publisher"
+                },
+                {
+                    "title": "Render Tool",
+                    "filename": "render"
+                },                        
+                {
+                    "title": "Scene Panel",
+                    "filename": "mapbrowser"
+                },
+                {
+                    "title": "Script Editor",
+                    "filename": "scripteditor"
+                },
+                {
+                    "title": "Terrain Panel",
+                    "filename": "terrainpanel"
+                },
+                {
+                    "title": "Texture Editor",
+                    "filename": "textureeditor"
+                },                        
+                {
+                    "title": "Toolbar",
+                    "filename": "toolbar"
+                },
+                {
+                    "title": "Vegetation",
+                    "filename": "vegetationtool"
+                },                        
+                {
+                    "title": "Vertex Panel",
+                    "filename": "vertexpanel"
+                },
+                {
+                    "title": "Viewports",
+                    "filename": "viewpanel"
+                },
+                {
+                    "title": "World Settings",
+                    "filename": "worldsettings"
+                }                        
+            ]
+        },        
         {
             "title": "Tutorials",
             "openstate": true,
@@ -71,104 +169,6 @@
                             "title": "Entity Components",
                             "filename": "components"
                         }                    
-                    ]
-                },
-                {
-                    "title": "Editor",
-                    "filename": "editor",
-                    "topics": [
-                        {
-                            "title": "Account Window",
-                            "filename": "accountwindow"
-                        },
-                        {
-                            "title": "Console",
-                            "filename": "console"
-                        },
-                        {
-                            "title": "Downloads Manager",
-                            "filename": "downloadsmanager"
-                        },
-                        {
-                            "title": "Entity Component System",
-                            "filename": "entitycomponentsystem"
-                        },                        
-                        {
-                            "title": "Face Panel",
-                            "filename": "facepanel"
-                        },
-                        {
-                            "title": "Flowgraph Editor",
-                            "filename": "flowgrapheditor"
-                        },
-                        {
-                            "title": "Material Editor",
-                            "filename": "materialeditor"
-                        },
-                        {
-                            "title": "Material Painter",
-                            "filename": "materialpainter"
-                        },
-                        {
-                            "title": "Model Editor",
-                            "filename": "modeleditor"
-                        },                        
-                        {
-                            "title": "Options Window",
-                            "filename": "optionswindow"
-                        },
-                        {
-                            "title": "Project Manager",
-                            "filename": "projectmanager"
-                        },
-                        {
-                            "title": "Project Panel",
-                            "filename": "assetbrowser"
-                        },
-                        {
-                            "title": "Publish Dialog",
-                            "filename": "publisher"
-                        },
-                        {
-                            "title": "Render Tool",
-                            "filename": "render"
-                        },                        
-                        {
-                            "title": "Scene Panel",
-                            "filename": "mapbrowser"
-                        },
-                        {
-                            "title": "Script Editor",
-                            "filename": "scripteditor"
-                        },
-                        {
-                            "title": "Terrain Panel",
-                            "filename": "terrainpanel"
-                        },
-                        {
-                            "title": "Texture Editor",
-                            "filename": "textureeditor"
-                        },                        
-                        {
-                            "title": "Toolbar",
-                            "filename": "toolbar"
-                        },
-                        {
-                            "title": "Vegetation",
-                            "filename": "vegetationtool"
-                        },                        
-                        {
-                            "title": "Vertex Panel",
-                            "filename": "vertexpanel"
-                        },
-                        {
-                            "title": "Viewports",
-                            "filename": "viewpanel"
-                        },
-                        {
-                            "title": "World Settings",
-                            "filename": "worldsettings"
-                        }                        
                     ]
                 },
                 {
