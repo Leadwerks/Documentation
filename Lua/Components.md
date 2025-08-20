@@ -116,7 +116,7 @@ The stock scripts included in a new project make assumptions about some commonly
 
 Thw following methods are commonly used in entity scripts and can provide increased interoperability in your scripts:
 
-| Name | Type | Syntax | Description |
-|---|---|---|---|
-| Damage | function | Damage(integer amount, [Entity](Entity.md) attacker) | Applies damage to an object. The _attacker_ argument may be nil. |
-| Kill | function | Kill([Entity](Entity.md) attacker) | Applies damage to an object. The _attacker_ argument may be nil. |
+| Name | Syntax | Description |
+|---|---|---|
+| Damage | Damage(integer amount, [Entity](Entity.md) attacker) | Applies damage to an object. The _attacker_ argument may be nil. |
+| Kill | Kill([Entity](Entity.md) attacker) | Applies damage to an object. The _attacker_ argument may be nil. |
