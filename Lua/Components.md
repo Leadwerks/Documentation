@@ -119,4 +119,4 @@ Thw following methods are commonly used in entity scripts and can provide increa
 | Name | Syntax | Description |
 |---|---|---|
 | Damage | Damage(integer amount, [Entity](Entity.md) attacker) | Applies damage to an object. The _attacker_ argument may be nil. |
-| Kill | Kill([Entity](Entity.md) attacker) | Applies damage to an object. The _attacker_ argument may be nil. |
+| Kill | Kill([Entity](Entity.md) attacker) | Instantly kills an object. The _attacker_ argument may be nil. |
