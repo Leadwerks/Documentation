@@ -86,7 +86,7 @@ protected:
     virtual void GainFocus() {}
 
     //Called when key is pressed
-    virtual void KeyDown(const KeyCode key) {}
+    virtual bool KeyDown(const KeyCode key) { return false; }
 
     //Called when key is released
     virtual void KeyUp(const KeyCode key) {}
