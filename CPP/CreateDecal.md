@@ -4,7 +4,7 @@ This function creates a new decal entity. The decal's material will be displayed
 
 ## Syntax
 
-- **CreateDecal**(shared_ptr<[World](World.md)/> world)
+- shared_ptr<[World](World.md)\> **CreateDecal**(shared_ptr<[World](World.md)\> world)
 
 ## Returns
 
