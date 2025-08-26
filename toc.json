@@ -1026,7 +1026,11 @@
                         {
                             "title": "SetMass",
                             "filename": "Entity_SetMass"
-                        },                        
+                        },
+                        {
+                            "title": "SetMass",
+                            "filename": "Entity_SetMaterial"
+                        },   
                         {
                             "title": "SetMatrix",
                             "filename": "Entity_SetMatrix"
