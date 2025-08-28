@@ -6,7 +6,7 @@ This class serves as the foundation for all 3D objects in a world. It provides a
 
 | Property | Type | Description |
 |---|---|---|
-| components | vector<[Component](Component.md)> | read-only array of components |
+| components | vector<shared_ptr<[Component](Component.md)\> > | read-only array of components |
 | extra | [Object](Object.md) | user-defined object |
 | kids | vector<shared_ptr<[Entity](Entity.md)\> \> | read-only array of child entities |
 | matrix | [xMat4](xMat4.md) | read-only 4x4 matrix |
