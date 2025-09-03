@@ -1,4 +1,4 @@
-# ParticleEmitter::GetParticleScale
+# ParticleEmitter:GetParticleScale
 
 This function gets the scale a newly emitted particle will use.
 

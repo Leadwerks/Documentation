@@ -1,10 +1,10 @@
-# ParticleEmitter::GetParticleColor
+# ParticleEmitter:GetParticleColor
 
 This function gets the colors a newly emitted particle will be set to use.
 
 ## Syntax
 
-- [Vec3](Vec3.md) **GetParticleColor**(int index)
+- [Vec3](Vec3.md) **GetParticleColor**(number index)
 
 | Parameter | Description |
 |---|---|

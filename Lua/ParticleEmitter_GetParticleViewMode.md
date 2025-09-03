@@ -1,10 +1,10 @@
-# ParticleEmitter::GetParticleViewMode
+# ParticleEmitter:GetParticleViewMode
 
 This function gets the velocity a newly emitted particle will use.
 
 ## Syntax
 
-- ParticleViewMode **GetParticleViewMode**()
+- number **GetParticleViewMode()**
 
 ## Returns
 

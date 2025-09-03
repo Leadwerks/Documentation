@@ -1,4 +1,4 @@
-# ParticleEmitter::GetEmissionArea
+# ParticleEmitter:GetEmissionArea
 
 This function gets the emission area of the particle emitter.
 
