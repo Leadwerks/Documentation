@@ -681,6 +681,86 @@
                                 {
                                     "title": "CreateParticleEmitter",
                                     "filename": "CreateParticleEmitter"
+                                },
+                                {
+                                    "title": "CountParticles",
+                                    "filename": "ParticleEmitter_CountParticles"
+                                },
+                                {
+                                    "title": "GetEmissionArea",
+                                    "filename": "ParticleEmitter_GetEmissionArea"
+                                },
+                                {
+                                    "title": "GetParticleAccleration",
+                                    "filename": "ParticleEmitter_GetParticleAccleration"
+                                },
+                                {
+                                    "title": "GetParticleColor",
+                                    "filename": "ParticleEmitter_GetParticleColor"
+                                },
+                                {
+                                    "title": "GetParticleScale",
+                                    "filename": "ParticleEmitter_GetParticleScale"
+                                },
+                                {
+                                    "title": "GetParticleTurbulence",
+                                    "filename": "ParticleEmitter_GetParticleTurbulence"
+                                },
+                                {
+                                    "title": "GetParticleVelocity",
+                                    "filename": "ParticleEmitter_GetParticleVelocity"
+                                },
+                                {
+                                    "title": "GetParticleViewMode",
+                                    "filename": "ParticleEmitter_GetParticleViewMode"
+                                },
+                                {
+                                    "title": "Pause",
+                                    "filename": "ParticleEmitter_Pause"
+                                },
+                                {
+                                    "title": "Play",
+                                    "filename": "ParticleEmitter_Play"
+                                },
+                                {
+                                    "title": "Reset",
+                                    "filename": "ParticleEmitter_Reset"
+                                },
+                                {
+                                    "title": "SetEmissionArea",
+                                    "filename": "ParticleEmitter_SetEmissionArea"
+                                },
+                                {
+                                    "title": "SetEmissionAcceleration",
+                                    "filename": "ParticleEmitter_SetEmissionAcceleration"
+                                },
+                                {
+                                    "title": "SetParticleColor",
+                                    "filename": "ParticleEmitter_SetParticleColor"
+                                },
+                                {
+                                    "title": "SetParticleScale",
+                                    "filename": "ParticleEmitter_SetParticleScale"
+                                },
+                                {
+                                    "title": "SetParticleSizer",
+                                    "filename": "ParticleEmitter_SetParticleSize"
+                                },
+                                {
+                                    "title": "SetParticleTurbulence",
+                                    "filename": "ParticleEmitter_SetParticleTurbulence"
+                                },
+                                {
+                                    "title": "SetParticleVelocity",
+                                    "filename": "ParticleEmitter_SetParticleVelocity"
+                                },
+                                {
+                                    "title": "SetParticleViewMode",
+                                    "filename": "ParticleEmitter_SetParticleViewModey"
+                                },
+                                {
+                                    "title": "SetLooping",
+                                    "filename": "ParticleEmitter_SetLooping"
                                 }
                             ]
                         },
