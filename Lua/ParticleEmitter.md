@@ -9,9 +9,6 @@ This entity can be used to create fire, smoke, explosion, and other effects.
 | [CountParticles](CountParticles.md) | Function | returns the particle count |
 | [CreateParticleEmitter](CreateParticleEmitter.md) | Function | creates a new particle emitter entity |
 | [GetEmissionArea](GetEmissionArea.md) | Function | gets the particle emission area |
-| [GetEmissionFrequency](GetEmissionFrequency.md) | Function | gets the particle emission frequency |
-| [GetEmissionQuantity](GetEmissionQuantity.md) | Function | gets the particle emission frequency |
-| [GetEmissionShape](GetEmissionShape.md) | Function | gets the particle emission shape |
 | [GetParticleAcceleration](GetParticleAcceleration.md) | Function | gets the particle acceleration |
 | [GetParticleColor](GetParticleColor.md) | Function | gets the particle color |
 | [GetParticleRadius](GetParticleRadius.md) | Function | gets the particle radius |
@@ -22,8 +19,6 @@ This entity can be used to create fire, smoke, explosion, and other effects.
 | [Play](Play.md) | Function | players the emitter |
 | [Reset](Reset.md) | Function | resets all particles |
 | [SetEmissionArea](SetEmissionArea.md) | Function | sets the particle emission area |
-| [SetEmissionFrequency](SetEmissionFrequency.md) | Function | set the particle emission frequency |
-| [SetEmissionShape](SetEmissionShape.md) | Function | set the particle emission shape |
 | [SetParticleAcceleration](SetParticleAcceleration.md) | Function | set the particle acceleration |
 | [SetParticleColor](SetParticleColor.md) | Function | sets the particle color |
 | [SetParticleRadius](SetParticleRadius.md) | Function | sets the particle radius |
@@ -31,6 +26,4 @@ This entity can be used to create fire, smoke, explosion, and other effects.
 | [SetParticleTurbulence](SetParticleTurbulence.md) | Function | sets the particle turbulence |
 | [SetParticleVelocity](ParticleEmitter_SetParticleVelocity.md) | Method | sets the velocity for newly emitted particles |
 | [SetParticleViewMode](SetParticleViewMode.md) | Function | sets the particle view mode |
-| [SetParticleCount](SetParticleCount.md) | Function | sets the particle count |
-| [SetEmissionQuantity](SetEmissionQuantity.md) | Function | sets the particle emission quantity |
 | [SetLooping](SetLooping.md) | Function | sets the particle loop mode |
