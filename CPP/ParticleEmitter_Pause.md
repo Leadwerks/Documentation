@@ -4,4 +4,4 @@ This method pauses emission of new particles.
 
 ## Syntax
 
-void **Pause**()
+- void **Pause**()
