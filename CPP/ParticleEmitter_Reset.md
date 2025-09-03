@@ -4,4 +4,4 @@ This method will reset all particles.
 
 ## Syntax
 
-void **Reset**()
+- void **Reset**()
