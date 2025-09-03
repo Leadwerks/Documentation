@@ -21,7 +21,7 @@ This entity can be used to create fire, smoke, explosion, and other effects.
 | [SetEmissionArea](SetEmissionArea.md) | Function | sets the particle emission area |
 | [SetParticleAcceleration](SetParticleAcceleration.md) | Function | set the particle acceleration |
 | [SetParticleColor](SetParticleColor.md) | Function | sets the particle color |
-| [SetParticleRadius](SetParticleRadius.md) | Function | sets the particle radius |
+| [SetParticleScale](SetParticleScale.md) | Function | sets the particle start and end scale |
 | [SetParticleSize](SetParticleSize.md) | Function | sets the particle size |
 | [SetParticleTurbulence](SetParticleTurbulence.md) | Function | sets the particle turbulence |
 | [SetParticleVelocity](ParticleEmitter_SetParticleVelocity.md) | Method | sets the velocity for newly emitted particles |
