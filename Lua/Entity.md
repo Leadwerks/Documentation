@@ -81,6 +81,7 @@ This class serves as the foundation for all 3D objects in a world. It provides a
 | [SetRotation](Entity_SetRotation.md) | Method | sets the entity rotation in local or global space |
 | [SetScale](Entity_SetScale.md) | Method | sets the entity scale |
 | [SetShadows](Entity_SetShadows.md) | Method | determines whether the entity casts a shadow |
+| [SetSweptCollision](Entity_SetSweptCollision.md) | Method | sets the entity swept collision mode |
 | [SetVelocity](Entity_SetVelocity.md) | Method | sets the entity linear velocity |
 | [Staticize](Entity_Staticize.md) | Method | permanently makes an entity static |
 | [Sync](Entity_Sync.md) | Method | resets rendering interpolation |
