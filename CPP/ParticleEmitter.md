@@ -11,7 +11,7 @@ This entity can be used to create fire, smoke, explosion, and other effects.
 | [GetEmissionArea](GetEmissionArea.md) | Function | gets the particle emission area |
 | [GetParticleAcceleration](GetParticleAcceleration.md) | Function | gets the particle acceleration |
 | [GetParticleColor](GetParticleColor.md) | Function | gets the particle color |
-| [GetParticleRadius](GetParticleRadius.md) | Function | gets the particle radius |
+| [GetParticleScale](GetParticleScale.md) | Function | gets the particle radius |
 | [GetParticleTurbulence](GetParticleTurbulence.md) | Function | gets the particle turbulence |
 | [GetParticleVelocity](GetParticleVelocity.md) | Function | gets the particle velocity |
 | [GetParticleViewMode](GetParticleViewMode.md) | Function | gets the particle view mode |
