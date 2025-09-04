@@ -37,7 +37,7 @@ Some web-based features require a free [Leadwerks account](https://www.leadwerks
 
 The following installation instructions only apply if you own a license for the standalone version of Leadwerks 5.
 
-First, download and install the [Leadwerks Client](https://github.com/Leadwerks/leadwerks.github.io/raw/main/LeadwerksClient.exe). This application will allow you to install different versions of the game engine and receive updates. When you open the application you will be prompted to sign into your Leadwerks account. If you do not have an account yet, you can create one [here](https://www.leadwerks.com/community/register).
+First, download and install the [Leadwerks Client](https://www.leadwerks.com/files/LeadwerksClient.exe). This application will allow you to install different versions of the game engine and receive updates. When you open the application you will be prompted to sign into your Leadwerks account. If you do not have an account yet, you can create one [here](https://www.leadwerks.com/community/register).
 
 ![](https://raw.githubusercontent.com/Leadwerks/Documentation/master/Images/client_signin.jpg)
 
