@@ -1108,7 +1108,11 @@
                             "filename": "Entity_SetMass"
                         },
                         {
-                            "title": "SetMass",
+                            "title": "SetMassCenter",
+                            "filename": "Entity_SetMassCenter"
+                        },
+                        {
+                            "title": "SetMaterial",
                             "filename": "Entity_SetMaterial"
                         },   
                         {
