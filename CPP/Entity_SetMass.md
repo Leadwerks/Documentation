@@ -4,7 +4,7 @@ This method sets the entity mass for physics interactivity.
 
 ## Syntax
 
-- void **SetMass**(const dFloat mass)
+- void **SetMass**(float mass)
 
 | Parameter | Description |
 | --- | --- |
