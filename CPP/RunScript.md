@@ -5,7 +5,7 @@ This function executes a Lua script from a file or string.
 ## Syntax
 
 - bool **RunScript**(const [WString](WString.md)& path)
-- bool **RunScript**(const [WString](WString.md)& path, vector<sol::object>& returnvalues)
+- bool **RunScript**(const [WString](WString.md)& path, vector\<sol::object\>& returnvalues)
 
 | Parameter | Description |
 |-----|-----|
