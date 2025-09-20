@@ -354,6 +354,7 @@
                 },
                 {
                     "title": "Component",
+                    "hidefromlua": true,
                     "filename": "Component",
                     "topics": [
                         {
