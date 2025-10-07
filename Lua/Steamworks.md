@@ -1,6 +1,6 @@
 # Steamworks
 
-Ultra Engine includes functionality to help publish your game to Steam.
+Leadwerks includes functionality to help publish your game to Steam.
 
 | Property | Type | Description |
 |---|---|---|
