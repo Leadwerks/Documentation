@@ -1,6 +1,6 @@
 # Steamworks
 
-Ultra Engine includes an optional module for adding functionality from the Steam API. These features can be added to your project by including the file "Steamworks/Steamworks.h" and enabling the "Steamworks/Steamworks.cpp" file.
+Leadwerks includes an optional module for adding functionality from the Steam API. These features can be added to your project by including the file "Steamworks/Steamworks.h" and enabling the "Steamworks/Steamworks.cpp" file.
 
 This module is intended to provide easy access to the most commonly used Steam features. Including this module also provides direct access to the [Steamworks API](https://partner.steamgames.com/doc/api).
 
