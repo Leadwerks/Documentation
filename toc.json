@@ -941,6 +941,11 @@
                             "filename": "Entity_ClearTags"
                         },
                         {
+                            "title": "Collide",
+                            "filename": "Component_Collide",
+                            "hideFromCPP": true
+                        },                           
+                        {
                             "title": "Copy",
                             "filename": "Entity_Copy"
                         },
@@ -1057,6 +1062,11 @@
                             "filename": "Entity_Listen"
                         },
                         {
+                            "title": "Load",
+                            "filename": "Component_Load",
+                            "hideFromCPP": true
+                        },                        
+                        {
                             "title": "Move",
                             "filename": "Entity_Move"
                         },
@@ -1165,6 +1175,11 @@
                             "filename": "Entity_SetVelocity"
                         },
                         {
+                            "title": "Start",
+                            "filename": "Component_Start",
+                            "hideFromCPP": true
+                        },                        
+                        {
                             "title": "Staticize",
                             "filename": "Entity_Staticize"
                         },
@@ -1179,6 +1194,11 @@
                         {
                             "title": "Turn",
                             "filename": "Entity_Turn"
+                        },
+                        {
+                            "title": "Update",
+                            "filename": "Component_Update",
+                            "hideFromCPP": true
                         },
                         {
                             "title": "UpdateBounds",
