@@ -6,7 +6,7 @@ The Leadwerks entity script system allows you to attach properties and functions
 
 ## Creating Entity Scripts
 
-To create a new component, press the '+' button that appears below the **Scene** tab in the right-side panel. Select the **New Component** popup menu that appears.
+To create a new entity script, press the '+' button that appears below the **Scene** tab in the right-side panel. Select the **New Entity Script** popup menu that appears.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/newcomponent.png?raw=true)
 
