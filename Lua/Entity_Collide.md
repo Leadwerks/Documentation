@@ -4,7 +4,7 @@ This method is called every time the entity collides with another object.
 
 ## Syntax
 
-- void **Collide**([Entity](Entity.md) collidedentity, [Vec3](Vec3.md) position, [Vec3](Vec3.md) normal, number speed)
+- **Collide**([Entity](Entity.md) collidedentity, [Vec3](Vec3.md) position, [Vec3](Vec3.md) normal, number speed)
 
 | Parameter | Description |
 |---|---|
