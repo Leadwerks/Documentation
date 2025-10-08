@@ -942,7 +942,7 @@
                         },
                         {
                             "title": "Collide",
-                            "filename": "Component_Collide",
+                            "filename": "Entity_Collide",
                             "hideFromCPP": true
                         },                           
                         {
@@ -1063,7 +1063,7 @@
                         },
                         {
                             "title": "Load",
-                            "filename": "Component_Load",
+                            "filename": "Entity_Load",
                             "hideFromCPP": true
                         },                        
                         {
@@ -1176,7 +1176,7 @@
                         },
                         {
                             "title": "Start",
-                            "filename": "Component_Start",
+                            "filename": "Entity_Start",
                             "hideFromCPP": true
                         },                        
                         {
@@ -1197,7 +1197,7 @@
                         },
                         {
                             "title": "Update",
-                            "filename": "Component_Update",
+                            "filename": "Entity_Update",
                             "hideFromCPP": true
                         },
                         {
