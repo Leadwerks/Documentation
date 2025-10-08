@@ -10,7 +10,7 @@ The integrated [script editor](scripteditor.md) is recommended for most users, a
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/ide.png?raw=true)
 
-The [programming reference](https://www.leadwerks.com/learn/LoadModel?lang=lua) includes examples for most commands. To run an example, just copy the code from the example section of the page, and paste it into the file Scripts\Main.lua, overwriting its contents.
+The [programming reference](https://www.leadwerks.com/learn/LoadModel?lang=lua) includes examples for most commands. To run an example, just copy the code from the example section of the page, and paste it into the file Scripts/Main.lua, overwriting its contents.
 
 If you are using the integrated script editor, you do not need to read the rest of this article, and you can proceed to the first Lua programming tutorial.
 
@@ -44,7 +44,7 @@ Once your development environment is set up, you can run your Ultra Engine Lua g
    - Press the F5 key within Visual Studio Code to launch your Ultra Engine Lua game.
 
 2. **Explore Example Projects:**
-   - If you want to see a working example, you can copy code from [our documentation](https://www.ultraengine.com/learn/LoadModel?lang=lua) and paste it into the *Source/main.lua* file in your project to see it in action.
+   - If you want to see a working example, you can copy code from [our documentation](https://www.ultraengine.com/learn/LoadModel?lang=lua) and paste it into the *Scripts/Main.lua* file in your project to see it in action.
 
 ## Trouble Shooting
 
