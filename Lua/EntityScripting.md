@@ -2,7 +2,7 @@
 
 www.youtube.com/watch?v=gV7un0VPeZ0
 
-The Leadwerks entity component system (ECS) uses Lua code and tables to attach properties and functions to entities in your game.
+The Leadwerks entity script system allows you to attach properties and functions directly to entities in your game.
 
 ## Creating Entity Scripts
 
