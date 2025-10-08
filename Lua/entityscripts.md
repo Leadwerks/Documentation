@@ -1,10 +1,10 @@
-# Components
+# Entity Scripting
 
 www.youtube.com/watch?v=gV7un0VPeZ0
 
 The Leadwerks entity component system (ECS) uses Lua code and tables to attach properties and functions to entities in your game.
 
-## Creating Components
+## Creating Entity Scripts
 
 To create a new component, press the '+' button that appears below the **Scene** tab in the right-side panel. Select the **New Component** popup menu that appears.
 
