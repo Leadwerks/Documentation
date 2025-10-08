@@ -219,8 +219,8 @@
                             "hideFromCPP": true
                         },
                         {
-                            "title": "Components",
-                            "filename": "Components",
+                            "title": "Entity Scripting",
+                            "filename": "entityscripting",
                             "hideFromCPP": true
                         }
                     ]
