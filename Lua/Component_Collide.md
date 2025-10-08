@@ -57,7 +57,7 @@ function box:Collide(entity, position, normal, speed)
     Print(normal)
     Print(speed)
 end
-
+ 
 while window:KeyDown(KEY_ESCAPE) == false and window:Closed() == false do
 
     --Update the world
