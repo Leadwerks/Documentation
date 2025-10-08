@@ -1,4 +1,4 @@
-# Component:Load
+# Entity:Load
 
 This function is called when a component is loaded from a file or copied.
 
