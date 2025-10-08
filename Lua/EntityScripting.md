@@ -103,7 +103,46 @@ When you run the game, the camera will follow the player around as you move with
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/myplayercomponent6.gif?raw=true)
 
-## Common Properties
+## Script Properties
+
+When a new script is created, it will include example properties for every supported type:
+
+```lua
+CustomScript.integervalue = 0--"Integer value"
+CustomScript.floatvalue = 0.0--"Float value"
+CustomScript.stringvalue = ""--"String value"
+CustomScript.booleanvalue = false--"Boolean value"
+CustomScript.optionvalue = 0--"Option value" ["Option 1", "Option 2", "Option 3"]
+CustomScript.entityvalue = nil--"Entity value"
+CustomScript.pathvalue = ""--"Path value" SOUND
+CustomScript.vec2value = Vec2(0,0)--"Vec2 value"
+CustomScript.vec3value = Vec3(0,0,0)--"Vec3 value"
+CustomScript.vec4value = Vec4(0,0,0,0)--"Vec4 value"
+CustomScript.rgbvalue = Vec3(1,1,1)--"RGB value" COLOR
+CustomScript.rgbavalue = Vec4(1,1,1,1)--"RGBA value" COLOR
+```
+
+You can add new properties or edit these ones.
+
+## Script Functions and the Flowgraph Editor
+
+Script functions can be marked as inputs and/or outputs, for use with the [flowgraph editor](flowgrapheditor.md). To do this, just add a comment at the end of the function declaration:
+
+```
+-- Function can act as a flowgraph input
+function CustomScript:MyFunction()--in
+end
+
+-- Function can act as a flowgraph output
+function CustomScript:MyFunction2()--out
+end
+
+-- Function can act as an input or an output
+function CustomScript:MyFunction3()--inout
+end
+```
+
+## Common Properties and Functions
 
 The stock scripts included in a new project make assumptions about some commonly used properties many types of objects may make use of. These are not strict rules you have to follow, but when scripts follow these guidelines they will enjoy greater interoperability with other community-created scripts.
 
