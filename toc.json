@@ -220,7 +220,7 @@
                         },
                         {
                             "title": "Entity Scripting",
-                            "filename": "entityscripting",
+                            "filename": "EntityScripting",
                             "hideFromCPP": true
                         }
                     ]
