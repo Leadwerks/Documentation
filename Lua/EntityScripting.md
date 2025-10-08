@@ -14,7 +14,7 @@ In the New Component dialog, select the group you want to place your component i
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/myplayercomponent.png?raw=true)
 
-The editor will create two new files in the appropriate folder. The Lua file contains your component code. The JSON file contains component definitions extracted from the code file, and tells the editor what editable properties the code file contains.
+The editor will create a new Lua file in the appropriate folder. The Lua file contains your component code. A JSON file will also be added to the "Entity Definitions" folder. This contains property definitions extracted from the code file, and tells the editor what editable properties the script contains.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/myplayercomponent2.png?raw=true)
 
