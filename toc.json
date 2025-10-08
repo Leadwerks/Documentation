@@ -107,11 +107,11 @@
         {
             "title": "Tutorials",
             "openstate": true,
-            "useLanguage": false,
             "topics": [
                 {
                     "title": "Crash Course",
                     "filename": "crashcourse",
+                    "useLanguage": false,
                     "topics": [
                         {
                             "title": "Getting Started",
