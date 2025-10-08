@@ -29,6 +29,7 @@ This class serves as the foundation for all 3D objects in a world. It provides a
 | [Attach](Entity_Attach.md) | Method | attaches the entity to a bone or navigation agent |
 | [ClearTags](Entity_ClearTags.md) | Method | removes all tags |
 | [Copy](Entity_Copy.md) | Method | duplicates the entity |
+| [Collide](Entity_Collide.md) | Method | called when an entity collides with another object |
 | [Detach](Entity_Detach.md) | Method | detaches the entity from a bone or navigation agent |
 | [EmitSound](Entity_EmitSound.md) | Method | plays a sound at the entity's position |
 | [FindChild](Entity_FindChild.md) | Method | searches for a child by name |
@@ -57,6 +58,7 @@ This class serves as the foundation for all 3D objects in a world. It provides a
 | [HasTag](Entity_HasTag.md) | Method | returns true if the entity includes the specified tag |
 | [Instantiate](Entity_Instantiate.md) | Method | creates an instanced copy of the entity |
 | [Listen](Entity_Listen.md) | Method | uses the entity for sound spatialization |
+| [Load](Entity_Load.md) | Method | called when the entity is loaded from a scene file |
 | [Move](Entity_Move.md) | Method | moves the entity |
 | [Point](Entity_Point.md) | Method | points one entity at another |
 | [RecordCollisions](Entity_RecordCollisions.md) | Method | enables collision recording |
@@ -84,9 +86,11 @@ This class serves as the foundation for all 3D objects in a world. It provides a
 | [SetShadows](Entity_SetShadows.md) | Method | determines whether the entity casts a shadow |
 | [SetSweptCollision](Entity_SetSweptCollision.md) | Method | sets the entity swept collision mode |
 | [SetVelocity](Entity_SetVelocity.md) | Method | sets the entity linear velocity |
+| [Start](Entity_Start.md) | Method | called when the entity is created |
 | [Staticize](Entity_Staticize.md) | Method | permanently makes an entity static |
 | [Sync](Entity_Sync.md) | Method | resets rendering interpolation |
 | [Translate](Entity_Translate.md) | Method | translates the entity position in local or global space |
 | [Turn](Entity_Turn.md) | Method | turns the entity in local or global space |
+| [Update](Entity_Update.md) | Method | called during each call to [World:Update](World_Update.md) |
 | [UpdateBounds](Entity_UpdateBounds.md) | Method | updates the entity bounding boxes |
 
