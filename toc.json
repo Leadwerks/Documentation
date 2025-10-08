@@ -166,8 +166,8 @@
                             "filename": "vegetation"
                         },
                         {
-                            "title": "Entity Components",
-                            "filename": "components"
+                            "title": "Entity Scripts",
+                            "filename": "entityscripts"
                         }                    
                     ]
                 },
