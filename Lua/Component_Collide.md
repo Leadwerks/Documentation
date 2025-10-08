@@ -1,4 +1,4 @@
-# Component:Collide
+# Entity:Collide
 
 This method is called every time the entity collides with another object.
 
@@ -51,17 +51,12 @@ box:SetMass(10)
 box:SetPosition(0,2,0)
 box:SetRotation(0,0,-35)
 
-local t = {}
-
-function t:Collide(entity, position, normal, speed)
+function box:Collide(entity, position, normal, speed)
     Print(entity.name)
     Print(position)
     Print(normal)
     Print(speed)
 end
-
---Add a component that prints out collision information
-box:AddComponent(t)
 
 while window:KeyDown(KEY_ESCAPE) == false and window:Closed() == false do
 
