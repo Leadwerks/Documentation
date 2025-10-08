@@ -1,4 +1,4 @@
-# Component:Start
+# Entity:Start
 
 This function is called once when the component is first created or after it is loaded.
 
