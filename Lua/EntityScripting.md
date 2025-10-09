@@ -10,7 +10,7 @@ To create a new entity script, press the '+' button that appears below the **Sce
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/newcomponent.png?raw=true)
 
-In the New Component dialog, select the group you want to place your component in and enter the name for your new component:
+In the New Entity Script dialog, select the group you want to place your component in and enter the name for your new component:
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/myplayercomponent.png?raw=true)
 
