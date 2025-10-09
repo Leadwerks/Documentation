@@ -10,11 +10,11 @@ To create a new entity script, press the '+' button that appears below the **Sce
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/newcomponent.png?raw=true)
 
-In the New Entity Script dialog, select the group you want to place your component in and enter the name for your new component:
+In the New Entity Script dialog, select the group you want to place your script in and enter the name for your new script:
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/myplayercomponent.png?raw=true)
 
-The editor will create a new Lua file in the appropriate folder. The Lua file contains your component code. A JSON file will also be added to the "Entity Definitions" folder. This contains property definitions extracted from the code file, and tells the editor what editable properties the script contains.
+The editor will create a new Lua file in the appropriate folder. The Lua file contains your script code. A JSON file will also be added to the "Entity Definitions" folder. This contains property definitions extracted from the code file, and tells the editor what editable properties the script contains.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/myplayercomponent2.png?raw=true)
 
@@ -50,15 +50,15 @@ RegisterComponent("MyPlayer", MyPlayer)
 return MyPlayer
 ```
 
-Now we need to create a simple scene to test the component in. Create a large flat box for the floor. Create a small box for the player, change the color to make it stand out, and add your new component to it. Finally, add a camera that points down at a 45 degree angle, so that it can see most of the floor. You can also set the skybox to the default sky in the [world properties](worldsettings.md) dialog, if you wish.
+Now we need to create a simple scene to test the script in. Create a large flat box for the floor. Create a small box for the player, change the color to make it stand out, and add your new script to it. Finally, add a camera that points down at a 45 degree angle, so that it can see most of the floor. You can also set the skybox to the default sky in the [world properties](worldsettings.md) dialog, if you wish.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/myplayercomponent3.png?raw=true)
 
-Once your scene is set up, you can run the game to try your new component. You should be able to control the player box with the arrow keys.
+Once your scene is set up, you can run the game to try your new script. You should be able to control the player box with the arrow keys.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/myplayercomponent4.png?raw=true)
 
-Now let's change the component so that it automatically creates a camera and updates it each frame, to follow the player. Delete the camera from your scene and replace the component code with this:
+Now let's change the script so that it automatically creates a camera and updates it each frame, to follow the player. Delete the camera from your scene and replace the script code with this:
 
 ```lua
 MyPlayer = {}
