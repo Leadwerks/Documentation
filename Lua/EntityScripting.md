@@ -45,9 +45,6 @@ function MyPlayer:Update()
 	self.entity:Move(movex, 0, movez)
 
 end
- 
-RegisterComponent("MyPlayer", MyPlayer)
-return MyPlayer
 ```
 
 Now we need to create a simple scene to test the script in. Create a large flat box for the floor. Create a small box for the player, change the color to make it stand out, and add your new script to it. Finally, add a camera that points down at a 45 degree angle, so that it can see most of the floor. You can also set the skybox to the default sky in the [world properties](worldsettings.md) dialog, if you wish.
@@ -95,9 +92,6 @@ function MyPlayer:Update()
 	self.camera:Move(0,0,-self.cameradistance)
 
 end
- 
-RegisterComponent("MyPlayer", MyPlayer)
-return MyPlayer
 ```
 When you run the game, the camera will follow the player around as you move with the arrow keys.
 
