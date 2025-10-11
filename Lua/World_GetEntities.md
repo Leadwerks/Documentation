@@ -2,6 +2,8 @@
 
 This method returns an array of all entities in the world, with optional filter parameters.
 
+## Syntax
+
 - [Entity](Entity.md)[] **GetEntities**()
 - [Entity](Entity.md)[] **GetEntities**(string field, string operation, value...)
 
@@ -11,11 +13,11 @@ This method returns an array of all entities in the world, with optional filter 
 | operation | the operation to perform. This can be set to "==", "~=", "<", ">", "<=", or ">="
 | value | the value to compare the entity field value to. This can be any Lua value. |
 
-# Returns
+## Returns
 
 Returns an array-style table filled with all entities in the world that pass the specified filters.
 
-# Remarks
+## Remarks
 
 You can provide any number of arguments, in sets of three. Each three arguments will be used to test the values attached to an entity, using the specified operation.
 
