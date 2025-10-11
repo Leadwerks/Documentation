@@ -3901,6 +3901,10 @@
                             "filename": "World_GetCollisionResponse"
                         },
                         {
+                            "title": "GetEntities",
+                            "filename": "World_GetEntities"
+                        },
+                        {
                             "title": "GetEntitiesInArea",
                             "filename": "World_GetEntitiesInArea"
                         },
