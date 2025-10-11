@@ -4,8 +4,8 @@ This function returns the arc tangent of the specified value. The second overloa
 
 ## Syntax
 
-- float **ATan**(const float value)
-- float **ATan**(const float y, const float x)
+- float **ATan**(float value)
+- float **ATan**(float y, const float x)
 
 | Parameter | Description |
 | --- | --- |
