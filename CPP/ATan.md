@@ -1,19 +1,17 @@
 # ATan
 
-This function returns the arc tangent of the specified value.
+This function returns the arc tangent of the specified value. The second overload will return an angle, given the Y and X coordinates of a point.
 
 ## Syntax
 
 - float **ATan**(const float value)
 - float **ATan**(const float y, const float x)
-- double **ATan**(const double value)
-- double **ATan**(const double y, const double x)
 
 | Parameter | Description |
 | --- | --- |
 | value | tangent value |
-| y | Y component of the vector |
-| x | X component of the vector |
+| y | Y component of a point, to determine and angle |
+| x | X component of a point, to determine and angle |
 
 ## Returns
 
