@@ -6,7 +6,7 @@ You can download two sample scenes for this tutorial [here](https://www.leadwerk
 
 ## Entity Script System
 
-The Leadwerks entity script system allows you to attach code files to objects in the scene to give them behavior in the game. Open the scene "component.map" from the sample package. You'll find two blue boxes, one with the SwingingDoor script, and the other with the SlidingDoor script. There is also a pivot in the middle of the scene with the FPSPlayer script added to it.
+The Leadwerks entity script system allows you to attach code files to objects in the scene to give them behavior in the game. Open the scene "scripts.map" from the sample package. You'll find two blue boxes, one with the SwingingDoor script, and the other with the SlidingDoor script. There is also a pivot in the middle of the scene with the FPSPlayer script added to it.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/components.png?raw=true)
 
