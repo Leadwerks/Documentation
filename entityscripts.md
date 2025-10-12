@@ -22,7 +22,7 @@ In the New Entity Script dialog, select the **Motion** script group and enter th
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/newcomponent2.png?raw=true)
 
-The editor will create two new files in the folder "Scripts\Entities\Motion". The "CustomScript.lua" file contains your script code. The "CustomScript.json" file located in the "Entity Definitions" folder contains script definitions extracted from the code file, and tells the editor what editable properties the code file contains.
+The editor will create two new files. The "CustomScript.lua" file located in the "Scripts\Entities\Motion" folder contains your script code. The "CustomScript.json" file located in the "Entity Definitions" folder contains script definitions extracted from the code file, and tells the editor what editable properties the code file contains.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/newcomponent3.png?raw=true)
 
