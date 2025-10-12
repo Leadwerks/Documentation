@@ -2,7 +2,7 @@
 
 www.youtube.com/watch?v=eww15sH0rSk
 
-You can download two sample scenes for this tutorial [here](https://www.leadwerks.com/community/files/file/3592-components-sample/) or use the [downloads manager](downloadsmanager.md) to install the package into a new Lua project.
+You can download two sample scenes for this tutorial [here](https://www.leadwerks.com/community/files/file/3592-entity-scripts-sample/) or use the [downloads manager](downloadsmanager.md) to install the package into a new Lua project.
 
 ## Entity Script System
 
