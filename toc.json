@@ -162,7 +162,7 @@
                             "filename": "vegetation"
                         },
                         {
-                            "title": "Entity Scripts",
+                            "title": "Entity Scripts and the Flowgraph",
                             "filename": "entityscripts"
                         }                    
                     ]
