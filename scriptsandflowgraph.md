@@ -1,6 +1,5 @@
 # Scripts and the Flowgraph
 
-
 You can download the sample scene for this tutorial [here](https://www.leadwerks.com/community/files/file/3592-entity-scripts-sample/) or use the [downloads manager](downloadsmanager.md) to install the package into a new Lua project.
 
 ## Entity Script System
@@ -57,26 +56,12 @@ When we run the game now, the door will rotate around the edge like we want:
 
 ## Flowgraph Editor
 
-The flowgraph editor allows you to make connections between script inputs and outputs, to set up complex sequences of events. Open the scene "flowgraph.map". Press the **Flowgraph Editor** button in the left-side bar to view the flowgraph editor interface.
+The flowgraph editor allows you to make connections between script inputs and outputs, to set up complex sequences of events. Press the _Flowgraph Editor_ button in the left side bar to open this tool.
 
-![](https://github.com/UltraEngine/Documentation/blob/master/Images/flowgraphexample.png?raw=true)
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/openflowgraph.gif?raw=true)
 
-The interface shows a connection between the two trigger field Collide outputs and the Open input on the corresponding door. When you run the game, stepping into the invisible trigger volume will cause each door to open.
+In this interface, you can see visual nodes that correspond to some objects in the scene. Left-click and drag a line to connect the Collide function on Trigger1 and Trigger2 to the Open function on Door1 and Door2:
 
-You can add a custom input to the script we previously created. Just open the file "Scripts\Entities\Motion\CustomScript.lua" and add this function anywhere in the file. The "in" comment after the function declaration will tell the editor the function can be used as an input in the code editor:
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/flowgraphconnect.gif?raw=true)
 
-```lua
-function CustomScript:Turn()--in
-	self.entity:Turn(self.rotationspeed)
-end
-```
-
-Select the green box in the middle of the scene and switch to the flowgraph editor. You can drag the box into the flowgraph view to add it into the interface.
-
-![](https://github.com/UltraEngine/Documentation/blob/master/Images/addentitytoflowgraph.gif?raw=true)
-
-You can drag a connection from the Collide output of both the trigger fields to the Turn input on the box.
-
-![](https://github.com/UltraEngine/Documentation/blob/master/Images/connect.gif?raw=true)
-
-When you run the game now, stepping into the invisible trigger fields will open the corresponding door, but will also cause the green box to rotate.
+When you run the game now, simply stepping into the invisible trigger field around it will cause either of these doors to open.
