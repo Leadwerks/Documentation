@@ -14,7 +14,7 @@ If you select the **Game > Run** menu item to run the game, you can use the WASD
 
 ### Sliding Doors
 
-The two doors in the front don't have a script added to them yet, so let's fix that. Select the door on the right, and in the **Scene** tab, under the entity properties, press the **Add Entity Script** button. Select the **Physics > SlidingDoor** item and double-click on it, to add the script to the entity.
+The two doors in the front don't have a script added to them yet, so let's fix that. Select the door on the right (Door4), and in the **Scene** tab, under the entity properties, press the **Add Entity Script** button. Select the **Physics > SlidingDoor** item and double-click on it, to add the script to the entity.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/addscript1.png?raw=true)
 
@@ -29,6 +29,14 @@ We can see in the "Back" and "Top" viewports that the door is 192 cm wide. There
 Run the game again, and you can see the door opens all the way now.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/doorscript3.jpg?raw=true)
+
+### Swinging Door Script
+
+Let's do the same thing for the left front door, but this time we will use the swinging door script. Select the door on the left (Door3), and in the **Scene** tab, under the entity properties, press the **Add Entity Script** button. Select the **Physics > SwingingDoor** item and double-click on it, to add the script to the entity.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/swingingdoorscript1.png?raw=true)
+
+
 
 ## Flowgraph Editor
 
