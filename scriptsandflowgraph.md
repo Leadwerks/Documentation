@@ -12,7 +12,7 @@ The Leadwerks entity script system allows you to attach code files to objects in
 
 If you select the **Game > Run** menu item to run the game, you can use the WASD keys to move around. Without any modifications, the two rear doors will open if you approach them and press the **E** key.
 
-## Adding Scripts
+### Sliding Doors
 
 The two doors in the front don't have a script added to them yet, so let's fix that. Select the door on the right, and in the **Scene** tab, under the entity properties, press the **Add Entity Script** button. Select the **Physics > SlidingDoor** item and double-click on it, to add the script to the entity.
 
