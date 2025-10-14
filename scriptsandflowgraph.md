@@ -18,7 +18,17 @@ The two doors in the front don't have a script added to them yet, so let's fix t
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/addscript1.png?raw=true)
 
+If we run the game now, we can walk up to the door and open it by pressing the **E** key. However, the door only opens partially. Let's exit the game and fix this.
 
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/doorscript1.jpg?raw=true)
+
+We can see in the "Back" and "Top" viewports that the door is 192 cm wide. Therefore, we just need to change the X component of the SlidingDoor Movement property to 192, and it should open all the way.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/doorscript2.png?raw=true)
+
+Run the game again, and you can see the door opens all the way now.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/doorscript3.jpg?raw=true)
 
 ## Flowgraph Editor
 
