@@ -2,15 +2,23 @@
 
 www.youtube.com/watch?v=eww15sH0rSk
 
-You can download two sample scenes for this tutorial [here](https://www.leadwerks.com/community/files/file/3592-entity-scripts-sample/) or use the [downloads manager](downloadsmanager.md) to install the package into a new Lua project.
+You can download the sample scene for this tutorial [here](https://www.leadwerks.com/community/files/file/3592-entity-scripts-sample/) or use the [downloads manager](downloadsmanager.md) to install the package into a new Lua project.
 
 ## Entity Script System
 
-The Leadwerks entity script system allows you to attach code files to objects in the scene to give them additional properties and behavior in the game. Open the scene "ScriptAndFlowgraph.map" from the sample package. You'll find two blue boxes, one with the SwingingDoor script, and the other with the SlidingDoor script. There is also a pivot in the middle of the scene with the FPSPlayer script added to it.
+The Leadwerks entity script system allows you to attach code files to objects in the scene to give them additional properties and behavior in the game. Open the scene "ScriptAndFlowgraph.map" from the sample package. You'll find four simple doorways, with a blue door in the middle. The two doors in the front have no script. The two doors in the back already have the SwingingDoor and SlidingDoor scripts added to them. The two doors in the back also have a transparent box around them, with a CollisionTrigger script added to each.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/ScriptAndFlowgraph.png?raw=true)
 
-If you select the **Game > Run** menu item to run the game, you can use the WASD keys to move around, and open either door by walking up to it and pressing the E key.
+If you select the **Game > Run** menu item to run the game, you can use the WASD keys to move around. Without any modifications, the two rear doors will open if you approach them and press the **E** key.
+
+## Adding Scripts
+
+The two doors in the front don't have a script added to them yet, so let's fix that. Select the door on the right, and in the **Scene** tab, under the entity properties, press the **Add Entity Script** button. Select the **Physics > SlidingDoor** item and double-click on it, to add the script to the entity.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/addscript1.png?raw=true)
+
+
 
 ## Flowgraph Editor
 
