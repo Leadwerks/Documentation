@@ -1,4 +1,4 @@
-# Entity Scripts and the Flowgraph
+# Scripts and the Flowgraph
 
 www.youtube.com/watch?v=eww15sH0rSk
 
