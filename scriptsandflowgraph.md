@@ -22,7 +22,7 @@ If we run the game now, we can walk up to the door and open it by pressing the *
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/doorscript1.jpg?raw=true)
 
-We can see in the "Back" and "Top" viewports that the door is 192 cm wide. Therefore, we just need to change the X component of the SlidingDoor Movement property to 192, and it should open all the way.
+We can see in the _Back_ and _Top_ viewports that the door is 192 cm wide. Therefore, we just need to change the X component of the SlidingDoor Movement property to 192, and it should open all the way.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/doorscript2.png?raw=true)
 
@@ -36,7 +36,17 @@ Let's do the same thing for the left front door, but this time we will use the s
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/swingingdoorscript1.png?raw=true)
 
+When we run the game, the door will rotate to open when we approach it and press the **E** key, but it's rotating around the object center. This is probably not the behavior we want:
 
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/swingingdoorscript2.jpg?raw=true)
+
+We can see in the _Top_ viewport that the door is 192 cm wide.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/swingingdoorscript3.png?raw=true)
+
+When we run the game now, the door will rotate around the edge like we want:
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/swingingdoorscript4.jpg?raw=true)
 
 ## Flowgraph Editor
 
