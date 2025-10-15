@@ -1,0 +1,130 @@
+# Two-dimensional Space
+
+This tutorial series will help you develop your 3D spatial visualization abilities, and teach you what tools are available to make 3D objects move around. Developing these skills will give you the ability to easily visualize how all games can be made.
+
+We will cover some mathematics in the series, but not very much. It's more important to understand what the math does, rather than memorizing equations or solving problems by hand.
+
+A notebook with graph paper is a great tool for every game developer to have with them at all times, along with a pen or pencil and ruler. These items will allow you to sketch out your ideas whenever and wherever they occur.
+
+## The Number Line
+
+I picture numbers in a line, with negative numbers to the left, zero in the middle, and positive numbers to the right.
+
+- <----------------------------- 0 -------------------------> +
+
+Often times we want to move from one number to another in a smooth motion. Let's say we want to gradually change a value from 1 to 5.
+
+### Constant Motion
+
+The [MoveTowards](MoveTowards.md) function will move a constant amount from the current value to a target value.
+
+```lua
+local n = 0
+
+while n < 10 do
+  n = MoveTowards(n, 10, 1)
+  Print(n)
+end
+```
+
+The output of the program looks like this:
+```
+1
+2
+3
+4
+5
+6
+7
+8
+9
+19
+```
+
+### Linear Interpolation
+
+Often times in games we want to avoid sudden movements, and prefer nice smooth motion. The [Mix](Mix.md) function is great for smoothing out motion. It accepts a starting value, a target value, and a decimal number to combine the two numbers with. This type of equation is called linear interpolation.
+
+Internally, the Mix function uses this equation:
+
+```lua
+function Mix(start, target, p)
+  return start * (1.0 - p) + stop * p
+end
+```
+If the p value equals zero, then the start value is returned. If the p value is one, then the target value is returned. If the p value is 0.5, then a number halfway in between the start and target values is returned.
+
+This code will print out the numbers 0, 5, and 10:
+
+```lua
+Print(Mix(0, 10, 0))
+Print(Mix(0, 10, 0.5))
+Print(Mix(0, 10, 1))
+```
+
+Now if we use the Mix function in a loop, using the returned value as the starting value the next time the function is called, we see some interesting results:
+```lua
+local n = 0
+
+while n < 10 do
+  n = Mix(n, 10, 0.5)
+  Print(n)
+end
+```
+
+The first iteration of the loop prints 0.5, then 0.75, and so on. Each time the returned number gets closer to the target value of 10, but it moves less and less each time until it finally reaches 10.
+
+Let's put our math into action and see what constant and smooth motion look like on the screen, with this simple program. You can copy and paste this code into the Main.lua file of a new Lua project. Press the left and right keys to move the target value to the either side of the screen, and watch how the two boxes move.
+```lua
+--Get the displays
+local displays = GetDisplays()
+
+--Create a window
+local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_TITLEBAR | WINDOW_CENTER)
+
+--Create a framebuffer
+local framebuffer = CreateFramebuffer(window)
+
+--Create a world
+local world = CreateWorld()
+
+--Create a camera
+local camera = CreateCamera(world)
+camera:SetClearColor(0.125)
+
+--Create a tile to show constant motion
+local tile1 = CreateTile(world, 100, 100)
+tile1:SetColor(0,1,0)
+
+--Create a tile to show smooth motion
+local tile2 = CreateTile(world, 100, 100)
+tile2:SetColor(0,0,1)
+
+local x1 = 0
+local x2 = 0
+local y = framebuffer.size.y / 2-- half the screen height
+local target = 0
+
+while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
+	
+	--Move the target to the right side of the screen
+	if window:KeyHit(KEY_RIGHT) then target = framebuffer.size.x - 100 end
+	
+	--Move the target to the left side of the screen
+	if window:KeyHit(KEY_LEFT) then target = 0 end
+	
+	--Constant motion
+	x1 = MoveTowards(x1, target, 10)
+	tile1:SetPosition(x1, y - 100)
+	
+	--Smooth motion
+	x2 = Mix(x2, target, 0.05)
+	tile2:SetPosition(x2, y)
+	
+	--Update the world
+	world:Update()
+	
+	--Render the world
+	world:Render(framebuffer)
+end
+```
