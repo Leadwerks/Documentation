@@ -255,6 +255,10 @@ A vector is a line with a starting point and an end point. Vectors may seem simp
 
 In Leadwerks, we have a [Vec2](Vec2.md) class that can represent either a 2D coordinate or a 2D vector with its starting point at the origin (0, 0).
 
+#### Vector Addition
+
+#### Vector Multiplication
+
 #### Inverting a Vector
 
 We can make a vector point in the exact opposite direction just by multiplying its X and Y coordinates by negative one:
