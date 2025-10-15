@@ -1,8 +1,6 @@
-# Scripts and the Flowgraph
+# Entity Scripts
 
 You can download the sample scene for this tutorial [here](https://www.leadwerks.com/community/files/file/3592-entity-scripts-sample/) or use the [downloads manager](downloadsmanager.md) to install the package into a new Lua project.
-
-## Entity Script System
 
 The Leadwerks entity script system allows you to attach code files to objects in the scene to give them additional properties and behavior in the game. Open the scene "ScriptExample.map" from the sample package. You'll find four simple doorways, with a blue door in the middle. The two doors in the front have no script. The two doors in the back already have the SwingingDoor and SlidingDoor scripts added to them. The two doors in the back also have a transparent box around them, with a CollisionTrigger script added to each.
 
@@ -10,7 +8,7 @@ The Leadwerks entity script system allows you to attach code files to objects in
 
 If you select the **Game > Run** menu item to run the game, you can use the WASD keys to move around. Without any modifications, the two rear doors will open if you approach them and press the **E** key.
 
-### Sliding Door Script
+## Sliding Door Script
 
 The two doors in the front don't have a script added to them yet, so let's fix that. Select the door on the right (Door4), and in the **Scene** tab, under the entity properties, press the **Add Entity Script** button. Select the **Physics > SlidingDoor** item and double-click on it, to add the script to the entity.
 
@@ -32,7 +30,7 @@ Run the game again, and you can see the door opens all the way now.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/doorscript3.jpg?raw=true)
 
-### Swinging Door Script
+## Swinging Door Script
 
 Let's do the same thing for the left front door, but this time we will use the swinging door script. Select the door on the left (Door3), and in the **Scene** tab, under the entity properties, press the **Add Entity Script** button. Select the **Physics > SwingingDoor** item and double-click on it, to add the script to the entity.
 
