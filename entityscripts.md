@@ -12,7 +12,7 @@ If you select the Player pivot entity, you can see in the entity properties that
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/fpsplayerscript.png?raw=true)
 
-If you select the **Game > Run** menu item to run the game, you can use the WASD keys to move around. Without any modifications, the two rear doors will open if you approach them and press the **E** key.
+If you select the **Game > Run** menu item to run the game, you can use the mouse and WASD keys to look and move around. Without any modifications, the two rear doors will open if you approach them and press the **E** key.
 
 ## Sliding Door Script
 
