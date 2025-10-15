@@ -12,7 +12,7 @@ I picture numbers in a line, with negative numbers to the left, zero in the midd
 
 - <----------------------------- 0 -------------------------> +
 
-Often times we want to move from one number to another in a smooth motion. Let's say we want to gradually change a value from 1 to 5.
+Often times we want to move from one number to another over time. Let's say we want to gradually change a value from 1 to 5.
 
 ### Constant Motion
 
