@@ -134,7 +134,11 @@ Press the left and right keys to move the target value to the either side of the
 
 ## Two-dimensional Space
 
-Things get even more interesting when we add a second dimension on our number line, the Y axis. We can position objects using both the X and Y coordinate, but we can also rotate objects in 2D space. Every point in 2D space besides the origin (0, 0) can form an angle. We can easily get the angle of any 2D coordinate with the [Angle](Angle.md) function. This always returns a value between 0 and 360.
+Things get even more interesting when we add a second dimension on our number line, the Y axis. We can position objects using both the X and Y coordinate, but we can also rotate objects in 2D space, and we can also create 2D vectors.
+
+### Rotation
+
+Every point in 2D space besides the origin (0, 0) can form an angle. We can easily get the angle of any 2D coordinate with the [Angle](Angle.md) function. This always returns a value between 0 and 360.
 
 A coordinate directly to the right of the origin like (1, 0) has an angle of 0 degrees. A coordinate directly above the origin, like (0, 1), has an angle of 90 degrees.
 
@@ -244,3 +248,11 @@ with this one:
 	a = MixAngle(a, target, 0.1)
 ```
 This will provide nice smooth rotation that goes all the way around the box.
+
+### Vectors
+
+A vector is a line with a starting point and an end point. Vectors may seem simple, but they are surprisingly powerful once you know how to use them.
+
+### Dot Product
+
+### Cross Product
