@@ -1,4 +1,4 @@
-# Two-dimensional Space
+# 3D Spatial Visualization
 
 This tutorial series will help you develop your 3D spatial visualization abilities, and teach you what tools are available to make 3D objects move around. Developing these skills will give you the ability to easily visualize how all games can be made.
 
@@ -6,7 +6,7 @@ We will cover some mathematics in the series, but not very much. It's more impor
 
 A notebook with graph paper is a great tool for every game developer to have with them at all times, along with a pen or pencil and ruler. These items will allow you to sketch out your ideas whenever and wherever they occur.
 
-## The Number Line
+## One-dimensional Space
 
 I picture numbers in a line, with negative numbers to the left, zero in the middle, and positive numbers to the right.
 
@@ -74,7 +74,7 @@ end
 
 The first iteration of the loop prints 0.5, then 0.75, and so on. Each time the returned number gets closer to the target value of 10, but it moves less and less each time until it finally reaches 10.
 
-Let's put our math into action and see what constant and smooth motion look like on the screen, with this simple program. You can copy and paste this code into the Main.lua file of a new Lua project. Press the left and right keys to move the target value to the either side of the screen, and watch how the two boxes move.
+Let's put our math into action and see what constant and smooth motion look like on the screen, with this simple program. You can copy and paste this code into the Main.lua file of a new Lua project.
 ```lua
 --Get the displays
 local displays = GetDisplays()
@@ -128,3 +128,13 @@ while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
 	world:Render(framebuffer)
 end
 ```
+
+Press the left and right keys to move the target value to the either side of the screen, and watch how the two boxes move. Although they both start and stop in the same position, their motion looks very different.
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/motion.gif?raw=true)
+
+## Two-dimensional Space
+
+Things get even more interesting when we add a second dimension on our number line, the Y axis. We can position objects using both the X and Y coordinate, but we can also rotate objects in 2D space. Every point in 2D space besides the origin (0, 0) can form an angle. We can easily get the angle of any 2D coordinate with the [Angle](Angle.md) function. This always returns a value between 0 and 360.
+
+A coordinate directly to the right of the origin like (1, 0) has an angle of 0 degrees. A coordinate directly above the origin, like (0, 1), has an angle of 90 degrees.
+
