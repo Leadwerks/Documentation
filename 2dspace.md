@@ -182,3 +182,64 @@ end
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/2dangle.gif?raw=true)
 
+Just like motion, we can create smooth rotation using the Mix command. However, if you move the mouse all the way around the tile, you will see that a problem arises:
+
+```lua
+--Get the displays
+local displays = GetDisplays()
+
+--Create a window
+local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_TITLEBAR | WINDOW_CENTER)
+
+--Create a framebuffer
+local framebuffer = CreateFramebuffer(window)
+
+--Create a world
+local world = CreateWorld()
+
+--Create a camera
+local camera = CreateCamera(world)
+camera:SetClearColor(0.125)
+
+--Get the screen center
+local center = Vec2(framebuffer.size.x / 2, framebuffer.size.y / 2)
+
+--Create a tile to show constant motion
+local tile = CreateTile(world, 100, 100)
+tile:SetColor(0,0,1)
+tile:SetHandle(-50, -50)
+tile:SetPosition(center.x, center.y)
+
+local a = 0
+local target = 0
+
+while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
+	
+	--Get the mouse position
+	local mousepos = window:GetMousePosition()
+	
+	--Get the new target angle and display it in the window titlebar
+	target = Angle(mousepos.x - center.x, mousepos.y - center.y)
+	window:SetText(tostring(Round(target)))
+	
+	--Calculate smooth rotation and apply it to the tile
+	a = Mix(a, target, 0.1)
+	tile:SetRotation(a)
+	
+	--Update the world
+	world:Update()
+	
+	--Render the world
+	world:Render(framebuffer)
+end
+```
+The problem is that the target angle is crossing the edge of 0 / 360, and the interpolation starts moving in the wrong direction. We can fix this by using the [MixAngle](MixAngle.md) function, which always uses the shortest distance between two angles.
+
+To fix this, just replace this line of code:
+```lua
+	a = Mix(a, target, 0.1)
+```
+with this one:
+```lua
+	a = MixAngle(a, target, 0.1)
+```
