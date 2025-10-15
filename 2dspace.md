@@ -255,9 +255,9 @@ A vector is a line with a starting point and an end point. Vectors may seem simp
 
 In Leadwerks, we have a [Vec2](Vec2.md) class that can represent either a 2D coordinate or a 2D vector with its starting point at the origin (0, 0).
 
-#### Vector Addition
+#### Vector Addition and Subtraction
 
-#### Vector Multiplication
+#### Vector Multiplication and Division
 
 #### Inverting a Vector
 
