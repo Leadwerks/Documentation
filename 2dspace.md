@@ -259,7 +259,7 @@ In Leadwerks, we have a [Vec2](Vec2.md) class that can represent either a 2D coo
 
 #### Normalize
 
-#### Ditance to Point
+#### Distance to Point
 
 #### Dot Product
 
