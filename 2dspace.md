@@ -253,11 +253,13 @@ This will provide nice smooth rotation that goes all the way around the box.
 
 A vector is a line with a starting point and an end point. Vectors may seem simple, but they are surprisingly powerful once you know how to use them.
 
-In Leadwerks, we have a [Vec2](Vec2.md) class provided to handle 2D vectors.
+In Leadwerks, we have a [Vec2](Vec2.md) class that can represent either a 2D coordinate or a 2D vector with its starting point at the origin (0, 0).
 
 #### Vector Length
 
+#### Normalize
 
+#### Ditance to Point
 
 #### Dot Product
 
