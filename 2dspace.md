@@ -255,11 +255,53 @@ A vector is a line with a starting point and an end point. Vectors may seem simp
 
 In Leadwerks, we have a [Vec2](Vec2.md) class that can represent either a 2D coordinate or a 2D vector with its starting point at the origin (0, 0).
 
+#### Inverting a Vector
+
+We can make a vector point in the exact opposite direction just by multiplying its X and Y coordinates by negative one:
+
+```lua
+--Points to the right and up
+v = Vec2(1, 1)
+
+--Invert the vector
+v = -v
+
+--Points to the left and down (-1, -1)
+Print(tostring(v.x)..", "..tostring(v.y))
+```
+
 #### Vector Length
+
+The length of a vector is calculated with something called the Pythagorean theorum that the ancient Egyptians discovered while programming ancient computer games. If we treat the X and Y coordinate of a Vec2 object as the sides of a triangle, the length of the vector between that coordinate and the origin can be calculated like the hypotenuse (the long side) of a triangle:
+
+Fortunately, we have a built-in function that does this, called [Vec2:Length](Vec2_Length.md).
+
+```lua
+v = Vec2(3, 4)
+
+local len = v:Length()
+
+Print(len)
+```
 
 #### Normalize
 
+Sometimes we want a vector to have a length of exactly 1.0. The [Vec2:Normalize](Vec2_Normalize.md) method will do this:
+
+```lua
+v = Vec2(3, 4)
+
+v = v:Normalize()
+
+Print(tostring(v.x)..", "..tostring(v.y))
+Print(v:Length())
+```
+
+If we want the vector to have some other length, we can just normalize it and then multiply it by the number we want.
+
 #### Distance to Point
+
+If we
 
 #### Dot Product
 
