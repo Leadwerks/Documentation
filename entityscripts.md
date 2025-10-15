@@ -6,6 +6,12 @@ The Leadwerks entity script system allows you to attach code files to objects in
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/ScriptAndFlowgraph.png?raw=true)
 
+## FPSPlayer Script
+
+If you select the Player pivot entity, you can see in the entity properties that it already has the FPSPlayer script added to it. This script will create a camera and provide player controls when the game is run.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/fpsplayerscript.png?raw=true)
+
 If you select the **Game > Run** menu item to run the game, you can use the WASD keys to move around. Without any modifications, the two rear doors will open if you approach them and press the **E** key.
 
 ## Sliding Door Script
