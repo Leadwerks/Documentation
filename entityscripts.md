@@ -1,6 +1,6 @@
 # Entity Scripts
 
-https://www.youtube.com/watch?v=-iOn8pHJn4I
+www.youtube.com/watch?v=-iOn8pHJn4I
 
 You can download the sample scene for this tutorial [here](https://www.leadwerks.com/community/files/file/3592-entity-scripts-sample/) or use the [downloads manager](downloadsmanager.md) to install the package into a new Lua project.
 
