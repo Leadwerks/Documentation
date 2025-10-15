@@ -138,3 +138,47 @@ Things get even more interesting when we add a second dimension on our number li
 
 A coordinate directly to the right of the origin like (1, 0) has an angle of 0 degrees. A coordinate directly above the origin, like (0, 1), has an angle of 90 degrees.
 
+We can rotate an object just by adding a small amount to its current angle each frame.
+
+```lua
+--Get the displays
+local displays = GetDisplays()
+
+--Create a window
+local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_TITLEBAR | WINDOW_CENTER)
+
+--Create a framebuffer
+local framebuffer = CreateFramebuffer(window)
+
+--Create a world
+local world = CreateWorld()
+
+--Create a camera
+local camera = CreateCamera(world)
+camera:SetClearColor(0.125)
+
+--Get the screen center
+local center = Vec2(framebuffer.size.x / 2, framebuffer.size.y / 2)
+
+--Create a tile to show constant motion
+local tile = CreateTile(world, 100, 100)
+tile:SetColor(0,0,1)
+tile:SetHandle(-50, -50)
+tile:SetPosition(center.x, center.y)
+
+while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
+	
+	local mousepos = window:GetMousePosition()
+	a = Angle(mousepos.x - center.x, mousepos.y - center.y)
+	tile:SetRotation(a)
+	
+	--Update the world
+	world:Update()
+	
+	--Render the world
+	world:Render(framebuffer)
+end
+```
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/2dangle.gif?raw=true)
+
