@@ -243,3 +243,4 @@ with this one:
 ```lua
 	a = MixAngle(a, target, 0.1)
 ```
+This will provide nice smooth rotation that goes all the way around the box.
