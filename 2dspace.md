@@ -249,10 +249,17 @@ with this one:
 ```
 This will provide nice smooth rotation that goes all the way around the box.
 
-### Vectors
+### 2D Vectors
 
 A vector is a line with a starting point and an end point. Vectors may seem simple, but they are surprisingly powerful once you know how to use them.
 
-### Dot Product
+In Leadwerks, we have a [Vec2](Vec2.md) class provided to handle 2D vectors.
 
-### Cross Product
+#### Vector Length
+
+
+
+#### Dot Product
+
+The dot product is a function that tells us how alike two vectors are. The dot product of two identical vectors is 1.0. The dot product of two vectors that point in the exact opposite directions is -1.0. The dot product of two vectors that are perpindular (form a 90 degree angle) is 0.0.
+
