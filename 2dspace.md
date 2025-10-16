@@ -133,9 +133,62 @@ while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
 end
 ```
 
-Press the left and right keys to move the target value to the either side of the screen, and watch how the two boxes move. Although they both start and stop in the same position, their motion looks very different. The green box moves at a constant speed, while the blue cube snaps like a rubber band.
+Press the left and right keys to move the target value to the either side of the screen, and watch how the two boxes move. Although they both start and stop in the same position, their motion looks very different. The green box moves at a constant speed, while the blue cube snaps like a rubber band, then slows down gradually.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/motion.gif?raw=true)
+
+We can use the Mix function as a general smoothing technique. In the example below, the arrow keys will move the green box left and right. The blue box will follow along the same horizontal position, using the Mix function to smoothly interpolate between its current position and its destination.
+
+```lua
+--Get the displays
+local displays = GetDisplays()
+
+--Create a window
+local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_TITLEBAR | WINDOW_CENTER)
+
+--Create a framebuffer
+local framebuffer = CreateFramebuffer(window)
+
+--Create a world
+local world = CreateWorld()
+
+--Create a camera
+local camera = CreateCamera(world)
+camera:SetClearColor(0.125)
+
+--Create a tile to show constant motion
+local tile1 = CreateTile(world, 100, 100)
+tile1:SetColor(0,1,0)
+tile1:MidHandle()
+tile1:SetPosition(framebuffer.size.x / 2, framebuffer.size.y / 2 - 50, 0)
+
+--Create a tile to show smooth motion
+local tile2 = CreateTile(world, 100, 100)
+tile2:SetColor(0,0,1)
+tile2:MidHandle()
+tile2:SetPosition(framebuffer.size.x / 2, framebuffer.size.y / 2 + 50, 0)
+
+local y = framebuffer.size.y / 2-- half the screen height
+
+while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
+	
+	--Move the green tile to the right
+	if window:KeyDown(KEY_RIGHT) then tile1:SetPosition(tile1.position.x + 10, tile1.position.y) end
+	
+	--Move the green tile to the left
+	if window:KeyDown(KEY_LEFT) then tile1:SetPosition(tile1.position.x - 10, tile1.position.y) end
+	
+	--Make the blue tile follow the green tile, with smooth motion
+	local x = Mix(tile2.position.x, tile1.position.x, 0.05)
+	tile2:SetPosition(x, tile2.position.y)
+	
+	--Update the world
+	world:Update()
+	
+	--Render the world
+	world:Render(framebuffer)
+end
+```
 
 ## Two-dimensional Space
 
