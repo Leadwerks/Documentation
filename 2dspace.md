@@ -53,7 +53,7 @@ Internally, the Mix function uses this equation:
 
 ```lua
 function Mix(start, target, p)
-  return start * (1.0 - p) + stop * p
+  return start * (1.0 - p) + target * p
 end
 ```
 If the p value equals zero, then the start value is returned. If the p value is one, then the target value is returned. If the p value is 0.5, then a number halfway in between the start and target values is returned. This code, for example, will print out the numbers 0, 5, and 10:
