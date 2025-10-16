@@ -62,3 +62,73 @@ end
 Here is the result when the code is run. The tile is indented a little bit from the top-left corner:
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/tileupperleft.png?raw=true)
+
+To place the tile in the lower-right corner of the screen, you have to take the tile's width and height into account. Replace the tile:SetPosition command at line 22 with this code:
+
+```lua
+tile:SetPosition(framebuffer.size.x - tile.size.x - 10, framebuffer.size.y - tile.size.y - 10)
+```
+
+When you run the code again, the tile will appear in the bottom-right corner, with 10 pixels of indentation.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/tilelowerleft.png?raw=true)
+
+You can use this code to place the tile in the exact center of the screen, but you must remember to subtract half the width and height from the coordinate:
+
+```lua
+tile:SetPosition(framebuffer.size.x / 2 - tile.size.x / 2, framebuffer.size.y / 2 - tile.size.y / 2)
+```
+
+Optionally, we can add an offset to the tile handle so that it is oriented around a different point, using the [Tile:SetHandle](Tile_SetHandle.md) command. This can be used to shift the tile over so that it is oriented around its center:
+
+```lua
+tile:SetHandle(-tile.size.x / 2, -tile.size.y / 2)
+tile:SetPosition(framebuffer.size.x / 2, framebuffer.size.y / 2)
+```
+
+The [Tile:MidHandle](Tile_MidHandle) command will automatically set the center of the tile as its handle, without the need to specify any parameters:
+
+```lua
+tile:MidHandle()
+tile:SetPosition(framebuffer.size.x / 2, framebuffer.size.y / 2)
+```
+
+This command is also handy when we are using rotation, because we usually want a tile to rotate around its own center:
+
+```lua
+--Get the displays
+local displays = GetDisplays()
+
+--Create a window
+local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_TITLEBAR | WINDOW_CENTER)
+
+--Create a framebuffer
+local framebuffer = CreateFramebuffer(window)
+
+--Create a world
+local world = CreateWorld()
+
+--Create a camera
+local camera = CreateCamera(world)
+camera:SetClearColor(0.125)
+
+--Load a tile from an image
+local tile = CreateTile(world, 150, 150)
+tile:SetColor(0,0,1)
+
+--Set the position in the lower-left corner of the screen
+tile:MidHandle()
+tile:SetPosition(framebuffer.size.x / 2, framebuffer.size.y / 2)
+
+while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
+	
+	--Rotate the tile
+	tile:Turn(1)
+	
+	--Update the world
+	world:Update()
+	
+	--Render the world
+	world:Render(framebuffer)
+end
+```
