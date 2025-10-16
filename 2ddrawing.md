@@ -384,19 +384,49 @@ camera:SetClearColor(0.125)
 local font = LoadFont("Fonts/Arial.ttf")
 
 --Create a text tile in the lower-left corner
-local tile1 = CreateTile(world, font, "Ammo: 50", 36, TEXT_LEFT | TEXT_BOTTOM)
+local tile1 = CreateTile(world, font, "Upper Left", 36, TEXT_LEFT | TEXT_TOP)
 tile1:SetColor(1,0.25,0.25)
-tile1:SetPosition(0, framebuffer.size.y)
+tile1:SetPosition(0, 0)
 
 --Create a text tile in the lower center
-local tile2 = CreateTile(world, font, "Magic: 75", 36, TEXT_CENTER | TEXT_BOTTOM)
+local tile2 = CreateTile(world, font, "Upper Center", 36, TEXT_CENTER | TEXT_TOP)
 tile2:SetColor(0.25,1,0.25)
-tile2:SetPosition(framebuffer.size.x / 2, framebuffer.size.y)
+tile2:SetPosition(framebuffer.size.x / 2, 0)
 
 --Create a text tile in the lower-right corner
-local tile3 = CreateTile(world, font, "Health: 100", 36, TEXT_RIGHT | TEXT_BOTTOM)
+local tile3 = CreateTile(world, font, "Upper Right", 36, TEXT_RIGHT | TEXT_TOP)
 tile3:SetColor(0.25,0.25,1)
-tile3:SetPosition(framebuffer.size.x, framebuffer.size.y)
+tile3:SetPosition(framebuffer.size.x, 0)
+
+--Create a text tile in the lower-left corner
+local tile4 = CreateTile(world, font, "Middle Left", 36, TEXT_LEFT | TEXT_MIDDLE)
+tile4:SetColor(1,0.25,0.25)
+tile4:SetPosition(0, framebuffer.size.y / 2)
+
+--Create a text tile in the lower center
+local tile5 = CreateTile(world, font, "Middle Center", 36, TEXT_CENTER | TEXT_MIDDLE)
+tile5:SetColor(0.25,1,0.25)
+tile5:SetPosition(framebuffer.size.x / 2, framebuffer.size.y / 2)
+
+--Create a text tile in the lower-right corner
+local tile6 = CreateTile(world, font, "Middle Right", 36, TEXT_RIGHT | TEXT_MIDDLE)
+tile6:SetColor(0.25,0.25,1)
+tile6:SetPosition(framebuffer.size.x, framebuffer.size.y / 2)
+
+--Create a text tile in the lower-left corner
+local tile7 = CreateTile(world, font, "Lower Left", 36, TEXT_LEFT | TEXT_BOTTOM)
+tile7:SetColor(1,0.25,0.25)
+tile7:SetPosition(0, framebuffer.size.y)
+
+--Create a text tile in the lower center
+local tile8 = CreateTile(world, font, "Lower Center", 36, TEXT_CENTER | TEXT_BOTTOM)
+tile8:SetColor(0.25,1,0.25)
+tile8:SetPosition(framebuffer.size.x / 2, framebuffer.size.y)
+
+--Create a text tile in the lower-right corner
+local tile9 = CreateTile(world, font, "Lower Right", 36, TEXT_RIGHT | TEXT_BOTTOM)
+tile9:SetColor(0.25,0.25,1)
+tile9:SetPosition(framebuffer.size.x, framebuffer.size.y)
 
 --Main loop
 while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
@@ -408,7 +438,7 @@ while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
     world:Render(framebuffer)
 end
 ```
-When this example is run, three text tiles will be visible along the bottom of the screen:
+When this example is run, three rows and columns of text will appear, with a tile on each edge, in each corner, and in the center of the screen:
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/2dtextalignment.png?raw=true)
 
