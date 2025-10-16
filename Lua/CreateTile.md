@@ -7,9 +7,9 @@ This function creates a new tile for 2D drawing. Tiles can be rectangles or text
 - [Tile](Tile) **CreateTile**([Camera](Camera) camera, number width, number height, boolean wireframe = false)
 - [Tile](Tile) **CreateTile**([Camera](Camera) camera, [Vec2](Vec2) size, boolean wireframe = false)
 - [Tile](Tile) **CreateTile**([Camera](Camera) camera, [Font](Font) font, string text, number fontsize = 14, number alignment = TEXT_LEFT, number linespacing = 1.5)
-- [Tile](Tile) **CreateTile**([World](World) camera, number width, number height, boolean wireframe = false)
-- [Tile](Tile) **CreateTile**([World](World) camera, [Vec2](Vec2) size, boolean wireframe = false)
-- [Tile](Tile) **CreateTile**([World](World) camera, [Font](Font) font, string text, number fontsize = 14, number alignment = TEXT_LEFT, number linespacing = 1.5)
+- [Tile](Tile) **CreateTile**([World](World) world, number width, number height, boolean wireframe = false)
+- [Tile](Tile) **CreateTile**([World](World) world, [Vec2](Vec2) size, boolean wireframe = false)
+- [Tile](Tile) **CreateTile**([World](World) world, [Font](Font) font, string text, number fontsize = 14, number alignment = TEXT_LEFT, number linespacing = 1.5)
 
 | Parameter | Description |
 |---|---|
