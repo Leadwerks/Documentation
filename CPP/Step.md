@@ -1,11 +1,11 @@
-# MoveTowards
+# Step
 
 This function increments one value towards a target at a steady rate.
 
 ## Syntax
 
-- float **MoveTowards**(const float start, const float stop, const float amount)
-- double **MoveTowards**(const double start, const double stop, const double amount)
+- float **Step**(const float start, const float stop, const float amount)
+- double **Step**(const double start, const double stop, const double amount)
 
 | Parameter | Description |
 |---|---|
