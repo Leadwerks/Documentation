@@ -303,6 +303,16 @@ Print(v:Length())
 
 If we want the vector to have some other length, we can just normalize it and then multiply it by the number we want.
 
+```lua
+v = Vec2(3, 4)
+
+v = v:Normalize()
+v = v * 2
+
+Print(tostring(v.x)..", "..tostring(v.y))
+Print(v:Length())
+```
+
 #### Distance to Point
 
 If we
