@@ -33,12 +33,14 @@ end
 ```
 
 The output of the program looks like this:
-```
+
+```txt
 2
 3
 4
 5
 ```
+
 Each time the function runs, it is adding one to the value, until the target value is reached.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/numberline1-5_step.png?raw=true)
@@ -56,6 +58,7 @@ function Mix(start, target, p)
   return start * (1.0 - p) + target * p
 end
 ```
+
 If the p value equals zero, then the start value is returned. If the p value is one, then the target value is returned. If the p value is 0.5, then a number halfway in between the start and target values is returned. This code, for example, will print out the numbers 1, 3, and 5:
 
 ```lua
@@ -78,7 +81,7 @@ end
 
 The first iteration of the loop prints 3, then 4, then 4.5, and so on. Each time the returned number gets closer to the target value, but it moves less and less each time until it finally reaches 5.
 
-```
+```txt
 3.0
 4.0
 4.5
