@@ -24,7 +24,7 @@ We may work with windows of different sizes, so rather than hard-coding the coor
 
 By default, a tile's position is oriented around its upper-left corner. This way if you position a tile at (0, 0) it will be visible in the top-left corner of the screen.
 
-The code below creates a single tile and places it at position (10, 10).
+The code below creates a single tile and places it at coordinate (10, 10).
 
 ```lua
 --Get the displays
