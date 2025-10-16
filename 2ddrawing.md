@@ -91,7 +91,7 @@ Optionally, we can add an offset to the tile handle so that it is oriented aroun
 tile:SetHandle(-tile.size.x / 2, -tile.size.y / 2)
 tile:SetPosition(framebuffer.size.x / 2, framebuffer.size.y / 2)
 ```
-Here is a visual diagram showing what happens when you shift the tile handle to the center:
+Here is a visual diagram showing a tile with the default orientation on the left, and with the handle shifted to the center on the right:
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/tilehandle.png?raw=true)
 
