@@ -2857,10 +2857,6 @@
                             "filename": "Mod"
                         },
                         {
-                            "title": "MoveTowards",
-                            "filename": "MoveTowards"
-                        },
-                        {
                             "title": "Radians",
                             "filename": "Radians"
                         },
@@ -2888,6 +2884,10 @@
                             "title": "Sin",
                             "filename": "Sin"
                         },
+                        {
+                            "title": "Step",
+                            "filename": "Step"
+                        },                        
                         {
                             "title": "Tan",
                             "filename": "Tan"
