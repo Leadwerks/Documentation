@@ -31,7 +31,7 @@ The code below creates a single tile and places it at position (10, 10).
 local displays = GetDisplays()
 
 --Create a window
-local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_TITLEBAR | WINDOW_CENTER)
+local window = CreateWindow("Leadwerks", 0, 0, 1280, 720, displays[1], WINDOW_TITLEBAR | WINDOW_CENTER)
 
 --Create a framebuffer
 local framebuffer = CreateFramebuffer(window)
