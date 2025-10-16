@@ -235,7 +235,7 @@ When we run this code, the blue box will follow along the same horizontal positi
 
 ## Two-dimensional Space
 
-Now we are going to add a second dimension to our number line, in the form of a second number line going up and down. A 2D number line is called a grid. Each coordinate on the grid has two numbers that indicate the X (horizontal) and Y (vertical) position. In the grid below, I have marked one coordinate in each quadrant of the grid. You can see how the sign of each number in a 2D coordinate indicates which side of the horizontal or vertical line they are on.
+Now we are going to add a second dimension to our number line, in the form of a second number line going up and down. A 2D number line is called a grid. Each coordinate on the grid has two numbers that indicate the X (horizontal) and Y (vertical) position. In the grid below, I have marked one coordinate in each quadrant of the grid. You can see how the sign of each number in a 2D coordinate indicates which side of the horizontal or vertical line the coordinate is on.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/2dgrid.png?raw=true)
 
