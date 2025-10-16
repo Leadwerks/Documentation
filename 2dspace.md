@@ -176,7 +176,7 @@ Press the left and right keys to move the target value to the either side of the
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/motion.gif?raw=true)
 
-We can use the Mix function as a general smoothing technique. In the example below, the arrow keys will move the green box left and right. The blue box will follow along the same horizontal position, using the Mix function to smoothly interpolate between its current position and its destination.
+We can use the Mix function as a general smoothing technique. In the example below, the arrow keys will move the green box left and right.
 
 ```lua
 --Get the displays
@@ -229,7 +229,15 @@ while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
 end
 ```
 
+When we run this code, the blue box will follow along the same horizontal position, using the Mix function to smoothly interpolate between its current position and its destination.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/smoothmotion.gif?raw=true)
+
 ## Two-dimensional Space
+
+Now we are going to add a second dimension to our number line, in the form of a second number line going up and down. A 2D number line is called a grid:
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/2dgrid.png?raw=true)
 
 Things get even more interesting when we add a second dimension on our number line, the Y axis. We can position objects using both the X and Y coordinate, but we can also rotate objects in 2D space, and we can also create 2D vectors.
 
@@ -334,6 +342,7 @@ while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
 	world:Render(framebuffer)
 end
 ```
+
 The problem is that the target angle is crossing the edge of 0 / 360, and the interpolation starts moving in the wrong direction. We can fix this by using the [MixAngle](MixAngle.md) function, which always uses the shortest distance between two angles.
 
 To fix this, just replace this line of code:
