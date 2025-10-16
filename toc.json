@@ -2631,47 +2631,6 @@
                             ]
                         },
                         {
-                            "title": "dAabb",
-                            "filename": "dAabb",
-                            "hideFromLua": true,
-                            "topics": [
-                                {
-                                    "title": "Update",
-                                    "filename": "dAabb_Update"
-                                }
-                            ]
-                        },
-                        {
-                            "title": "dMat4",
-                            "hideFromLua": true,
-                            "filename": "dMat4"
-                        },
-                        {
-                            "title": "dPlane",
-                            "hideFromLua": true,
-                            "filename": "dPlane"
-                        },
-                        {
-                            "title": "dQuat",
-                            "hideFromLua": true,
-                            "filename": "dQuat"
-                        },
-                        {
-                            "title": "dVec2",
-                            "hideFromLua": true,
-                            "filename": "dVec2"
-                        },
-                        {
-                            "title": "dVec3",
-                            "hideFromLua": true,
-                            "filename": "dVec3"
-                        },
-                        {
-                            "title": "dVec4",
-                            "hideFromLua": true,
-                            "filename": "dVec4"
-                        },
-                        {
                             "title": "iVec2",
                             "filename": "iVec2"
                         },
