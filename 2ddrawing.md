@@ -223,6 +223,7 @@ while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
     world:Render(framebuffer)
 end
 ```
+Also note that this example used the [LoadTile](LoadTile.md) function, which loads an image from a file, then uses the image width and height for the tile size.
 
 ### Drawing Text
 
