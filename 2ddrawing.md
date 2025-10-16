@@ -23,3 +23,42 @@ We may work with windows of different sizes, so rather than hard-coding the coor
 ## Tile Orientation
 
 By default, a tile's position is oriented around its upper-left corner. This way if you position a tile at (0, 0) it will be visible in the top-left corner of the screen.
+
+The code below creates a single tile and places it at position (10, 10).
+
+```lua
+--Get the displays
+local displays = GetDisplays()
+
+--Create a window
+local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_TITLEBAR | WINDOW_CENTER)
+
+--Create a framebuffer
+local framebuffer = CreateFramebuffer(window)
+
+--Create a world
+local world = CreateWorld()
+
+--Create a camera
+local camera = CreateCamera(world)
+camera:SetClearColor(0.125)
+
+--Load a tile from an image
+local tile = CreateTile(world, 150, 150)
+tile:SetColor(0,0,1)
+
+--Set the position in the upper-left corner of the screen
+tile:SetPosition(10, 10)
+
+while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
+	
+	--Update the world
+	world:Update()
+	
+	--Render the world
+	world:Render(framebuffer)
+end
+```
+Here is the result when the code is run. The tile is indented a little bit from the top-left corner:
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/tileupperleft.png?raw=true)
