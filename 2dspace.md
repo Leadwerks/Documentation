@@ -16,6 +16,8 @@ Often times we want to move from one number to another over time. Let's say we w
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/numberline1-5.png?raw=true)
 
+There are two main ways we can achieve this, that will each give a difference appearance.
+
 ### Constant Motion
 
 The [Step](Step.md) function will move a constant amount from the current value to a target value.
