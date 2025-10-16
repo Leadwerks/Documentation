@@ -20,9 +20,13 @@ We may work with windows of different sizes, so rather than hard-coding the coor
 | 0, framebuffer.size.y | bottom-left of the screen |
 | framebuffer.size.x, framebuffer.size.y | bottom-right of the screen |
 
-## Tile Orientation
+## Tiles
 
-By default, a tile's position is oriented around its upper-left corner. This way if you position a tile at (0, 0) it will be visible in the top-left corner of the screen.
+Leadwerks 5 uses persistent objects that stay on the screen. This provides better performance and easier management of 2D shapes. The basic drawing primitive in Leadwerks is called a [Tile](Tile.md). Tiles come in three forms and can be used to display rectangles, images, or text.
+
+### Tile Orientation
+
+Like screen coordinates, a tile's position is oriented around its upper-left corner. This way if you position a tile at (0, 0) it will be visible in the top-left corner of the screen.
 
 The code below creates a single tile and places it at coordinate (10, 10).
 
@@ -47,7 +51,7 @@ camera:SetClearColor(0.125)
 local tile = CreateTile(world, 150, 150)
 tile:SetColor(0,0,1)
 
---Set the position in the upper-left corner of the screen
+--Set the tile position
 tile:SetPosition(10, 10)
 
 while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
@@ -79,7 +83,7 @@ You can use this code to place the tile in the exact center of the screen, but y
 tile:SetPosition(framebuffer.size.x / 2 - tile.size.x / 2, framebuffer.size.y / 2 - tile.size.y / 2)
 ```
 
-## Tile Handle
+### Tile Handles
 
 Optionally, we can add an offset to the tile handle so that it is oriented around a different point, using the [Tile:SetHandle](Tile_SetHandle.md) command. This can be used to shift the tile over so that it is oriented around its center:
 
