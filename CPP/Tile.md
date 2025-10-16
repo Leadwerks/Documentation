@@ -28,4 +28,5 @@ Base class: [Object](Object.md)
 | [SetOrder](Tile_SetOrder.md) | Method | Sets the tile sort order |
 | [SetScale](Tile_SetScale.md) | Method | Sets the tile scale |
 | [SetText](Tile_SetText.md) | Method | Sets the tile text |
+| [Turn](Tile_Turn.md) | Method | Adds rotation to the tile |
 | [CreateTile](CreateTile.md) | Function | Creates a new tile |
