@@ -79,6 +79,8 @@ You can use this code to place the tile in the exact center of the screen, but y
 tile:SetPosition(framebuffer.size.x / 2 - tile.size.x / 2, framebuffer.size.y / 2 - tile.size.y / 2)
 ```
 
+## Tile Handle
+
 Optionally, we can add an offset to the tile handle so that it is oriented around a different point, using the [Tile:SetHandle](Tile_SetHandle.md) command. This can be used to shift the tile over so that it is oriented around its center:
 
 ```lua
