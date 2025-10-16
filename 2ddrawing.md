@@ -1,4 +1,4 @@
-# 2D Drawing
+# 2D Graphics
 
 In this lesson we will learn about 2D drawing and screen orientation, with a focus on the spatial properties of screen coordinates and 2D tiles.
 
@@ -311,7 +311,7 @@ Alternatively, we can use the angular equivalent for the Step command, [StepAngl
 
 Another handy command you may sometimes need is the [DeltaAngle](DeltaAngle.md) function. This will return the difference between two angles, always using the shortest distance around the circle.
 
-### Text Tiles
+### Displaying Text
 
 Text objects can be created with the [CreateTile](CreateTile.md) command. To create a text tile, you must first load a font from a .ttf (True-type Font) file.
 
