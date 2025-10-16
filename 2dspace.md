@@ -241,6 +241,86 @@ Now we are going to add a second dimension to our number line, in the form of a 
 
 The center of the grid, coordinate (0, 0), is called the _origin_. If you hear something like "distance to the origin" it just means "distance to the center of the grid".
 
+If we apply the second dimension to our previous example, we can make one box smoothly follow another. Run this code and use the left, right, up, and down keys to move the object around the screen.
+
+```lua
+--Get the displays
+local displays = GetDisplays()
+
+--Create a window
+local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_TITLEBAR | WINDOW_CENTER)
+
+--Create a framebuffer
+local framebuffer = CreateFramebuffer(window)
+
+--Create a world
+local world = CreateWorld()
+
+--Create a camera
+local camera = CreateCamera(world)
+camera:SetClearColor(0.125)
+
+--Create a tile to show constant motion
+local tile1 = CreateTile(world, 100, 100)
+tile1:SetColor(0,1,0)
+tile1:MidHandle()
+tile1:SetPosition(framebuffer.size.x / 2, framebuffer.size.y / 2, 0)
+
+--Create a tile to show smooth motion
+local tile2 = CreateTile(world, 100, 100)
+tile2:SetColor(0,0,1)
+tile2:MidHandle()
+tile2:SetPosition(tile1.position)
+
+while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
+	
+	--Move the green tile to the right
+	if window:KeyDown(KEY_RIGHT) then tile1:SetPosition(tile1.position.x + 10, tile1.position.y) end
+	
+	--Move the green tile to the left
+	if window:KeyDown(KEY_LEFT) then tile1:SetPosition(tile1.position.x - 10, tile1.position.y) end
+		
+	--Move the green tile to the right
+	if window:KeyDown(KEY_UP) then tile1:SetPosition(tile1.position.x, tile1.position.y - 10) end
+	
+	--Move the green tile to the left
+	if window:KeyDown(KEY_DOWN) then tile1:SetPosition(tile1.position.x, tile1.position.y + 10) end
+	
+	--Make the blue tile follow the green tile, with smooth motion
+	local x = Mix(tile2.position.x, tile1.position.x, 0.05)
+	local y = Mix(tile2.position.y, tile1.position.y, 0.05)
+	
+	--Position the blue tile
+	tile2:SetPosition(x, y)
+	
+	--Update the world
+	world:Update()
+	
+	--Render the world
+	world:Render(framebuffer)
+end
+```
+
+Here you can see the motion working on both the X and Y axes:
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/2dsmoothmotion.gif?raw=true)
+
+
+This gives me an idea! Let's hide the green tile, and replace the blue tile with an image of a spaceship. When we run the code, we can use the arrow keys to move the spaceship around the screen.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/2dspaceship.gif?raw=true)
+
+The space ship has nice smooth motion, exactly like what you would see in a game!
+
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+
+
 Things get even more interesting when we add a second dimension on our number line, the Y axis. We can position objects using both the X and Y coordinate, but we can also rotate objects in 2D space, and we can also create 2D vectors.
 
 ### Rotation
