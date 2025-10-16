@@ -6,6 +6,8 @@ This function performs a linear interpolation and returns the result.
 
 - float **Mix**(const float value0, const float value1, const float d)
 - double **Mix**(const double value0, const double value1, const double d)
+- [Vec2](Vec2.md) **Mix**(const [Vec2](Vec2.md)& value0, const [Vec2](Vec2.md)& value1, const float d)
+- [Vec3](Vec3.md) **Mix**(const [Vec3](Vec3.md)& value0, const [Vec3](Vec3.md)& value1, const float d)
 
 | Parameter | Description |
 | --- | --- |
