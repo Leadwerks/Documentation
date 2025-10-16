@@ -1,4 +1,4 @@
-# 3D Spatial Visualization
+# 3D Spatialization
 
 This tutorial series will help you develop your 3D spatial visualization abilities, and teach you what tools are available to make 3D objects move around. Developing these skills will give you the ability to easily visualize how all games can be made.
 
