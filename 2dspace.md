@@ -10,7 +10,7 @@ A notebook with graph paper is a great tool for every game developer to have wit
 
 I picture numbers in a line, with negative numbers to the left, zero in the middle, and positive numbers to the right.
 
-- <----------------------------- 0 -------------------------> +
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/numberline.png?raw=true)
 
 Often times we want to move from one number to another over time. Let's say we want to gradually change a value from 1 to 5.
 
