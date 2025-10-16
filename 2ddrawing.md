@@ -270,3 +270,6 @@ while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
     world:Render(framebuffer)
 end
 ```
+
+Here is the result when the program is run:
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/texttile.jpg?raw=true)
