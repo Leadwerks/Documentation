@@ -85,12 +85,15 @@ tile:SetPosition(framebuffer.size.x / 2 - tile.size.x / 2, framebuffer.size.y / 
 
 ### Tile Handles
 
-Optionally, we can add an offset to the tile handle so that it is oriented around a different point, using the [Tile:SetHandle](Tile_SetHandle.md) command. This can be used to shift the tile over so that it is oriented around its center:
+Optionally, we can add an offset to the tile handle so that it is oriented around a different point, using the [Tile:SetHandle](Tile_SetHandle.md) command. This can be used to shift the tile over so that it is oriented around its center.
 
 ```lua
 tile:SetHandle(-tile.size.x / 2, -tile.size.y / 2)
 tile:SetPosition(framebuffer.size.x / 2, framebuffer.size.y / 2)
 ```
+Here is a visual diagram showing what happens when you shift the tile handle to the center:
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/tilehandle.png?raw=true)
 
 The [Tile:MidHandle](Tile_MidHandle) command will automatically set the center of the tile as its handle, without the need to specify any parameters:
 
