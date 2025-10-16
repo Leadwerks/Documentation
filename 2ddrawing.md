@@ -59,7 +59,7 @@ while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
 	world:Render(framebuffer)
 end
 ```
-Here is the result when the code is run. The tile is indented a little bit from the top-left corner:
+Here is the result when the code is run. The tile is indented a little bit (10 pixels, to be exact) from the top-left corner:
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/tileupperleft.png?raw=true)
 
