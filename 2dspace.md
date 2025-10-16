@@ -18,13 +18,13 @@ Often times we want to move from one number to another over time. Let's say we w
 
 ### Constant Motion
 
-The [MoveTowards](MoveTowards.md) function will move a constant amount from the current value to a target value.
+The [Step](Step.md) function will move a constant amount from the current value to a target value.
 
 ```lua
 local n = 0
 
 while n < 5 do
-  n = MoveTowards(n, 10, 1)
+  n = Step(n, 10, 1)
   Print(n)
 end
 ```
@@ -118,7 +118,7 @@ while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
 	if window:KeyHit(KEY_LEFT) then target = 0 end
 	
 	--Constant motion
-	x1 = MoveTowards(x1, target, 10)
+	x1 = Step(x1, target, 10)
 	tile1:SetPosition(x1, y - 100)
 	
 	--Smooth motion
