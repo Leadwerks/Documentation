@@ -71,7 +71,7 @@ tile:SetPosition(framebuffer.size.x - tile.size.x - 10, framebuffer.size.y - til
 
 When you run the code again, the tile will appear in the bottom-right corner, with 10 pixels of indentation.
 
-![](https://github.com/UltraEngine/Documentation/blob/master/Images/tilelowerleft.png?raw=true)
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/tilelowerright.png?raw=true)
 
 You can use this code to place the tile in the exact center of the screen, but you must remember to subtract half the width and height from the coordinate:
 
