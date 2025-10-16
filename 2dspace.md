@@ -39,9 +39,11 @@ The output of the program looks like this:
 4
 5
 ```
-Each time the function runs, it is adding an 1 to the value, until the target value is reached.
+Each time the function runs, it is adding one to the value, until the target value is reached.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/numberline1-5_step.png?raw=true)
+
+Because the difference between five and one equals four, it takes four even steps to reach the target value.
 
 ### Linear Interpolation
 
