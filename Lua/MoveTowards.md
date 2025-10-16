@@ -1,10 +1,10 @@
-# MoveTowards
+# Step
 
 This function increments one value towards a target at a steady rate.
 
 ## Syntax
 
-- number **MoveTowards**(number start, number stop, number amount)
+- number **Step**(number start, number stop, number amount)
 
 | Parameter | Description |
 |---|---|
