@@ -4,16 +4,17 @@ This function creates a new tile for 2D drawing. Tiles can be rectangles or text
 
 ## Syntax
 
-- [Tile](Tile) **CreateTile**([Camera](Camera) camera, number width, number height)
-- [Tile](Tile) **CreateTile**([Camera](Camera) camera, number width, number height, boolean wireframe)
-- [Tile](Tile) **CreateTile**([Camera](Camera) camera, [Vec2](Vec2) size)
-- [Tile](Tile) **CreateTile**([Camera](Camera) camera, [Vec2](Vec2) size, boolean wireframe)
-- [Tile](Tile) **CreateTile**([Camera](Camera) camera, [Font](Font) font, string text)
-- [Tile](Tile) **CreateTile**([Camera](Camera) camera, [Font](Font) font, string text, number fontsize, number alignment, number linespacing)
+- [Tile](Tile) **CreateTile**([Camera](Camera) camera, number width, number height, boolean wireframe = false)
+- [Tile](Tile) **CreateTile**([Camera](Camera) camera, [Vec2](Vec2) size, boolean wireframe = false)
+- [Tile](Tile) **CreateTile**([Camera](Camera) camera, [Font](Font) font, string text, number fontsize = 14, number alignment = TEXT_LEFT, number linespacing = 1.5)
+- [Tile](Tile) **CreateTile**([World](World) camera, number width, number height, boolean wireframe = false)
+- [Tile](Tile) **CreateTile**([World](World) camera, [Vec2](Vec2) size, boolean wireframe = false)
+- [Tile](Tile) **CreateTile**([World](World) camera, [Font](Font) font, string text, number fontsize = 14, number alignment = TEXT_LEFT, number linespacing = 1.5)
 
 | Parameter | Description |
 |---|---|
 | camera | camera the tile will appear on |
+| world | world the tile will appear in, rendered last after all cameras are drawn |
 | size, width, height | size of a rectangle tile |
 | wireframe | if set to true a line rectangle will be created, otherwise a solid rectangle will be created |
 | font | font to create a text tile with |
