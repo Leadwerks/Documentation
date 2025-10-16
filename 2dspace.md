@@ -23,7 +23,7 @@ The [MoveTowards](MoveTowards.md) function will move a constant amount from the 
 ```lua
 local n = 0
 
-while n < 10 do
+while n < 5 do
   n = MoveTowards(n, 10, 1)
   Print(n)
 end
@@ -36,12 +36,10 @@ The output of the program looks like this:
 3
 4
 5
-6
-7
-8
-9
-19
 ```
+Each time the function runs, it is adding an 1 to the value, until the target value is reached.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/numberline1-5_step.png?raw=true)
 
 ### Linear Interpolation
 
@@ -59,22 +57,29 @@ If the p value equals zero, then the start value is returned. If the p value is 
 This code will print out the numbers 0, 5, and 10:
 
 ```lua
-Print(Mix(0, 10, 0))
-Print(Mix(0, 10, 0.5))
-Print(Mix(0, 10, 1))
+Print(Mix(1, 5, 0))
+Print(Mix(1, 5, 0.5))
+Print(Mix(1, 5, 1))
 ```
 
 Now if we use the Mix function in a loop, using the returned value as the starting value the next time the function is called, we see some interesting results:
 ```lua
-local n = 0
+local n = 1
+local target = 5
 
-while n < 10 do
-  n = Mix(n, 10, 0.5)
+while n < target do
+  n = Mix(n, target, 0.5)
   Print(n)
 end
 ```
 
-The first iteration of the loop prints 0.5, then 0.75, and so on. Each time the returned number gets closer to the target value of 10, but it moves less and less each time until it finally reaches 10.
+The first iteration of the loop prints 3, then 4, then 4.5, and so on. Each time the returned number gets closer to the target value, but it moves less and less each time until it finally reaches 5.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/numberline1-5_lerp.png?raw=true)
+
+This has some interesting implications for games:
+- If the target value is far away from the current value, the target value will change quickly to catch up.
+- As the current value gets closer and closer to the target value, the movement slows down.
 
 Let's put our math into action and see what constant and smooth motion look like on the screen, with this simple program. You can copy and paste this code into the Main.lua file of a new Lua project.
 ```lua
