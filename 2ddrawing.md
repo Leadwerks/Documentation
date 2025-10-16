@@ -1,6 +1,6 @@
 # 2D Drawing
 
-In this lesson we will learn about 2D drawing and screen orientation, with a focus on the spatial characteristics of screen coordinates and 2D tile objects.
+In this lesson we will learn about 2D drawing and screen orientation, with a focus on the spatial characteristics of screen coordinates and 2D tiles.
 
 ## Screen Coordinates
 
@@ -215,6 +215,52 @@ while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
 	local a = Angle(mousepos.x - cx, mousepos.y - cy)
 
     tile:SetRotation(a)
+
+    --Update the world
+    world:Update()
+
+    --Render the world
+    world:Render(framebuffer)
+end
+```
+
+### Drawing Text
+
+Text objects can be created with the [CreateTile](CreateTile.md) command. To create a text tile, you must first load a font from a .ttf (True-type Font) file.
+
+You can specify the orientation a text tile has in the optional alignment parameter. TEXT_LEFT, TEXT_CENTER, and TEXT_RIGHT will control the horizontal alignment of the text, while TEXT_TOP, TEXT_MIDDLE, and TEXT_BOTTOM control the vertical alignment. Like rectangles, text tiles by default are oriented around their upper-left corner.
+
+This example will create a text tile with its handle in the horizontal and vertical center, place it at the center of the screen, and rotate it continuously:
+
+```lua
+--Get the displays
+local displays = GetDisplays()
+
+--Create a window
+local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_TITLEBAR | WINDOW_CENTER)
+
+--Create a framebuffer
+local framebuffer = CreateFramebuffer(window)
+
+--Create a world
+local world = CreateWorld()
+
+--Create a camera
+local camera = CreateCamera(world)
+camera:SetClearColor(0.125)
+
+--Load a font
+local font = LoadFont("Fonts/Arial.ttf")
+
+--Create a text tile
+local tile = CreateTile(world, font, "Welcome to Leadwerks 5!", 72, TEXT_CENTER | TEXT_MIDDLE)
+tile:SetPosition(framebuffer.size.x / 2, framebuffer.size.y / 2)
+tile:SetColor(0,1,1)
+
+while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
+
+	--Rotate the tile
+    tile:Turn(1)
 
     --Update the world
     world:Update()
