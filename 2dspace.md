@@ -45,7 +45,7 @@ Each time the function runs, it is adding an 1 to the value, until the target va
 
 ### Linear Interpolation
 
-Often times in games we want to avoid sudden movements, and prefer nice smooth motion. The [Mix](Mix.md) function is great for smoothing out motion. It accepts a starting value, a target value, and a decimal number to combine the two numbers with. This type of equation is called linear interpolation.
+Often times in games we want to avoid sudden movements, and prefer nice smooth motion. The [Mix](Mix.md) function is great for smoothing out motion. It accepts a starting value, a target value, and a decimal number to combine the two numbers with. This type of motion is called linear interpolation.
 
 Internally, the Mix function uses this equation:
 
