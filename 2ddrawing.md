@@ -355,4 +355,55 @@ Here is the result when the program is run:
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/texttile.jpg?raw=true)
 
+We can use the text alignment flags to easily fit text into a corner or on an edge, without any complicated positioning:
+
+```lua
+--Get the displays
+local displays = GetDisplays()
+
+--Create a window
+local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_TITLEBAR | WINDOW_CENTER)
+
+--Create a framebuffer
+local framebuffer = CreateFramebuffer(window)
+
+--Create a world
+local world = CreateWorld()
+
+--Create a camera
+local camera = CreateCamera(world)
+camera:SetClearColor(0.125)
+
+--Load a font
+local font = LoadFont("Fonts/Arial.ttf")
+
+--Create a text tile in the lower-left corner
+local tile1 = CreateTile(world, font, "Ammo: 50", 36, TEXT_LEFT | TEXT_BOTTOM)
+tile1:SetColor(1,0.25,0.25)
+tile1:SetPosition(0, framebuffer.size.y)
+
+--Create a text tile in the lower center
+local tile2 = CreateTile(world, font, "Magic: 75", 36, TEXT_CENTER | TEXT_BOTTOM)
+tile2:SetColor(0.25,1,0.25)
+tile2:SetPosition(framebuffer.size.x / 2, framebuffer.size.y)
+
+--Create a text tile in the lower-right corner
+local tile3 = CreateTile(world, font, "Health: 100", 36, TEXT_RIGHT | TEXT_BOTTOM)
+tile3:SetColor(0.25,0.25,1)
+tile3:SetPosition(framebuffer.size.x, framebuffer.size.y)
+
+--Main loop
+while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
+
+    --Update the world
+    world:Update()
+
+    --Render the world
+    world:Render(framebuffer)
+end
+```
+When this example is run, three text tiles will be visible along the bottom of the screen:
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/2dtextalignment.png?raw=true)
+
 The Tile class is meant to provide a simple way to draw 2D shapes on the screen. If you want to create more advanced user interfaces with support for DPI scaling, see the [GUI system](GUI.md).
