@@ -306,7 +306,63 @@ Here you can see the motion working on both the X and Y axes:
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/2dsmoothmotion.gif?raw=true)
 
 
-This gives me an idea! Let's hide the green tile, and replace the blue tile with an image of a spaceship. When we run the code, we can use the arrow keys to move the spaceship around the screen.
+This gives me an idea! Let's hide the green tile, and replace the blue tile with an image of a spaceship.
+
+```lua
+--Get the displays
+local displays = GetDisplays()
+
+--Create a window
+local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_TITLEBAR | WINDOW_CENTER)
+
+--Create a framebuffer
+local framebuffer = CreateFramebuffer(window)
+
+--Create a world
+local world = CreateWorld()
+
+--Create a camera
+local camera = CreateCamera(world)
+camera:SetClearColor(0)
+
+local x = framebuffer.size.x / 2
+local y = framebuffer.size.y / 2
+
+--Load a tile from an image
+local tile = LoadTile(world, "https://raw.githubusercontent.com/Leadwerks/Documentation/refs/heads/master/Assets/Materials/Sprites/nightraider.png")
+tile:MidHandle()
+tile:SetPosition(x, y)
+
+while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
+	
+	--Move right
+	if window:KeyDown(KEY_RIGHT) then x = x + 10 end
+	
+	--Move left
+	if window:KeyDown(KEY_LEFT) then x = x - 10 end
+		
+	--Move up
+	if window:KeyDown(KEY_UP) then y = y - 10 end
+	
+	--Move down
+	if window:KeyDown(KEY_DOWN) then y = y + 10 end
+	
+	--Make the blue tile follow the green tile, with smooth motion
+	smoothx = Mix(tile.position.x, x, 0.1)
+	smoothy = Mix(tile.position.y, y, 0.1)
+	
+	--Position the blue tile
+	tile:SetPosition(smoothx, smoothy)
+	
+	--Update the world
+	world:Update()
+	
+	--Render the world
+	world:Render(framebuffer)
+end
+```
+
+When we run the code, we can use the arrow keys to move the spaceship around the screen.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/2dspaceship.gif?raw=true)
 
