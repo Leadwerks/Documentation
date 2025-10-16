@@ -208,12 +208,18 @@ local tile = LoadTile(world, "https://raw.githubusercontent.com/Leadwerks/Docume
 tile:MidHandle()
 tile:SetPosition(cx, cy)
 
+--Main loop
 while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
 
+	--Get the mouse position
 	local mousepos = window:GetMousePosition()
 
+	--Get the rotation
 	local a = Angle(mousepos.x - cx, mousepos.y - cy)
 
+	--Display the rotation in the window titlebar
+
+	--Set the tile rotation
     tile:SetRotation(a)
 
     --Update the world
@@ -224,6 +230,80 @@ while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
 end
 ```
 Also note that this example used the [LoadTile](LoadTile.md) function, which loads an image from a file, then uses the image width and height for the tile size.
+
+#### Interpolation of Rotation
+
+In our example above, the spaceship rotates instantly to point towards the mouse cursor. If we want, we can add interpolation to smooth out the motion for a better visual result. Let's try using the Mix command on the angle, like we did for position in the previous lesson:
+
+```lua
+--Get the displays
+local displays = GetDisplays()
+
+--Create a window
+local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_TITLEBAR | WINDOW_CENTER)
+
+--Create a framebuffer
+local framebuffer = CreateFramebuffer(window)
+
+--Create a world
+local world = CreateWorld()
+
+--Create a camera
+local camera = CreateCamera(world)
+camera:SetClearColor(0)
+
+--Get the screen center
+local cx = framebuffer.size.x / 2
+local cy = framebuffer.size.y / 2
+
+--Load a tile from an image
+local tile = LoadTile(world, "https://raw.githubusercontent.com/Leadwerks/Documentation/refs/heads/master/Assets/Materials/Sprites/nightraider.png")
+tile:MidHandle()
+tile:SetPosition(cx, cy)
+
+--Main loop
+while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
+
+	--Get the mouse position
+    local mousepos = window:GetMousePosition()
+
+	--Get the rotation
+    local a = Angle(mousepos.x - cx, mousepos.y - cy)
+
+	--Display the rotation in the window titlebar
+	window:SetText(tostring(a))
+	
+	--Smooth the angle with linear interpolation
+	local smoothangle = Mix(tile:GetRotation(), a, 0.05)
+
+	--Rotate the tile with the angle
+    tile:SetRotation(smoothangle)
+
+    --Update the world
+    world:Update()
+
+    --Render the world
+    world:Render(framebuffer)
+end
+```
+
+This code mostly works, but if we move the mouse up and down on the right side of the spaceship, it will suddenly spin around, taking the longer route to get to the desired angle. This happens when it is interpolating between a value like 355 and 5. Instead of taking the short route, which is to increase the angle until it hits 360 and resets to zero, it takes the long way around the circle.
+
+To fix this, just replace the Mix command with a special command for rotations called [MixAngle](MixAngle,md). This command is meant for use with rotations and will always take the shortest route to the desired rotation.
+
+```lua
+	--Smooth the angle with linear interpolation
+	local smoothangle = MixAngle(tile:GetRotation(), a, 0.05)
+```
+
+Alternatively, we can use the angular equivalent for the Step command, [StepAngle](StepAngle,md). This will make the spaceship rotate at a constant speed until the desired angle is reached. The motion will appear more robotic, and might be good for things like turrets tracking the player:
+
+```lua
+	--Use constant motion towards the desired angle
+	local smoothangle = StepAngle(tile:GetRotation(), a, 1)
+```
+
+Another handy command you may sometimes need is the [DeltaAngle](DeltaAngle.md) function. This will return the difference between two angles, always using the shortest distance around the circle.
 
 ### Text Tiles
 
