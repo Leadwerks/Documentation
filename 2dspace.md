@@ -65,6 +65,7 @@ Print(Mix(1, 5, 1))-- returns the second value
 ```
 
 Back to our number line now. If we use the Mix function in a loop, using the returned value as the starting value the next time the function is called, we see some interesting results:
+
 ```lua
 local n = 1
 local target = 5
@@ -76,6 +77,35 @@ end
 ```
 
 The first iteration of the loop prints 3, then 4, then 4.5, and so on. Each time the returned number gets closer to the target value, but it moves less and less each time until it finally reaches 5.
+
+```
+3.0
+4.0
+4.5
+4.75
+4.875
+4.9375
+4.96875
+4.984375
+4.9921875
+4.99609375
+4.998046875
+4.9990234375
+4.99951171875
+4.999755859375
+4.9998779296875
+4.9999389648438
+4.9999694824219
+4.9999847412109
+4.9999923706055
+4.9999961853027
+4.9999980926514
+4.9999990463257
+4.9999995231628
+5.0
+```
+
+On a number line, the first few steps would look like this:
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/numberline1-5_lerp.png?raw=true)
 
