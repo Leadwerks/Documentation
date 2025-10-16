@@ -108,7 +108,7 @@ The first iteration of the loop prints 3, then 4, then 4.5, and so on. Each time
 5.0
 ```
 
-On a number line, the first few steps would look like this:
+On a number line, the first few steps would look like the image below. Notice how each step is half the size of the previous one:
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/numberline1-5_lerp.png?raw=true)
 
@@ -117,6 +117,7 @@ This has some interesting implications for games:
 - As the current value gets closer and closer to the target value, the movement slows down.
 
 Let's put our math into action and see what constant and smooth motion look like on the screen, with this simple program. You can copy and paste this code into the Main.lua file of a new Lua project.
+
 ```lua
 --Get the displays
 local displays = GetDisplays()
