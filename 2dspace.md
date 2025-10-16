@@ -280,10 +280,10 @@ while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
 	--Move the green tile to the left
 	if window:KeyDown(KEY_LEFT) then tile1:SetPosition(tile1.position.x - 10, tile1.position.y) end
 		
-	--Move the green tile to the right
+	--Move the green tile up
 	if window:KeyDown(KEY_UP) then tile1:SetPosition(tile1.position.x, tile1.position.y - 10) end
 	
-	--Move the green tile to the left
+	--Move the green tile down
 	if window:KeyDown(KEY_DOWN) then tile1:SetPosition(tile1.position.x, tile1.position.y + 10) end
 	
 	--Make the blue tile follow the green tile, with smooth motion
@@ -301,10 +301,11 @@ while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
 end
 ```
 
+You might have noticed that we are adding 10 to the Y position when we press the down key, and subtracting 10 when we press the up key. This is because screen coordinates are flipped upside-down compared to how we would draw them on a piece of paper. This will be explained in more detail in the next lesson.
+
 Here you can see the motion working on both the X and Y axes:
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/2dsmoothmotion.gif?raw=true)
-
 
 This gives me an idea! Let's replace the blue tile with an image of a spaceship.
 
