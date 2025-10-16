@@ -2887,7 +2887,11 @@
                         {
                             "title": "Step",
                             "filename": "Step"
-                        },                        
+                        },   
+                        {
+                            "title": "StepAngle",
+                            "filename": "StepAngle"
+                        },                          
                         {
                             "title": "Tan",
                             "filename": "Tan"
