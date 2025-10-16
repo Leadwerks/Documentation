@@ -217,8 +217,6 @@ while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
 	--Get the rotation
 	local a = Angle(mousepos.x - cx, mousepos.y - cy)
 
-	--Display the rotation in the window titlebar
-
 	--Set the tile rotation
     tile:SetRotation(a)
 
