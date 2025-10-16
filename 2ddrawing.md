@@ -225,7 +225,7 @@ end
 ```
 Also note that this example used the [LoadTile](LoadTile.md) function, which loads an image from a file, then uses the image width and height for the tile size.
 
-### Drawing Text
+### Text Tiles
 
 Text objects can be created with the [CreateTile](CreateTile.md) command. To create a text tile, you must first load a font from a .ttf (True-type Font) file.
 
