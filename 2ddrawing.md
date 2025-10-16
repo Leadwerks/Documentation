@@ -1,6 +1,6 @@
 # 2D Drawing
 
-In this lesson we will learn about 2D drawing and screen orientation, with a focus on the spatial characteristics of screen coordinates and 2D tiles.
+In this lesson we will learn about 2D drawing and screen orientation, with a focus on the spatial properties of screen coordinates and 2D tiles.
 
 ## Screen Coordinates
 
