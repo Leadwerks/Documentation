@@ -8,7 +8,7 @@ A notebook with graph paper is a great tool for every game developer to have wit
 
 ## One-dimensional Space
 
-I picture numbers in a line, with negative numbers to the left, zero in the middle, and positive numbers to the right.
+I picture numbers in a row, with negative numbers to the left, zero in the middle, and positive numbers to the right. This is called a _number line_:
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/numberline.png?raw=true)
 
