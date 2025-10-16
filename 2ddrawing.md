@@ -183,7 +183,7 @@ while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
 end
 ```
 
-We can use the [Angle](Angle.md) command to convert a 2D coordinate into a rotation. Here we are taking the mouse position, subtracting the center of the screen, and then converting the resulting coordinate into an angle. When we move the mouse, the spaceship will turn to face it.
+We can use the [Angle](Angle.md) command to convert a 2D coordinate into a rotation.
 
 ```lua
 --Get the displays
@@ -230,6 +230,11 @@ while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
     world:Render(framebuffer)
 end
 ```
+
+Here we are taking the mouse position, subtracting the center of the screen, and then converting the resulting coordinate into an angle. When we move the mouse, the spaceship will turn to face it. 
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/angle.png?raw=true)
+
 Also note that this example used the [LoadTile](LoadTile.md) function, which loads an image from a file, then uses the image width and height for the tile size.
 
 #### Interpolation of Rotation
