@@ -24,9 +24,10 @@ The [Step](Step.md) function will move a constant amount from the current value 
 
 ```lua
 local n = 0
+local target = 5
 
-while n < 5 do
-  n = Step(n, 10, 1)
+while n < target do
+  n = Step(n, target, 1)
   Print(n)
 end
 ```
