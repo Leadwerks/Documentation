@@ -99,7 +99,9 @@ tile:MidHandle()
 tile:SetPosition(framebuffer.size.x / 2, framebuffer.size.y / 2)
 ```
 
-This command is also handy when we are using rotation, because we usually want a tile to rotate around its own center:
+### Tile Rotation
+
+We can rotate a tile using the [Tile:SetRotation](Tile_SetRotation.md) or [Tile:Turn](Tile_Turn.md) commands. Unless we change the handle position, a tile will rotate around its upper-left corner:
 
 ```lua
 --Get the displays
@@ -122,7 +124,46 @@ camera:SetClearColor(0.125)
 local tile = CreateTile(world, 150, 150)
 tile:SetColor(0,0,1)
 
---Set the position in the lower-left corner of the screen
+--Set the tile position in the center of the screen
+tile:SetPosition(framebuffer.size.x / 2 - tile.size.x / 2, framebuffer.size.y / 2 - tile.size.y / 2)
+
+while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
+	
+	--Rotate the tile
+	tile:Turn(1)
+	
+	--Update the world
+	world:Update()
+	
+	--Render the world
+	world:Render(framebuffer)
+end
+```
+
+We can use the [Tile:MidHandle](Tile_MidHandle.md) to center the tile, which is usually best for rotation:
+
+```lua
+--Get the displays
+local displays = GetDisplays()
+
+--Create a window
+local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_TITLEBAR | WINDOW_CENTER)
+
+--Create a framebuffer
+local framebuffer = CreateFramebuffer(window)
+
+--Create a world
+local world = CreateWorld()
+
+--Create a camera
+local camera = CreateCamera(world)
+camera:SetClearColor(0.125)
+
+--Load a tile from an image
+local tile = CreateTile(world, 150, 150)
+tile:SetColor(0,0,1)
+
+--Set the tile position in the center of the screen
 tile:MidHandle()
 tile:SetPosition(framebuffer.size.x / 2, framebuffer.size.y / 2)
 
@@ -136,5 +177,49 @@ while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
 	
 	--Render the world
 	world:Render(framebuffer)
+end
+```
+
+We can use the [Angle](Angle.md) command to convert a 2D coordinate into a rotation. Here we are taking the mouse position, subtracting the center of the screen, and then converting the resulting coordinate into an angle. When we move the mouse, the spaceship will turn to face it.
+
+```lua
+--Get the displays
+local displays = GetDisplays()
+
+--Create a window
+local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_TITLEBAR | WINDOW_CENTER)
+
+--Create a framebuffer
+local framebuffer = CreateFramebuffer(window)
+
+--Create a world
+local world = CreateWorld()
+
+--Create a camera
+local camera = CreateCamera(world)
+camera:SetClearColor(0)
+
+--Get the screen center
+local cx = framebuffer.size.x / 2
+local cy = framebuffer.size.y / 2
+
+--Load a tile from an image
+local tile = LoadTile(world, "https://raw.githubusercontent.com/Leadwerks/Documentation/refs/heads/master/Assets/Materials/Sprites/nightraider.png")
+tile:MidHandle()
+tile:SetPosition(cx, cy)
+
+while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
+
+	local mousepos = window:GetMousePosition()
+
+	local a = Angle(mousepos.x - cx, mousepos.y - cy)
+
+    tile:SetRotation(a)
+
+    --Update the world
+    world:Update()
+
+    --Render the world
+    world:Render(framebuffer)
 end
 ```
