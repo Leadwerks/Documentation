@@ -274,3 +274,5 @@ end
 Here is the result when the program is run:
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/texttile.jpg?raw=true)
+
+The Tile class is meant to provide a simple way to draw 2D shapes on the screen. If you want to create more advanced user interfaces with support for DPI scaling, see the [GUI system](Interface.md).
