@@ -31,7 +31,6 @@ end
 
 The output of the program looks like this:
 ```
-1
 2
 3
 4
@@ -52,17 +51,15 @@ function Mix(start, target, p)
   return start * (1.0 - p) + stop * p
 end
 ```
-If the p value equals zero, then the start value is returned. If the p value is one, then the target value is returned. If the p value is 0.5, then a number halfway in between the start and target values is returned.
-
-This code will print out the numbers 0, 5, and 10:
+If the p value equals zero, then the start value is returned. If the p value is one, then the target value is returned. If the p value is 0.5, then a number halfway in between the start and target values is returned. This code, for example, will print out the numbers 0, 5, and 10:
 
 ```lua
-Print(Mix(1, 5, 0))
-Print(Mix(1, 5, 0.5))
-Print(Mix(1, 5, 1))
+Print(Mix(0, 10, 0))
+Print(Mix(0, 10, 0.5))
+Print(Mix(0, 10, 1))
 ```
 
-Now if we use the Mix function in a loop, using the returned value as the starting value the next time the function is called, we see some interesting results:
+Back to our number line now. If we use the Mix function in a loop, using the returned value as the starting value the next time the function is called, we see some interesting results:
 ```lua
 local n = 1
 local target = 5
