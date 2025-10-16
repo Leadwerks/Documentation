@@ -133,7 +133,8 @@ while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
 end
 ```
 
-Press the left and right keys to move the target value to the either side of the screen, and watch how the two boxes move. Although they both start and stop in the same position, their motion looks very different.
+Press the left and right keys to move the target value to the either side of the screen, and watch how the two boxes move. Although they both start and stop in the same position, their motion looks very different. The green box moves at a constant speed, while the blue cube snaps like a rubber band.
+
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/motion.gif?raw=true)
 
 ## Two-dimensional Space
