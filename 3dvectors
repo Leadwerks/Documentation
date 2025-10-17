@@ -1,0 +1,8 @@
+# 3D Vectors
+
+If we draw a line from any point in 3D space to the origin (0, 0, 0), we get a vector. A vector is a line with a direction and a length.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/3dvector.png?raw=true)
+
+We have a special class in Leadwerks for handling 3D vectors called [Vec3](Vec3.md).
+
