@@ -19,3 +19,15 @@ Print(v.z)
 ```
 
 You can think of a Vec3 as either a point in space, or a line from the origin to a point in space.
+
+## Vector Length
+
+The Vec3 class includes a method that tells us the length of any 3D vector:
+
+```lua
+v = Vec3(2, 4, 0)
+l = v:Length()
+Print(l)
+```
+
+
