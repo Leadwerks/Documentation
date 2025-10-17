@@ -24,3 +24,8 @@ In the Leadwerks 3D coordinate system, positive X points to the right, positive 
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/lefthandcoordsys.jpg?raw=true)
 
+## Left-handed Rotation Rule
+
+To determine the positive direction of rotation for each axis, we can use our left hand again. If you point your thumb in the positive direction of each axis like below, your fingers will curl around in the positive direction of rotation:
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/lefthandrotation.jpg?raw=true)
