@@ -12,8 +12,8 @@ Base class: [Object](Object.md)
 | scale | [Vec2](Vec2.md) | Read-only tile scale |
 | text | string | Read-only tile text |
 | [GetColor](Tile_GetColor.md) | Method | Gets the file color |
-| [GetOrder](Tile_GetOrder.md) | Method | Gets the file sort order |
 | [GetMaterial](Tile_GetMaterial.md) | Method | Gets the tile material |
+| [GetOrder](Tile_GetOrder.md) | Method | Gets the file sort order |
 | [GetPosition](Tile_GetPosition.md) | Method | Gets the tile position in 2D space |
 | [GetRotation](Tile_GetRotation.md) | Method | Gets the tile rotation |
 | [GetScale](Tile_GetScale.md) | Method | Gets the tile scale |
@@ -21,9 +21,9 @@ Base class: [Object](Object.md)
 | [SetColor](Tile_SetColor.md) | Method | Sets the tile color |
 | [SetHandle](Tile_SetHandle.md) | Method | Sets the tile offset |
 | [SetMaterial](Tile_SetMaterial.md) | Method | Sets the tile material |
+| [SetOrder](Tile_SetOrder.md) | Method | Sets the tile sort order |
 | [SetPosition](Tile_SetPosition.md) | Method | Sets the tile position in 2D space |
 | [SetRotation](Tile_SetRotation.md) | Method | Sets the tile rotation |
-| [SetOrder](Tile_SetOrder.md) | Method | Sets the tile sort order |
 | [SetScale](Tile_SetScale.md) | Method | Sets the tile scale |
 | [SetText](Tile_SetText.md) | Method | Sets the tile text |
 | [Turn](Tile_Turn.md) | Method | Adds rotation to the tile |
