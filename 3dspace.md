@@ -12,7 +12,7 @@ To figure out where the coordinate (2, 2, 2) appears on the screen, we can start
 
 Draw this grid on paper and label the axes. Then pick five random 3D coordinates and draw and label where they should appear in the image. This is great practice, and you must be able to do this to develop 3D games.
 
-Can you picture a box that with dimensions of 2x2x2, with it's near lower-left corner at the origin?
+Can you picture a box that with dimensions of 2 x 2 x 2, with one corner at position (2, 2, 2) and another corner at the origin?
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/3dgrid_222box.png?raw=true)
 
