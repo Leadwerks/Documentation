@@ -6,3 +6,6 @@ To convert our 2D grid into a 3D grid, we just need to add one additional axis c
 
 I've also labeled and color-coded the positive and negative directions for each axis. Picture the postive Z axis going into the screen, and the negative Z axis coming out of the screen.
 
+## Coordinate System Handedness
+
+In the Leadwerks 3D coordinate system, positive X points to the right, positive Y points up, and positiue Z points forward. 
