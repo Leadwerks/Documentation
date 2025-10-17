@@ -20,4 +20,7 @@ Try drawing a few different boxes on a 3D grid on paper, and label the coordinat
 
 ## Coordinate System Handedness
 
-In the Leadwerks 3D coordinate system, positive X points to the right, positive Y points up, and positiue Z points forward. 
+In the Leadwerks 3D coordinate system, positive X points to the right, positive Y points up, and positiue Z points forward. This is a left-hand coordinate system. You can use your left hand to represent the direction of the X, Y, and Z axes, as shown below. Each extended finger points in the positive direction of the axis it represents.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/lefthandcoordsys.jpg?raw=true)
+
