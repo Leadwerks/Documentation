@@ -10,7 +10,7 @@ To figure out where the coordinate (2, 2, 2) appears on the screen, we can start
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/3dgrid_222.png?raw=true)
 
-Draw this grid on paper and label the axes. Then pick five random 3D coordinates and draw and label where they should appear in the image.
+Draw this grid on paper and label the axes. Then pick five random 3D coordinates and draw and label where they should appear in the image. This is great practice, and you must be able to do this to develop 3D games.
 
 ## Coordinate System Handedness
 
