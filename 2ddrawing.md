@@ -317,6 +317,8 @@ Text objects can be created with the [CreateTile](CreateTile.md) command. To cre
 
 You can specify the orientation a text tile has in the optional alignment parameter. TEXT_LEFT, TEXT_CENTER, and TEXT_RIGHT will control the horizontal alignment of the text, while TEXT_TOP, TEXT_MIDDLE, and TEXT_BOTTOM control the vertical alignment. Like rectangles, text tiles by default are oriented around their upper-left corner.
 
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/textalignment.png?raw=true)
+
 This example will create a text tile with its handle in the horizontal and vertical center, place it at the center of the screen, and rotate it continuously:
 
 ```lua
