@@ -2035,6 +2035,70 @@
                                 {
                                     "title": "CreateTile",
                                     "filename": "CreateTile"
+                                },
+                                {
+                                    "title": "GetColor",
+                                    "filename": "Tile_GetColor"
+                                },
+                                {
+                                    "title": "GetOrder",
+                                    "filename": "Tile_GetOrder"
+                                },
+                                {
+                                    "title": "GetMaterial",
+                                    "filename": "Tile_GetMaterial"
+                                },
+                                {
+                                    "title": "GetPosition",
+                                    "filename": "Tile_GetPosition"
+                                },
+                                {
+                                    "title": "GetRotation",
+                                    "filename": "Tile_GetRotation"
+                                },
+                                {
+                                    "title": "GetScale",
+                                    "filename": "Tile_GetScale"
+                                },
+                                {
+                                    "title": "MidHandle",
+                                    "filename": "Tile_MidHandle"
+                                },
+                                {
+                                    "title": "SetColor",
+                                    "filename": "Tile_SetColor"
+                                },
+                                {
+                                    "title": "SetHandle",
+                                    "filename": "Tile_SetHandle"
+                                },
+                                {
+                                    "title": "SetMaterial",
+                                    "filename": "Tile_SetMaterial"
+                                },
+                                {
+                                    "title": "SetOrder",
+                                    "filename": "Tile_SetOrder"
+                                },                                
+                                {
+                                    "title": "SetPosition",
+                                    "filename": "Tile_SetPosition"
+                                },
+                                {
+                                    "title": "SetRotation",
+                                    "filename": "Tile_SetRotation"
+                                },                            
+                                {
+                                    "title": "SetScale",
+                                    "filename": "Tile_SetScale"
+                                },
+                                {
+                                    "title": "SetText",
+                                    "filename": "Tile_SetText"
+                                },
+                                {
+                                    "title": "Turn",
+                                    "filename": "Tile_Turn"
                                 }
                             ]
                         },
