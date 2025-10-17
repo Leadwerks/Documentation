@@ -31,3 +31,9 @@ To determine the positive direction of rotation for each axis, we can use our le
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/lefthandrotation.jpg?raw=true)
 
 Since this image shows the thumb pointing up, in the positive direction of the Y axis, that means that increasing the rotation on the Y axis will make objects turn to the right.
+
+If you point your thumb in the positive direction of the X axis (left) your fingers curl downwards. The means increasing the X rotation will make an object that is facing forward turn downwards.
+
+If you point your thumb in the positive direction of the Z axis (forward) your fingers will curl up and to the left. That means increase the Z rotation of an object that is facing forward will make it tilt to the left.
+
+If you're ever confused about which direction of rotation is which, just use the left-hand rule.
