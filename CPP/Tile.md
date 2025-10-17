@@ -11,7 +11,6 @@ Base class: [Object](Object.md)
 | rotation | float | Read-only tile rotation |
 | scale | [Vec2](Vec2.md) | Read-only tile scale |
 | text | [WString](WString.md) | Read-only tile text |
-| [GetClipRegion](Tile_GetClipRegion.md) | Method | Sets the tile clipping rectangle |
 | [GetColor](Tile_GetColor.md) | Method | Gets the file color |
 | [GetOrder](Tile_GetOrder.md) | Method | Gets the file sort order |
 | [GetMaterial](Tile_GetMaterial.md) | Method | Gets the tile material |
@@ -19,7 +18,6 @@ Base class: [Object](Object.md)
 | [GetRotation](Tile_GetRotation.md) | Method | Gets the tile rotation |
 | [GetScale](Tile_GetScale.md) | Method | Gets the tile scale |
 | [MidHandle](Tile_MidHandle.md) | Method | Sets the tile offset to the center |
-| [SetClipRegion](Tile_SetClipRegion.md) | Method | Sets the tile clipping rectangle |
 | [SetColor](Tile_SetColor.md) | Method | Sets the tile color |
 | [SetHandle](Tile_SetHandle.md) | Method | Sets the tile offset |
 | [SetMaterial](Tile_SetMaterial.md) | Method | Sets the tile material |
