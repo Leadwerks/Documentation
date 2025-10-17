@@ -12,6 +12,12 @@ To figure out where the coordinate (2, 2, 2) appears on the screen, we can start
 
 Draw this grid on paper and label the axes. Then pick five random 3D coordinates and draw and label where they should appear in the image. This is great practice, and you must be able to do this to develop 3D games.
 
+Can you picture a box that with dimensions of 2x2x2, with it's near lower-left corner at the origin?
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/3dgrid_222box.png?raw=true)
+
+Try drawing a few different boxes on a 3D grid on paper. This will help you train your brain to think in 3D.
+
 ## Coordinate System Handedness
 
 In the Leadwerks 3D coordinate system, positive X points to the right, positive Y points up, and positiue Z points forward. 
