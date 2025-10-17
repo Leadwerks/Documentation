@@ -16,7 +16,7 @@ Can you picture a box that with dimensions of 2x2x2, with it's near lower-left c
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/3dgrid_222box.png?raw=true)
 
-Try drawing a few different boxes on a 3D grid on paper. This will help you train your brain to think in 3D.
+Try drawing a few different boxes on a 3D grid on paper, and label the coordinate of each corner of the box. This will help you train your brain to think in 3D.
 
 ## Coordinate System Handedness
 
