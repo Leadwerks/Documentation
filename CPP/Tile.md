@@ -28,3 +28,4 @@ Base class: [Object](Object.md)
 | [SetText](Tile_SetText.md) | Method | Sets the tile text |
 | [Turn](Tile_Turn.md) | Method | Adds rotation to the tile |
 | [CreateTile](CreateTile.md) | Function | Creates a new tile |
+| [LoadTile](LoadTile.md) | Function | Loads a new tile from an image |
