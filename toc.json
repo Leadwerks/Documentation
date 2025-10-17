@@ -134,10 +134,6 @@
                             "filename": "lighting"
                         },
                         {
-                            "title": "Adding the Player",
-                            "filename": "playercontrols"
-                        },
-                        {
                             "title": "3D Models",
                             "filename": "models"
                         },
