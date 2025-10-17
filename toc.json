@@ -2061,6 +2061,10 @@
                                     "filename": "Tile_GetScale"
                                 },
                                 {
+                                    "title": "LoadTile",
+                                    "filename": "LoadTile"
+                                },                                
+                                {
                                     "title": "MidHandle",
                                     "filename": "Tile_MidHandle"
                                 },
