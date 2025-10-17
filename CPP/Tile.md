@@ -12,8 +12,8 @@ Base class: [Object](Object.md)
 | scale | [Vec2](Vec2.md) | Read-only tile scale |
 | text | [WString](WString.md) | Read-only tile text |
 | [GetColor](Tile_GetColor.md) | Method | Gets the file color |
-| [GetOrder](Tile_GetOrder.md) | Method | Gets the file sort order |
 | [GetMaterial](Tile_GetMaterial.md) | Method | Gets the tile material |
+| [GetOrder](Tile_GetOrder.md) | Method | Gets the file sort order |
 | [GetPosition](Tile_GetPosition.md) | Method | Gets the tile position in 2D space |
 | [GetRotation](Tile_GetRotation.md) | Method | Gets the tile rotation |
 | [GetScale](Tile_GetScale.md) | Method | Gets the tile scale |
