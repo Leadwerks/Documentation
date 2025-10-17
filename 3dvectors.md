@@ -71,4 +71,8 @@ The result is a vector that points in the same direction as the first, but inste
 
 Unit vectors can be useful for multiplication operations if we want to make sure we don't change the length or the other vector.
 
+## Dot Product
+
+## Cross Product
+
 
