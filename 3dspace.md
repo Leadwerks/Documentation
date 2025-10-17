@@ -29,3 +29,5 @@ In the Leadwerks 3D coordinate system, positive X points to the right, positive 
 To determine the positive direction of rotation for each axis, we can use our left hand again. If you point your thumb in the positive direction of each axis like below, your fingers will curl around in the positive direction of rotation:
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/lefthandrotation.jpg?raw=true)
+
+Since this image shows the thumb pointing up, in the positive direction of the Y axis, that means that increasing the rotation on the Y axis will make objects turn to the right.
