@@ -65,6 +65,29 @@ The result is a vector that points in the same direction as the first, but inste
 
 ## Vector Addition and Subtraction
 
+You can add two vectors simply by adding each member together. This shows how to add vectors A and B to make a new vector called C:
+
+```txt
+C.x = A.x + B.x
+C.y = A.y + B.y
+C.z = A.z + B.z
+```
+
+With code, the operation looks like this:
+
+```lua
+A = Vec3(1, 2, 3)
+B = Vec3(2, 3, 1)
+
+C = A + B
+
+Print(C.x)
+Print(C.y)
+Print(C.z)
+```
+
+I don't usually think in numbers. Instead, I like to think in pictures. Adding vectors together visually is easy. All you have to do is connect one vector to the end of the other. Where you end up is the new vector:
+
 
 
 ## Vector Multiplication and Division
