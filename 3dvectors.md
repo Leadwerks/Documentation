@@ -66,9 +66,9 @@ The result is a vector that points in the same direction as the first, but inste
 ## Vector Addition and Subtraction
 
 
- Unit vectors can be useful for multiplication operations if we want to make sure we don't change the length or the other vector.
 
 ## Vector Multiplication and Division
 
+Unit vectors can be useful for multiplication operations if we want to make sure we don't change the length or the other vector.
 
 
