@@ -1,6 +1,6 @@
 # WString
 
-Base class: [Object](Object.md), std::wstring
+Base class: [Object](Object.md)
 
 This class provides an interface for manipulating wide unicode text strings. This class is preferable because it can support all characters.
 
