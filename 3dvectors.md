@@ -120,6 +120,10 @@ We can perform this in one line of code like this:
 C = A * B
 ```
 
+Vector multiplication can be visualized as stretching or compressing the X, Y, and Z components of one vector by the other:
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/vectormultiplication.png?raw=true)
+
 We can also multiply a vector by a single number:
 
 ```lua
