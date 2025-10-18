@@ -88,7 +88,7 @@ Print(C.z)
 
 I don't usually think in numbers. Instead, I like to think in pictures. Adding vectors together visually is easy. All you have to do is connect one vector to the end of the other. Where you end up is the new vector:
 
-
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/vectoraddition.png?raw=true)
 
 ## Vector Multiplication and Division
 
