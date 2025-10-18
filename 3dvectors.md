@@ -104,14 +104,58 @@ I don't usually think in numbers. Instead, I like to think in pictures. Adding v
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/vectoraddition.png?raw=true)
 
-## Vector Multiplication and Division
+## Vector Multiplication
 
-Unit vectors can be useful for multiplication operations if we want to make sure we don't change the length or the other vector.
+Just like addition, vector multiplication can be performed by multiplying each vector component together:
 
-### Inverse Vectors
+```txt
+C.x = A.x * B.x
+C.y = A.y * B.y
+C.z = A.z * B.z
+```
+
+We can perform this in one line of code like this:
+
+```lua
+C = A * B
+```
+
+We can also multiply a vector by a single number:
+
+```lua
+A = B * 2
+```
+
+This is the exact same thing as multiplying a vector by another vector that has the same value for X, Y, and Z:
+
+```lua
+A = B * Vec3(2)
+```
+
+Vector multiplication has many uses. To slow a moving object down, we can just multiply its velocity by some number between zero and one, like 0.1. This will gradually lower the velocity:
+
+```
+velocity = velocity * 0.1
+```
+
+We can use multiplication to make colors brighter or darker:
+
+```
+red = Vec3(1,0,0)
+darkred = red * 0.5
+```
+
+We can also use multiplication to flip one vector component:
+
+```
+direction = direction * Vec3(-1,1,1)
+```
+
+If we multiply the entire vector by -1, we get a vector pointing in the exact opposite direction.
 
 ## Dot Product
 
-## Cross Product
+
 
 ## Reflection
+
