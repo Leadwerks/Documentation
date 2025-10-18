@@ -1,4 +1,4 @@
-# Tile::GetRotation
+# Tile:GetRotation
 
 This method gets the tile rotation.
 
