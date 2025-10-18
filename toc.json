@@ -2065,6 +2065,10 @@
                                     "filename": "Tile_MidHandle"
                                 },
                                 {
+                                    "title": "Move",
+                                    "filename": "Tile_Move"
+                                },                                
+                                {
                                     "title": "SetColor",
                                     "filename": "Tile_SetColor"
                                 },
