@@ -22,6 +22,12 @@ This function creates a new tile for 2D drawing. Tiles can be rectangles or text
 | alignment | text alignment, can be any combination of TEXT_LEFT, TEXT_CENTER, TEXT_RIGHT, TEXT_TOP, TEXT_MIDDLE, and TEXT_BOTTOM |
 | linespacing | text spacing between multiple lines of text |
 
+## Remarks
+
+The text alignment flags can be used to control the orientation of the text around the tile handle. The default orientation is top-left.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/textalignment.png?raw=true)
+
 ## Returns
 
 Returns a new tile.
