@@ -26,21 +26,29 @@ The length of a vector is easy to calculate. We just take the X, Y, and Z length
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/vectorlength.svg?raw=true)
 
-This is a formula you should know by heart, and be able to draw out on paper with the help of a calculator.
+This is a formula you should know by heart, and be able to draw out on paper with the help of a calculator. In code, it would look like this:
+
+```lua
+v = Vec3(3, 4, 0)
+l = Sqrt(v.x * v.x + v.y * v.y + v.z * v.z)
+Print(l)
+```
 
 The Vec3 class includes a method that tells uses this forumula to get the length of any 3D vector:
 
 ```lua
-v = Vec3(-2, 4, 0)
+v = Vec3(3, 4, 0)
 l = v:Length()
 Print(l)
 ```
 
-This tells us that the length of this vector is exactly 4.47214.
+This tells us that the length of this vector is exactly 5 units.
 
 ## Normalizing Vectors
 
-Sometimes we want to keep the same direction, but rescale a vector so that its length is exactly one. In mathematics, a vector with a length of one is called is called a _unit vector_.
+Sometimes we want to keep the same direction, but rescale a vector so that its length is exactly one. In mathematics, a vector with a length of one is called is called a _unit vector_. In computer graphics, a unit vector is also called a _normal_, and they have many uses. For example, mesh vertex normals tell the lighting system which direction the surface faces at each vertex and are used for lighting.
+
+
 
 The Vec3 class has a method that will returned a normalized version of any vector:
 
