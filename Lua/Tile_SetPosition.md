@@ -1,6 +1,6 @@
 # Tile:SetPosition
 
-This method sets the tile position in 2D space. A third Z parameter can be used for sorting tiles.
+This method sets the tile position in 2D space. The Z position can be used for sorting tiles.
 
 ## Syntax
 
