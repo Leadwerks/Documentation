@@ -4,8 +4,8 @@ This function loads a tile from an image file. The image will be applied to the 
 
 ## Syntax
 
-- shared_ptr<[Tile](Tile,md)\> **LoadTile**(shared_ptr<[Camera](Camera.md)\> camera, [WString](WString.md) path, LoadFlags flags = LOAD_DEFAULT)
-- shared_ptr<[Tile](Tile,md)\> **LoadTile**(shared_ptr<[World](World.md)\> world, [WString](WString.md) path, LoadFlags flags = LOAD_DEFAULT)
+- shared_ptr<[Tile](Tile.md)\> **LoadTile**(shared_ptr<[Camera](Camera.md)\> camera, [WString](WString.md) path, LoadFlags flags = LOAD_DEFAULT)
+- shared_ptr<[Tile](Tile.md)\> **LoadTile**(shared_ptr<[World](World.md)\> world, [WString](WString.md) path, LoadFlags flags = LOAD_DEFAULT)
 
 | Parameter | Description |
 |--|--|
