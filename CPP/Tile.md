@@ -18,6 +18,7 @@ Base class: [Object](Object.md)
 | [GetRotation](Tile_GetRotation.md) | Method | Gets the tile rotation |
 | [GetScale](Tile_GetScale.md) | Method | Gets the tile scale |
 | [MidHandle](Tile_MidHandle.md) | Method | Sets the tile offset to the center |
+| [Move](Tile_Move.md) | Method | Moves the tile in 2D space |
 | [SetColor](Tile_SetColor.md) | Method | Sets the tile color |
 | [SetHandle](Tile_SetHandle.md) | Method | Sets the tile offset |
 | [SetMaterial](Tile_SetMaterial.md) | Method | Sets the tile material |
