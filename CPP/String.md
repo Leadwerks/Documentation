@@ -2,7 +2,7 @@
 
 The String class provides an interface for manipulating ASCII text strings.
 
-Base class: [Object](Object.md), std::string
+Base class: [Object](Object.md)
 
 | Property | Type | Description |
 |---|---|---|
