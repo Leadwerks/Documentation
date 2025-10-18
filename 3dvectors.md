@@ -22,7 +22,13 @@ You can think of a Vec3 as either a point in space, or a line from the origin to
 
 ## Vector Length
 
-The Vec3 class includes a method that tells us the length of any 3D vector:
+The length of a vector is easy to calculate. We just have to take the X, Y, and Z lengths, square each one, add them together, and take the square root:
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/vectorlength.svg?raw=true)
+
+This is a formula you should know by heart, and be able to draw out on paper with the help of a calculator.
+
+The Vec3 class includes a method that tells uses this forumula to get the length of any 3D vector:
 
 ```lua
 v = Vec3(-2, 4, 0)
