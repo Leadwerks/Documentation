@@ -4,8 +4,8 @@ This function loads a tile from an image file. The image will be applied to the 
 
 ## Syntax
 
-- [Tile](Tile,md) **LoadTile**([Camera](Camera.md) camera, string path, number flags = LOAD_DEFAULT)
-- [Tile](Tile,md) **LoadTile**([World](World.md) world, string path, number flags = LOAD_DEFAULT)
+- [Tile](Tile.md) **LoadTile**([Camera](Camera.md) camera, string path, number flags = LOAD_DEFAULT)
+- [Tile](Tile.md) **LoadTile**([World](World.md) world, string path, number flags = LOAD_DEFAULT)
 
 | Parameter | Description |
 |--|--|
