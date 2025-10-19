@@ -1,6 +1,6 @@
 # Camera::SetFogColor
 
-This method controls the color of the camera fog distance effect. 
+This method controls the color of the camera distance fog effect. 
 
 ## Syntax
 
