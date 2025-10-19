@@ -1,6 +1,6 @@
 # Camera::GetFogRange
 
-This method gets the camera fog color.
+This method gets the camera fog range.
 
 ## Syntax
 
@@ -8,4 +8,4 @@ This method gets the camera fog color.
 
 ## Returns
 
-Returns the camera distance fog color.
+Returns the camera distance at which the camera fog effect begins, and the distance at which is reaches its maximum density.
