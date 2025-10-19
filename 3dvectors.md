@@ -156,6 +156,102 @@ If the two vectors point in the exact opposite directions, their dot product wil
 
 If the two vector are perpindicular (they form a 90 degree angle), their dot product will be zero.
 
+```lua
+--Get the displays
+local displays = GetDisplays()
+
+--Create a window
+local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_TITLEBAR | WINDOW_CENTER)
+
+--Create a framebuffer
+local framebuffer = CreateFramebuffer(window)
+
+--Create a world
+local world = CreateWorld()
+world:SetAmbientLight(1)
+
+--Create a camera
+local camera = CreateCamera(world)
+camera:SetClearColor(0.125)
+camera:SetRotation(35,0,0)
+camera:Move(0,0,-40)
+
+local ship = LoadModel(world, "https://github.com/Leadwerks/Documentation/raw/refs/heads/master/Assets/Models/Spaceship/spaceship.mdl")
+
+local viewcone = CreateCone(world, 20, 20)
+viewcone:SetRotation(-90,0,0)
+viewcone:SetPosition(0,0,10)
+viewcone:SetParent(ship)
+viewcone:SetColor(2,2,0,0.5)
+viewcone:SetScale(1,1,0.01)
+
+local mtl = CreateMaterial()
+mtl:SetTransparent(true)
+viewcone:SetMaterial(mtl)
+
+local enemy = CreateBox(world)
+enemy:SetPosition(0,0,10)
+
+local angleindicator1 = CreateBox(world)
+local angleindicator2 = CreateBox(world)
+angleindicator1:SetColor(1,1,0)
+angleindicator2:SetColor(1,1,0)
+
+local font = LoadFont("Fonts/arial.ttf")
+local label = CreateTile(camera, font, "Dot Product: 0")
+
+--Main loop
+while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
+	
+	--Simple movement controls
+	if window:KeyDown(KEY_RIGHT) then ship:Turn(0,1,0) end
+	if window:KeyDown(KEY_LEFT) then ship:Turn(0,-1,0) end
+	if window:KeyDown(KEY_UP) then ship:Move(0,0,0.1) end
+	if window:KeyDown(KEY_DOWN) then ship:Move(0,0,-0.1) end
+	
+	--Make the camera follow the ship
+	--camera:SetPosition(ship.position)
+	--camera:SetRotation(0, MixAngle(camera.rotation.y, ship.rotation.y, 0.05), 0)
+	camera:SetPosition(0,0,0)
+	camera:SetRotation(0,0,0)
+	camera:Turn(90,0,0)
+	camera:Move(0,0,-15)
+	
+	--Get the vector between the ship and box positions
+	local deltaposition = enemy.position - ship.position
+	
+	angleindicator1:SetPosition((ship.position + enemy.position) * 0.5)
+	angleindicator1:SetScale(0.1, 0.1, deltaposition:Length())
+	angleindicator1:AlignToVector(deltaposition)
+
+	deltaposition = deltaposition:Normalize()
+	
+	--Get the ship forward direction
+	local dir = TransformNormal(0, 0, 1, ship, nil)
+	
+	angleindicator2:SetPosition(ship.position + dir * 5)
+	angleindicator2:SetScale(0.1, 0.1, 10)
+	angleindicator2:AlignToVector(dir)
+	
+	--Get the dot product of these two vectors
+	local d = dir:Dot(deltaposition)
+	
+	if d < Sin(45) then
+		enemy:SetColor(0,1,0)
+	else
+		enemy:SetColor(1,0,0)		
+	end
+	
+	label:SetText("Dot product: "..tostring(d))
+	
+    --Update the world
+    world:Update()
+	
+    --Render the world
+    world:Render(framebuffer)
+end
+```
+
 ## Reflection
 
 The Vec3 class has another method called [Reflect](Vec3_Reflect.md). This gives a reflection angle, given a trajectory and the normal of a face it is bouncing off of.
