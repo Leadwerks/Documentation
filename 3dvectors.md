@@ -156,6 +156,7 @@ If the two vectors point in the exact opposite directions, their dot product wil
 
 If the two vector are perpindicular (they form a 90 degree angle), their dot product will be zero.
 
+
 ```lua
 --Get the displays
 local displays = GetDisplays()
@@ -250,6 +251,12 @@ while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
     --Render the world
     world:Render(framebuffer)
 end
+```
+
+Note that a dot product can be converted into an angle value using the [ACos](ACos.md) function:
+
+```lua
+angle = ACos(A:Dot(B))
 ```
 
 ## Reflection
