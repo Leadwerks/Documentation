@@ -440,6 +440,22 @@
                                     "filename": "CreateCamera"
                                 },
                                 {
+                                    "title": "GetFog",
+                                    "filename": "Camera_GetFog"
+                                },
+                                {
+                                    "title": "GetFogAngle",
+                                    "filename": "Camera_GetFogAngle"
+                                },
+                                {
+                                    "title": "GetFogColor",
+                                    "filename": "Camera_GetFogColor"
+                                },
+                                {
+                                    "title": "GetFogRange",
+                                    "filename": "Camera_GetFogRange"
+                                },
+                                {
                                     "title": "GetFov",
                                     "filename": "Camera_GetFov"
                                 },
@@ -492,12 +508,12 @@
                                     "filename": "Camera_SetFogColor"
                                 },
                                 {
-                                    "title": "SetFov",
-                                    "filename": "Camera_SetFov"
-                                },
-                                {
                                     "title": "SetFogRange",
                                     "filename": "Camera_SetFogRange"
+                                },
+                                {
+                                    "title": "SetFov",
+                                    "filename": "Camera_SetFov"
                                 },
                                 {
                                     "title": "SetMsaa",
