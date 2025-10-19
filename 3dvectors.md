@@ -179,9 +179,9 @@ camera:Move(0,0,-40)
 
 local ship = LoadModel(world, "https://github.com/Leadwerks/Documentation/raw/refs/heads/master/Assets/Models/Spaceship/spaceship.mdl")
 
-local viewcone = CreateCone(world, 20, 20)
+local viewcone = CreateCone(world, 100, 100)
 viewcone:SetRotation(-90,0,0)
-viewcone:SetPosition(0,0,10)
+viewcone:SetPosition(0,0,50)
 viewcone:SetParent(ship)
 viewcone:SetColor(2,2,0,0.5)
 viewcone:SetScale(1,1,0.01)
@@ -199,7 +199,9 @@ angleindicator1:SetColor(1,1,0)
 angleindicator2:SetColor(1,1,0)
 
 local font = LoadFont("Fonts/arial.ttf")
-local label = CreateTile(camera, font, "Dot Product: 0")
+local label1 = CreateTile(camera, font, "")
+local label2 = CreateTile(camera, font, "")
+label2:SetPosition(0,20)
 
 --Main loop
 while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
@@ -237,13 +239,18 @@ while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
 	--Get the dot product of these two vectors
 	local d = dir:Dot(deltaposition)
 	
-	if d < Sin(45) then
+	--Convert the dot product into an angle
+	local a = ACos(d)
+	
+	--Compare the angle to the max viewing angle of 45 degrees
+	if a < 45 then
 		enemy:SetColor(0,1,0)
 	else
 		enemy:SetColor(1,0,0)		
 	end
 	
-	label:SetText("Dot product: "..tostring(d))
+	label1:SetText("Dot product: "..tostring(d))
+	label2:SetText("Angle: "..tostring(Round(a)))
 	
     --Update the world
     world:Update()
