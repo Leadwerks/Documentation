@@ -4,7 +4,7 @@ This method sets the camera fog mode, for showing distance fog.
 
 ## Syntax
 
-- **SetFog**(bool mode)
+- void **SetFog**(bool mode)
 
 | Parameter | Description |
 |---|---|
