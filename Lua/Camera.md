@@ -10,6 +10,10 @@ The camera class is an entity used to render the world.
 | -------------------- | -------- | ---------------------------------------------------- |
 | [AddPostEffect](Camera_AddPostEffect.md) | Method | Adds a post-processing effect to the post-processing effects stack. | 
 | [ClearPostEffects](ClearPostEffects.md) | Method | Clears the post-processing effects stack. |
+| [GetFog](Camera_GetFog.md) | Method | returns the camera fog mode |
+| [GetFogAngle](Camera_GetFogAngle.md) | Method | returns the camera fog angle on the horizone |
+| [GetFogColor](Camera_GetFogColor.md) | Method | returns the camera fog color |
+| [GetFogRange](Camera_GetFogRange.md) | Method | returns the camera fog distance |
 | [GetFov](Camera_GetFov.md) | Method | returns the camera field-of-view |
 | [GetProjectionMode](Camera_GetProjectionMode.md) | Method | returns the camera projection mode |
 | [GetRange](Camera_GetRange.md) | Method | returns the camera near and far range |
