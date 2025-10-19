@@ -148,7 +148,15 @@ If we multiply a vector by negative one, the resulting vector points in the oppo
 
 ## Dot Product
 
+The Vec3 class has a special method called [Dpt](Vec3_Dot.md), which gives the dot product of two vectors. The dot product is a measure of how "alike" the direction of two vectors is.
 
+If the two vectors point in the same exact direction, their dot product will be one.
+
+If the two vectors point in the exact opposite directions, their dot product will be negative one.
+
+If the two vector are perpindicular (they form a 90 degree angle), their dot product will be zero.
 
 ## Reflection
+
+The Vec3 class has another method called [Reflect](Vec3_Reflect.md). This gives a reflection angle, given a trajectory and the normal of a face it is bouncing off of.
 
