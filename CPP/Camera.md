@@ -19,6 +19,9 @@ The camera class is an entity used to render the world.
 | [SetClearColor](Camera_SetClearColor.md) | Method | sets the color to clear the screen with |
 | [SetClearMode](Camera_SetClearMode.md) | Method | controls color and depth clearing |
 | [SetDepthPrepass](Camera_SetDepthPrepass.md) | Method | sets the camera depth pre-pass mode |
+| [SetFog](Camera_SetFog.md) | Method | sets the camera fog mode |
+| [SetFogAngle](Camera_SetFogAngle.md) | Method | sets the camera fog angle on the horizone |
+| [SetFogColor](Camera_SetFogColor.md) | Method | sets the camera fog color |
 | [SetFov](Camera_SetFov.md) | Method | sets the camera field of view |
 | [SetMsaa](Camera_SetMsaa.md) | Method | sets the camera antialias mode |
 | [SetOrder](Camera_SetOrder.md) | Method | sets the camera draw order |
@@ -27,6 +30,7 @@ The camera class is an entity used to render the world.
 | [SetRealtime](Camera_SetRealtime.md) | Method | sets realtime rendering mode |
 | [SetRefraction](Camera_SetRefraction.md) | Method | enables or disables transparency refraction |
 | [SetRenderTarget](Camera_SetRenderTarget.md) | Method | for render-to-texture |
+| [SetSsr](Camera_SetSsr.md) | Method | sets the camera screen-space reflection mode |
 | [SetSweptCulling](Camera_SetSweptCulling.md) | Method | sets camera swept culling mode |
 | [SetTessellation](Camera_SetTessellation.md) | Method | sets camera tessellation density |
 | [SetUniform](Camera_SetUniform.md) | Method | sets a value in a post-processing shader |
