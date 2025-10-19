@@ -22,7 +22,7 @@ The camera class is an entity used to render the world.
 | [SetFog](Camera_SetFog.md) | Method | sets the camera fog mode |
 | [SetFogAngle](Camera_SetFogAngle.md) | Method | sets the camera fog angle on the horizone |
 | [SetFogColor](Camera_SetFogColor.md) | Method | sets the camera fog color |
-| [SetFogRange](Camera_SetFogRange.md) | Method | sets the camera fog start and stop range |
+| [SetFogRange](Camera_SetFogRange.md) | Method | sets the camera fog distance |
 | [SetFov](Camera_SetFov.md) | Method | sets the camera field of view |
 | [SetMsaa](Camera_SetMsaa.md) | Method | sets the camera antialias mode |
 | [SetOrder](Camera_SetOrder.md) | Method | sets the camera draw order |
