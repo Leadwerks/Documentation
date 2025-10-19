@@ -480,6 +480,18 @@
                                     "filename": "Camera_SetDepthPrepass"
                                 },
                                 {
+                                    "title": "SetFog",
+                                    "filename": "Camera_SetFog"
+                                },
+                                {
+                                    "title": "SetFogAngle",
+                                    "filename": "Camera_SetFogAngle"
+                                },
+                                {
+                                    "title": "SetFogColor",
+                                    "filename": "Camera_SetFogColor"
+                                },
+                                {
                                     "title": "SetFov",
                                     "filename": "Camera_SetFov"
                                 },
@@ -510,6 +522,10 @@
                                 {
                                     "title": "SetRenderTarget",
                                     "filename": "Camera_SetRenderTarget"
+                                },
+                                {
+                                    "title": "SetSsr",
+                                    "filename": "Camera_SetSsr"
                                 },
                                 {
                                     "title": "SetSweptCulling",
