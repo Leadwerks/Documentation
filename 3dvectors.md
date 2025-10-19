@@ -120,10 +120,6 @@ We can perform this in one line of code like this:
 C = A * B
 ```
 
-Vector multiplication can be visualized as stretching or compressing the X, Y, and Z components of one vector by the other:
-
-![](https://github.com/UltraEngine/Documentation/blob/master/Images/vectormultiplication.png?raw=true)
-
 We can also multiply a vector by a single number:
 
 ```lua
@@ -136,26 +132,11 @@ This is the exact same thing as multiplying a vector by another vector that has 
 A = B * Vec3(2)
 ```
 
-Vector multiplication has many uses. To slow a moving object down, we can just multiply its velocity by some number between zero and one, like 0.1. This will gradually lower the velocity:
+Vector multiplication is not as intuitive to visualize, but fortunately usually only use it for a couple of simple situations:
+- Making a vector longer or shorter
+- Inverting the vector
 
-```
-velocity = velocity * 0.1
-```
-
-We can use multiplication to make colors brighter or darker:
-
-```
-red = Vec3(1,0,0)
-darkred = red * 0.5
-```
-
-We can also use multiplication to flip one vector component:
-
-```
-direction = direction * Vec3(-1,1,1)
-```
-
-If we multiply the entire vector by -1, we get a vector pointing in the exact opposite direction.
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/vectormultiplication.png?raw=true)
 
 ## Dot Product
 
