@@ -5,7 +5,6 @@ This function increments one angle towards a target angle at a steady rate, usin
 ## Syntax
 
 - float **Step**(const float start, const float stop, const float amount)
-- double **Step**(const double start, const double stop, const double amount)
 
 | Parameter | Description |
 |---|---|
