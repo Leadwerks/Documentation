@@ -1,0 +1,23 @@
+{
+	"metadata":
+	{
+		"materialfiles":
+		[
+			"./Material.mat"
+		],
+		"model":
+		{
+			"indices": 67896,
+			"limbs": 5,
+			"materials": 1,
+			"meshes": 1,
+			"primitives": 22632,
+			"textureextensions":
+			[
+				"jpeg",
+				"png"
+			],
+			"vertices": 27335
+		}
+	}
+}
