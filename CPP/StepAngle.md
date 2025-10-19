@@ -1,6 +1,6 @@
-# Step
+# StepAngle
 
-This function increments one value towards a target at a steady rate.
+This function increments one angle towards a target angle at a steady rate, using the shortest possible distance.
 
 ## Syntax
 
@@ -9,10 +9,10 @@ This function increments one value towards a target at a steady rate.
 
 | Parameter | Description |
 |---|---|
-| start | beginning value |
-| stop | destination value |
+| start | beginning angle |
+| stop | destination angle |
 | amount | maximum distance to move |
 
 ## Returns
 
-Returns the incremented value. If the difference between the values is less than *amount* then *stop* will be returned.
+Returns the incremented angle. If the difference between the angles is less than *amount* then *stop* will be returned.
