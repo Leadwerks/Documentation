@@ -496,6 +496,10 @@
                                     "filename": "Camera_SetFov"
                                 },
                                 {
+                                    "title": "SetFogRange",
+                                    "filename": "Camera_SetFogRange"
+                                },
+                                {
                                     "title": "SetMsaa",
                                     "filename": "Camera_SetMsaa"
                                 },                                
