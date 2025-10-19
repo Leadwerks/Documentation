@@ -133,8 +133,16 @@ A = B * Vec3(2)
 ```
 
 Vector multiplication is not as intuitive to visualize, but fortunately usually only use it for a couple of simple situations:
-- Making a vector longer or shorter
-- Inverting the vector
+
+### Scaling a Vector
+
+We can make a vector longer or short by multiplying it by some scaling value:
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/vectormultiplication2.png?raw=true)
+
+### Inverting a Vector
+
+If we multiply a vector by negative one, the resulting vector points in the opposite direction, while retaining the same length:
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/vectormultiplication.png?raw=true)
 
