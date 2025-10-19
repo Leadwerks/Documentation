@@ -5,7 +5,6 @@ This function performs a linear interpolation between two angles and returns the
 ## Syntax
 
 - float **MixAngle**(const float angle0, const float angle1, const float d)
-- double **MixAngle**(const double angle0, const double angle1, const double d)
 
 | Parameter | Description |
 | --- | --- |
