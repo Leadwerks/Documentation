@@ -8,7 +8,56 @@ We already saw rotation in 2D space, as a single angle. In 3D space we have a ty
 
 Unfortunately, Euler angles do not give us a complete definition of rotation that works in all situations. As an object pitches up or down approaching +/- 90 degrees, yaw and roll start rotating around the same axis. When we get near this pitch, our math stops working.
 
+```lua
+--Get the displays
+local displays = GetDisplays()
 
+--Create a window
+local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_TITLEBAR | WINDOW_CENTER)
+
+--Create a framebuffer
+local framebuffer = CreateFramebuffer(window)
+
+--Create a world
+local world = CreateWorld()
+world:SetAmbientLight(1)
+
+--Create a camera
+local camera = CreateCamera(world)
+camera:SetClearColor(0.125)
+camera:Move(0,0,-2)
+
+local ship = LoadModel(world, "https://github.com/Leadwerks/Documentation/raw/refs/heads/master/Assets/Models/Spaceship/spaceship.mdl")
+
+local font = LoadFont("Fonts/arial.ttf")
+local label = CreateTile(camera, font, "Rotation:")
+
+--Main loop
+while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
+
+	if window:KeyDown(KEY_RIGHT) then ship:SetRotation(ship.rotation.x, ship.rotation.y + 1, ship.rotation.z) end
+	if window:KeyDown(KEY_LEFT) then ship:SetRotation(ship.rotation.x, ship.rotation.y - 1, ship.rotation.z) end
+		
+	if window:KeyDown(KEY_UP) then ship:SetRotation(ship.rotation.x - 1, ship.rotation.y, ship.rotation.z) end
+	if window:KeyDown(KEY_DOWN) then ship:SetRotation(ship.rotation.x + 1, ship.rotation.y, ship.rotation.z) end
+		
+	if window:KeyDown(KEY_Q) then ship:SetRotation(ship.rotation.x, ship.rotation.y, ship.rotation.z + 1) end
+	if window:KeyDown(KEY_A) then ship:SetRotation(ship.rotation.x, ship.rotation.y, ship.rotation.z - 1) end
+	
+	--Recalculate the Euler rotation from the quaternion to force reset rotation
+	local r = ship:GetQuaternion()
+	r = r:ToEuler()
+	ship:SetRotation(r)
+	
+	label:SetText("Rotation: "..tostring(r.x)..", "..tostring(r.y)..", "..tostring(r.z))
+
+    --Update the world
+    world:Update()
+	
+    --Render the world
+    world:Render(framebuffer)
+end
+```
 
 ## Quaternions
 
