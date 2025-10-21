@@ -53,6 +53,14 @@ end
 
 Parenting allows us to create complex assemblies of objects that move in a natural way.
 
+We can access all the children an entity has parented to it with the _kids_ array:
+
+```lua
+for n = 1, #entity.kids do
+	Print("Child "..tostring(n)..", name: "..entity.kids[n].name)
+end
+```
+
 ## Transforming a Point
 
 One of the most powerful techniques in 3D games is the ability to transform points, vectors, and other data from one entity's space to another.
