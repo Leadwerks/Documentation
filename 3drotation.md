@@ -122,7 +122,7 @@ end
 
 ### Spherical Linear Interpolation
 
-The major advantage of quaternions is they can be used to smoothly interpolate between any two rotations, always using the shortest distance. This provides fluid natural looking rotation that looks great in games.
+Another major advantage of quaternions is they can be used to smoothly interpolate between any two rotations, always using the shortest distance. This provides fluid natural looking rotation that looks great in games.
 
 ```lua
 --Get the displays
