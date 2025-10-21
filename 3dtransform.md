@@ -1,10 +1,6 @@
 # Hierarchies and Space Transformations
 
-One of the most powerful techniques in 3D games is the ability to transform points, vectors, and other data from one entity's space to another.
-
-You can think of space transformations as data relative to another entity. For example, if an entity is positioned at (10,0,0), and its not rotated, what would the position (11,0,0) be relative to that entity? The answer is (1,0,0).
-
-If the entity was positioned at (10,0,0) and its rotation was (0,180,0), the position (11,0,0) relative to the entity would be (-1,0,0), since the entity is spun around 180 degrees.
+In Leadwerks, we can "parent" one entity to another. This will make it so when the parent entity moves or rotates, the child will move with it, as if it is stuck to the parent:
 
 ```lua
 --Get the displays
@@ -55,7 +51,15 @@ while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
 end
 ```
 
+Parenting allows us to create complex assemblies of objects that move in a natural way.
+
 ## Transforming a Point
+
+One of the most powerful techniques in 3D games is the ability to transform points, vectors, and other data from one entity's space to another.
+
+You can think of space transformations as data relative to another entity. For example, if an entity is positioned at (10,0,0), and its not rotated, what would the position (11,0,0) be relative to that entity? The answer is (1,0,0).
+
+If the entity was positioned at (10,0,0) and its rotation was (0,180,0), the position (11,0,0) relative to the entity would be (-1,0,0), since the entity is spun around 180 degrees.
 
 
 ## Transforming a Normal
