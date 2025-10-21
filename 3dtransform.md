@@ -6,6 +6,55 @@ You can think of space transformations as data relative to another entity. For e
 
 If the entity was positioned at (10,0,0) and its rotation was (0,180,0), the position (11,0,0) relative to the entity would be (-1,0,0), since the entity is spun around 180 degrees.
 
+```lua
+--Get the displays
+local displays = GetDisplays()
+
+--Create a window
+local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_TITLEBAR | WINDOW_CENTER)
+
+--Create a framebuffer
+local framebuffer = CreateFramebuffer(window)
+
+--Create a world
+local world = CreateWorld()
+world:SetAmbientLight(1)
+
+--Create a camera
+local camera = CreateCamera(world)
+camera:SetClearColor(0.125)
+camera:Turn(35,0,0)
+camera:Move(0,0,-3)
+
+--Load a model
+local ship = LoadModel(world, "https://github.com/Leadwerks/Documentation/raw/refs/heads/master/Assets/Models/Spaceship/spaceship.mdl")
+
+--Create a box
+local box = CreateBox(world, 2, 0.25, 0.1)
+
+--Move the box forward a bit
+box:SetPosition(0,0,1.5)
+
+--Attach the box to the ship
+box:SetParent(ship)
+
+--Main loop
+while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
+	
+	--Rotate the ship around its Y axis
+	ship:Turn(0,1,0)
+	
+	--Rotate the box around its Z axis
+	box:Turn(0,0,10)
+
+    --Update the world
+    world:Update()
+	
+    --Render the world
+    world:Render(framebuffer)
+end
+```
+
 ## Transforming a Point
 
 
