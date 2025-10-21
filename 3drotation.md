@@ -69,6 +69,57 @@ Quaternions are a more advanced definition of rotation that don't have the ambig
 
 Any time you set an entity's rotation using Euler angles, Leadwerks will calculate and store the correponding quaternion rotation.
 
+The [Entity:Turn](Entity_Turn.md) method will use the interally stored quaternion to apply rotation to the entity's current rotation, always producing a correct result:
+
+```lua
+--Get the displays
+local displays = GetDisplays()
+
+--Create a window
+local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_TITLEBAR | WINDOW_CENTER)
+
+--Create a framebuffer
+local framebuffer = CreateFramebuffer(window)
+
+--Create a world
+local world = CreateWorld()
+world:SetAmbientLight(1)
+
+--Create a camera
+local camera = CreateCamera(world)
+camera:SetClearColor(0.125)
+camera:Move(0,0,-2)
+
+local ship = LoadModel(world, "https://github.com/Leadwerks/Documentation/raw/refs/heads/master/Assets/Models/Spaceship/spaceship.mdl")
+
+local font = LoadFont("Fonts/arial.ttf")
+local label = CreateTile(camera, font, "Rotation:")
+
+--Main loop
+while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
+	
+	--Key controls rotate the ship
+	if window:KeyDown(KEY_RIGHT) then ship:Turn(0,1,0) end
+	if window:KeyDown(KEY_LEFT) then ship:Turn(0,-1,0) end
+		
+	if window:KeyDown(KEY_W) then ship:Turn(-1,0,0) end
+	if window:KeyDown(KEY_S) then ship:Turn(1,0,0) end
+		
+	if window:KeyDown(KEY_A) then ship:Turn(0,0,1) end
+	if window:KeyDown(KEY_D) then ship:Turn(0,0,-1) end
+	
+	--Display the rotation
+	r = ship.rotation
+	label:SetText("Rotation: "..tostring(r.x)..", "..tostring(r.y)..", "..tostring(r.z))
+
+    --Update the world
+    world:Update()
+	
+    --Render the world
+    world:Render(framebuffer)
+end
+```
+
 ### Spherical Linear Interpolation
 
 The major advantage of quaternions is they can be used to smoothly interpolate between any two rotations, always using the shortest distance. This provides fluid natural looking rotation that looks great in games.
