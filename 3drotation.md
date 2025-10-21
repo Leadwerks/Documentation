@@ -34,21 +34,25 @@ local label = CreateTile(camera, font, "Rotation:")
 
 --Main loop
 while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
-
-	if window:KeyDown(KEY_RIGHT) then ship:SetRotation(ship.rotation.x, ship.rotation.y + 1, ship.rotation.z) end
-	if window:KeyDown(KEY_LEFT) then ship:SetRotation(ship.rotation.x, ship.rotation.y - 1, ship.rotation.z) end
-		
-	if window:KeyDown(KEY_UP) then ship:SetRotation(ship.rotation.x - 1, ship.rotation.y, ship.rotation.z) end
-	if window:KeyDown(KEY_DOWN) then ship:SetRotation(ship.rotation.x + 1, ship.rotation.y, ship.rotation.z) end
-		
-	if window:KeyDown(KEY_Q) then ship:SetRotation(ship.rotation.x, ship.rotation.y, ship.rotation.z + 1) end
-	if window:KeyDown(KEY_A) then ship:SetRotation(ship.rotation.x, ship.rotation.y, ship.rotation.z - 1) end
 	
-	--Recalculate the Euler rotation from the quaternion to force reset rotation
+	--Get the quaternion rotation and convert to a Euler
 	local r = ship:GetQuaternion()
 	r = r:ToEuler()
+	
+	--Key controls rotate the ship
+	if window:KeyDown(KEY_RIGHT) then r.y = r.y + 1 end
+	if window:KeyDown(KEY_LEFT) then r.y = r.y - 1 end
+		
+	if window:KeyDown(KEY_W) then r.x = r.x - 1 end
+	if window:KeyDown(KEY_S) then r.x = r.x + 1 end
+		
+	if window:KeyDown(KEY_A) then r.z = r.z + 1 end
+	if window:KeyDown(KEY_D) then r.z = r.z - 1 end
+	
+	--Set the rotation
 	ship:SetRotation(r)
 	
+	--Display the rotation
 	label:SetText("Rotation: "..tostring(r.x)..", "..tostring(r.y)..", "..tostring(r.z))
 
     --Update the world
