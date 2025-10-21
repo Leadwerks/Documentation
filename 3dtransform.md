@@ -22,3 +22,4 @@ If the entity was positioned at (10,0,0) and its rotation was (0,180,0), the pos
 
 ## Transforming an Axis-aligned Bounding Box
 
+## Parenting Entities
