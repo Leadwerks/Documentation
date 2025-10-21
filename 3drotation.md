@@ -12,9 +12,13 @@ Unfortunately, Euler angles do not give us a complete definition of rotation tha
 
 ## Quaternions
 
+Quaternions are a more advanced definition of rotation that don't have the ambiguity of Euler angles. Quaternions use four numbers, x, y, z, and w, to define a rotation. They aren't very human-friendly, but you don't need to understand what the actual numbers mean.
 
+Any time you set an entity's rotation using Euler angles, Leadwerks will calculate and store the correponding quaternion rotation.
 
 ### Spherical Linear Interpolation
+
+The major advantage of quaternions is they can be used to smoothly interpolate between any two rotations, always using the shortest distance. This provides fluid natural looking rotation that looks great in games.
 
 ```lua
 --Get the displays
