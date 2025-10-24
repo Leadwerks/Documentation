@@ -21,23 +21,45 @@ Ultra Engine uses Lua 5.4 to give you access to [the very latest Lua features](h
 Below is complete C++ code for a program controlled primarily with Lua. The program first executes some required scripts in the "System" directory, then all scripts in the "Start" directory, and then runs the "Main.lua" file and exits when the script is finished:
 
 ```c++
-#include "UltraEngine.h"
+#include "Leadwerks.h"
+#include "Steamworks/Steamworks.h"
 
-using namespace UltraEngine;
+using namespace Leadwerks;
 
-void ExecuteDir(const WString& path)
+void ExecuteDir(std::shared_ptr<Package> package, const WString& path, const bool recursive)
 {
-    auto dir = LoadDir(path);
+    std::vector<WString> dir;
+    int type;
+    if (package)
+    {
+        dir = package->LoadDir(path);
+    }
+    else
+    {
+        dir = LoadDir(path);
+    }
     for (auto file : dir)
     {
         WString filepath = path + "/" + file;
-        switch (FileType(filepath))
+        auto ext = Leadwerks::ExtractExt(file).Lower();
+        if (package)
+        {
+            type = package->FileType(filepath);
+        }
+        else
+        {
+            type = FileType(filepath);
+        }
+        switch (type)
         {
         case 1:
-            if (ExtractExt(file).Lower() == "lua")  RunScript(filepath);
+            if (ext == "lua" or ext == "luac")
+            {
+                RunScript(filepath);
+            }
             break;
         case 2:
-            ExecuteDir(filepath);
+            if (recursive) ExecuteDir(package, filepath, true);
             break;
         }
     }
@@ -48,26 +70,66 @@ int main(int argc, const char* argv[])
     //Get commandline settings
     auto settings = ParseCommandLine(argc, argv);
 
+    auto L = GetLuaState();
+    Steamworks::BindCommands(L);
+    L->set_function("CommandLine", [settings]() { return tableplusplus::tablewrapper(settings); });
+
+    //Load packages
+    auto dir = LoadDir("");
+    std::shared_ptr<Package> datapackage;
+    if (FileType("data.zip") == 1)
+    {
+        datapackage = LoadPackage("data.zip");
+    }
+    
     //Run the error handler script
     RunScript("Scripts/System/ErrorHandler.lua");
 
-    //Enable the debugger if needed
-    shared_ptr<Timer> debugtimer;
-    if (settings["debug"].is_boolean() and settings["debug"] == true)
+    //Enable the integrated debugger if needed
+    if (settings["debugport"].is_integer())
     {
-        RunScript("Scripts/System/Debugger.lua");
-        debugtimer = CreateTimer(510);
-        ListenEvent(EVENT_TIMERTICK, debugtimer, std::bind(PollDebugger, 500));
+        int debugport = settings["debugport"];
+        int debugtimeout = 10000;
+        int debuglevels = 6;
+        String breakpoints;
+        if (settings["debugport"].is_integer()) debugport = settings["debugport"];
+        if (settings["debugtimeout"].is_integer()) debugtimeout = settings["debugtimeout"];
+        if (settings["debuglevels"].is_number()) debuglevels = settings["debuglevels"];
+        if (settings["breakpoints"].is_string()) breakpoints = settings["breakpoints"];
+        if (ConnectDebugger(debugport, debugtimeout, debuglevels, breakpoints))
+        {
+            Print("Connected to debugger on port " + String(debugport));
+        }
+        else
+        {
+            Print("Error: Failed to connect to debugger on port " + String(debugport) + " after " + String(debugtimeout) + " milliseconds");
+        }
     }
 
-    //Enable the entity component system
+    //Run the component system helper
     RunScript("Scripts/System/ComponentSystem.lua");
 
-    //Run user start scripts
-    ExecuteDir("Scripts/Start");
+    //Run component scripts
+    dir = LoadDir("Scripts/Entities");
+    for (auto file : dir)
+    {
+        int type;
+        if (datapackage)
+        {
+            type = datapackage->FileType("Scripts/Entities/" + file);
+        }
+        else
+        {
+            type = FileType("Scripts/Entities/" + file);
+        }
+        if (type == 2)
+        {
+            ExecuteDir(datapackage, "Scripts/Entities/" + file, false);
+        }
+    }
 
     //Run main script
-    RunScript("Scripts/Main.lua");
+    RunScript("Scripts/main.lua");
 
     return 0;
 }
