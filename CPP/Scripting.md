@@ -106,6 +106,15 @@ int main(int argc, const char* argv[])
         }
     }
 
+    //Enable the Visual Studio debugger if needed
+    shared_ptr<Timer> debugtimer;
+    if (settings["debug"].is_boolean() and settings["debug"] == true)
+    {
+        RunScript("Scripts/System/Debugger.lua");
+        debugtimer = CreateTimer(510);
+        ListenEvent(EVENT_TIMERTICK, debugtimer, std::bind(PollDebugger, 500));
+    }
+
     //Run the component system helper
     RunScript("Scripts/System/ComponentSystem.lua");
 
