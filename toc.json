@@ -1139,6 +1139,14 @@
                             "filename": "Entity_SetFriction"
                         },
                         {
+                            "title": "SetGravity",
+                            "filename": "Entity_SetGravity"
+                        },
+                        {
+                            "title": "SetGravityMode",
+                            "filename": "Entity_SetGravityMode"
+                        },                        
+                        {
                             "title": "SetHidden",
                             "filename": "Entity_SetHidden"
                         },
