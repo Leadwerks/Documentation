@@ -72,6 +72,8 @@ This class serves as the foundation for all 3D objects in a world. It provides a
 | [SetElasticity](Entity_SetElasticity.md) | Method | sets the entity physics elasticity |
 | [SetFriction](Entity_SetFriction.md) | Method | sets the entity physics friction |
 | [SetFog](Entity_SetFog.md) | Method | controls whether distance fog affects the entity |
+| [SetGravity](Entity_SetGravity.md) | Method | defines a special gravity value for this entity |
+| [SetGravityMode](Entity_SetGravityMode.md) | Method | controls whether the world gravity affects the entity |
 | [SetHidden](Entity_SetHidden.md) | Method | hides or shows the entity |
 | [SetInput](Entity_SetInput.md) | Method | handles controls for player movement |
 | [SetMass](Entity_SetMass.md) | Method | sets the entity physical mass |
