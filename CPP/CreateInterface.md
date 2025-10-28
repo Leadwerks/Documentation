@@ -11,7 +11,7 @@ This function creates a new graphical user interface for desktop applications or
 | Parameter | Description |
 | --- | --- |
 | window | window to create the user interface on |
-| camera | camera to create the interface in, for 3D graphics |
+| camera | camera to create the interface on, for 3D graphics |
 | world | world to create the interface in, for 3D graphics |
 | font | font to use, for 3D graphics |
 | size | interface dimensions, for 3D graphics |
