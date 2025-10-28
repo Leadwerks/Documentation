@@ -116,11 +116,11 @@ CustomScript.rgbvalue = Vec3(1,1,1)--"RGB value" COLOR
 CustomScript.rgbavalue = Vec4(1,1,1,1)--"RGBA value" COLOR
 ```
 
-You can add new properties or edit these ones.
+You can add new properties or edit these ones. Whenever you save a script, the editor will automatically detect the changed file, and update the JSON file stored in the "Entity Definitions" folder.
 
 ## Script Functions and the Flowgraph Editor
 
-Script functions can be marked as inputs and/or outputs, for use with the [flowgraph editor](flowgrapheditor.md). To do this, just add a comment at the end of the function declaration:
+Script functions can be marked as inputs and/or outputs, for use with the [flowgraph editor](flowgrapheditor.md). To do this, just add a comment after the function declaration:
 
 ```
 -- Function can act as a flowgraph input
