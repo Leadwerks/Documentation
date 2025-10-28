@@ -6,11 +6,13 @@ This function creates a new graphical user interface for desktop applications or
 
 - [Interface](Interface.md) **CreateInterface**([Window](Window.md) window)
 - [Interface](Interface.md) **CreateInterface**([Camera](Camera.md) camera, [Font](Font.md) font, [iVec2](iVec2.md) size)
+- [Interface](Interface.md) **CreateInterface**([World](World.md) camera, [Font](Font.md) font, [iVec2](iVec2.md) size)
 
 | Parameter | Description |
 | --- | --- |
 | window | window to create the user interface on |
-| camera | camera to create the interface in, for 3D graphics |
+| world | world to create the interface in, for 3D graphics |
+| camera | camera to create the interface on, for 3D graphics |
 | font | font to use, for 3D graphics |
 | size | interface dimensions, for 3D graphics |
 
