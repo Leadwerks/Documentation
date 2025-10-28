@@ -23,7 +23,7 @@ for k = 1, #displays do
     Print(" Graphics Modes:")
     local gfxmodes = displays[k].graphicsmodes
     for n = 1, #gfxmodes do
-        Print("     " .. tostring(n) .. ": " .. tostring(gfxmodes[n].x) .. ", " .. tostring(gfxmodes[n].y .. ", " .. tostring(gfxmodes[n].z)))
+        Print("     " .. tostring(n) .. ": " .. tostring(gfxmodes[n].x) .. ", " .. tostring(gfxmodes[n].y) )
     end
 end
 ```
