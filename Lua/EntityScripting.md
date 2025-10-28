@@ -1,6 +1,6 @@
 # Entity Scripting
 
-www.youtube.com/watch?v=gV7un0VPeZ0
+www.youtube.com/watch?v=eek2m8G1mtg
 
 The Leadwerks entity script system allows you to attach properties and functions directly to entities in your game.
 
