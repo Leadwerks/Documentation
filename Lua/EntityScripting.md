@@ -65,7 +65,7 @@ MyPlayer.speed = 0.02--"Speed"
 MyPlayer.cameradistance = 2--"Camera distance"
 
 function MyPlayer:Start()
-	self.camera = CreateCamera(self.entity.world)
+	self.camera = CreateCamera(self.world)
 end
 
 function MyPlayer:Update()
@@ -84,10 +84,10 @@ function MyPlayer:Update()
 	if window:KeyDown(KEY_DOWN) then movez = movez - self.speed end
 	if window:KeyDown(KEY_UP) then movez = movez + self.speed end
 	
-	self.entity:Move(movex, 0, movez)
+	self:Move(movex, 0, movez)
 
 	--Update camera
-	self.camera:SetPosition(self.entity:GetPosition())
+	self.camera:SetPosition(self:GetPosition())
 	self.camera:SetRotation(45,0,0)
 	self.camera:Move(0,0,-self.cameradistance)
 
