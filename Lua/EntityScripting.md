@@ -42,7 +42,7 @@ function MyPlayer:Update()
 	if window:KeyDown(KEY_DOWN) then movez = movez - self.speed end
 	if window:KeyDown(KEY_UP) then movez = movez + self.speed end
 	
-	self.entity:Move(movex, 0, movez)
+	self:Move(movex, 0, movez)
 
 end
 ```
