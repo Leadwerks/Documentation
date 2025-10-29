@@ -226,7 +226,11 @@
                         {
                             "title": "2D Graphics",
                             "filename": "2dgraphics"
-                        }                 
+                        },
+                        {
+                            "title": "3D Space",
+                            "filename": "3dspace"
+                        }                        
                     ]
                 }                
             ]
