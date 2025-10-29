@@ -215,7 +215,20 @@
                             "hideFromCPP": true
                         }
                     ]
-                }
+                },
+                {
+                    "title": "3D Spatialization",
+                    "topics": [
+                        {
+                            "title": "Interpolation",
+                            "filename": "1dspace"
+                        },
+                        {
+                            "title": "2D Graphics",
+                            "filename": "2dgraphics"
+                        }                 
+                    ]
+                }                
             ]
         },
         {
