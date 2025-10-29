@@ -23,12 +23,12 @@ There are two main ways we can achieve this, that will each give a difference ap
 The [Step](Step.md) function will move a constant amount from the current value to a target value.
 
 ```lua
-local n = 0
+local current = 0
 local target = 5
 
-while n < target do
-  n = Step(n, target, 1)
-  Print(n)
+while current < target do
+  current = Step(current, target, 1)
+  Print(current)
 end
 ```
 
@@ -70,12 +70,12 @@ Print(Mix(1, 5, 1))-- returns the second value
 Back to our number line now. If we use the Mix function in a loop, using the returned value as the starting value the next time the function is called, we see some interesting results:
 
 ```lua
-local n = 1
+local current = 1
 local target = 5
 
-while n < target do
-  n = Mix(n, target, 0.5)
-  Print(n)
+while current < target do
+  current = Mix(current, target, 0.5)
+  Print(current)
 end
 ```
 
