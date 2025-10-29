@@ -220,7 +220,7 @@
                     "title": "3D Spatialization",
                     "topics": [
                         {
-                            "title": "Interpolation",
+                            "title": "1D Space",
                             "filename": "1dspace"
                         },
                         {
