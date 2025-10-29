@@ -102,6 +102,42 @@ tile:MidHandle()
 tile:SetPosition(framebuffer.size.x / 2, framebuffer.size.y / 2)
 ```
 
+Wait a minute...if you know how to draw a rectangle in the middle of the screen, you can also draw crosshairs. Here's some code that does exactly that:
+
+```lua
+--Get the displays
+local displays = GetDisplays()
+
+--Create a window
+local window = CreateWindow("Leadwerks", 0, 0, 1280, 720, displays[1], WINDOW_TITLEBAR | WINDOW_CENTER)
+
+--Create a framebuffer
+local framebuffer = CreateFramebuffer(window)
+
+--Create a world
+local world = CreateWorld()
+
+--Create a camera
+local camera = CreateCamera(world)
+camera:SetClearColor(0.125)
+
+--Load a tile from an image
+local tile = LoadTile(world, "https://raw.githubusercontent.com/Leadwerks/Documentation/refs/heads/master/Assets/Materials/Hud/crosshairs.png")
+tile:MidHandle()
+
+--Set the tile position
+tile:SetPosition(framebuffer.size.x / 2, framebuffer.size.y / 2)
+
+while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
+
+    --Update the world
+    world:Update()
+
+    --Render the world
+    world:Render(framebuffer)
+end
+```
+
 ### Tile Rotation
 
 We can rotate a tile using the [Tile:SetRotation](Tile_SetRotation.md) or [Tile:Turn](Tile_Turn.md) commands. Unless we change the handle position, a tile will rotate around its upper-left corner:
