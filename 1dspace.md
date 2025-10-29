@@ -6,6 +6,8 @@ We will cover some mathematics in the series, but not very much. It's more impor
 
 A notebook with graph paper is a great tool for every game developer to have with them at all times, along with a pen or pencil and ruler. These items will allow you to sketch out your ideas whenever and wherever they occur, and the physical act of drawing with your hands on paper will help you train your brain to think in 3D.
 
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/oldschool.jpg?raw=true)
+
 ## One-dimensional Space
 
 I like to picture numbers in a row, with negative numbers to the left, zero in the middle, and positive numbers to the right. This is called a _number line_:
