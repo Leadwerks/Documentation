@@ -54,8 +54,8 @@ Often times in games we want to avoid sudden movements, and prefer nice smooth m
 Internally, the Mix function uses this equation:
 
 ```lua
-function Mix(start, target, p)
-  return start * (1.0 - p) + target * p
+function Mix(current, target, blend)
+  return current * (1.0 - blend) + target * blend
 end
 ```
 
