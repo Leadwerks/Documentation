@@ -2,11 +2,13 @@
 
 We already saw rotation in 2D space, as a single angle. In 3D space we have a type of rotation called Euler angles, which consists of three separate rotations that go around the X, Y, and Z axis. These are commonly referred to as pitch (X), yaw (Y), and roll (Z).
 
-
-
 ## Gimbal Lock
 
-Unfortunately, Euler angles do not give us a complete definition of rotation that works in all situations. As an object pitches up or down approaching +/- 90 degrees, yaw and roll start rotating around the same axis. When we get near this pitch, our math stops working.
+One key issue occurs when an object pitches up or down close to ±90 degrees. At these points, the yaw and roll rotations can become indistinguishable because they start to rotate around the same axis. This causes what's known as "gimbal lock," where the math that calculates and interprets these angles breaks down or produces ambiguous results.
+
+In essence, although Euler angles always mathematically represent some rotation, converting from a rotation matrix or quaternion back to Euler angles can yield multiple valid solutions. It's kind of like how you can turn a cow into a hamburger (by cutting it up), but you can't reverse the process to get the cow back from the hamburger—once it's broken down, you can't reconstruct the original.
+
+If other parts of the game like the physics system change the entity's orientation, the system recalculates the Euler angles based on the new orientation. Because of the ambiguities and potential for gimbal lock, this can sometimes lead to unexpected or inconsistent rotations. Here's an example that demonstrates the problem:
 
 ```lua
 --Get the displays
