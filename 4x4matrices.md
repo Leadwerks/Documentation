@@ -45,6 +45,15 @@ The first three values in the last row contains the position of the entity in wo
 
 The last value in each row is unused, so the right column is always set to (0, 0, 0, 1). This just makes the math work out nicely when we do fancy things with matrices.
 
+So what our matrix values mean are really this:
+
+```
+xx, xy, xz, 0 - X axis with scale
+yx, yy, yz, 0 - Y axis with scale
+zx, zy, zz, 0 - Z axis with scale
+tx, ty, tz, 1 - Translation
+```
+
 Let's take another look at our matrix values, now that we know what they represent:
 
 ```
