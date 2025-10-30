@@ -20,10 +20,8 @@ The code above will print out the following:
 0, 0, 1, 0
 0, 0, 0, 1
 ```
-This particular type of matrix is called an _identity matrix_ and instantly tells us a few things:
-- The object is at position (0,0,0).
-- The object is not rotated.
-- The object has a scale of 1.0 on all three axes.
+
+What do these funny numbers mean?
 
 ### Matrix Orientation
 
@@ -46,6 +44,22 @@ The first three values in the last row contains the position of the entity in wo
 - The length of the third row vector is the object's scale on the Z axis, in world space.
 
 The last value in each row is unused, so the right column is always set to (0, 0, 0, 1). This just makes the math work out nicely when we do fancy things with matrices.
+
+Let's take another look at our matrix values, now that we know what they represent:
+
+```
+1, 0, 0, 0
+0, 1, 0, 0
+0, 0, 1, 0
+0, 0, 0, 1
+```
+
+This particular type of matrix is called an _identity matrix_ and instantly tells us a few things:
+- The object is at position (0,0,0).
+- The object is not rotated.
+- The object has a scale of 1.0 on all three axes.
+
+4x4 matrices in Leadwerks are always orthogonal, which means the three axes always form a left-handed coordinate system and are oriented 90 degrees apart from one another.
 
 ## Using Entity Matrices
 
@@ -75,8 +89,12 @@ And of course the entity's position in world space is easily accessily like so:
 position = entity.matrix[3].xyz
 ```
 
-Since the entity matrix encodes the position, rotation, and scale, this gives us an easy way to exactly copy one entity's orientation to another:
+Since the entity matrix encodes the position, rotation, and scale, this gives us an easy way to exactly copy one entity's orientation to another in one simple command:
 
 ```lua
 b:SetMatrix(a.matrix)
 ```
+
+## Matrix Transformations
+
+The [transformation commands](3dtransform.md) we previously learned about will accept two 4x4 matrices as the source and destination parameters, in addition to using entities.
