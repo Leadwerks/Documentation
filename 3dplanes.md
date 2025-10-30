@@ -114,7 +114,7 @@ planemesh:SetMaterial(mtl)
 --Main loop
 while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
 
-	a = a + 1
+	a = a + 0.25
 	
 	--Apply the rotation to the plane
 	p.x = Sin(a)
@@ -141,6 +141,12 @@ while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
     world:Render(framebuffer)
 	
 end
+```
+When you run the example, you may notice that objects are changing color while they are still intersecting the plane. This is because the object position is being tested, and radius of the sphere is not being considered. If you want to make a test that tells if any part of the sphere is in front of the plane, you can just add this code to modify the plane distance by the sphere radius, right before the main loop:
+
+```lua
+--Add the sphere radius to the plane distance to offset it
+p.d = p.d + 0.5
 ```
 
 ## Plane-line Intersection
