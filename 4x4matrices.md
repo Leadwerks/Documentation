@@ -2,6 +2,8 @@
 
 What is the matrix? In Leadwerks, a 4x4 matrix is a mathematical structure used to represent an object’s position, rotation, and scale in 3D space. Think of it as a compact way to encode all the spatial information about an entity. The matrix contains 16 values arranged in four rows and four columns, which together define how the object is oriented in the world.
 
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/4x4matrix1.png?raw=true)
+
 The [Mat4](Mat4.md) class has four [Vec4](Vec4.md) that can be accessed either with i, j, k, and t, or by number:
 
 ```lua
@@ -45,14 +47,9 @@ The first three values in the last row contains the position of the entity in wo
 
 The last value in each row is unused, so the right column is always set to (0, 0, 0, 1). This just makes the math work out nicely when we do fancy things with matrices.
 
-So what our matrix values mean are really this:
+Let's take another look at the matrix, with the X, Y, and Z axes highlighted in red, green, and blue:
 
-| Row | Description |
-|---|---|
-| xx, xy, xz, 0 | X axis and scale |
-| yx, yy, yz, 0 | Y axis and scale |
-| zx, zy, zz, 0 | Z axis and scale |
-| tx, ty, tz, 1 | Translation |
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/4x4matrix.png?raw=true)
 
 Let's take another look at our matrix values, now that we know what they represent:
 
