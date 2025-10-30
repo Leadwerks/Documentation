@@ -1,4 +1,4 @@
-# 3D Vectors
+# Vectors
 
 If we draw a line from any point in 3D space to the origin (0, 0, 0), we get a vector. A vector is a line with a direction and a length.
 
