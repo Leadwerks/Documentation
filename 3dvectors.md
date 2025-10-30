@@ -270,3 +270,69 @@ angle = ACos(A:Dot(B))
 
 The Vec3 class has another method called [Reflect](Vec3_Reflect.md). This gives a reflection angle, given a trajectory and the normal of a face it is bouncing off of.
 
+```lua
+--Get the displays
+local displays = GetDisplays()
+
+--Create a window
+local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_TITLEBAR | WINDOW_CENTER)
+
+--Create a framebuffer
+local framebuffer = CreateFramebuffer(window)
+
+--Create a world
+local world = CreateWorld()
+world:SetAmbientLight(1)
+
+--Create a camera
+local camera = CreateCamera(world)
+camera:SetClearColor(0.125)
+camera:SetRotation(15,0,0)
+camera:Move(0,0,-5)
+
+--Create the ground
+ground = CreateBox(world, 10, 1, 10)
+ground:SetPosition(0, -0.5, 0)
+ground:SetColor(0.5)
+
+--Laser will start here and point at the origin (0,0,0)
+laserposition = Vec3(3,3,0)
+
+--Create a "laser beam"
+beam1 = CreateBox(world) 
+beam1:SetColor(1,0,0)
+
+beam2 = CreateBox(world) 
+beam2:SetColor(0,1,0)
+
+--Main loop
+while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
+
+	--Display the last beam
+	local dir = Vec3(0) - laserposition;
+	beam1:SetPosition((Vec3(0) + laserposition) * 0.5)
+	beam1:AlignToVector(dir, 2)
+	beam1:SetScale(0.1, 0.1, dir:Length())
+
+	--Calculate the reflection vector
+	local endpoint = dir:Reflect(Vec3(0,1,0))
+	
+	--Display the bounced laser
+	dir = Vec3(0) - endpoint;
+	beam2:SetPosition((Vec3(0) + endpoint) * 0.5)
+	beam2:AlignToVector(dir, 2)
+	beam2:SetScale(0.1, 0.1, dir:Length())
+	
+	--Move the laser position around with the arrow keys
+	if window:KeyDown(KEY_RIGHT) then laserposition.x = laserposition.x + 0.1 end
+	if window:KeyDown(KEY_LEFT) then laserposition.x = laserposition.x - 0.1 end
+	if window:KeyDown(KEY_UP) then laserposition.z = laserposition.z + 0.1 end
+	if window:KeyDown(KEY_DOWN) then laserposition.z = laserposition.z - 0.1 end
+	
+    --Update the world
+    world:Update()
+
+    --Render the world
+    world:Render(framebuffer)
+end
+```
