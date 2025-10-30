@@ -25,7 +25,7 @@ This particular type of matrix is called an _identity matrix_ and instantly tell
 - The object is not rotated.
 - The object has a scale of 1.0 on all three axes.
 
-##$ Matrix Orientation
+### Matrix Orientation
 
 - The first three values in the first row represents the direction of the object's X axis in global space. For example, on a 3D model of an airplane this row would be a vector indicating the direction the right wing is pointing.
 
