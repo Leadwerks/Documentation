@@ -62,8 +62,9 @@ else
 end
 ```
 
-## Point-Line Intersection
+## Point-line Intersection
 
+We can determine the intersection point between a plane and a 3D line in space with the [Plane:IntersectsLine](Plane_IntersectsLine.md) method.
 
 
 ## Convex Volumes
