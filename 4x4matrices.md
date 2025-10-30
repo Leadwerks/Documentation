@@ -27,13 +27,13 @@ This particular type of matrix is called an _identity matrix_ and instantly tell
 
 ##$ Matrix Orientation
 
-The first three values in the first row represents the direction of the object's X axis in global space. For example, on a 3D model of an airplane this row would be a vector indicating the direction the right wing is pointing.
+- The first three values in the first row represents the direction of the object's X axis in global space. For example, on a 3D model of an airplane this row would be a vector indicating the direction the right wing is pointing.
 
-The first three values in the second row represents the direction of the object's Y axis in global space. For example, on a 3D model of an airplane this row would be a vector indicating the up direction relative to the aircraft.
+- The first three values in the second row represents the direction of the object's Y axis in global space. For example, on a 3D model of an airplane this row would be a vector indicating the up direction relative to the aircraft.
 
-The first three values in the third row represents the direction of the object's Z axis in global space. For example, on a 3D model of an airplane this row would be a vector indicating the forward direction relative to the aircraft.
+- The first three values in the third row represents the direction of the object's Z axis in global space. For example, on a 3D model of an airplane this row would be a vector indicating the forward direction relative to the aircraft.
 
-##$ Matrix Translation
+### Matrix Translation
 
 The first three values in the last row contains the position of the entity in world space. These are the X, Y, and Z coordinates where the object is located.
 
