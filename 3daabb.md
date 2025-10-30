@@ -1,6 +1,6 @@
 # Axis-aligned Bounding Boxes
 
-An axis-aligned bounding box is a 3D box with volume. It is defined as having width, height, depth, a center position, and minimum and maximum extents:
+An axis-aligned bounding box (AABB) is a 3D box with volume. It is defined as having width, height, depth, a center position, and minimum and maximum extents:
 
 | Member | Type | Description |
 |---|---|---|
@@ -10,9 +10,9 @@ An axis-aligned bounding box is a 3D box with volume. It is defined as having wi
 | size | [Vec3](Vec3.md) | size of the bounding box |
 | radius | number | distance from the center of the box to any corner |
 
-"Axis-aligned" just means the box can't be rotated, which simplies a lot of calculations and makes them more efficient.
+Axis-aligned bounding boxes are often used as a rough intersection test before more detailed calculations are made. In many cases this allows us to skip more expensive calculations on objects we know don't undersect the bounding box. "Axis-aligned" just means the box can't be rotated, which simplies a lot of calculations and makes them more efficient.
 
-To define a bounding box, we just need to specify the minimum and maximum extents of the box, and the rest will be calculated. The other members of the bounding box will be calculated automatically.
+To define a bounding box, we just need to specify the minimum and maximum extents of the box, and the rest will be calculated automatically. The other members of the bounding box will be calculated automatically.
 
 ```lua
 local aabb = Aabb(-2, -1, -1, 2, 1, 1)
@@ -33,7 +33,9 @@ Here is the printed result when this code is run:
 2.44948983192443848
 ```
 
-Axis-aligned bounding boxes are often used as a rough intersection test before more detailed calculations are made. In many cases this allows us to skip more expensive calculations on objects we know don't undersect the bounding box.
+We can modify an Aabb at any time, but we need to remember to call the [Aabb:Update](Aabb_Update.md) method any time we do this. This method will calculate the center, size, and radius from the minimum and maximum extents.
+
+## AABB Intersection Tests
 
 | Method | Description |
 |---|---|
