@@ -1,6 +1,8 @@
 # Axis-aligned Bounding Boxes
 
-An axis-aligned bounding box (AABB) is a 3D box with volume. It is defined as having width, height, depth, a center position, and minimum and maximum extents:
+An axis-aligned bounding box (AABB) is a 3D box with volume. It is defined as having width, height, depth, a center position, and minimum and maximum extents.
+
+In Leadwerks this is handled with the [Aabb](Aabb.md) class, which has these members:
 
 | Member | Type | Description |
 |---|---|---|
