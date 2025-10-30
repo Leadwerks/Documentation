@@ -2,6 +2,10 @@
 
 We already saw rotation in 2D space, as a single angle. In 3D space we have a type of rotation called Euler angles, which consists of three separate rotations that go around the X, Y, and Z axis. These are commonly referred to as pitch (X), yaw (Y), and roll (Z).
 
+## Order of Rotation
+
+When a Euler rotation is specified, the angle for each axis is applied in the order of Y first, then pitch, then roll. This is like spinning around to face one direction, turning your head up, and then tilting your head to the side.
+
 ## Gimbal Lock
 
 One key issue occurs when an object pitches up or down close to ±90 degrees. At these points, the yaw and roll rotations can become indistinguishable because they start to rotate around the same axis. This causes what's known as "gimbal lock," where the math that calculates and interprets these angles breaks down or produces ambiguous results.
