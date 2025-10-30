@@ -62,6 +62,10 @@ else
 end
 ```
 
+## Point-Line Intersection
+
+
+
 ## Convex Volumes
 
 Things get interesting when we start using multiple planes. Before we get ahead of ourselves, lets define what convex and concave shapes are.
