@@ -47,7 +47,33 @@ The first three values in the last row contains the position of the entity in wo
 
 The last value in each row is unused, so the right column is always set to (0, 0, 0, 1). This just makes the math work out nicely when we do fancy things with matrices.
 
-## Getting and Settings Entity Matrices
+## Using Entity Matrices
+
+Since we know the third row of the matrix encodes the entity's forward direction, this provides an easy way to retrieve it without calling any other functions:
+
+```lua
+forward = entity.matrix[2].xyz
+```
+
+If the entity could be scaled, you make want to normalize the returned vector:
+
+```lua
+forward = forward:Normalize()
+```
+
+You can do the same for the entity's right or up directions:
+
+```lua
+right = entity.matrix[0].xyz:Normalize()
+up = entity.matrix[1].xyz:Normalize()
+forward = entity.matrix[2].xyz:Normalize()
+```
+
+And of course the entity's position in world space is easily accessily like so:
+
+```lua
+position = entity.matrix[3].xyz
+```
 
 Since the entity matrix encodes the position, rotation, and scale, this gives us an easy way to exactly copy one entity's orientation to another:
 
