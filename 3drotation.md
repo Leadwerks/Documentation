@@ -2,6 +2,20 @@
 
 We already saw rotation in 2D space, as a single angle. In 3D space we have a type of rotation called Euler angles, which consists of three separate rotations that go around the X, Y, and Z axis. These are commonly referred to as pitch (X), yaw (Y), and roll (Z).
 
+## Left-handed Rotation Rule
+
+To determine the positive direction of rotation for each axis, we can use our left hand again. If you point your thumb in the positive direction of each axis like below, your fingers will curl around in the positive direction of rotation:
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/lefthandrotation.jpg?raw=true)
+
+Since this image shows the thumb pointing up, in the positive direction of the Y axis, that means that increasing the rotation on the Y axis will make objects turn to the right.
+
+If you point your thumb in the positive direction of the X axis (left) your fingers curl downwards. The means increasing the X rotation will make an object that is facing forward turn downwards.
+
+If you point your thumb in the positive direction of the Z axis (forward) your fingers will curl up and to the left. That means increase the Z rotation of an object that is facing forward will make it tilt to the left.
+
+If you're ever confused about which direction of rotation is which, just use the left-hand rule.
+
 ## Order of Rotation
 
 When a Euler rotation is specified, the angle for each axis is applied in the order of yaw first, then pitch, then roll. This is like spinning around to face one direction, turning your head up, and then tilting your head to the side.
