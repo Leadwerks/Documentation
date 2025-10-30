@@ -4,7 +4,7 @@ We already saw rotation in 2D space, as a single angle. In 3D space we have a ty
 
 ## Order of Rotation
 
-When a Euler rotation is specified, the angle for each axis is applied in the order of Y first, then pitch, then roll. This is like spinning around to face one direction, turning your head up, and then tilting your head to the side.
+When a Euler rotation is specified, the angle for each axis is applied in the order of yaw first, then pitch, then roll. This is like spinning around to face one direction, turning your head up, and then tilting your head to the side.
 
 ## Gimbal Lock
 
