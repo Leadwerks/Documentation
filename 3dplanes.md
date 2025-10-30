@@ -155,8 +155,6 @@ We can determine the intersection point between a plane and a 3D line in space w
 - If the line is parallel to the plane (runs alongside it), the line will never intersect the plane.
 - If a line segment is being tested, instead of an infinite line, it may not intersect the plane.
 
-
-
 ## Convex Volumes
 
 Things get interesting when we start using multiple planes. Before we get ahead of ourselves, lets define what convex and concave shapes are.
@@ -202,3 +200,8 @@ p.d = p.d - r
 d = p:DistanceToPoint(v)
 Print(d)
 ```
+
+## Brushes
+
+The [Brush](Brush.md) entity class uses constructive solid geometry to provide an easy interface for performing advanced volumetric operations.
+
