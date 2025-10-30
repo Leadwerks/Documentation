@@ -62,6 +62,87 @@ else
 end
 ```
 
+Here is an example showing how many objects can be tested to see if they are in front of or behind the plane:
+
+```lua
+--Get the displays
+local displays = GetDisplays()
+
+--Create a window
+local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_TITLEBAR | WINDOW_CENTER)
+
+--Create a framebuffer
+local framebuffer = CreateFramebuffer(window)
+
+--Create a world
+local world = CreateWorld()
+world:SetAmbientLight(1)
+
+--Create a camera
+local camera = CreateCamera(world)
+camera:SetClearColor(0.125)
+camera:SetRotation(35,0,0)
+camera:Move(0,0,-7)
+
+--Create the ground
+ground = CreateBox(world, 10, 1, 10)
+ground:SetPosition(0, -0.5, 0)
+ground:SetColor(0.5)
+
+--Add some objects to the scene
+balls = {}
+for n = 1, 20 do
+	ball = CreateSphere(world)
+	ball:SetPosition(Random(-5,5), 0, Random(-5,5))
+	table.insert(balls, ball)	
+end
+
+--Define the plane
+a = 45
+p = Plane(Sin(a), 0, Cos(a), 0)
+
+--Create a visual mesh for the plane. This will create a rectangular mesh that is flat on the XZ axis
+planemesh = CreatePlane(world, 15, 3)
+
+--Create a transparent double-sided material for the mesh
+mtl = CreateMaterial()
+mtl:SetTransparent(true)
+mtl:SetColor(1,1,1,0.5)
+mtl:SetBackFaceCullMode(false)
+planemesh:SetMaterial(mtl)
+
+--Main loop
+while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
+
+	a = a + 1
+	
+	--Apply the rotation to the plane
+	p.x = Sin(a)
+	p.z = Cos(a)
+    
+	--ALign the Y axis of the plane mesh to the plane normal
+	planemesh:SetRotation(0, a, 0)
+	planemesh:Turn(90,0,0)
+	planemesh:SetPosition(0,1,0)
+	planemesh:Move(0,0,-p.d)
+	
+	for n = 1, #balls do		
+		if p:DistanceToPoint(balls[n].position) > 0 then
+			balls[n]:SetColor(0,1,0)
+		else
+			balls[n]:SetColor(1,0,0)			
+		end		
+	end
+	
+    --Update the world
+    world:Update()
+	
+    --Render the world
+    world:Render(framebuffer)
+	
+end
+```
+
 ## Plane-line Intersection
 
 We can determine the intersection point between a plane and a 3D line in space with the [Plane:IntersectsLine](Plane_IntersectsLine.md) method. This will tell us if the line intersects the plane, and if so, what the exact intersection point is. Note that a line will not ever intersect a plane under a few conditions:
