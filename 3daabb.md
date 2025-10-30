@@ -53,6 +53,8 @@ Print(aabb.center)--Prints the new center
 
 ## AABB Intersection Tests
 
+We have several methods that can perform intersection tests using AABBs. Because these operations are very efficient, it's okay to use them many times without worrying about their impact on performance.
+
 | Method | Description |
 |---|---|
 | [IntersectsPoint](Aabb_IntersectsPoint.md) | Tests the intersection of the box and a point in 3D space |
