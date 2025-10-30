@@ -155,6 +155,104 @@ We can determine the intersection point between a plane and a 3D line in space w
 - If the line is parallel to the plane (runs alongside it), the line will never intersect the plane.
 - If a line segment is being tested, instead of an infinite line, it may not intersect the plane.
 
+Since we know how to get the intersection point of a plane and a line, we can use this knowledge to make a more advanced laser beam example. Instead of forcing the intersection point to always be at the origin, this example lets us move and rotate the laser beam source. The bounced beam will be shown in the correct position, bouncing at the correct angle.
+
+```lua
+--Get the displays
+local displays = GetDisplays()
+
+--Create a window
+local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_TITLEBAR | WINDOW_CENTER)
+
+--Create a framebuffer
+local framebuffer = CreateFramebuffer(window)
+
+--Create a world
+local world = CreateWorld()
+world:SetAmbientLight(1)
+
+--Create a camera
+local camera = CreateCamera(world)
+camera:SetClearColor(0.125)
+camera:SetRotation(15,0,0)
+camera:Move(0,0,-5)
+
+--Create the ground
+ground = CreateBox(world, 100, 1, 100)
+ground:SetPosition(0, -0.5, 0)
+ground:SetColor(0.5)
+
+--Laser will start here and point at the origin (0,0,0)
+laserposition = Vec3(0,3,0)
+laserdir = Vec3(-1,-1,0)
+
+--Create a "laser beam"
+beam1 = CreateBox(world) 
+beam1:SetColor(1,0,0)
+beam1:AlignToVector(laserdir)
+beam1.lods[1].meshes[1]:Translate(0,0,0.5)--shift the mesh vertices forward half the box depth, to make positioning easier
+beam1:UpdateBounds()
+
+beam2 = CreateBox(world) 
+beam2:SetColor(0,1,0)
+beam2.lods[1].meshes[1]:Translate(0,0,0.5)--shift the mesh vertices forward half the box depth, to make positioning easier
+beam2:UpdateBounds()
+
+--The ground plane points up and sits at the origin
+groundplane = Plane(0,1,0,0)
+
+--Laser beam maximum range
+range = 100
+
+--Main loop
+while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
+
+	laserdir = TransformNormal(0,0,1, beam1, nil)
+
+	--Calculate the intersection of the laser with the ground plane
+	intersectionpoint = Vec3(0)
+	if groundplane:IntersectsLine(laserposition, laserposition + laserdir * range, intersectionpoint, true) then
+	
+		--Display the last beam
+		local dir = intersectionpoint - laserposition;
+		beam1:SetPosition(laserposition)
+		beam1:SetScale(0.1, 0.1, dir:Length())
+
+		--Calculate the reflection vector
+		local bouncedir = dir:Reflect(Vec3(0,1,0))
+
+		--Make the beam bounce visible
+		beam2:SetHidden(false)
+
+		--Display the bounced laser
+		beam2:SetPosition(intersectionpoint)
+		beam2:AlignToVector(bouncedir, 2)
+		beam2:SetScale(0.1, 0.1, 100)
+		
+	else
+	
+		--Position the laser beam
+		beam1:SetPosition(laserposition)
+		
+		--Hide the beam bounce
+		beam2:SetHidden(true)
+	
+	end
+
+    --Move the laser position around with the arrow keys
+    if window:KeyDown(KEY_RIGHT) then laserposition.x = laserposition.x + 0.1 end
+    if window:KeyDown(KEY_LEFT) then laserposition.x = laserposition.x - 0.1 end
+    if window:KeyDown(KEY_UP) then beam1:Turn(1,0,0) end
+    if window:KeyDown(KEY_DOWN) then beam1:Turn(-1,0,0) end
+
+    --Update the world
+    world:Update()
+
+    --Render the world
+    world:Render(framebuffer)
+end
+```
+
 ## Convex Volumes
 
 Things get interesting when we start using multiple planes. Before we get ahead of ourselves, lets define what convex and concave shapes are.
