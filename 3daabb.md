@@ -35,6 +35,22 @@ Here is the printed result when this code is run:
 
 We can modify an Aabb at any time, but we need to remember to call the [Aabb:Update](Aabb_Update.md) method any time we do this. This method will calculate the center, size, and radius from the minimum and maximum extents.
 
+```lua
+--Create a bounding box around the origin
+local aabb = Aabb(-1, -1, -1, 1, 1, 1)
+Print(aabb.center)
+
+--Shift the box to the right by 100 meters
+aabb.min.x = 99
+aabb.max.x = 101
+Print(aabb.center)--Stil prints "0, 0, 0"
+
+--Update the box center, size, and radius from the minimum and maximum extents
+aabb:Update()
+
+Print(aabb.center)--Prints the new center
+```
+
 ## AABB Intersection Tests
 
 | Method | Description |
@@ -44,10 +60,12 @@ We can modify an Aabb at any time, but we need to remember to call the [Aabb:Upd
 | [IntersectsLine](Aabb_IntersectsLine.md) | Tests the intersection of the box and a line in 3D space |
 | [IntersectsPlane](Aabb_IntersectsPlane.md) | Tests the intersection of the box and a plane |
 
+## Entity Bounds
+
 Each entity has three bounding boxes we can retrieve, using the [Entity:GetBounds](Entity_GetBounds,md) method.
 
 - The *local* bounding box encloses the entity, in its own local coordinate system.
 - The *global* bounding box encloses the entity, in global space.
 - The *recursive* bounding box encloses the entity and all of its children, in global space.
 
-These bounding boxes are updated automatically any time the entity moves.
+Entity bounding boxes can sometimes be a little bigger than they need to be to perfectly enclose the entire object, but they will never be smaller. If two entity bounding boxes intersect, the entities might intersect, but if their bounding boxes don't undersect, then they definitely don't intersect at all.
