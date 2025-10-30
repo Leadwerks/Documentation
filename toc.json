@@ -240,6 +240,10 @@
                             "filename": "3dvectors"
                         },
                         {
+                            "title": "Axis-aligned Bounding Boxes",
+                            "filename": "3daabbs"
+                        },
+                        {
                             "title": "Planes",
                             "filename": "3dplanes"
                         }
