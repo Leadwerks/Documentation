@@ -36,9 +36,9 @@ local p2 = Plane(Vec3(0,-2,0), Vec3(0,1,0))-- point, normal
 local p3 = Plane(Vec3(0,-2,0), Vec3(0,-2,1), Vec3(1,-2,0))-- A, B, C
 
 --Display the results
-Print(tostring(p1.x)..", "..tostring(p1.y)..", "..tostring(p1.z)..", "..tostring(p1.d))
-Print(tostring(p2.x)..", "..tostring(p2.y)..", "..tostring(p2.z)..", "..tostring(p2.d))
-Print(tostring(p3.x)..", "..tostring(p3.y)..", "..tostring(p3.z)..", "..tostring(p3.d))
+Print(p1)
+Print(p2)
+Print(p3)
 ```
 
 ## Plane-point Distance
