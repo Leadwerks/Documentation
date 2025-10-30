@@ -238,7 +238,11 @@
                         {
                             "title": "3D Vectors",
                             "filename": "3dvectors"
-                        }                        
+                        },
+                        {
+                            "title": "3D Planes",
+                            "filename": "3dplanes"
+                        }
                     ]
                 }                
             ]
