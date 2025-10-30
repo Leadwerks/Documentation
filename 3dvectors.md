@@ -270,6 +270,8 @@ angle = ACos(A:Dot(B))
 
 The Vec3 class has another method called [Reflect](Vec3_Reflect.md). This gives a reflection angle, given a trajectory and the normal of a face it is bouncing off of.
 
+This example shows how to make a laser that bounces off a wall.
+
 ```lua
 --Get the displays
 local displays = GetDisplays()
