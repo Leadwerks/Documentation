@@ -83,4 +83,24 @@ If we add a third plane we can complete the shape. All objects that are behind e
 
 This is exactly how the engine handles frustum culling, which determines whether each objects is visible within the camera's field of view.
 
-You may notice that some of the circles intersect the planes. The plane-point distance does not account for a sphere's radius, but if we want to, we can simply add the sphere's radius to the plane distance component, and it will work.
+You may notice that some of the circles intersect the planes. The plane-point distance does not account for a sphere's radius, but if we want to, we can simply subtract the sphere's radius from the plane distance component, and it will give us the right result:
+
+```lua
+--Sphere center
+v = Vec3(0,1,0)
+
+--Sphere radius
+r = 3
+
+--Plane points up, 2 meters below the origin
+p = Plane(0,1,0,2)
+
+--Plane-point distance
+d = p:DistanceToPoint(v)
+Print(d)
+
+--Plane-sphere distance
+p.d = p.d - r
+d = p:DistanceToPoint(v)
+Print(d)
+```
