@@ -47,12 +47,12 @@ The last value in each row is unused, so the right column is always set to (0, 0
 
 So what our matrix values mean are really this:
 
-```
-xx, xy, xz, 0 - X axis with scale
-yx, yy, yz, 0 - Y axis with scale
-zx, zy, zz, 0 - Z axis with scale
-tx, ty, tz, 1 - Translation
-```
+| Row | Description |
+|---|---|
+| xx, xy, xz, 0 | X axis and scale |
+| yx, yy, yz, 0 | Y axis and scale |
+| zx, zy, zz, 0 | Z axis and scale |
+| tx, ty, tz, 1 | Translation |
 
 Let's take another look at our matrix values, now that we know what they represent:
 
