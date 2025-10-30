@@ -10,6 +10,8 @@ An axis-aligned bounding box (AABB) is a 3D box with volume. It is defined as ha
 | size | [Vec3](Vec3.md) | size of the bounding box |
 | radius | number | distance from the center of the box to any corner |
 
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/aabb.png?raw=true)
+
 Axis-aligned bounding boxes are often used as a rough intersection test before more detailed calculations are made. In many cases this allows us to skip more expensive calculations on objects we know don't undersect the bounding box. "Axis-aligned" just means the box can't be rotated, which simplies a lot of calculations and makes them more efficient.
 
 To define a bounding box, we just need to specify the minimum and maximum extents of the box, and the rest will be calculated automatically. The other members of the bounding box will be calculated automatically.
