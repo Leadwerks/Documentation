@@ -67,7 +67,20 @@ A convex shape doesn't have any parts of the shaoe that point inwards. A concave
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/convexconcave.png?raw=true)
 
+We can form convex shapes out of a series of planes, and the volume that lies behind each plane will form the shape. This is the basis of constructive solid geometry, which is useful as a level design tool.
 
+Let's consider a field of objects divided by a plane. Objects behind the plane will be shown in green. Object in front of the plane will be shown in read. The plane divides the field in two:
 
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/planedistance1.png?raw=true)
 
+Something interesting happens if we take these objects and apply another plane, discarding the objects in front, and keeping the ones behind the second plane:
 
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/planedistance2.png?raw=true)
+
+If we add a third plane we can complete the shape. All objects that are behind each plane are within the shape, and everything else marked in red it outside the shape:
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/planedistance3.png?raw=true)
+
+This is exactly how the engine handles frustum culling, which determines whether each objects is visible within the camera's field of view.
+
+You may notice that some of the circles intersect the planes. The plane-point distance does not account for a sphere's radius, but if we want to, we can simply add the sphere's radius to the plane distance component, and it will work.
