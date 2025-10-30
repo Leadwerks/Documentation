@@ -68,4 +68,70 @@ Each entity has three bounding boxes we can retrieve, using the [Entity:GetBound
 - The *global* bounding box encloses the entity, in global space.
 - The *recursive* bounding box encloses the entity and all of its children, in global space.
 
-Entity bounding boxes can sometimes be a little bigger than they need to be to perfectly enclose the entire object, but they will never be smaller. If two entity bounding boxes intersect, the entities might intersect, but if their bounding boxes don't undersect, then they definitely don't intersect at all.
+This example shows how entity bounding boxes can be tested to see if the objects intersect:
+
+```lua
+--Get the displays
+local displays = GetDisplays()
+
+--Create a window
+local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_TITLEBAR | WINDOW_CENTER)
+
+--Create a framebuffer
+local framebuffer = CreateFramebuffer(window)
+
+--Create a world
+local world = CreateWorld()
+world:SetAmbientLight(1)
+
+--Create a camera
+local camera = CreateCamera(world)
+camera:SetClearColor(0.125)
+camera:Move(0,0,-4)
+
+--Create two boxes
+local box1 = CreateBox(world)
+box1:SetPosition(-1,0,0)
+
+local box2 = CreateBox(world)
+box2:SetPosition(1,0,0)
+
+--Main loop
+while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
+	
+	local speed = 0.02
+	if window:KeyDown(KEY_RIGHT) then box2:Move(speed,0,0) end
+	if window:KeyDown(KEY_LEFT) then box2:Move(-speed,0,0) end
+	if window:KeyDown(KEY_UP) then box2:Move(0,speed,0) end
+	if window:KeyDown(KEY_DOWN) then box2:Move(0,-speed,0) end
+	
+	bounds1 = box1:GetBounds(BOUNDS_GLOBAL)
+	bounds2 = box2:GetBounds(BOUNDS_GLOBAL)
+	
+	if bounds1:IntersectsAabb(bounds2, 0) then
+		box1:SetColor(1,0,0)
+		box2:SetColor(1,0,0)
+	else
+		box1:SetColor(0,1,0)
+		box2:SetColor(0,1,0)		
+	end
+	
+    --Update the world
+    world:Update()
+	
+    --Render the world
+    world:Render(framebuffer)
+	
+end
+```
+
+Entity bounding boxes can sometimes be a little bigger than they need to be to perfectly enclose the entire object, but they will never be smaller. If two entity bounding boxes intersect, the entities might intersect, but if their bounding boxes don't undersect, then they definitely don't intersect at all. We can see this in action if we replace the box creation code in the previous example with two spheres:
+
+```lua
+--Create two spheres
+local box1 = CreateSphere(world)
+box1:SetPosition(-1,0,0)
+
+local box2 = CreateSphere(world)
+box2:SetPosition(1,0,0)
+```
