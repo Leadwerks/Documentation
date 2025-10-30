@@ -47,6 +47,10 @@ The first three values in the last row contains the position of the entity in wo
 
 The last value in each row is unused, so the right column is always set to (0, 0, 0, 1). This just makes the math work out nicely when we do fancy things with matrices.
 
----
+## Getting and Settings Entity Matrices
 
-Would you like me to generate an example code snippet demonstrating how to extract the forward vector from a matrix in Leadwerks?
+Since the entity matrix encodes the position, rotation, and scale, this gives us an easy way to exactly copy one entity's orientation to another:
+
+```lua
+b:SetMatrix(a.matrix)
+```
