@@ -63,7 +63,7 @@ end
 
 Things get interesting when we start using multiple planes. Before we get ahead of ourselves, lets define what convex and concave shapes are.
 
-A convex shape doesn't have any parts of the shaoe that point inwards. A concave shape has part that point inwards, like a _cave_. As usual, it's easies to explain this with pictures:
+A convex shape doesn't have any parts of the shaoe that point inwards. A concave shape has part that point inwards, _like a cave_. As usual, it's easies to explain this with pictures:
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/convexconcave.png?raw=true)
 
