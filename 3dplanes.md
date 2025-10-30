@@ -7,7 +7,7 @@ You might not use planes directly when developing games, but they are an extreme
 - We can calculate the distance between any point in 3D space and the plane's surface.
 - We can determine the intersection point of a line in 3D space with the plane.
 
-Any plane can be defined as a normal and a distance to the origin:
+A plane is defined as a normal and a distance to the origin:
 
 | Member | Description |
 |---|---|
