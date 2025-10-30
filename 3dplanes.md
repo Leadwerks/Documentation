@@ -64,7 +64,10 @@ end
 
 ## Point-line Intersection
 
-We can determine the intersection point between a plane and a 3D line in space with the [Plane:IntersectsLine](Plane_IntersectsLine.md) method.
+We can determine the intersection point between a plane and a 3D line in space with the [Plane:IntersectsLine](Plane_IntersectsLine.md) method. This will tell us if the line intersects the plane, and if so, what the exact intersection point is. Note that a line will not ever intersect a plane under a few conditions:
+- If the line is parallel to the plane (runs alongside it), the line will never intersect the plane.
+- If a line segment is being tested, instead of an infinite line, it may not intersect the plane.
+
 
 
 ## Convex Volumes
