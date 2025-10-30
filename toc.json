@@ -234,7 +234,11 @@
                         {
                             "title": "3D Rotation",
                             "filename": "3drotation"
-                        }
+                        },
+                        {
+                            "title": "3D Vectors",
+                            "filename": "3dvectors"
+                        }                        
                     ]
                 }                
             ]
