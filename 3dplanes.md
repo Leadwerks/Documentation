@@ -2,18 +2,21 @@
 
 A plane is like an infinite surface rotated in any direction that divides th entire universe into two pieces. Everything is in the world is either in front of, behind, or exactly on the plane's surface.
 
-Any plane can be defined with just a normal and a distance to the origin:
-
-```lua
-p = Plane(nx, ny, nz, d)
-```
-
-Note that the distance to the plane is considered "distance in front of the plane". If the origin is behind the plane, the distance value will be nagative.
-
-Planes have two superpowers that are very useful for games:
+You might not use planes directly when developing games, but they are an extremely powerful tool for solving difficult geometric problems, so it's good to know what they can do. Planes have two superpowers that are very useful for games:
 
 - We can calculate the distance between any point in 3D space and the plane's surface.
 - We can determine the intersection point of a line in 3D space with the plane.
+
+Any plane can be defined with just a normal and a distance to the origin:
+
+| Member | Description |
+|---|---|
+| x | X component of the plane normal |
+| y | Y component of the plane normal |
+| z | Z component of the plane normal |
+| d | distance to the origin |
+
+Note that the distance to the plane is considered "distance in front of the plane". If the origin is behind the plane, the distance value will be nagative.
 
 ## Plane Constructors
 
