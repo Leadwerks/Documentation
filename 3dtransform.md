@@ -150,6 +150,10 @@ end
 ```
 ### Transforming a Vector
 
+The [TransformVector](TransformVector.md) function converts a 3D vector from one coordinate space to another.
+
+This example transforms the forward vector (0, 0, 1) from world space to the ship's local space. Notice that because the ship is scaled to 2.0, the transsformed vector will have a length of just 0.5.
+
 ```lua
 --Get the displays
 local displays = GetDisplays()
@@ -197,9 +201,9 @@ while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
     world:Render(framebuffer)
 end
 ```
-
-
 ### Transforming a Normal
+
+The [TransformNormal](TransformNormal.md) function operates just like a vector, except that it normalizes the result, so the returned vector's length is always one.
 
 ```lua
 --Get the displays
@@ -249,11 +253,12 @@ while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
 end
 ```
 
-### Transforming a Rotation
+### Other Transformations
 
+Transforming points, vectors, and normals are the most common operations used in games. Additionally, we have a few extra commands that may be useful from time to time.
 
-### Transforming a Plane
+The [TransformRotation](TransformRotation.md) function transforms a rotation between coordinate systems. It's best to use quaternions with this, but Euler angles are also accepted.
 
+The [TransformAabb](TransformAabb.md) function transforms an axis-aligned bounding box from one coordinate system to another.
 
-### Transforming an Axis-aligned Bounding Box
-
+The [TransformPlane](TransformPlane.md) function transforms a plane from one coordinate system to another.
