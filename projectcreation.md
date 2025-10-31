@@ -1,5 +1,7 @@
 # Leadwerks 5 Crash Course
 
+Hello, and welcome to Leadwerks 5! This series of articles in intended to get you up to speed quickly, with a fast but thorough demonstration of the most common features you are likely to use in the editor.
+
 www.youtube.com/watch?v=YYbFPMu1vpg
 
 The first time you run Leadwerks, the [project manager](projectmanager.md) will appear. If this is your first time running the program ever, there will be no projects listed in the window.
