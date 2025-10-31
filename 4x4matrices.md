@@ -99,6 +99,8 @@ What would happen if we then scaled the entity by 10 on each axis? Our matrix wo
 3, 0, 2, 1
 ```
 
+It can be difficult to visualize what the numbers in a 4x4 matrix mean. It's more important to just remember what each row in a 4x4 matrix represents.
+
 ## Using Entity Matrices
 
 Since we know the third row of the matrix encodes the entity's forward direction, this provides an easy way to retrieve it without calling any other functions:
