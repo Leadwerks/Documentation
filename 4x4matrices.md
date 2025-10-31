@@ -108,7 +108,7 @@ What would happen if we then scaled the entity by 10 on each axis? Our matrix wo
 3, 5, 2, 1
 ```
 
-It can be difficult to visualize what the numbers in a 4x4 matrix mean. It's more important to just remember what each row in a 4x4 matrix represents.
+It can be difficult to visualize what the numbers in a 4x4 matrix mean. It's more important to just remember what each row in the matrix represents.
 
 ## Using Entity Matrices
 
