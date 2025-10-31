@@ -90,13 +90,22 @@ Our correct matrix looks like this:
 
 Use the [left-hand rule](3dspace.md) to help visualize this. Just point your first finger up so that your thumb points back towards you.
 
+If we moved this entity forward five meters, what would the resulting 4x4 matrix look like? Since the entity's forward vector is (0, 1, 0), this would add five to the Y component of the matrix translation, giving up this matrix:
+
+```txt
+1, 0, 0, 0
+0, 0, -1, 0
+0, 1, 0, 0
+3, 5, 2, 1
+```
+
 What would happen if we then scaled the entity by 10 on each axis? Our matrix would now look like this:
 
 ```txt
 10, 0, 0, 0
 0, 0, -10, 0
 0, 10, 0, 0
-3, 0, 2, 1
+3, 5, 2, 1
 ```
 
 It can be difficult to visualize what the numbers in a 4x4 matrix mean. It's more important to just remember what each row in a 4x4 matrix represents.
