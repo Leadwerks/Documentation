@@ -85,9 +85,9 @@ One of the most powerful aspects of entity hierarchies is the ability to transfo
 
 It's important to understand these concepts:
 
-- World or Global Space: Coordinates relative to the world origin.
-- Local Space: Coordinates relative to an entity's own origin.
-- Parent Space: Coordinates relative to the parent entity, if any.
+- _World_ or _Global_ Space: Coordinates relative to the world origin.
+- _Local_ Space: Coordinates relative to an entity's own origin.
+- _Parent_ Space: Coordinates relative to the parent entity, if any.
 
 Suppose you have a point in world space and want to find its position relative to an entity, or vice versa. Leadwerks provides transformation functions to facilitate these conversions.
 
