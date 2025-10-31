@@ -109,7 +109,7 @@
                     "useLanguage": false,
                     "topics": [
                         {
-                            "title": "Getting Started",
+                            "title": "Create a Project",
                             "filename": "projectcreation"
                         },
                         {
