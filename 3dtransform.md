@@ -257,8 +257,6 @@ end
 
 Transforming points, vectors, and normals are the most common operations used in games. Additionally, we have a few extra commands that may be useful from time to time.
 
-The [TransformRotation](TransformRotation.md) function transforms a rotation between coordinate systems. It's best to use quaternions with this, but Euler angles are also accepted.
-
-The [TransformAabb](TransformAabb.md) function transforms an axis-aligned bounding box from one coordinate system to another.
-
-The [TransformPlane](TransformPlane.md) function transforms a plane from one coordinate system to another.
+- The [TransformRotation](TransformRotation.md) function transforms a rotation between coordinate systems. It's best to use quaternions with this, but Euler angles are also accepted.
+- The [TransformAabb](TransformAabb.md) function transforms an axis-aligned bounding box from one coordinate system to another.
+- The [TransformPlane](TransformPlane.md) function transforms a plane from one coordinate system to another.
