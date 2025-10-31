@@ -104,3 +104,52 @@ b:SetMatrix(a.matrix)
 ## Matrix Transformations
 
 The [transformation commands](3dtransform.md) we previously learned about will accept two 4x4 matrices as the source and destination parameters, in addition to using entities.
+
+```lua
+--Get the displays
+local displays = GetDisplays()
+
+--Create a window
+local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_TITLEBAR | WINDOW_CENTER)
+
+--Create a framebuffer
+local framebuffer = CreateFramebuffer(window)
+
+--Create a world
+local world = CreateWorld()
+world:SetAmbientLight(1)
+
+--Create a camera
+local camera = CreateCamera(world)
+camera:SetClearColor(0.125)
+camera:Turn(35,0,0)
+camera:Move(0,0,-4)
+
+--Load a model
+local ship = LoadModel(world, "https://github.com/Leadwerks/Documentation/raw/refs/heads/master/Assets/Models/Spaceship/spaceship.mdl")
+ship:SetPosition(2,0,0)
+
+--Make an instanced copy of the model
+local ship2 = ship:Instantiate(world)
+ship2:SetColor(2,0,0,1, true)
+ship2:SetPosition(-2,0,0)
+
+--Main loop
+while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
+
+    --Key controls move and rotate ship
+    if window:KeyDown(KEY_RIGHT) then ship:Move(0.1,0,0) end
+    if window:KeyDown(KEY_LEFT) then ship:Move(-0.1,0,0) end
+    if window:KeyDown(KEY_UP) then ship:Turn(-1,0,0) end
+    if window:KeyDown(KEY_DOWN) then ship:Turn(1,0,0) end
+
+	--Space key copies one entity's orientation to the other
+	if window:KeyHit(KEY_SPACE) then ship2:SetMatrix(ship.matrix) end
+
+    --Update the world
+    world:Update()
+
+    --Render the world
+    world:Render(framebuffer)
+end
+```
