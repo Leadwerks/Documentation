@@ -20,28 +20,35 @@ world:SetAmbientLight(1)
 local camera = CreateCamera(world)
 camera:SetClearColor(0.125)
 camera:Turn(35,0,0)
-camera:Move(0,0,-3)
+camera:Move(0,0,-5)
+
+--Create a beam
+local arm = CreateBox(world,8,0.25,0.25)
+arm:SetColor(0.25)
+
+--Create a stand, just for visual clarity
+local stand = CreateCylinder(world,0.25,1.25)
+stand:SetColor(0.25)
 
 --Load a model
 local ship = LoadModel(world, "https://github.com/Leadwerks/Documentation/raw/refs/heads/master/Assets/Models/Spaceship/spaceship.mdl")
+ship:SetPosition(4,0,0)
+ship:SetParent(arm)
 
 --Create a box
-local box = CreateBox(world, 2, 0.25, 0.1)
-
---Move the box forward a bit
-box:SetPosition(0,0,1.5)
-
---Attach the box to the ship
-box:SetParent(ship)
+local propeller = CreateBox(world, 2, 0.25, 0.1)
+propeller:SetPosition(0,0,1.25)
+propeller:SetColor(1,0,0)
+propeller:SetParent(ship, false)
 
 --Main loop
 while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
 	
-	--Rotate the ship around its Y axis
-	ship:Turn(0,1,0)
+	--Rotate the arm the ship is attached to around the Y axis
+	arm:Turn(0,-1,0)
 	
-	--Rotate the box around its Z axis
-	box:Turn(0,0,10)
+	--Rotate the propeller around its Z axis
+	propeller:Turn(0,0,10)
 
     --Update the world
     world:Update()
