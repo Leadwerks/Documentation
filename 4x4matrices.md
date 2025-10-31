@@ -101,9 +101,7 @@ Since the entity matrix encodes the position, rotation, and scale, this gives us
 b:SetMatrix(a.matrix)
 ```
 
-## Matrix Transformations
-
-The [transformation commands](3dtransform.md) we previously learned about will accept two 4x4 matrices as the source and destination parameters, in addition to using entities.
+This example shows all of these techniques in action:
 
 ```lua
 --Get the displays
@@ -134,6 +132,21 @@ local ship2 = ship:Instantiate(world)
 ship2:SetColor(2,0,0,1, true)
 ship2:SetPosition(-2,0,0)
 
+--Text tiles for displaying info
+local font = LoadFont("Fonts/arial.ttf")
+
+local tile1 = CreateTile(world, font, "")
+tile1:SetPosition(4,4)
+
+local tile2 = CreateTile(world, font, "")
+tile2:SetPosition(4,24)
+
+local tile3 = CreateTile(world, font, "")
+tile3:SetPosition(4,44)
+
+local tile4 = CreateTile(world, font, "")
+tile4:SetPosition(4,64)
+
 --Main loop
 while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
 
@@ -146,6 +159,13 @@ while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
 	--Space key copies one entity's orientation to the other
 	if window:KeyHit(KEY_SPACE) then ship2:SetMatrix(ship.matrix) end
 
+	--Update the display text
+	m = ship.matrix
+	tile1:SetText("Left: " .. tostring(m[0][0]) .. ", " .. tostring(m[0][1]) .. ", " .. tostring(m[0][2]) )
+	tile2:SetText("Up: " .. tostring(m[1][0]) .. ", " .. tostring(m[1][1]) .. ", " .. tostring(m[1][2]) )
+	tile3:SetText("Forward: " .. tostring(m[2][0]) .. ", " .. tostring(m[2][1]) .. ", " .. tostring(m[2][2]) )
+	tile4:SetText("Translation: " .. tostring(m[3][0]) .. ", " .. tostring(m[3][1]) .. ", " .. tostring(m[3][2]) )
+	
     --Update the world
     world:Update()
 
@@ -153,3 +173,7 @@ while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
     world:Render(framebuffer)
 end
 ```
+
+## Matrix Transformations
+
+The [transformation commands](3dtransform.md) we previously learned about will accept two 4x4 matrices as the source and destination parameters, in addition to using entities.
