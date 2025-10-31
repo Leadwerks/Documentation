@@ -246,7 +246,11 @@
                         {
                             "title": "Planes",
                             "filename": "3dplanes"
-                        }
+                        },
+                        {
+                            "title": "4x4 Matrices",
+                            "filename": "4x4matrices"
+                        }                        
                     ]
                 }                
             ]
