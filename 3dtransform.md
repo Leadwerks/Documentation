@@ -1,6 +1,8 @@
 # Hierarchies and Space Transformations
 
-In Leadwerks, we can "parent" one entity to another. This will make it so when the parent entity moves or rotates, the child will move with it, as if it is stuck to the parent:
+In Leadwerks, we can "parent" one entity to another. This establishes a hierarchical relationship between two entities. When the parent moves or rotates, all its child entities follow suit as if they are attached to it. Conversely, moving a child entity affects its position relative to the parent, but does not affect the parent entity.
+
+Let's consider a simple example where we have a spaceship with a spinning propeller, that is mounted on a rotating arm:
 
 ```lua
 --Get the displays
@@ -58,9 +60,16 @@ while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
 end
 ```
 
+In this setup:
+
+- The ship is parented to the end of the arm, so when the arm rotates, the ship moves along with it.
+- The propeller is parented to the ship, so it spins independently but moves with the ship as the ship moves and rotates.
+
 Parenting allows us to create complex assemblies of objects that move in a natural way.
 
-We can access all the children an entity has parented to it with the _kids_ array:
+## Accessing Child Entities
+
+Leadwerks provides a straightforward way to access all children of an entity via the _kids_ array:
 
 ```lua
 for n = 1, #entity.kids do
@@ -68,7 +77,14 @@ for n = 1, #entity.kids do
 end
 ```
 
+This is useful for iterating over parts of a composite object, especially when dynamically modifying objects in a hierarchy.
+
 ## Transforming a Point
+
+
+
+
+
 
 One of the most powerful techniques in 3D games is the ability to transform points, vectors, and other data from one entity's space to another.
 
