@@ -90,6 +90,15 @@ Our correct matrix looks like this:
 
 Use the [left-hand rule](3dspace.md) to help visualize this. Just point your first finger up so that your thumb points back towards you.
 
+What would happen if we then scaled the entity by 10 on each axis? Our matrix would now look like this:
+
+```txt
+10, 0, 0, 0
+0, 0, -10, 0
+0, 10, 0, 0
+3, 0, 2, 1
+```
+
 ## Using Entity Matrices
 
 Since we know the third row of the matrix encodes the entity's forward direction, this provides an easy way to retrieve it without calling any other functions:
