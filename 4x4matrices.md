@@ -4,7 +4,7 @@ What is the matrix? In Leadwerks, a 4x4 matrix is a mathematical structure used 
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/4x4matrix1.png?raw=true)
 
-The [Mat4](Mat4.md) class has four [Vec4](Vec4.md) that can be accessed either with i, j, k, and t, or by number:
+The [Mat4](Mat4.md) class has four [Vec4](Vec4.md) that can be accessed either with i, j, k, and t, or by index:
 
 ```lua
 m = Mat4(1)
