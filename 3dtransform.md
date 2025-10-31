@@ -93,12 +93,161 @@ Suppose you have a point in world space and want to find its position relative t
 
 ### Transforming a Point
 
+The [TransformPoint](TransformPoint.md) function converts a point in 3D space from one entity's coordinate system to another.
+
+In the example below, the box's position is transformed to the ship's local space. The box's position relative to the ship will be displayed onscreen.
+
+```lua
+--Get the displays
+local displays = GetDisplays()
+
+--Create a window
+local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_TITLEBAR | WINDOW_CENTER)
+
+--Create a framebuffer
+local framebuffer = CreateFramebuffer(window)
+
+--Create a world
+local world = CreateWorld()
+world:SetAmbientLight(1)
+
+--Create a camera
+local camera = CreateCamera(world)
+camera:SetClearColor(0.125)
+camera:Turn(35,0,0)
+camera:Move(0,0,-5)
+
+--Load a model
+local ship = LoadModel(world, "https://github.com/Leadwerks/Documentation/raw/refs/heads/master/Assets/Models/Spaceship/spaceship.mdl")
+
+--Create a box
+local box = CreateBox(world)
+box:SetPosition(4,0,0)
+box:SetColor(0,0,1)
+
+--Display some text
+local font = LoadFont("Fonts/arial.ttf")
+local tile = CreateTile(world, font, "")
+
+--Main loop
+while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
+	
+	if window:KeyDown(KEY_RIGHT) then ship:Turn(0,1,0) end
+	if window:KeyDown(KEY_LEFT) then ship:Turn(0,-1,0) end
+
+	--Transform the box's position to the ship's space
+	p = TransformPoint(box.position, nil, ship)
+
+	--Display the transformed position
+	tile:SetText("Position: "..tostring(p.x)..", "..tostring(p.y)..", "..tostring(p.z))
+
+    --Update the world
+    world:Update()
+	
+    --Render the world
+    world:Render(framebuffer)
+end
+```
+### Transforming a Vector
+
+```lua
+--Get the displays
+local displays = GetDisplays()
+
+--Create a window
+local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_TITLEBAR | WINDOW_CENTER)
+
+--Create a framebuffer
+local framebuffer = CreateFramebuffer(window)
+
+--Create a world
+local world = CreateWorld()
+world:SetAmbientLight(1)
+
+--Create a camera
+local camera = CreateCamera(world)
+camera:SetClearColor(0.125)
+camera:Turn(35,0,0)
+camera:Move(0,0,-5)
+
+--Load a model
+local ship = LoadModel(world, "https://github.com/Leadwerks/Documentation/raw/refs/heads/master/Assets/Models/Spaceship/spaceship.mdl")
+ship:SetScale(2)
+
+--Display some text
+local font = LoadFont("Fonts/arial.ttf")
+local tile = CreateTile(world, font, "")
+
+--Main loop
+while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
+	
+	if window:KeyDown(KEY_RIGHT) then ship:Turn(0,1,0) end
+	if window:KeyDown(KEY_LEFT) then ship:Turn(0,-1,0) end
+
+	--Transform the forward vector from world space to the ship's space
+	p = TransformVector(0, 0, 1, nil, ship)
+
+	--Display the transformed vector
+	tile:SetText("Vector: "..tostring(p.x)..", "..tostring(p.y)..", "..tostring(p.z))
+
+    --Update the world
+    world:Update()
+	
+    --Render the world
+    world:Render(framebuffer)
+end
+```
+
 
 ### Transforming a Normal
 
+```lua
+--Get the displays
+local displays = GetDisplays()
 
-### Transforming a Vector
+--Create a window
+local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_TITLEBAR | WINDOW_CENTER)
 
+--Create a framebuffer
+local framebuffer = CreateFramebuffer(window)
+
+--Create a world
+local world = CreateWorld()
+world:SetAmbientLight(1)
+
+--Create a camera
+local camera = CreateCamera(world)
+camera:SetClearColor(0.125)
+camera:Turn(35,0,0)
+camera:Move(0,0,-5)
+
+--Load a model
+local ship = LoadModel(world, "https://github.com/Leadwerks/Documentation/raw/refs/heads/master/Assets/Models/Spaceship/spaceship.mdl")
+ship:SetScale(2)
+
+--Display some text
+local font = LoadFont("Fonts/arial.ttf")
+local tile = CreateTile(world, font, "")
+
+--Main loop
+while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
+	
+	if window:KeyDown(KEY_RIGHT) then ship:Turn(0,1,0) end
+	if window:KeyDown(KEY_LEFT) then ship:Turn(0,-1,0) end
+
+	--Transform the forward normal from world space to the ship's space
+	p = TransformNormal(0, 0, 1, nil, ship)
+
+	--Display the transformed normal
+	tile:SetText("Vector: "..tostring(p.x)..", "..tostring(p.y)..", "..tostring(p.z))
+
+    --Update the world
+    world:Update()
+	
+    --Render the world
+    world:Render(framebuffer)
+end
+```
 
 ### Transforming a Rotation
 
