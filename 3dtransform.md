@@ -79,19 +79,17 @@ end
 
 This is useful for iterating over parts of a composite object, especially when dynamically modifying objects in a hierarchy.
 
-## Transforming a Point
+## Space Transformations
 
+One of the most powerful aspects of entity hierarchies is the ability to transform points, normals, vectors, and other data between different coordinate spaces.
 
+It's important to understand these concepts:
 
+- World or Global Space: Coordinates relative to the world origin.
+- Local Space: Coordinates relative to an entity's own origin.
+- Parent Space: Coordinates relative to the parent entity, if any.
 
-
-
-One of the most powerful techniques in 3D games is the ability to transform points, vectors, and other data from one entity's space to another.
-
-You can think of space transformations as data relative to another entity. For example, if an entity is positioned at (10,0,0), and its not rotated, what would the position (11,0,0) be relative to that entity? The answer is (1,0,0).
-
-If the entity was positioned at (10,0,0) and its rotation was (0,180,0), the position (11,0,0) relative to the entity would be (-1,0,0), since the entity is spun around 180 degrees.
-
+Suppose you have a point in world space and want to find its position relative to an entity, or vice versa. Leadwerks provides transformation functions to facilitate these conversions.
 
 ## Transforming a Normal
 
