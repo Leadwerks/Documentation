@@ -89,22 +89,22 @@ It's important to understand these concepts:
 - _Local_ Space: Coordinates relative to an entity's own origin.
 - _Parent_ Space: Coordinates relative to the parent entity, if any.
 
-Suppose you have a point in world space and want to find its position relative to an entity, or vice versa. Leadwerks provides transformation functions to facilitate these conversions.
+Suppose you have a point in world space and want to find its position relative to an entity, or vice versa. Leadwerks provides transformation functions to perform these conversions.
 
-## Transforming a Normal
-
-
-## Transforming a Vector
+### Transforming a Point
 
 
-## Transforming a Rotation
+### Transforming a Normal
 
 
-## Transforming a Plane
+### Transforming a Vector
 
 
-## Transforming an Axis-aligned Bounding Box
+### Transforming a Rotation
 
 
-## Parenting Entities
+### Transforming a Plane
+
+
+### Transforming an Axis-aligned Bounding Box
 
