@@ -67,6 +67,27 @@ This particular type of matrix is called an _identity matrix_ and instantly tell
 
 4x4 matrices in Leadwerks are always orthogonal, which means the three axes always form a left-handed coordinate system and are oriented 90 degrees apart from one another.
 
+## Visualizing Matrices
+
+What would the 4x4 matrix look like for an entity positioned at (3, 0, 2) with a pitch of negative 90 degrees?
+
+Since the last row of the matrix represents the position, and the fourth value in this row is always 1.0, we know the last matrix row would be (3, 0, 2, 1).
+
+Using the [left-handed rule for rotation](3drotation.md) we can figure out that -90 degrees means the object is turned to face up. That means the third matrix row, indicating the entity's forward direction, would be (0, 1, 0, 0).
+
+The entity's X axis would be unchanged, so the first row remains (1, 0, 0, 0).
+
+Finally, since the entity is pointing up, it's local Y axis now points in the negative Z direction, so the second matrix row is now (0, 0, -1, 0).
+
+Our correct matrix looks like this:
+
+```txt
+1, 0, 0, 0
+0, 0, -1, 0
+0, 1, 0, 0
+3, 0, 2, 1
+```
+
 ## Using Entity Matrices
 
 Since we know the third row of the matrix encodes the entity's forward direction, this provides an easy way to retrieve it without calling any other functions:
