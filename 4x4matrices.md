@@ -217,10 +217,6 @@ while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
 end
 ```
 
-## 3x3 Matrices
-
-It's rare that you would need these, but the [Mat3](Mat3.md) class is also available, for handling 3x3 matrices. These can be useful for problems that only involve rotation and scale. The engine uses these for some lighting calculations.
-
 ## Matrix Transformations
 
 The [transformation commands](3dtransform.md) we previously learned about will accept two 4x4 matrices as the source and destination parameters, in addition to using entities.
