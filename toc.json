@@ -247,10 +247,14 @@
                             "title": "Planes",
                             "filename": "3dplanes"
                         },
+                        {                           
+                            "title": "Hierarchies and Space Transformations ",
+                            "filename": "3dtransform"
+                        },
                         {
                             "title": "4x4 Matrices",
                             "filename": "4x4matrices"
-                        }                        
+                        }                  
                     ]
                 }                
             ]
