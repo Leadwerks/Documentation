@@ -37,6 +37,7 @@ end
 The output of the program looks like this:
 
 ```txt
+1
 2
 3
 4
