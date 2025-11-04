@@ -4,6 +4,8 @@ This tutorial series will help you develop your 3D spatial visualization abiliti
 
 We will cover some mathematics in the series, but not very much. It's more important to understand what the math does, rather than memorizing equations or solving problems by hand.
 
+www.youtube.com/watch?v=uTkkh3QDI9c
+
 A notebook with graph paper is a great tool for every game developer to have with them at all times, along with a pen or pencil and ruler. These items will allow you to sketch out your ideas whenever and wherever they occur, and the physical act of drawing with your hands on paper will help you train your brain to think in 3D.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/oldschool.jpg?raw=true)
