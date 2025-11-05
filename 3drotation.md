@@ -90,7 +90,7 @@ end
 
 Quaternions are a more advanced definition of rotation that don't have the ambiguity of Euler angles. Quaternions use four numbers, x, y, z, and w, to define a rotation. They aren't very human-friendly, but you don't need to understand what the actual numbers mean.
 
-Any time you set an entity's rotation using Euler angles, Leadwerks will calculate and store the correponding quaternion rotation.
+Any time you set an entity's rotation using Euler angles, Leadwerks will calculate and store the correponding quaternion rotation. You can retrieve the entity rotation as a quaternion using the [Entity:GetQuaternion](Entity_GetQuaternion.md) method.
 
 The [Entity:Turn](Entity_Turn.md) method will use the interally stored quaternion to apply rotation to the entity's current rotation, always producing a correct result:
 
