@@ -145,7 +145,7 @@ end
 
 ### Spherical Linear Interpolation
 
-Another major advantage of quaternions is they can be used to smoothly interpolate between any two rotations, always using the shortest distance. This provides fluid natural looking rotation that looks great in games.
+If we try to interpolate Euler rotations using the [MixAngle](MixAngle.md) function for each axis, the resulting motion will look strange. Pitch, yaw, and roll are being interpolated independently, resulting in a lot of excess motion that doesn't take the shortest route between the current and target rotations.
 
 ```lua
 --Get the displays
@@ -176,22 +176,31 @@ local n = 1
 
 --Main loop
 while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
-	
-	if window:KeyHit(KEY_SPACE) then
-		n = n + 1
-		if n > 2 then n = 1 end
-	end
-	
-	--Interpolating each axis rotation does not provide the shortest rotation
-	--ship:SetRotation(MixAngle(ship.rotation.x, target[n].x, 0.05), MixAngle(ship.rotation.y, target[n].y, 0.05), MixAngle(ship.rotation.z, target[n].z, 0.05))
-	
-	--Spherical linear interpolation provides the shortest rotation
-	ship:SetRotation(ship:GetQuaternion():Slerp(Quat(target[n]), 0.05))
-	
+
+    if window:KeyHit(KEY_SPACE) then
+        n = n + 1
+        if n > 2 then n = 1 end
+    end
+
+    --Interpolating each axis rotation does not provide the shortest rotation
+    ship:SetRotation(MixAngle(ship.rotation.x, target[n].x, 0.05), MixAngle(ship.rotation.y, target[n].y, 0.05), MixAngle(ship.rotation.z, target[n].z, 0.05))
+
+    --Spherical linear interpolation provides the shortest rotation
+    ship:SetRotation(ship:GetQuaternion():Slerp(Quat(target[n]), 0.05))
+
     --Update the world
     world:Update()
-	
+
     --Render the world
     world:Render(framebuffer)
 end
 ```
+Quaternions support a special type of interpolation called _spherical linear interapoltion_, or [Slerp](Quat_Slerp.md) for short. This can be used to smoothly interpolate between any two rotations, always using the shortest distance.
+
+Replace the rotation code at line 36 with this line of code that uses spherical linear interapoltion:
+
+```lua
+ship:SetRotation(ship:GetQuaternion():Slerp(Quat(target[n]), 0.05))
+```
+
+This provides fluid natural looking rotation that looks great in games.
