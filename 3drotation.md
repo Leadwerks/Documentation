@@ -185,9 +185,6 @@ while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
     --Interpolating each axis rotation does not provide the shortest rotation
     ship:SetRotation(MixAngle(ship.rotation.x, target[n].x, 0.05), MixAngle(ship.rotation.y, target[n].y, 0.05), MixAngle(ship.rotation.z, target[n].z, 0.05))
 
-    --Spherical linear interpolation provides the shortest rotation
-    ship:SetRotation(ship:GetQuaternion():Slerp(Quat(target[n]), 0.05))
-
     --Update the world
     world:Update()
 
