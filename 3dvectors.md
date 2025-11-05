@@ -1,5 +1,9 @@
 # Vectors
 
+3D vectors are one of the most important tools in your toolbox, as a game developer.
+
+www.youtube.com/watch?v=QDwyMSMD2eY
+
 If we draw a line from any point in 3D space to the origin (0, 0, 0), we get a vector. A vector is a line with a direction and a length.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/3dvector.png?raw=true)
