@@ -2,6 +2,8 @@
 
 In this lesson we will learn about 2D drawing and screen orientation, with a focus on the spatial properties of screen coordinates and 2D shapes.
 
+www.youtube.com/watch?v=6sYWSguRjiw
+
 ## Screen Coordinates
 
 There is a long-standing convention in computer graphics that considers the upper-left corner of the screen to be position (0, 0). Moving to the right of the screen increases the X coordinate, as expected, but in screen coordinates moving down the screen also increases the Y coordinate. This is the opposite of a 3D coordinate system where the positive Y direction points up. This is probably because text in most languages reads from the top down, so if you are designing a user interface it makes sense to start at the top-left corner.
