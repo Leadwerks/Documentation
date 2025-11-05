@@ -197,7 +197,9 @@ Quaternions support a special type of interpolation called _spherical linear int
 Replace the rotation code at line 36 with this line of code that uses spherical linear interapoltion:
 
 ```lua
-ship:SetRotation(ship:GetQuaternion():Slerp(Quat(target[n]), 0.05))
+local qcurrent = ship:GetQuaternion()
+local qtarget = Quat(target[n])
+ship:SetRotation(qcurrent:Slerp(qtarget, 0.05))
 ```
 
 This provides fluid natural looking rotation that looks great in games.
