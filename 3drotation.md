@@ -55,29 +55,32 @@ local label = CreateTile(camera, font, "Rotation:")
 --Main loop
 while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
 	
-	--Get the quaternion rotation and convert to a Euler
-	local r = ship:GetQuaternion()
-	r = r:ToEuler()
+    --Get the quaternion rotation and convert to a Euler
+    local r = ship:GetRotation()
 	
-	--Key controls rotate the ship
-	if window:KeyDown(KEY_RIGHT) then r.y = r.y + 1 end
-	if window:KeyDown(KEY_LEFT) then r.y = r.y - 1 end
-		
-	if window:KeyDown(KEY_W) then r.x = r.x - 1 end
+    --Key controls rotate the ship
+    if window:KeyDown(KEY_RIGHT) then r.y = r.y + 1 end
+    if window:KeyDown(KEY_LEFT) then r.y = r.y - 1 end
+	
+    if window:KeyDown(KEY_W) then r.x = r.x - 1 end
 	if window:KeyDown(KEY_S) then r.x = r.x + 1 end
-		
-	if window:KeyDown(KEY_A) then r.z = r.z + 1 end
-	if window:KeyDown(KEY_D) then r.z = r.z - 1 end
+
+    if window:KeyDown(KEY_A) then r.z = r.z + 1 end
+    if window:KeyDown(KEY_D) then r.z = r.z - 1 end
+
+    --Set the rotation
+    ship:SetRotation(r)
+
+	--This causes a new Euler rotation value to be calculated from the internal orientation
+	ship:Turn(1,0,0)
+	ship:Turn(-1,0,0)
 	
-	--Set the rotation
-	ship:SetRotation(r)
-	
-	--Display the rotation
-	label:SetText("Rotation: "..tostring(r.x)..", "..tostring(r.y)..", "..tostring(r.z))
+    --Display the rotation
+    label:SetText("Rotation: "..tostring(r.x)..", "..tostring(r.y)..", "..tostring(r.z))
 
     --Update the world
     world:Update()
-	
+
     --Render the world
     world:Render(framebuffer)
 end
