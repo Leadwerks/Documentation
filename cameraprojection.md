@@ -110,4 +110,3 @@ while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
 	
 end
 ```
-
