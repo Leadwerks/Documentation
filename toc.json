@@ -232,24 +232,24 @@
                             "filename": "3dspace"
                         },
                         {
-                            "title": "3D Rotation",
-                            "filename": "3drotation"
-                        },
-                        {
                             "title": "Axis-aligned Bounding Boxes",
                             "filename": "3daabb"
-                        },                        
+                        },                         
+                        {
+                            "title": "3D Rotation",
+                            "filename": "3drotation"
+                        },                      
                         {
                             "title": "Vectors",
                             "filename": "3dvectors"
                         },
-                        {
-                            "title": "Planes",
-                            "filename": "3dplanes"
-                        },
                         {                           
                             "title": "Hierarchies and Transformations",
                             "filename": "3dtransform"
+                        },
+                        {
+                            "title": "Planes",
+                            "filename": "3dplanes"
                         },
                         {
                             "title": "4x4 Matrices",
