@@ -2,6 +2,8 @@
 
 In Leadwerks, we can "parent" one entity to another. This establishes a hierarchical relationship between two entities. When the parent moves or rotates, all its child entities follow suit as if they are attached to it. Conversely, moving a child entity affects its position relative to the parent, but does not affect the parent entity.
 
+www.youtube.com/watch?v=Fm96zaY3UQc
+
 Let's consider a simple example where we have a spaceship with a spinning propeller, that is mounted on a rotating arm:
 
 ```lua
