@@ -206,7 +206,7 @@ while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
 
 	--Update the display text
 	m = ship.matrix
-	tile1:SetText("Left: " .. tostring(m[0][0]) .. ", " .. tostring(m[0][1]) .. ", " .. tostring(m[0][2]) )
+	tile1:SetText("Right: " .. tostring(m[0][0]) .. ", " .. tostring(m[0][1]) .. ", " .. tostring(m[0][2]) )
 	tile2:SetText("Up: " .. tostring(m[1][0]) .. ", " .. tostring(m[1][1]) .. ", " .. tostring(m[1][2]) )
 	tile3:SetText("Forward: " .. tostring(m[2][0]) .. ", " .. tostring(m[2][1]) .. ", " .. tostring(m[2][2]) )
 	tile4:SetText("Translation: " .. tostring(m[3][0]) .. ", " .. tostring(m[3][1]) .. ", " .. tostring(m[3][2]) )
