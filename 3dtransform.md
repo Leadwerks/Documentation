@@ -60,6 +60,10 @@ while not window:KeyDown(KEY_ESCAPE) and not window:Closed() do
 end
 ```
 
+The code will produce this scene:
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/hierarchy.jpg?raw=true)
+
 In this setup:
 
 - The ship is parented to the end of the arm, so when the arm rotates, the ship moves along with it.
