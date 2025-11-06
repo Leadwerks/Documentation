@@ -243,6 +243,10 @@
                             "title": "Vectors",
                             "filename": "3dvectors"
                         },
+                        {
+                            "title": "Camera Projection",
+                            "filename": "cameraprojection"
+                        },                        
                         {                           
                             "title": "Hierarchies and Transformations",
                             "filename": "3dtransform"
