@@ -2,6 +2,8 @@
 
 A plane is like an infinite surface rotated in any direction that slices the entire universe into two pieces. Everything is in the world is either in front of, behind, or exactly on the plane's surface.
 
+www.youtube.com/watch?v=-xE22XlcvpA
+
 You might not use planes directly when developing games, but they are an extremely powerful tool for solving difficult geometric problems, so it's good to know what they can do. Planes have two superpowers that are very useful for games:
 
 - We can calculate the distance between any point in 3D space and the plane's surface.
