@@ -136,8 +136,11 @@ If a filter callback is provided it will be called for each entity that is evalu
 
 ```lua
 function RayFilter(entity, extra)
-	if entity.color == Vec4(0,0,1,1) then return false end
-	return true
+	if entity.color == Vec4(0,0,1,1) then
+		return false
+	else
+		return true
+	end
 end
 ```
 
