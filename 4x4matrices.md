@@ -223,4 +223,4 @@ end
 
 The [transformation commands](3dtransform.md) we previously learned about will accept two 4x4 matrices as the source and destination parameters, in addition to using entities.
 
-This concludes the 3D Spaciatlization tutorial series. If you understood most of it, you are now a 3D master. Feel free to ask on the forum or on Discord if you have questions or if anything was unclear.
+This concludes the 3D Spaciatlization tutorial series. If you understood most of it, you are now a 3D master. Feel free to ask if you have questions or if anything was unclear.
