@@ -1,6 +1,6 @@
 # Raycasting
 
-Raycasting is an important technique in game development, used for detecting objects and interactions within a 3D environment. It allows developers to "cast" an invisible line, or ray, through the scene to determine what it intersects with.
+Raycasting is an important technique in game development, used for detecting objects and interactions within a 3D environment. It allows you to "cast" an invisible line, or ray, through the scene to determine what it intersects with.
 
 Raycasting is widely used in game development for:
 
