@@ -19,8 +19,8 @@ The camera class is an entity used to render the world.
 | [GetRange](Camera_GetRange.md) | Method | returns the camera near and far range |
 | [GetZoom](Camera_GetZoom.md) | Method | returns the camera zoom value |
 | [Pick](Camera_Pick.md) | Method | performs a raycast at the specified screen coordinates |
-| [Project](Camera_Project.md) | Method | projects a position from world to screen space |
 | [Render](Camera_Render.md) | Method | refreshes a camera view, for non-realtime cameras |
+| [ScreenToWorld](Camera_ScreenToWorld.md) | Method | unprojects a position from screen to world space |
 | [SetBackfaceCulling](Camera_SetBackfaceCulling.md) | Method | overrides the backface culling mode of all objects |
 | [SetClearColor](Camera_SetClearColor.md) | Method | sets the color to clear the screen with |
 | [SetClearMode](Camera_SetClearMode.md) | Method | controls color and depth clearing |
@@ -42,5 +42,5 @@ The camera class is an entity used to render the world.
 | [SetTessellation](Camera_SetTessellation.md) | Method | sets camera tessellation density |
 | [SetUniform](Camera_SetUniform.md) | Method | sets a value in a post-processing shader |
 | [SetZoom](Camera_SetZoom.md) | Method | sets the camera zoom |
-| [UnProject](Camera_UnProject.md) | Method | unprojects a position from screen to world space |
+| [WorldToScreen](Camera_WorldToScreen.md) | Method | projects a position from world to screen space |
 | [CreateCamera](CreateCamera.md) | Function | creates a new camera entity |
