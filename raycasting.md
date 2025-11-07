@@ -2,9 +2,7 @@
 
 Raycasting is a fundamental technique in game development, used for detecting objects and interactions within a 3D environment. It allows developers to "cast" an invisible line, or ray, through the scene to determine what it intersects with, enabling features like aiming, object selection, and collision detection.
 
-### Leadwerks Raycasting Options
-
-Leadwerks offers two primary methods for performing raycasts:
+Leadwerks provides three methods for performing raycasts:
 
 - **World:Pick**: Casts a ray between two specific points in the world space.
 - **Camera:Pick**: Casts a ray from a screen coordinate into the 3D scene, useful for mouse picking or targeting.
