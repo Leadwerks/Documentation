@@ -10,14 +10,17 @@ Leadwerks provides three methods for performing raycasts:
 
 The first two commands both return a [PickInfo](PickInfo.md) structure containing information about the intersection:
 
-- **entity**: The object hit by the ray. If `nil`, the ray did not hit anything.
-- **position**: The exact point in space where the ray intersects the entity.
-- **normal**: The surface normal at the intersection point, useful for determining how to respond to the hit.
-- **mesh**: For model or brush entities, the specific mesh that was intersected.
-- **meshlayer**: For vegetation or layered meshes, the index of the layer hit.
-- **polygon**: The index of the primitive (triangle or face) within the mesh that the ray hit.
-- **face**: For brush entities, the specific face that was intersected.
-- **texcoords**: Texture coordinates at the intersection point, useful for texture-based effects.
+| Property | Type | Description |
+| ----- | ----- | ----- |
+| entity | [Entity](Entity.md) | picked entity |
+| face | [Face](Face.md) | picked face, for brushes |
+| mesh | [Mesh](Mesh.md) | picked mesh, for models |
+| meshlayer | integer | index of picked mesh layer |
+| meshlayerinstance | [iVec2](iVec2.md) | picked mesh layer instance coordinate |
+| normal | [xVec3](xVec3.md) | picked normal |
+| polygon | integer | picked polygon, for models |
+| position | [xVec3](xVec3.md) | picked position |
+| texcoords | [table](https://www.lua.org/manual/5.4/manual.html#6.6) | array of picked texture coordinates, for brushes or models |
 
 ### Sphere Casting (Radius Parameter)
 
