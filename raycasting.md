@@ -116,7 +116,7 @@ end
 
 Raycasts can include an optional radius parameter. When a non-zero radius is specified, the raycast becomes a **sphere cast**, which checks for intersections within a spherical volume. This is especially useful for detecting wider objects or simulating a more forgiving collision area.
 
-If we add the sphere radius into 
+If we add the sphere radius into the pick command, the picked position will now correctly show the point at which the sphere would hit the scene:
 
 ```lua
 local pick_info = world:Pick(pivot:GetPosition(true), target_pos, 0.25, true)
