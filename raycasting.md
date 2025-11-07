@@ -112,7 +112,7 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
 end
 ```
 
-## Sphere Casting (Radius Parameter)
+## Sphere Casting
 
 Raycasts can include an optional radius parameter. When a non-zero radius is specified, the raycast becomes a **sphere cast**, which checks for intersections within a spherical volume. This is especially useful for detecting wider objects or simulating a more forgiving collision area.
 
