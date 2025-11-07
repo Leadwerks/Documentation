@@ -134,6 +134,8 @@ If we are not interested in the intersected object, and only want to know if the
 
 If a filter callback is provided it will be called for each entity that is evaluated. If the callback returns true the entity will be tested, otherwise it will be skipped.
 
+You can declare this function in the code before the main loop:
+
 ```lua
 function RayFilter(entity, extra)
 	if entity.color == Vec4(0,0,1,1) then
@@ -143,6 +145,8 @@ function RayFilter(entity, extra)
 	end
 end
 ```
+
+If we pass the RayFilter function to the Pick command, it will be used to skip blue objects:
 
 ```lua
 local pickinfo = world:Pick(pivot:GetPosition(true), target_pos, 0.0, true, RayFilter)
