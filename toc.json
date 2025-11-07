@@ -520,12 +520,12 @@
                                     "filename": "Camera_Pick"
                                 },
                                 {
-                                    "title": "Project",
-                                    "filename": "Camera_Project"
-                                },
-                                {
                                     "title": "Render",
                                     "filename": "Camera_Render"
+                                },
+                                {
+                                    "title": "ScreenToWorld",
+                                    "filename": "Camera_ScreenToWorld"
                                 },
                                 {
                                     "title": "SetClearColor",
@@ -608,8 +608,8 @@
                                     "filename": "Camera_SetZoom"
                                 },
                                 {
-                                    "title": "UnProject",
-                                    "filename": "Camera_UnProject"
+                                    "title": "WorldToScreen",
+                                    "filename": "Camera_WorldToScreen"
                                 }
                             ]
                         },
