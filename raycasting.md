@@ -129,6 +129,10 @@ local pick_info = world:Pick(pivot:GetPosition(true), target_pos, 0.25, true)
 
 The World and Camera Pick methods can perform a line-of-sight test, which will return from the function as soon as the first object is intersected, or they can perform a more thorough test that finds the closest picked object. Both these methods accept an optional _closest_ parameter that uses a boolean to indicate whether the more thorough (and slower) test should be performed.
 
+When we are interested in the intersected object, the closest parameter should be set to true. For example, if we are selecting an object to interact with or shooting a bullet, the closest parameter should be set to true.
+
+If we are not interested in the intersected object, and only want to know if there is an unbroken line of sight between two objects, then the closest parameter can be set to false.
+
 ## Raycast Filter
 
 If a filter callback is provided it will be called for each entity that is evaluated. If the callback returns true the entity will be tested, otherwise it will be skipped.
