@@ -60,7 +60,7 @@ int main(int argc, const char* argv[])
     //Add a light
     auto light = CreateDirectionalLight(world);
     light->SetRotation(35, 45, 0);
-    light->SetColor(5);
+    light->SetColor(2);
 
     //Set up the scene
     auto floor = CreatePlane(world, 100, 100);
