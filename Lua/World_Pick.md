@@ -60,7 +60,7 @@ camera:SetRotation(25, 0, 0)
 -- Add a light
 local light = CreateDirectionalLight(world)
 light:SetRotation(35, 45, 0)
-light:SetColor(5)
+light:SetColor(2)
 
 -- Set up the scene
 local floor = CreatePlane(world, 100, 100)
