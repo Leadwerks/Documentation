@@ -10,11 +10,11 @@ Raycasting is widely used in game development for:
 
 ## Commands
 
-Leadwerks provides three methods for performing raycasts:
+Leadwerks provides three commands for performing raycasting:
 
-- **World:Pick**: Casts a ray between two specific points in the world space.
-- **Camera:Pick**: Casts a ray from a screen coordinate into the 3D scene, useful for mouse picking or targeting.
-- **Entity:GetVisible**: Casts a ray between two entities and returns true if nothing is hit.
+- [World:Pick](World_Pick.md): Casts a ray between two specific points in the world space.
+- [Camera:Pick](Camera_Pick.md): Casts a ray from a screen coordinate into the 3D scene, useful for mouse picking or targeting.
+- [Entity:GetVisible](Entity_GetVisible.md): Casts a ray between two entities and returns true if nothing is hit.
 
 The first two commands both return a [PickInfo](PickInfo.md) structure containing information about the intersection:
 
