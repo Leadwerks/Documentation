@@ -130,6 +130,22 @@ When we are interested in the intersected object, the closest parameter should b
 
 If we are not interested in the intersected object, and only want to know if there is an unbroken line of sight between two objects, then the closest parameter can be set to false.
 
+## Pick Mode
+
+Entities can be individually set to be pickable or not, using the [Entity:SetPickMode](Entity_SetPickMode.md) command. Three possible modes are available:
+
+- **PICK_NONE**: The object will be skipped by all raycasts.
+- **PICK_COLLIDER**: The object's collider will be used for raycasts, if one has been set, otherwise it will be skipped.
+- **PICK_MESH**: The object's mesh geometry will be used for raycasts.
+
+The default pick mode for [Model](Model.md), [Brush](Brush.md), and [Terrain](Terrain.md) entities is PICK_MESH.
+
+You can see this in action simply by disabling picking on one of the boxes in our example above:
+
+```lua
+b1:SetPickMode(PICK_NONE)
+```
+
 ## Raycast Filter
 
 If a filter callback is provided it will be called for each entity that is evaluated. If the callback returns true the entity will be tested, otherwise it will be skipped.
