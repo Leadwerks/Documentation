@@ -30,6 +30,8 @@ The first two commands both return a [PickInfo](PickInfo.md) structure containin
 | position | [xVec3](xVec3.md) | picked position |
 | texcoords | [table](https://www.lua.org/manual/5.4/manual.html#6.6) | array of picked texture coordinates, for brushes or models |
 
+This example shows how to use the [World:Pick](World_Pick.md) command:
+
 ```lua
 -- Get the displays
 local displays = GetDisplays()
@@ -111,9 +113,6 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
     world:Render(framebuffer)
 end
 ```
-
-![](https://raw.githubusercontent.com/UltraEngine/Documentation/master/Images/World_Pick.gif)
-
 
 ## Sphere Casting (Radius Parameter)
 
