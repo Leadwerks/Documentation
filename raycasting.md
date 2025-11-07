@@ -167,3 +167,107 @@ If we pass the RayFilter function to the Pick command, it will be used to skip b
 ```lua
 local pickinfo = world:Pick(pivot:GetPosition(true), target_pos, 0.0, true, RayFilter)
 ```
+
+Using our newfound knowledge of raycasting, we can now make a much more robust laser bouncing example:
+
+```lua
+-- Get the displays
+local displays = GetDisplays()
+
+-- Create window
+local window = CreateWindow("Leadwerks", 0, 0, 1280, 720, displays[1], WINDOW_CENTER | WINDOW_TITLEBAR)
+
+-- Create world
+local world = CreateWorld()
+
+-- Create framebuffer
+local framebuffer = CreateFramebuffer(window)
+
+-- Set up camera
+local camera = CreateCamera(world)
+camera:SetClearColor(0.125)
+camera:SetFov(70)
+camera:SetPosition(0, 2, -3)
+camera:SetRotation(25, 0, 0)
+
+-- Add a light
+local light = CreateDirectionalLight(world)
+light:SetRotation(35, 45, 0)
+
+-- Set up the scene
+local floor = CreatePlane(world, 100, 100)
+floor:Move(0, -1, 0)
+floor:SetColor(0.5)
+
+local b1 = CreateBox(world, 2.0)
+b1:SetPosition(-3.0, 0.0, 0.0)
+b1:SetColor(1, 0, 0)
+b1:SetRotation(0,90,0)
+
+local b2 = CreateBox(world, 2.0)
+b2:SetColor(0.0, 0.0, 1.0)
+b2:SetPosition(3.0, 0.0, 2.0)
+b2:SetRotation(0.0, 45.0, 0.0)
+
+local pivot = CreatePivot(world)
+
+local rod_scale = 5.0
+local rod = CreateCylinder(world, 0.05)
+rod:SetCollider(nil)
+rod:SetParent(pivot)
+rod:SetRotation(90.0, 0.0, 0.0)
+rod:SetPosition(0.0, 0.0, rod_scale / 2.0)
+rod:SetScale(1.0, rod_scale, 1.0)
+
+local sphere = CreateSphere(world, 0.25)
+sphere:SetCollider(nil)
+sphere:SetParent(pivot)
+sphere:SetColor(0, 1, 0)
+sphere:SetPosition(0.0, 0.0, rod_scale)
+
+local bounce = CreateCylinder(world, 0.05)
+bounce:SetScale(1.0, rod_scale, 1.0)
+bounce:SetPickMode(PICK_NONE)
+
+while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
+	
+	--Rotate the assembly
+    pivot:Turn(0.0, 0.5, 0.0)
+
+	--Get the point at the maximum ray distance
+    local target_pos = TransformPoint(0, 0, rod_scale, pivot, nil)
+
+    -- Perform a ray cast
+    local pickinfo = world:Pick(pivot:GetPosition(true), target_pos, 0, true)
+	
+	--Update the sphere based on the pick result
+    if pickinfo.entity then
+		
+        sphere:SetPosition(pickinfo.position, true)
+				
+		--Show the laser bounce
+		bounce:SetHidden(false)
+		
+		--Get the reflection vector
+		dir = target_pos - pivot.position
+		dir = dir:Normalize()		
+		r = dir:Reflect(pickinfo.normal)
+		
+		--Position the laser bounce
+		bounce:SetPosition(pickinfo.position + r * rod_scale * 0.5)
+		
+		--Align the Y axis of the laser bounce model to the reflection vector
+		bounce:AlignToVector(r, 1)
+		
+    else		
+        sphere:SetPosition(target_pos, true)
+		bounce:SetHidden(true)
+    end
+
+    -- Update the world
+    world:Update()
+
+    -- Render the world
+    world:Render(framebuffer)
+end
+```
