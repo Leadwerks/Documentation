@@ -134,3 +134,13 @@ If we are not interested in the intersected object, and only want to know if the
 
 If a filter callback is provided it will be called for each entity that is evaluated. If the callback returns true the entity will be tested, otherwise it will be skipped.
 
+```lua
+function RayFilter(entity, extra)
+	if entity.color.r < 1.0 then return false end
+	return true
+end
+```
+
+```lua
+local pickinfo = world:Pick(pivot:GetPosition(true), target_pos, 0.0, true, RayFilter)
+```
