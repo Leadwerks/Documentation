@@ -37,7 +37,7 @@ This example shows how to use the [World:Pick](World_Pick.md) command:
 local displays = GetDisplays()
 
 -- Create window
-local window = CreateWindow("Ultra Engine", 0, 0, 1280, 720, displays[1], WINDOW_CENTER | WINDOW_TITLEBAR)
+local window = CreateWindow("Leadwerks", 0, 0, 1280, 720, displays[1], WINDOW_CENTER | WINDOW_TITLEBAR)
 
 -- Create world
 local world = CreateWorld()
@@ -55,11 +55,11 @@ camera:SetRotation(25, 0, 0)
 -- Add a light
 local light = CreateDirectionalLight(world)
 light:SetRotation(35, 45, 0)
-light:SetColor(5)
 
 -- Set up the scene
 local floor = CreatePlane(world, 100, 100)
 floor:Move(0, -1, 0)
+floor:SetColor(0.5)
 
 local b1 = CreateBox(world, 2.0)
 b1:SetPosition(-3.0, 0.0, 0.0)
@@ -86,22 +86,20 @@ sphere:SetParent(pivot)
 sphere:SetColor(0, 1, 0)
 sphere:SetPosition(0.0, 0.0, rod_scale)
 
-local spin_speed = 0.5
 while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
-    pivot:Turn(0.0, spin_speed, 0.0)
+	
+	--Rotate the assembly
+    pivot:Turn(0.0, 0.5, 0.0)
 
-    local target_pos = Vec3(0.0, 0.0, rod_scale)
-
-    local m = pivot:GetMatrix(true)
-    m = m:Inverse()
-    local identity = Mat4(1)
-
-    target_pos = TransformPoint(target_pos, identity, m)
+	--Get the point at the maximum ray distance
+    local target_pos = TransformPoint(0, 0, rod_scale, pivot, nil)
 
     -- Perform a ray cast
-    local pick_info = world:Pick(pivot:GetPosition(true), target_pos, 0, true)
-    if pick_info.entity then
-        sphere:SetPosition(pick_info.position, true)
+    local pickinfo = world:Pick(pivot:GetPosition(true), target_pos, 0.0, true)
+	
+	--Update the sphere based on the pick result
+    if pickinfo.entity then
+        sphere:SetPosition(pickinfo.position, true)
     else
         sphere:SetPosition(target_pos, true)
     end
