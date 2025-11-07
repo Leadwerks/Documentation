@@ -1,10 +1,10 @@
-# Camera::UnProject
+# Camera::ScreenToWorld
 
-This method projects 2D screen coordinate to a point.
+This method projects 2D screen coordinate to a point in world space.
 
 ## Syntax
 
-- [Vec3](Vec3.md) **UnProject**(const [Vec3](Vec3.md)& coord, shared_ptr<[Framebuffer](Framebuffer.md)\> framebuffer)
+- [Vec3](Vec3.md) **ScreenToWorld**(const [Vec3](Vec3.md)& coord, shared_ptr<[Framebuffer](Framebuffer.md)\> framebuffer)
 
 | Parameter | Description |
 |---|---|
