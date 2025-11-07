@@ -28,13 +28,9 @@ Raycasts can include an optional radius parameter. When a non-zero radius is spe
 Raycasting is versatile and widely used in game development for:
 
 - **Object Interaction**: Checking what the player is looking at or pointing to, such as selecting objects or NPCs.
-- **Aiming & Shooting**: Detecting hits when firing projectiles or bullets.
-- **Collision Detection**: Ensuring characters and objects don't pass through each other.
-- **Environmental Queries**: Determining surfaces for placement or physics interactions.
-- **Line-of-Sight Checks**: Verifying if an NPC can see the player.
+- **Shooting**: Detecting hits when firing projectiles or bullets.
+- **Line-of-Sight Checks**: Verifying if an enemey can see the player.
 
 By leveraging raycasting, developers can create interactive and immersive gameplay experiences with precise control over object detection and interaction.
 
----
 
-Would you like me to add any specific examples or diagrams to illustrate these concepts?
