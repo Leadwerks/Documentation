@@ -30,7 +30,7 @@ The first two commands both return a [PickInfo](PickInfo.md) structure containin
 | position | [xVec3](xVec3.md) | picked position |
 | texcoords | [table](https://www.lua.org/manual/5.4/manual.html#6.6) | array of picked texture coordinates, for brushes or models |
 
-## Line of Sight Testing
+## Line-of-Sight Testing
 
 This example demonstrates how a simple line-of-sight test can be performed to check if two entities can "see" each other.
 
