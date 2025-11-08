@@ -30,6 +30,63 @@ The first two commands both return a [PickInfo](PickInfo.md) structure containin
 | position | [xVec3](xVec3.md) | picked position |
 | texcoords | [table](https://www.lua.org/manual/5.4/manual.html#6.6) | array of picked texture coordinates, for brushes or models |
 
+## Line of Sight Testing
+
+This example demonstrates how a simple line-of-sight test can be performed to check if two entities can "see" each other.
+
+```lua
+-- Get the displays
+local displays = GetDisplays()
+
+-- Create window
+local window = CreateWindow("Leadwerks", 0, 0, 1280, 720, displays[1], WINDOW_CENTER | WINDOW_TITLEBAR)
+
+-- Create world
+local world = CreateWorld()
+
+-- Create framebuffer
+local framebuffer = CreateFramebuffer(window)
+
+-- Set up camera
+local camera = CreateCamera(world)
+camera:SetClearColor(0.125)
+camera:SetPosition(0, 0, -6)
+
+--Create two boxes
+local box1 = CreateBox(world)
+box1:SetPosition(-3,0,0)
+
+local box2 = CreateBox(world)
+box2:SetPosition(3,0,0)
+
+--Create a wall between the two objects
+local wall = CreateBox(world,1,2,1)
+
+while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
+	
+	--Move one box with the arrow keys
+	if window:KeyDown(KEY_UP) then box2:Move(0,0.1,0) end
+	if window:KeyDown(KEY_DOWN) then box2:Move(0,-0.1,0) end
+
+	--Perform the visibility test and show the results
+	if box2:GetVisible(box1) then
+		box1:SetColor(0,1,0)
+		box2:SetColor(0,1,0)
+	else
+		box1:SetColor(1,0,0)
+		box2:SetColor(1,0,0)
+	end
+
+    -- Update the world
+    world:Update()
+
+    -- Render the world
+    world:Render(framebuffer)
+end
+```
+
+## Raycast
+
 This example shows how to use the [World:Pick](World_Pick.md) command:
 
 ```lua
