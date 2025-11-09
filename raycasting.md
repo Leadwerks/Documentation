@@ -271,6 +271,8 @@ If we pass the RayFilter function to the Pick command, it will be used to skip b
 local pickinfo = world:Pick(pivot:GetPosition(true), target_pos, 0.0, true, RayFilter)
 ```
 
+## Bouncing Laser Example
+
 Using our newfound knowledge of raycasting, we can now make a much more robust laser bouncing example:
 
 ```lua
@@ -375,7 +377,7 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
 end
 ```
 
-## Creating a Third-person Player Controller
+## Third-person Player Example
 
 One common use of the raycast feature is controlling the camera's distance from the player in a game that uses third-person view. We can cast a ray in the direction of the camera and use it to detect how far away the camera can be moved without blocking our view of the player.
 
