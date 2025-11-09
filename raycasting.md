@@ -374,3 +374,13 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
     world:Render(framebuffer)
 end
 ```
+
+## Creating a Third-person Player Controller
+
+One common use of the raycast feature is controlling the camera's distance from the player in a game that uses third-person view. We can cast a ray in the direction of the camera and use it to detect how far away the camera can be moved without blocking our view of the player.
+
+```lua
+
+```
+
+
