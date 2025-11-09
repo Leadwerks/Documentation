@@ -1,15 +1,46 @@
 {
 	"material": {
+		"alphacutoff": 0.5,
+		"alphamask": false,
+		"backfaceculling": true,
+		"backfacelighting": false,
+		"blendsmoothing": 0.5,
 		"displacement": [
 			0.05000000074505806,
 			-0.02500000037252903
 		],
-		"extras": "{\n\t\"alwaysuseshader\": \"0\",\n\t\"blendmode\": \"0\",\n\t\"castshadows\": \"1\",\n\t\"cullbackfaces\": \"1\",\n\t\"depthmask\": \"1\",\n\t\"depthtest\": \"1\",\n\t\"diffuse\": \"1.000000,1.000000,1.000000,1.000000\",\n\t\"drawmode\": \"-1\",\n\t\"shader\": \"\\\"Shaders/Model/Animated/diffuse.shader\\\"\",\n\t\"shader1\": \"\\\"Shaders/Model/Shadow/shadow+animation.shader\\\"\",\n\t\"texture0\": \"\\\"./Metal_Diffuse.jpeg\\\"\",\n\t\"texture3\": \"\\\"./Metal_Normal.jpeg\\\"\",\n\t\"zsort\": \"0\"\n}",
+		"displacementblend": 1.0,
+		"emission": [
+			0.0,
+			0.0,
+			0.0
+		],
 		"metallic": 0.5,
+		"nondirectional": false,
+		"normalscale": 1.0,
+		"occlusion": 0.0,
+		"pickmode": true,
+		"refractionmodel": 0,
 		"roughness": 0.0,
-		"shaderfamily": "Shaders/PBR.fam",
+		"saturation": 1.0,
+		"shaderfamily": "Shaders/SpecularGloss.fam",
 		"shadow": true,
+		"specularcolor": [
+			1.0,
+			1.0,
+			1.0
+		],
+		"specularweight": 1.0,
+		"tessellation": false,
 		"texture0": "./Metal_diffuse.dds",
-		"texture1": "./Metal_normal.dds"
+		"texture1": "./Metal_normal.dds",
+		"texturescroll": [
+			0.0,
+			0.0,
+			0.0
+		],
+		"thickness": 0.25,
+		"transparent": false,
+		"vertexeffect": 0
 	}
 }

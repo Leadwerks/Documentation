@@ -1,0 +1,24 @@
+{
+	"metadata":
+	{
+		"materialfiles":
+		[
+			"./metal_diffuse.mat",
+			"./paint_diffuse.mat",
+			"./plastic_diffuse.mat"
+		],
+		"model":
+		{
+			"indices": 49566,
+			"limbs": 1,
+			"materials": 3,
+			"meshes": 3,
+			"primitives": 16522,
+			"textureextensions":
+			[
+				"dds"
+			],
+			"vertices": 49566
+		}
+	}
+}
