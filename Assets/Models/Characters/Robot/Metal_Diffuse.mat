@@ -1,0 +1,15 @@
+{
+	"material": {
+		"displacement": [
+			0.05000000074505806,
+			-0.02500000037252903
+		],
+		"extras": "{\n\t\"alwaysuseshader\": \"0\",\n\t\"blendmode\": \"0\",\n\t\"castshadows\": \"1\",\n\t\"cullbackfaces\": \"1\",\n\t\"depthmask\": \"1\",\n\t\"depthtest\": \"1\",\n\t\"diffuse\": \"1.000000,1.000000,1.000000,1.000000\",\n\t\"drawmode\": \"-1\",\n\t\"shader\": \"\\\"Shaders/Model/Animated/diffuse.shader\\\"\",\n\t\"shader1\": \"\\\"Shaders/Model/Shadow/shadow+animation.shader\\\"\",\n\t\"texture0\": \"\\\"./Metal_Diffuse.jpeg\\\"\",\n\t\"texture3\": \"\\\"./Metal_Normal.jpeg\\\"\",\n\t\"zsort\": \"0\"\n}",
+		"metallic": 0.5,
+		"roughness": 0.0,
+		"shaderfamily": "Shaders/PBR.fam",
+		"shadow": true,
+		"texture0": "./Metal_diffuse.dds",
+		"texture1": "./Metal_normal.dds"
+	}
+}
