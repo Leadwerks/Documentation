@@ -187,6 +187,52 @@ When we are interested in the intersected object, the closest parameter should b
 
 If we are not interested in the intersected object, and only want to know if there is an unbroken line of sight between two objects, then the closest parameter can be set to false.
 
+This example shows how we can set closest to true, and the Pick function will return once any object is hit, without finding the closest intersection:
+
+```lua
+-- Get the displays
+local displays = GetDisplays()
+
+-- Create window
+local window = CreateWindow("Leadwerks", 0, 0, 1280, 720, displays[1], WINDOW_CENTER | WINDOW_TITLEBAR)
+
+-- Create world
+local world = CreateWorld()
+
+-- Create framebuffer
+local framebuffer = CreateFramebuffer(window)
+
+-- Set up camera
+local camera = CreateCamera(world)
+camera:SetClearColor(0.125)
+camera:SetPosition(0, 0, -6)
+
+--Create two boxes
+local box1 = CreateBox(world, 1, 3, 1)
+box1:SetPosition(-1.5,0,0)
+
+local box2 = CreateBox(world, 1, 3, 1)
+box2:SetPosition(1.5,0,0)
+
+local model = CreateSphere(world, 0.5)
+model:SetColor(1,0,0)
+model:SetPosition(8,0,0)
+
+while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
+
+	if window:KeyHit(KEY_SPACE) then
+		local pickinfo = world:Pick(Vec3(8,0,0), Vec3(-8,0,0), 0.5, true)
+		model:SetPosition(pickinfo.position)
+	end
+	
+    -- Update the world
+    world:Update()
+
+    -- Render the world
+    world:Render(framebuffer)
+end
+```
+
 ## Pick Mode
 
 Entities can be individually set to be pickable or not, using the [Entity:SetPickMode](Entity_SetPickMode.md) command. Three possible modes are available:
