@@ -380,7 +380,123 @@ end
 One common use of the raycast feature is controlling the camera's distance from the player in a game that uses third-person view. We can cast a ray in the direction of the camera and use it to detect how far away the camera can be moved without blocking our view of the player.
 
 ```lua
+-- Get the displays
+local displays = GetDisplays()
 
+-- Create window
+local window = CreateWindow("Leadwerks", 0, 0, 1280, 720, displays[1], WINDOW_CENTER | WINDOW_TITLEBAR)
+
+-- Create framebuffer
+local framebuffer = CreateFramebuffer(window)
+
+-- Create world
+local world = CreateWorld()
+world:SetAmbientLight(0.1)
+
+local light = CreateDirectionalLight(world)
+light:SetRotation(45,25,0)
+light:SetShadowCascadeDistance(10,20,40,80)
+
+-- Create the ground
+local ground = CreateBox(world, 50, 1, 50)
+ground:SetPosition(0,-0.5,0)
+ground:SetColor(0.5)
+
+-- Create a simple arch
+local col1 = CreateBox(world, 1, 3, 1)
+col1:SetPosition(3,1.5,0)
+col1:SetColor(0,1,0)
+
+local col2 = CreateBox(world, 1, 3, 1)
+col2:SetPosition(-3,1.5,0)
+col2:SetColor(0,1,0)
+
+local box = CreateBox(world, 7, 1, 1)
+box:SetPosition(0,3.5,0)
+box:SetColor(0,1,0)
+
+-- Create a camera
+local camera = CreateCamera(world)
+camera:SetClearColor(0.125)
+
+--Create the player
+local player = CreatePivot(world)
+player:SetMass(10)
+player:SetPhysicsMode(PHYSICS_PLAYER)
+player:SetCollisionType(COLLISION_PLAYER)
+player:SetPosition(0,0,-2)
+player:SetShadows(true)
+
+--Create a visible model for the player
+local model = CreateCylinder(world, 0.5, 2)
+model:SetPosition(0,1,-2)
+model:SetParent(player)
+model:SetCollider(nil)
+model:SetCollisionType(COLLISION_NONE)
+model:SetColor(0,0,1)
+
+--Some variables we will use
+local maxcameradistance = 5
+local cameradistance = maxcameradistance
+local cx = Round(framebuffer.size.x / 2)
+local cy = Round(framebuffer.size.y / 2)
+local camerarotation = Vec3(35,0,0)
+local mousespeed = 0.1
+local movespeed = 5
+
+--Prepare window stuff
+window:SetCursor(CURSOR_NONE)
+window:SetMousePosition(cx, cy)
+
+while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
+
+	--Get the mouse move distance
+	local mousepos = window:GetMousePosition()
+	local dx = mousepos.x - cx
+	local dy = mousepos.y - cy
+	window:SetMousePosition(cx, cy)
+		
+	--Calculate the new camera rotation
+	camerarotation.x = camerarotation.x + dy * mousespeed
+	camerarotation.y = camerarotation.y + dx * mousespeed
+	camerarotation.x = Clamp(camerarotation.x, 0, 90)
+
+	--Handle player movement
+	local angle = 0
+	local move = 0
+	local strafe = 0
+	
+	if window:KeyDown(KEY_W) then move = move + movespeed end
+	if window:KeyDown(KEY_S) then move = move - movespeed end
+	if window:KeyDown(KEY_D) then strafe = strafe + movespeed end
+	if window:KeyDown(KEY_A) then strafe = strafe - movespeed end
+	
+	player:SetInput(camerarotation.y, move, strafe)
+	
+    -- Update the world
+    world:Update()
+
+	-- Update the camera orientation
+	camera:SetRotation(camerarotation)
+	camera:SetPosition(player.position + Vec3(0,1.8,0))
+	
+	--Perform a raycast from the player's head, in the direction of the camera vector, to the maximum camera range
+	local pickinfo = world:Pick(camera.position, TransformPoint(0,0,-maxcameradistance, camera, nil), 0.25, true)
+	
+	if pickinfo.entity then
+		--If anything was hit, use the pick position as the camera position
+		cameradistance = pickinfo.position:DistanceToPoint(camera.position)
+	else
+		--If nothing was hit then adjust the camera distance to move smoothly to the max distance
+		cameradistance = Mix(cameradistance, maxcameradistance, 0.1)
+	end
+	
+	--Move the camera away from the player
+	camera:Move(0,0,-cameradistance)
+		
+    -- Render the world
+    world:Render(framebuffer)
+end
 ```
 
-
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/thirdpersoncamera.jpg?raw=true)
