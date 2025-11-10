@@ -150,3 +150,128 @@ You may add your own if you wish, using the [World:SetCollisionResponse](World_S
 
 Very often, we may wish to perform some action when a collision occurs. For example, if we have a game where the player has to collect some items, the actual goal is to collide with the desired item. Here is an example of a game where the player collects coins, which increase their score until they are all collected and the player wins:
 
+```lua
+-- Get the displays
+local displays = GetDisplays()
+
+-- Create window
+local window = CreateWindow("Leadwerks", 0, 0, 1280, 720, displays[1], WINDOW_CENTER | WINDOW_TITLEBAR)
+
+-- Create framebuffer
+local framebuffer = CreateFramebuffer(window)
+
+-- Create world
+local world = CreateWorld()
+world:SetAmbientLight(0.1)
+
+-- Create a camera
+local camera = CreateCamera(world)
+camera:SetClearColor(0.125)
+camera:SetRotation(35,0,0)
+camera:Move(0,0,-10)
+
+-- Create light
+local light = CreateDirectionalLight(world)
+light:SetColor(1.2)
+light:SetRotation(65,45,0)
+light:SetShadowCascadeDistance(10,20,40,80)
+
+-- Create the ground
+local ground = CreateBox(world, 50, 1, 50)
+ground:SetPosition(0,-0.5,0)
+ground:SetColor(0.5)
+
+--Create the player
+local player = CreatePivot(world)
+player:SetMass(10)
+player:SetPhysicsMode(PHYSICS_PLAYER)
+player:SetCollisionType(COLLISION_PLAYER)
+player:SetPosition(0,0,-2)
+player:SetShadows(true)
+
+--Create a visible model for the player
+local model = CreateCylinder(world, 0.5, 2)
+model:SetPosition(0,1,-2)
+model:SetParent(player)
+model:SetCollider(nil)
+model:SetCollisionType(COLLISION_NONE)
+model:SetColor(0,0,1)
+
+local coins = {}
+for n = 1, 20 do
+	local coin = CreateCylinder(world, 0.5, 0.1)
+	coin:SetColor(1,1,0)
+	coin:SetPosition(Random(-8,8), 0.5, Random(-5,10))	
+	coin:SetRotation(0, Random(0, 360), 0)
+	coin:Turn(90,0,0)
+	coin:SetCollisionType(COLLISION_TRIGGER)
+	coin.iscoin = true
+	table.insert(coins, coin)
+end
+
+-- Global variable for the score
+score = 0
+
+--Create some text to display the score
+local font = LoadFont("Fonts/arial.ttf")
+scoretile = CreateTile(world, font, "Score: 0", 32)
+
+-- Load a sound to play
+sound = LoadSound("https://github.com/Leadwerks/Documentation/raw/refs/heads/master/Assets/Sound/coin.wav")
+
+function player:Collide(entity, position, normal, speed)
+
+	-- Check to see if the entity is a coin
+	if entity.iscoin then
+		
+		-- Check if hidden
+		if not entity:GetHidden() then
+			
+			-- Hide the coin
+			entity:SetHidden(true)
+			
+			--I ncrease the score by one
+			score = score + 1
+			
+			-- Update the score display
+			if score == #coins then
+				scoretile:SetText("You win!")
+			else
+				scoretile:SetText("Score: " .. tostring(score))
+			end
+			
+			-- Play a sound
+			if sound~= nil then
+				sound:Play()
+			end
+		end
+	end
+end
+
+-- Main loop
+while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
+	
+	for n = 1, #coins do
+		coins[n]:Turn(0,0,1)
+	end
+	
+	local speed = 5
+	local move = 0
+	local strafe = 0
+	
+    -- Control the player with the arrow keys
+    if window:KeyDown(KEY_DOWN) then move = move - speed end
+	if window:KeyDown(KEY_UP) then move = move + speed end
+    if window:KeyDown(KEY_LEFT) then strafe = strafe - speed end
+	if window:KeyDown(KEY_RIGHT) then strafe = strafe + speed end
+		
+	player:SetInput(0, move, strafe)
+	
+    -- Update the world
+    world:Update()
+
+    -- Render the world
+    world:Render(framebuffer)
+
+end
+```
