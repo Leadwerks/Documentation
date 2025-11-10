@@ -1,6 +1,6 @@
 # Entity Filters
 
-By default, the [World:GetEntitiesInArea](World_GetEntitiesInArea.md) returns all entities in the world. We can also define optional arguments that let you filter the results. You can use this to retrieve a list of entities in the world that meet conditions you can specify. (This functionality is only available in the Lua API.)
+By default, the [World:GetEntities](World_GetEntities.md) returns all entities in the world. We can also define optional arguments that let you filter the results. You can use this to retrieve a list of entities in the world that meet conditions you can specify. (This functionality is only available in the Lua API.)
 
 You can define any number of filter arguments, in sets of three. Each set must include the following arguments, in order:
 
