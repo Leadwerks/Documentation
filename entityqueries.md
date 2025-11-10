@@ -93,18 +93,14 @@ for n = 1, 2 do
 		end
 	
 		if self.target then
-			
 			-- Move towards the target
 			local dir = self.target.position - self.position
 			dir.y = 0
 			dir = dir:Normalize() * self.speed
 			self:SetInput(0, dir.z, dir.x)
-			
 		else
-			
 			--Stop
 			self:SetInput(0,0)
-			
 		end		
 		
 	end
