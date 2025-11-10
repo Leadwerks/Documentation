@@ -1,10 +1,10 @@
-# World:SetCOLLISION
+# World:SetCollision
 
 This method can be used to set custom collision responses between different collision types.
 
 ## Syntax
 
-- **SetCOLLISION**(number type1, number type2, number response)
+- **SetCollision**(number type1, number type2, number response)
 
 | Parameter | Description |
 |---|---|
