@@ -1,10 +1,10 @@
-# World::SetCOLLISION
+# World::SetCollision
 
 This method can be used to set custom collision responses between different collision types.
 
 ## Syntax
 
-- void **SetCOLLISION**(const int type1, const int type2, const COLLISION response)
+- void **SetCollision**(const int type1, const int type2, const COLLISION response)
 
 | Parameter | Description |
 |---|---|
