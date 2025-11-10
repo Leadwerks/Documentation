@@ -275,7 +275,11 @@
                         {
                             "title": "Proximity Testing",
                             "filename": "proximitytesting"
-                        }
+                        },
+                        {
+                            "title": "Entity Filters",
+                            "filename": "entityfilters"
+                        }                        
                     ]
                 }
             ]
