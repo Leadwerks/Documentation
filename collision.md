@@ -145,3 +145,8 @@ The following collision types and their behavior are defined by default:
 | COLLISION_PLAYER | COLLISION_TRIGGER | COLLISION_DETECT |
 
 You may add your own if you wish, using the [World:SetCollisionResponse](World_SetCollisionResponse.md) command.
+
+## Collision Triggers
+
+Very often, we may wish to perform some action when a collision occurs. For example, if we have a game where the player has to collect some items, the actual goal is to collide with the desired item. Here is an example of a game where the player collects coins, which increase their score until they are all collected and the player wins:
+
