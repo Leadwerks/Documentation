@@ -267,7 +267,11 @@
                         {
                             "title": "Raycasting",
                             "filename": "raycasting"
-                        }
+                        },
+                        {
+                            "title": "Proximity Testing",
+                            "filename": "proximitytesting"
+                        }                        
                     ]
                 }
             ]
