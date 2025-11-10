@@ -164,3 +164,15 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
 	
 end
 ```
+
+## Rotated Box Test
+
+```lua
+
+```
+
+## Entity In View
+
+```lua
+
+```
