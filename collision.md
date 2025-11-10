@@ -129,4 +129,19 @@ There are three possible responded.
 - **COLLISION_DETECT** will register a collision you can detect, but physics will be unaffected.
 - **COLLISION_NONE** will not register any collision or affect physics.
 
+The following collision types and their behavior are defined by default:
 
+| Type 1 | Type 2 | Response |
+|---|---|---|
+| COLLISION_PROP | COLLISION_PROP | COLLISION_COLLIDE |
+| COLLISION_PROP | COLLISION_SCENE | COLLISION_COLLIDE |
+| COLLISION_DEBRIS | COLLISION_SCENE | COLLISION_COLLIDE |
+| COLLISION_DEBRIS | COLLISION_PROP | COLLISION_COLLIDE |
+| COLLISION_SCENE | COLLISION_PLAYER | COLLISION_COLLIDE |
+| COLLISION_PROP | COLLISION_PLAYER | COLLISION_COLLIDE |
+| COLLISION_PLAYER | COLLISION_PLAYER | COLLISION_COLLIDE |
+| COLLISION_SCENE | COLLISION_PROJECTILE | COLLISION_COLLIDE |
+| COLLISION_PROP | COLLISION_PROJECTILE | COLLISION_COLLIDE |
+| COLLISION_PLAYER | COLLISION_TRIGGER | COLLISION_DETECT |
+
+You may add your own if you wish, using the [World:SetCollisionResponse](World_SetCollisionResponse.md) command.
