@@ -4,7 +4,9 @@ Collision is an important feature in that acts on both game physics and as an in
 
 ## Entity Collision Detection
 
-Collision is most commonly handled in the [Collide](https://www.leadwerks.com/learn/Entity_Collide?lang=lua&nocpp=1) function in an entity script. For the same of this example, we can simply declare a function called Collide and add it to the entity object. This has the exact same result as placing an object in a scene and selecting an entity script in its properties.
+Collision is most commonly handled in the [Collide](https://www.leadwerks.com/learn/Entity_Collide?lang=lua&nocpp=1) function in an entity script. You can read a tutorial using this approach [here](entityscripts.md).
+
+For the same of simplifying this example, we can simply declare a function called Collide and add it to the entity object. This has the exact same result as placing an object in a scene and selecting an entity script in its properties.
 
 ```lua
 -- Get the displays
