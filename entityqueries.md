@@ -1,6 +1,6 @@
 # Entity Filters
 
-The [World:GetEntities](World_GetEntities.md) command accepts optional arguments that let you filter the results. You can use this to retrieve a list of entities in the world that meet conditions you can specify.
+By default, the [World:GetEntities](World_GetEntities.md) returns all entities in the world. We can also define optional arguments that let you filter the results. You can use this to retrieve a list of entities in the world that meet conditions you can specify.
 
 In the example below, we retrieve a filtered list of all entities on team two that have more than zero health. This allows the hunters to find the objects they are looking for, while preventing them from attacking each other.
 
