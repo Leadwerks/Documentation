@@ -269,9 +269,13 @@
                             "filename": "raycasting"
                         },
                         {
+                            "title": "Collision",
+                            "filename": "collision"
+                        },
+                        {
                             "title": "Proximity Testing",
                             "filename": "proximitytesting"
-                        }                        
+                        }
                     ]
                 }
             ]
