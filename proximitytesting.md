@@ -358,7 +358,7 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
 end
 ```
 
-## Entity In View
+## Entity Visibility Test
 
 ```lua
 -- Get the displays
@@ -461,7 +461,9 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
 
 end
 ```
+
 We can modify our example to include line-of-sight testing.
+
 ```lua
 -- Get the displays
 local displays = GetDisplays()
