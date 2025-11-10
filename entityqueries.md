@@ -10,6 +10,10 @@ You can define any number of filter arguments, in sets of three. Each set must i
 | operation | string | the operation to perform. This can be set to "==", "~=", "<", ">", "<=", or ">="
 | value | any | the value to compare the entity field value to. This can be any Lua value. |
 
+This can be used to easily retrieve a list of entities according to any criteria you want. Note that unlike our previous examples using [World:GetEntitiesInArea](World_GetEntitiesInArea.md), this method will return all entities in the world, regardless of their location.
+
+## Example
+
 In the example below, we retrieve a filtered list of all entities on team two that have more than zero health. This allows the hunters to find the objects they are looking for, while preventing them from attacking each other.
 
 ```lua
