@@ -281,6 +281,8 @@ volume:AddVertex(0.5, -0.5, 0.5)
 volume:AddVertex(-0.5, -0.5, 0.5)
 volume:AddVertex(-0.5, -0.5, -0.5)
 
+-- Note that indices are one-based in Lua. If you convert this code to C++, subtract one from each indice
+
 -- Top
 local face = volume:AddFace()
 face:AddIndice(1)
