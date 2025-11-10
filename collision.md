@@ -264,7 +264,6 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
 	if window:KeyDown(KEY_UP) then move = move + speed end
     if window:KeyDown(KEY_LEFT) then strafe = strafe - speed end
 	if window:KeyDown(KEY_RIGHT) then strafe = strafe + speed end
-		
 	player:SetInput(0, move, strafe)
 	
     -- Update the world
