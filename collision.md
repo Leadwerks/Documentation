@@ -121,7 +121,7 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
 end
 ```
 
-## Collisiion Types
+## Collision Types
 
 Each entity has a collision type. The types are just constant values with no intrinsic meaning, but they can be set to react based on the collision type of the other colliding entity. You can specify the collision response for every pair of collision types.
 
