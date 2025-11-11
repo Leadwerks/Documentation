@@ -137,7 +137,7 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
 end
 ```
 
-## Hordes
+## Enemy Hordes
 
 In this example we have added a horde of enemies that stays at the same size. When one enemy is killed, another will spawn to replace it.
 
