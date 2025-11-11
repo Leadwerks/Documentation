@@ -146,6 +146,8 @@ There are many other ways you could time the enemies:
 - Enemies are spawned at a constant rate, regardless of how many already exist.
 - An enemy wave attack is triggered by an invisibile collision object the player activates.
 
+This example simply spawns a new enemy far from the origin. You could spawn enemies in specific locations, or check some pre-defined spots to see which are not visible to the player.
+
 ```lua
 -- Get the displays
 local displays = GetDisplays()
