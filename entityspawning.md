@@ -141,6 +141,11 @@ end
 
 In this example we have added a horde of enemies that stays at the same size. When one enemy is killed, another will spawn to replace it.
 
+There are many other ways you could time the enemies:
+- Enemies come in waves, with a fixed number of enemies each wave.
+- Enemies are spawned at a constant rate, regardless of how many already exist.
+- An enemy wave attack is triggered by an invisibile collision object the player activates.
+
 ```lua
 -- Get the displays
 local displays = GetDisplays()
