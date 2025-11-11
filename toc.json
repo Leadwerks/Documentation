@@ -279,7 +279,11 @@
                         {
                             "title": "Entity Filters",
                             "filename": "entityfilters"
-                        }                        
+                        },
+                        {
+                            "title": "Entity Spawning and Management",
+                            "filename": "entityspawning"
+                        }                      
                     ]
                 }
             ]
