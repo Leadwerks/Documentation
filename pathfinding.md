@@ -88,3 +88,10 @@ if self.navmesh then
 end
 ```
 
+## Top-Down Shooter Example
+
+Let's take everything we have learned about game mechanics and put it all together in one example. This example will use raytracing, collision, entity filters, proximity testing, entity spawning, and pathfinding to provide a simple playable game:
+
+```lua
+```
+
