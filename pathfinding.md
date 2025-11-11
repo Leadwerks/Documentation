@@ -66,3 +66,25 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
     world:Render(framebuffer)
 end
 ```
+
+## Getting the Navmesh from a Scene
+
+The scene object includes a member that lists all navmeshes found in the scene. In most cases, there will only be a single navmesh per scene. The _Monster.lua_ entity script makes use of this feature in its **Load** function.
+
+```lua
+self.navmesh = scene.navmeshes[self.navmeshindex]
+```
+
+It then makes use of the navmesh in its **Start** function to create a navigation agent and attach itself to the agent.
+
+```lua
+if self.navmesh then
+    self.agent = CreateNavAgent(self.navmesh, 0.5, 1.8)
+    self.agent:SetPosition(self:GetPosition(true))
+    self.agent:SetRotation(self:GetRotation(true).y)
+    self:SetPosition(0, 0, 0)
+    self:SetRotation(0, 180, 0)
+    self:Attach(self.agent)
+end
+```
+
