@@ -72,7 +72,7 @@ end
 The scene object includes a member that lists all navmeshes found in the scene. In most cases, there will only be a single navmesh per scene. The _Monster.lua_ entity script makes use of this feature in its **Load** function.
 
 ```lua
-self.navmesh = scene.navmeshes[self.navmeshindex]
+self.navmesh = scene.navmeshes[self.navmeshindex]-- navmeshindex is 1 by default
 ```
 
 It then makes use of the navmesh in its **Start** function to create a navigation agent and attach itself to the agent.
