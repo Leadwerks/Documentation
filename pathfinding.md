@@ -67,6 +67,10 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
 end
 ```
 
+## Dynamic Navmesh Rebuilding
+
+
+
 ## Getting the Navmesh from a Scene
 
 The scene object includes a member that lists all navmeshes found in the scene. In most cases, there will only be a single navmesh per scene. The _Monster.lua_ entity script makes use of this feature in its **Load** function.
