@@ -16,7 +16,7 @@ I recommend you start with the [Crash Course](https://www.leadwerks.com/learn/pr
 
 ## Installation
 
-Leadwerks 5 is available [on Steam](https://store.steampowered.com/app/251810/Leadwerks_Game_Engine/). If you purchased this software, the application will appear in your Steam library when you open the Steam client software.
+Leadwerks 5 is available [on Steam](https://store.steampowered.com/app/251810/?utm_source=leadwerks_website&utm_medium=web). If you purchased this software, the application will appear in your Steam library when you open the Steam client software.
 
 If you received a Steam key, please follow these instructions to activate your purchase on Steam:
 - Launch the Steam client software and log into your Steam account.
