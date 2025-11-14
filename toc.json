@@ -286,7 +286,7 @@
                         },
                         {
                             "title": "Pathfinding",
-                            "filename": "Pathfinding"
+                            "filename": "pathfinding"
                         }                        
                     ]
                 }
