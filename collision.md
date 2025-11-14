@@ -8,7 +8,7 @@ Collision is most commonly handled in the [Collide](https://www.leadwerks.com/le
 
 Collisions will only occur between objects that are active in the physics simulation. In order for a collision to occur, one or both of the colliding objects must have a mass and a velocity. Both objects must have a [Collider](Collider.md) attached to them. Two objects that are overlapping but not physically active will not register a collision.
 
-For the same of simplifying this example, we can simply declare a function called Collide and add it to the entity object. This has the exact same result as placing an object in a scene and selecting an entity script in its properties.
+For the sake of simplifying this example, we can simply declare a function called Collide and add it to the entity object. This has the exact same result as placing an object in a scene and selecting an entity script in its properties.
 
 ```lua
 -- Get the displays
