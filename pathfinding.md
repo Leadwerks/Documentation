@@ -198,7 +198,7 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
 end
 ```
 
-## Using Multiple Navigation Meshes
+## Using Multiple Navmeshes
 
 Each navigation mesh is built using the parameters you specify in the [CreateNavMesh](CreateNavMesh.md) function. If you have characters with vastly different sizes, you can create multiple navigation meshes to handle each size. To make the agents from different navigation meshes interact, create a proxy agent that you manually reposition. You will probably want to make a proxy for larger objects on a smaller navigation mesh, so that the smaller characters avoid the larger one.
 
