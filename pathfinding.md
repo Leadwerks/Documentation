@@ -198,6 +198,115 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
 end
 ```
 
+## Using Multiple Navigation Meshes
+
+Each navigation mesh is built using the parameters you specify in the [CreateNavMesh](CreateNavMesh.md) function. If you have characters with vastly different sizes, you can create multiple navigation meshes to handle each size. To make the agents from different navigation meshes interact, create a proxy agent that you manually reposition. You will probably want to make a proxy for larger objects on a smaller navigation mesh, so that the smaller characters avoid the larger one.
+
+```lua
+local displays = GetDisplays();
+
+--Create a window
+local window = CreateWindow("Leadwerks", 0, 0, 1280, 720, displays[1], WINDOW_CENTER | WINDOW_TITLEBAR)
+
+--Create a framebuffer
+local framebuffer = CreateFramebuffer(window)
+
+--Create a world
+local world = CreateWorld()
+
+--Create a camera
+local camera = CreateCamera(world)
+camera:SetFov(70)
+camera:SetClearColor(0.125)
+camera:SetRotation(Vec3(35, 0, 0))
+camera:Move(0,0,-10)
+
+--Create light
+local light = CreateBoxLight(world)
+light:SetRange(-20, 20)
+light:SetArea(30, 30)
+light:SetRotation(35, 35, 0)
+
+--Create scene
+local ground = CreateBox(world, 20, 1, 20)
+ground:SetPosition(Vec3(0, -0.5, 0))
+ground:SetColor(0.5)
+local wall1 = CreateBox(world, 1, 2, 3)
+wall1:SetPosition(0,0,2)
+
+local wall2 = CreateBox(world, 1, 2, 3)
+wall2:SetPosition(0,0,-3)
+
+--Create navmesh for small objects
+local navmesh1 = CreateNavMesh(world, 5, 4, 4)
+navmesh1:Build()
+
+local agents = {}
+local entities = {}
+
+for n = 1, 10 do
+	
+	--Create player
+	local player = CreateCylinder(world, 0.4, 1.8)
+	player:SetNavObstacle(false)
+	player:SetColor(0, 0, 1)
+	local agent = CreateNavAgent(navmesh1)
+	player:Attach(agent)
+	agent:SetPosition(navmesh1:RandomPoint())
+	table.insert(agents, agent)
+	table.insert(entities, player)
+	
+end
+
+--Create navmesh for big objects, specifying 1.0 for the agent radius
+local navmesh2 = CreateNavMesh(world, 5, 4, 4, 32, 0.25, 1)
+navmesh2:Build()
+
+--Create big guy
+local player = CreateCylinder(world, 1, 4)
+player:SetNavObstacle(false)
+player:SetColor(0, 1, 0)
+local bigagent = CreateNavAgent(navmesh2)
+player:Attach(bigagent)
+bigagent:SetPosition(navmesh2:RandomPoint())
+table.insert(agents, bigagent)
+table.insert(entities, player)
+
+--Create a navagent for the big guy, on the first navmesh
+bigagentproxy = CreateNavAgent(navmesh1, 1, 2)
+
+--Main loop
+while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
+
+    --Visualize the navmesh if the space key is pressed
+    navmesh2:SetDebugging(window:KeyDown(KEY_SPACE))
+
+	bigagentproxy:SetPosition(bigagent:GetPosition())
+
+    --Click to control where the agent moves to
+    if window:MouseHit(MOUSE_LEFT) then
+        local mousepos = window:GetMousePosition()
+        local pickinfo = camera:Pick(framebuffer, mousepos.x, mousepos.y)
+        if pickinfo.entity then
+			for n = 1, #agents do
+				agents[n]:Navigate(pickinfo.position)
+			end
+        end
+    end
+
+	--Move the block with the arrow keys
+	if window:KeyDown(KEY_UP) then wall:Move(0,0,0.1) end
+	if window:KeyDown(KEY_DOWN) then wall:Move(0,0,-0.1) end
+
+    --Update the world
+    world:Update()
+
+    --Render the world
+    world:Render(framebuffer)
+
+end
+```
+
 ## Top-Down Shooter Example
 
 Let's take everything we have learned about game mechanics and put it all together in one example. This example will use raytracing, collision, entity filters, proximity testing, entity spawning, and pathfinding to provide a simple playable game:
