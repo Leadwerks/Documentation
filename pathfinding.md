@@ -73,6 +73,8 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
 end
 ```
 
+Note that the navigation system is independent from the physics system. You can have characters that are completely controlled by the navigation system alone, or you can combine the navigation mesh with the physics collision, by repositioning the navigation agent if there is a discreprency with the physics object's position.
+
 ## Getting the Navmesh from a Scene
 
 The scene object includes a member that lists all navmeshes found in the scene. In most cases, there will only be a single navmesh per scene. The _Monster.lua_ entity script makes use of this feature in its **Load** function.
