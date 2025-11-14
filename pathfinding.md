@@ -326,18 +326,42 @@ local world = CreateWorld()
 --Create light
 local light = CreateBoxLight(world)
 light:SetRange(-20, 20)
-light:SetArea(70, 70)
+light:SetArea(80, 80)
 light:SetRotation(65, 45, 0)
 light:SetShadowmapSize(1024)
 
 --Create scene
-local ground = CreateBox(world, 50, 1, 50)
+local ground = CreateBox(world, 60, 1, 60)
 ground:SetPosition(Vec3(0, -0.5, 0))
 ground:SetColor(0.5)
+local wall1 = CreateBox(world, 8, 2, 2)
+wall1:SetColor(0.25)
+wall1:SetPosition(0,1,-5)
+local wall2 = CreateBox(world, 8, 2, 2)
+wall2:SetColor(0.25)
+wall2:SetPosition(-2,1,5)
+local wall3 = CreateBox(world, 2, 2, 8)
+wall3:SetColor(0.25)
+wall3:SetPosition(8,1,0)
+local wall4 = CreateBox(world, 12, 2, 2)
+wall4:SetColor(0.25)
+wall4:SetPosition(0,1,10)
+local wall5 = CreateBox(world, 2, 2, 12)
+wall5:SetColor(0.25)
+wall5:SetPosition(-10,1,2)
+local wall5 = CreateBox(world, 20, 2, 2)
+wall5:SetColor(0.25)
+wall5:SetPosition(10,1,15)
+local wall6 = CreateBox(world, 2, 2, 12)
+wall6:SetColor(0.25)
+wall6:SetPosition(16,1,2)
 
 --Define Teams
 TEAM_GOOD = 1
 TEAM_BAD = 2
+
+-- Load a font for text rendering
+local font = LoadFont("Fonts/arial.ttf")
 
 --Create player
 player = CreateCylinder(world, 0.4, 1.8)
@@ -349,15 +373,34 @@ player:SetColor(0,0,1)
 player:SetCollisionType(COLLISION_PLAYER)
 player:SetMass(10)
 player.camera = CreateCamera(player.world)
+player.camera:Listen()
 player.bullets = {}
 player.health = 100
 player.team = TEAM_GOOD
+player.score = 0
+player.healthtile = CreateTile(world, font, "Health: 100", 48)
+player.scoretile = CreateTile(world, font, "Score: 0", 48, TEXT_RIGHT)
+player.scoretile:SetPosition(framebuffer.size.x, 0)
+player.gametile = CreateTile(world, font, "Wave 1", 48, TEXT_CENTER)
+player.gametile:SetPosition(framebuffer.size.x / 2, 0)
+
+--Gun Sound 3 by TheNikonProductions -- https://freesound.org/s/337698/ -- License: Attribution 3.0
+player.sound_shoot = LoadSound("https://github.com/Leadwerks/Documentation/raw/refs/heads/master/Assets/Sound/shoot.wav")
 
 function player:TakeDamage(damage)
+	
+	--Add a refractory period during which the player cannot be hurt
+	if self.lasthurttime == nil then self.lasthurttime = 0 end
+	local now = self.world:GetTime()
+	if now - self.lasthurttime < 1000 then return end
+	self.lasthurttime = now
+	
 	self.health = self.health - damage
+	self.healthtile:SetText("Health: "..tostring(self.health))
 	if self.health <= 0 then
 		self:SetColor(0,0,0)
 		self:SetInput(0,0,0)
+		self.gametile:SetText("You Died!")
 	end
 end
 
@@ -376,13 +419,19 @@ function player:Update()
 			local bulletspeed = 1
 			local p0 = self.bullets[n].position
 			local p1 = TransformPoint(0, 0, bulletspeed, self.bullets[n], nil)		
-			local pickinfo = self.world:Pick(p0, p1, 0, true)
+			local pickinfo = self.world:Pick(p0, p1, 0.25, true)
 			if pickinfo.entity then
 				if isfunction(pickinfo.entity.TakeDamage) then
 					pickinfo.entity:TakeDamage(10, self)
 				end
 				self.bullets[n]:SetHidden(true)
 				table.remove(self.bullets, n)
+				if isnumber(pickinfo.entity.health) then
+					if pickinfo.entity.health <= 0 then
+						self.score = self.score + 1
+						self.scoretile:SetText("Score: "..tostring(self.score))
+					end
+				end
 			else
 				self.bullets[n]:Move(0,0,bulletspeed)
 			end
@@ -400,7 +449,7 @@ function player:Update()
 	
 	-- Player movement
 	if self.health <= 0 then return end
-	local speed = 8
+	local speed = 4
 	local move = Vec2(0)
 	if window:KeyDown(KEY_D) then move.x = move.x + 1 end
 	if window:KeyDown(KEY_A) then move.x = move.x - 1 end
@@ -412,6 +461,7 @@ function player:Update()
 	-- Shooting
 	if window:MouseDown(MOUSE_LEFT) then		
 		if self.lastfiretime == nil or now - self.lastfiretime > 100 then
+			if self.sound_shoot then self.sound_shoot:Play() end
 			self.lastfiretime = now
 			local p = Plane(0,1,0,0)
 			local cx = window.framebuffer.size.x / 2
@@ -441,87 +491,106 @@ function player:Update()
 end
 
 -- Create navmesh
-local navmesh = CreateNavMesh(world, 5, 6, 6)
+local navmesh = CreateNavMesh(world, 5, 8, 8)
 navmesh:Build()
 
 -- The scene object will act as a container to store zombies in
 local scene = CreateScene()
 
--- Create zombies
-for n = 1, 10 do
-    local zombie = CreateCylinder(world, 0.4, 1.8)
-	zombie.lods[1].meshes[1]:Translate(0, 0.9, 0)
-	zombie:UpdateBounds()
-	zombie:SetPickMode(PICK_MESH)-- use mesh picking, since we shifted the mesh vertically
-    zombie:SetNavObstacle(false)-- don't affect the navmesh building
-    zombie:SetColor(1, 0, 0)
-    zombie.health = 30
-	zombie.team = TEAM_BAD
-	zombie.agent = CreateNavAgent(navmesh)
-    zombie:Attach(zombie.agent)
-	zombie.agent:SetPosition(navmesh:RandomPoint())	
-    zombie.scene = scene
-    scene:AddEntity(zombie)
+function SpawnWave(count, scene)
 	
-	-- The player bullets will call this function when they hit a zombie
-	function zombie:TakeDamage(damage)
-		self.health = self.health - damage
-		if self.health <= 0 then
-			self.agent:Stop()
-			self.agent = nil
-			self.dietime = self.world:GetTime()
-			self:SetColor(0,0,0)
-			self:SetPickMode(PICK_NONE)
-			self:SetCollisionType(COLLISION_NONE)
-		end
-	end
-	
-	-- Zombie update function will be called every frame
-	function zombie:Update()
+	-- Create zombies
+	for n = 1, count do
+		local zombie = CreateCylinder(world, 0.4, 1.8)
+		zombie.lods[1].meshes[1]:Translate(0, 0.9, 0)
+		zombie:UpdateBounds()
+		zombie:SetPickMode(PICK_MESH)-- use mesh picking, since we shifted the mesh vertically
+		zombie:SetNavObstacle(false)-- don't affect the navmesh building
+		zombie:SetColor(1, 0, 0)
+		zombie.health = 30
+		zombie.team = TEAM_BAD
+		zombie.agent = CreateNavAgent(navmesh)
+		zombie:Attach(zombie.agent)
+		zombie:SetRotation(0,Random(360),0)
+		zombie.agent:SetPosition(TransformPoint(0,0,30, zombie, nil))
+		zombie.scene = scene
+		--Zombie Roar by gneube -- https://freesound.org/s/315846/ -- License: Attribution 4.0
+		zombie.sound_death = LoadSound("https://github.com/Leadwerks/Documentation/raw/refs/heads/master/Assets/Sound/zombie-roar.wav")
+		scene:AddEntity(zombie)
 		
-		--Handle dead zombies
-		if self.health <= 0 then
-			self:Move(0,-0.01,0)
-			local now = self.world:GetTime()
-			if now - self.dietime > 5000 then
-				self:SetHidden(true)
-				self.Update = nil
-				self.scene:RemoveEntity(self)
+		-- The player bullets will call this function when they hit a zombie
+		function zombie:TakeDamage(damage)
+			self.health = self.health - damage
+			if self.health <= 0 then
+				if self.sound_death then self:EmitSound(self.sound_death) end
+				self.agent:Stop()
+				self.agent = nil
+				self.dietime = self.world:GetTime()
+				self:SetColor(0,0,0)
+				self:SetPickMode(PICK_NONE)
+				self:SetCollisionType(COLLISION_NONE)
 			end
-			return
 		end
 		
-		if self.target and self.target.health <= 0 then
-			self.target = nil
-			self.agent:Stop()
-		end
-		
-		-- Find a target to attack
-		if self.target == nil then
-			local entities = self.world:GetEntities("health", ">", 0, "team", "~=", self.team)
-			if #entities > 0 then self.target = entities[1] end
-		end
-		
-		-- If we have a target, go towards it
-		if self.target ~= nil then
-			self.agent:Navigate(self.target.position)
-			if self.target:GetDistance(self) < 1 then
-				if isfunction(self.target.TakeDamage) then
-					self.target:TakeDamage(5, self)
+		-- Zombie update function will be called every frame
+		function zombie:Update()
+			
+			--Handle dead zombies
+			if self.health <= 0 then
+				self:Move(0,-0.01,0)
+				local now = self.world:GetTime()
+				if now - self.dietime > 5000 then
+					self:SetHidden(true)
+					self.Update = nil
+					self.scene:RemoveEntity(self)
 				end
-				-- Pushes the player away
-				local dir = self.target.position - self.position
-				dir = dir:Normalize() * 2
-				self.target:SetVelocity(self.target:GetVelocity() + dir)
+				return
 			end
-		end
-		
+			
+			if self.target and self.target.health <= 0 then
+				self.target = nil
+				self.agent:Stop()
+			end
+			
+			-- Find a target to attack
+			if self.target == nil then
+				local entities = self.world:GetEntities("health", ">", 0, "team", "~=", self.team)
+				if #entities > 0 then self.target = entities[1] end
+			end
+			
+			-- If we have a target, go towards it
+			if self.target ~= nil then
+				self.agent:Navigate(self.target.position)
+				if self.target:GetDistance(self) < 1 then
+					if isfunction(self.target.TakeDamage) then
+						self.target:TakeDamage(10, self)
+					end
+					-- Pushes the player away
+					local dir = self.target.position - self.position
+					dir = dir:Normalize() * 2
+					self.target:SetVelocity(self.target:GetVelocity() + dir)
+				end
+			end
+			
+		end		
 	end
-	
 end
+
+local wave = 1
+local zombiecount = 5
+SpawnWave(zombiecount, scene)
 
 --Main loop
 while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
+
+	--Spawn another wave when all zombies are dead
+	if #scene.entities == 0 then
+		wave = wave + 1
+		player:SetPosition(0,0,0)
+		player.gametile:SetText("Wave "..tostring(wave))
+		zombiecount = zombiecount * 2
+		SpawnWave(zombiecount, scene)
+	end
 	
 	--Run GC sweep
 	collectgarbage()
@@ -534,4 +603,3 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
 
 end
 ```
-
