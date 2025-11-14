@@ -12,7 +12,7 @@ The best place to start is the [Crash Course](https://www.leadwerks.com/learn/pr
 
 ### Additional Recommended Software
 
-- [Microsoft Visual Studio Community Edition](https://visualstudio.microsoft.com/#vs-section) is used for C++ programming.
+- [Microsoft Visual Studio Community Edition](https://visualstudio.microsoft.com/downloads/) is used for C++ programming.
 
 ## Installation
 
