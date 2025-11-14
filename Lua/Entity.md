@@ -54,6 +54,7 @@ This class serves as the foundation for all 3D objects in a world. It provides a
 | [GetScale](Entity_GetScale.md) | Method | returns the entity scale |
 | [GetUuid](Entity_GetUuid.md) | Method | returns the entity's unique identifier |
 | [GetVelocity](Entity_GetVelocity.md) | Method | returns the entity linear velocity |
+| [GetVisible](Entity_GetVisible.md) | Method | performs a line-of-sight test between two entities |
 | [GetWorld](Entity_GetWorld.md) | Method | returns the world the entity resides in |
 | [HasTag](Entity_HasTag.md) | Method | returns true if the entity includes the specified tag |
 | [Instantiate](Entity_Instantiate.md) | Method | creates an instanced copy of the entity |
