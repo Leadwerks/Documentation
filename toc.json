@@ -1147,6 +1147,10 @@
                             "filename": "Entity_GetVelocity"
                         },
                         {
+                            "title": "GetVisible",
+                            "filename": "Entity_GetVisible"
+                        },
+                        {
                             "title": "GetWorld",
                             "filename": "Entity_GetWorld"
                         },
