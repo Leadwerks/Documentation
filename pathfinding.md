@@ -312,5 +312,226 @@ end
 Let's take everything we have learned about game mechanics and put it all together in one example. This example will use raycasting, collision, entity filters, proximity testing, entity spawning, and pathfinding to provide a simple playable game:
 
 ```lua
+local displays = GetDisplays();
+
+--Create a window
+local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_CENTER | WINDOW_TITLEBAR)
+
+--Create a framebuffer
+ framebuffer = CreateFramebuffer(window)
+
+--Create a world
+local world = CreateWorld()
+
+--Create light
+local light = CreateBoxLight(world)
+light:SetRange(-20, 20)
+light:SetArea(70, 70)
+light:SetRotation(65, 45, 0)
+light:SetShadowmapSize(1024)
+
+--Create scene
+local ground = CreateBox(world, 50, 1, 50)
+ground:SetPosition(Vec3(0, -0.5, 0))
+ground:SetColor(0.5)
+
+--Define Teams
+TEAM_GOOD = 1
+TEAM_BAD = 2
+
+--Create player
+player = CreateCylinder(world, 0.4, 1.8)
+player.lods[1].meshes[1]:Translate(0, 0.9, 0)
+player:UpdateBounds()
+player:SetNavObstacle(false)
+player:SetPhysicsMode(PHYSICS_PLAYER)
+player:SetColor(0,0,1)
+player:SetCollisionType(COLLISION_PLAYER)
+player:SetMass(10)
+player.camera = CreateCamera(player.world)
+player.bullets = {}
+player.health = 100
+player.team = TEAM_GOOD
+
+function player:TakeDamage(damage)
+	self.health = self.health - damage
+	if self.health <= 0 then
+		self:SetColor(0,0,0)
+		self:SetInput(0,0,0)
+	end
+end
+
+function player:Update()
+	
+	-- Get the current game time
+	local now = self.world:GetTime()
+	
+	-- Update bullets
+	local n
+	for n = #self.bullets, 1, -1 do
+		if now - self.bullets[n].spawntime > 2000 then
+			self.bullets[n]:SetHidden(true)
+			table.remove(self.bullets, n)
+		else
+			local bulletspeed = 1
+			local p0 = self.bullets[n].position
+			local p1 = TransformPoint(0, 0, bulletspeed, self.bullets[n], nil)		
+			local pickinfo = self.world:Pick(p0, p1, 0, true)
+			if pickinfo.entity then
+				if isfunction(pickinfo.entity.TakeDamage) then
+					pickinfo.entity:TakeDamage(10, self)
+				end
+				self.bullets[n]:SetHidden(true)
+				table.remove(self.bullets, n)
+			else
+				self.bullets[n]:Move(0,0,bulletspeed)
+			end
+		end
+	end
+	
+	-- Update the camera
+	self.camera:SetPosition(self.position)
+	self.camera:SetRotation(45,0,0)
+	self.camera:Move(0,0,-8)
+		
+	-- Get the active window
+	local window = ActiveWindow()
+	if window == nil then return end
+	
+	-- Player movement
+	if self.health <= 0 then return end
+	local speed = 8
+	local move = Vec2(0)
+	if window:KeyDown(KEY_D) then move.x = move.x + 1 end
+	if window:KeyDown(KEY_A) then move.x = move.x - 1 end
+	if window:KeyDown(KEY_W) then move.y = move.y + 1 end
+	if window:KeyDown(KEY_S) then move.y = move.y - 1 end
+	if move.x ~= 0 or move.y ~= 0 then move = move:Normalize() * speed end
+	self:SetInput(0, move.y, move.x)
+	
+	-- Shooting
+	if window:MouseDown(MOUSE_LEFT) then		
+		if self.lastfiretime == nil or now - self.lastfiretime > 100 then
+			self.lastfiretime = now
+			local p = Plane(0,1,0,0)
+			local cx = window.framebuffer.size.x / 2
+			local cy = window.framebuffer.size.y / 2
+			local mousepos = window:GetMousePosition()
+			local coord = Vec3(mousepos.x, mousepos.y, 0)
+			coord.z = self.camera:GetRange().y
+			farpoint = self.camera:ScreenToWorld(coord, framebuffer)
+			local r = Vec3(0)
+			if p:IntersectsLine(self.camera.position, farpoint, r) then
+				local dir = r - self.position
+				dir.y = 0
+				dir = dir:Normalize()
+				local bullet = CreateSphere(world, 0.25)
+				bullet:SetPickMode(PICK_NONE)
+				bullet.spawntime = now
+				bullet:SetNavObstacle(false)
+				bullet:SetPosition(self.position + Vec3(0,1,0))
+				bullet:AlignToVector(dir)
+				bullet:Move(0, 0, 0.5)
+				bullet:SetCollisionType(COLLISION_TRIGGER)
+				table.insert(self.bullets, bullet)
+			end
+		end
+	end
+
+end
+
+-- Create navmesh
+local navmesh = CreateNavMesh(world, 5, 6, 6)
+navmesh:Build()
+
+-- The scene object will act as a container to store zombies in
+local scene = CreateScene()
+
+-- Create zombies
+for n = 1, 10 do
+    local zombie = CreateCylinder(world, 0.4, 1.8)
+	zombie.lods[1].meshes[1]:Translate(0, 0.9, 0)
+	zombie:UpdateBounds()
+	zombie:SetPickMode(PICK_MESH)-- use mesh picking, since we shifted the mesh vertically
+    zombie:SetNavObstacle(false)-- don't affect the navmesh building
+    zombie:SetColor(1, 0, 0)
+    zombie.health = 30
+	zombie.team = TEAM_BAD
+	zombie.agent = CreateNavAgent(navmesh)
+    zombie:Attach(zombie.agent)
+	zombie.agent:SetPosition(navmesh:RandomPoint())	
+    zombie.scene = scene
+    scene:AddEntity(zombie)
+	
+	-- The player bullets will call this function when they hit a zombie
+	function zombie:TakeDamage(damage)
+		self.health = self.health - damage
+		if self.health <= 0 then
+			self.agent:Stop()
+			self.agent = nil
+			self.dietime = self.world:GetTime()
+			self:SetColor(0,0,0)
+			self:SetPickMode(PICK_NONE)
+			self:SetCollisionType(COLLISION_NONE)
+		end
+	end
+	
+	-- Zombie update function will be called every frame
+	function zombie:Update()
+		
+		--Handle dead zombies
+		if self.health <= 0 then
+			self:Move(0,-0.01,0)
+			local now = self.world:GetTime()
+			if now - self.dietime > 5000 then
+				self:SetHidden(true)
+				self.Update = nil
+				self.scene:RemoveEntity(self)
+			end
+			return
+		end
+		
+		if self.target and self.target.health <= 0 then
+			self.target = nil
+			self.agent:Stop()
+		end
+		
+		-- Find a target to attack
+		if self.target == nil then
+			local entities = self.world:GetEntities("health", ">", 0, "team", "~=", self.team)
+			if #entities > 0 then self.target = entities[1] end
+		end
+		
+		-- If we have a target, go towards it
+		if self.target ~= nil then
+			self.agent:Navigate(self.target.position)
+			if self.target:GetDistance(self) < 1 then
+				if isfunction(self.target.TakeDamage) then
+					self.target:TakeDamage(5, self)
+				end
+				-- Pushes the player away
+				local dir = self.target.position - self.position
+				dir = dir:Normalize() * 2
+				self.target:SetVelocity(self.target:GetVelocity() + dir)
+			end
+		end
+		
+	end
+	
+end
+
+--Main loop
+while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
+	
+	--Run GC sweep
+	collectgarbage()
+	
+    --Update the world
+    world:Update()
+
+    --Render the world
+    world:Render(framebuffer)
+
+end
 ```
 
