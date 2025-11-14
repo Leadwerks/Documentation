@@ -101,7 +101,6 @@ if self.navmesh then
 end
 ```
 
-
 ## Dynamic Navmesh Rebuilding
 
 We can demonstrate this by adding some code in the main loop of our previous example, that allows us to move the wall in the scene with the up and down arrow keys. Hold the space key as you do this to see how the navigation mesh rebuilds.
@@ -110,6 +109,93 @@ We can demonstrate this by adding some code in the main loop of our previous exa
 --Move the block with the arrow keys
 if window:KeyDown(KEY_UP) then wall:Move(0,0,0.1) end
 if window:KeyDown(KEY_DOWN) then wall:Move(0,0,-0.1) end
+```
+
+## Crowds
+
+The pathfinding system is capable of handling large numbers of characters with realistic crowding behavior. This is perfect for making hordes of zombies, or other enemies. Here is our example modified to handle multiple characters:
+
+```lua
+local displays = GetDisplays();
+
+--Create a window
+local window = CreateWindow("Leadwerks", 0, 0, 1280, 720, displays[1], WINDOW_CENTER | WINDOW_TITLEBAR)
+
+--Create a framebuffer
+local framebuffer = CreateFramebuffer(window)
+
+--Create a world
+local world = CreateWorld()
+
+--Create a camera
+local camera = CreateCamera(world)
+camera:SetFov(70)
+camera:SetClearColor(0.125)
+camera:SetPosition(Vec3(0, 3, -6))
+camera:SetRotation(Vec3(35, 0, 0))
+
+--Create light
+local light = CreateBoxLight(world)
+light:SetRange(-20, 20)
+light:SetArea(20, 20)
+light:SetRotation(35, 35, 0)
+light:SetColor(3, 3, 3)
+
+--Create scene
+local ground = CreateBox(world, 10, 1, 10)
+ground:SetPosition(Vec3(0, -0.5, 0))
+ground:SetColor(0, 1, 0)
+local wall = CreateBox(world, 1, 2, 4)
+
+--Create navmesh
+local navmesh = CreateNavMesh(world, 5, 4, 4)
+navmesh:Build()
+
+local agents = {}
+local entities = {}
+
+for n = 1, 10 do
+	
+	--Create player
+	local player = CreateCylinder(world, 0.4, 1.8)
+	player:SetNavObstacle(false)
+	player:SetColor(0, 0, 1)
+	local agent = CreateNavAgent(navmesh)
+	player:Attach(agent)
+	agent:SetPosition(navmesh:RandomPoint())
+	table.insert(agents, agent)
+	table.insert(entities, player)
+	
+end
+
+--Main loop
+while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
+
+    --Visualize the navmesh if the space key is pressed
+    navmesh:SetDebugging(window:KeyDown(KEY_SPACE))
+
+    --Click to control where the agent moves to
+    if window:MouseHit(MOUSE_LEFT) then
+        local mousepos = window:GetMousePosition()
+        local pickinfo = camera:Pick(framebuffer, mousepos.x, mousepos.y)
+        if pickinfo.entity then
+			for n = 1, #agents do
+				agents[n]:Navigate(pickinfo.position)
+			end
+        end
+    end
+
+	--Move the block with the arrow keys
+	if window:KeyDown(KEY_UP) then wall:Move(0,0,0.1) end
+	if window:KeyDown(KEY_DOWN) then wall:Move(0,0,-0.1) end
+
+    --Update the world
+    world:Update()
+
+    --Render the world
+    world:Render(framebuffer)
+
+end
 ```
 
 ## Top-Down Shooter Example
