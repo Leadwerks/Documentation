@@ -57,21 +57,24 @@ agent:SetPosition(-2,1,0)
 --Main loop
 while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
 
-    navmesh:SetDebugging(window:KeyDown(KEY_D))
+    --Visualize the navmesh if the space key is pressed
+    navmesh:SetDebugging(window:KeyDown(KEY_SPACE))
 
+    --Click to control where the agent moves to
     if window:MouseHit(MOUSE_LEFT) then
         local mousepos = window:GetMousePosition()
-        local rayinfo = camera:Pick(framebuffer, mousepos.x, mousepos.y)
-        if rayinfo.success then
-            agent:Navigate(rayinfo.position)
+        local pickinfo = camera:Pick(framebuffer, mousepos.x, mousepos.y)
+        if pickinfo.entity then
+            agent:Navigate(pickinfo.position)
         end
     end
-    if window:KeyHit(KEY_SPACE) then
-        agent:Stop()
-    end
 
+    --Update the world
     world:Update()
+
+    --Render the world
     world:Render(framebuffer)
+
 end
 ```
 
