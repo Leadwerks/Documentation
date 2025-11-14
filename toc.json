@@ -3432,6 +3432,10 @@
                                     "filename": "NavMesh_RandomPoint"
                                 },
                                 {
+                                    "title": "SetDebugging",
+                                    "filename": "NavMesh_SetDebugging"
+                                },                                
+                                {
                                     "title": "SetPosition",
                                     "filename": "NavMesh_SetPosition"
                                 },
