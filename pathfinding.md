@@ -104,7 +104,13 @@ end
 
 ## Dynamic Navmesh Rebuilding
 
+We can demonstrate this by adding some code in the main loop of our previous example, that allows us to move the wall in the scene with the up and down arrow keys. Hold the space key as you do this to see how the navigation mesh rebuilds.
 
+```lua
+--Move the block with the arrow keys
+if window:KeyDown(KEY_UP) then wall:Move(0,0,0.1) end
+if window:KeyDown(KEY_DOWN) then wall:Move(0,0,-0.1) end
+```
 
 ## Top-Down Shooter Example
 
