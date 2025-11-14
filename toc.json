@@ -283,7 +283,11 @@
                         {
                             "title": "Entity Spawning and Management",
                             "filename": "entityspawning"
-                        }                      
+                        },
+                        {
+                            "title": "Pathfinding",
+                            "filename": "Pathfinding"
+                        }                        
                     ]
                 }
             ]
