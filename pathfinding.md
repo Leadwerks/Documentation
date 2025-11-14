@@ -8,6 +8,8 @@ Pathfinding is accomplished with a navigation mesh. The [NavMesh](NavMesh.md) cl
 
 Each navigation mesh can have one or more [NavAgent](NavAgent.md) objects. A navigation agent represents a character that can move about the scene. Navigation agents will follow the contours of the navigation mesh, and will also move to avoid one another in a crowd.
 
+Here is a simple example that demonstrates how to create a navigation mesh, add a single agent, and make the agent navigate to a destination the user clicks the mouse on.
+
 ```lua
 local displays = GetDisplays();
 
