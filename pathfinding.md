@@ -1,6 +1,12 @@
 # Pathfinding
 
-Leadwerks includes a robust pathfinding system...
+The Leadwerks pathfinding analyzes the level geometry and tells characters in your game where they are allowed to walk, and how to get from one point to another. The Leadwerks pathfinding system is fully dynamic, meaning that if an object moves in your game, the pathfinding data will adjust and characters may choose another route to reach their destination.
+
+Pathfinding is accomplished with a navigation mesh. The [NavMesh](NavMesh.md) class defines an area the navigation mesh, and handles building and updating of the mesh data.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/navmesh.jpg?raw=true)
+
+Each navigation mesh can have one or more [NavAgent](NavAgent.md) objects. A navigation agent represents a character that can move about the scene. Navigation agents will follow the contours of the navigation mesh, and will also move to avoid one another in a crowd.
 
 ```lua
 local displays = GetDisplays();
