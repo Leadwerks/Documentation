@@ -163,7 +163,7 @@ Alternatively, you could also store objects as keys in a table, and assign any v
 enemies[enemy] = true
 ```
 
-When you iterate through the loop, use pairs instead of an array index:
+When you iterate through the loop, use [pairs](Tables.md) instead of an array index:
 
 ```
 local k, v
