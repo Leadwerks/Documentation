@@ -118,7 +118,7 @@ if window:KeyDown(KEY_DOWN) then wall:Move(0,0,-0.1) end
 
 ## Crowds
 
-The pathfinding system is capable of handling large numbers of characters with realistic crowding behavior. This is perfect for making hordes of zombies, or other enemies. Here is our example modified to handle multiple characters:
+The pathfinding system is capable of handling large numbers of characters with realistic crowding behavior. Here is our example modified to handle multiple characters:
 
 ```lua
 local displays = GetDisplays();
@@ -202,6 +202,10 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
 
 end
 ```
+
+The crowd avoidance system is perfect for making hordes of zombies, or other enemies.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/crowds.gif?raw=true)
 
 ## Using Multiple Navmeshes
 
