@@ -256,11 +256,11 @@ local pickinfo = world:Pick(Vec3(8,0,0), Vec3(-8,0,0), 0.5, true)
 
 Entities can be individually set to be pickable or not, using the [Entity:SetPickMode](Entity_SetPickMode.md) command. Three possible modes are available:
 
-- **PICK_NONE**: The object will be skipped by all raycasts.
-- **PICK_COLLIDER**: The object's collider will be used for raycasts, if one has been set, otherwise it will be skipped.
-- **PICK_MESH**: The object's mesh geometry will be used for raycasts.
+- _PICK_NONE_: The object will be skipped by all raycasts.
+- _PICK_COLLIDER_: The object's collider will be used for raycasts, if one has been set, otherwise it will be skipped.
+- _PICK_MESH_: The object's mesh geometry will be used for raycasts.
 
-The default pick mode for [Model](Model.md), [Brush](Brush.md), and [Terrain](Terrain.md) entities is PICK_MESH.
+The default pick mode for [Model](Model.md), [Brush](Brush.md), and [Terrain](Terrain.md) entities is PICK_MESH. Model primitives like those created with the [CreateBox](CreateBox.md), [CreateCone](CreateCone.md), [CreateSphere](CreateSphere.md), and other functions will use the PICK_COLLIDER mode, for greater efficiency.
 
 You can see this in action simply by disabling picking on one of the boxes in our example above:
 
