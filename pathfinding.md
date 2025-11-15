@@ -205,7 +205,7 @@ end
 
 The crowd avoidance system is perfect for making hordes of zombies, or other enemies.
 
-![](https://github.com/UltraEngine/Documentation/blob/master/Images/crowds.gif?raw=true)
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/crowd.gif?raw=true)
 
 ## Using Multiple Navmeshes
 
