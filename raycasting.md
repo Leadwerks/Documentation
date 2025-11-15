@@ -262,7 +262,7 @@ Entities can be individually set to be pickable or not, using the [Entity:SetPic
 
 The default pick mode for [Model](Model.md), [Brush](Brush.md), and [Terrain](Terrain.md) entities is PICK_MESH. Model primitives like those created with the [CreateBox](CreateBox.md), [CreateCone](CreateCone.md), [CreateSphere](CreateSphere.md), and other functions will use the PICK_COLLIDER mode, for greater efficiency.
 
-You can see this in action simply by disabling picking on one of the boxes in our example above:
+You can see the effect of the pick mode by disabling picking on one of the boxes in our example above:
 
 ```lua
 b1:SetPickMode(PICK_NONE)
