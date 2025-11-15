@@ -177,6 +177,10 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
 end
 ```
 
+The example shows a raycast with a vector that slowly rotates. A sphere is positioned at the raycast hit position to show where it intersects the scene.
+
+![](https://raw.githubusercontent.com/UltraEngine/Documentation/master/Images/World_Pick.gif)
+
 ## Sphere Casting
 
 Raycasts can include an optional radius parameter. When a non-zero radius is specified, the raycast becomes a **sphere cast**, which checks for intersections within a spherical volume. This is especially useful for detecting wider objects or simulating a more forgiving collision area.
