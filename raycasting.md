@@ -43,7 +43,7 @@ This example demonstrates how a simple line-of-sight test can be performed to ch
 local displays = GetDisplays()
 
 -- Create window
-local window = CreateWindow("Leadwerks", 0, 0, 1280, 720, displays[1], WINDOW_CENTER | WINDOW_TITLEBAR)
+local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_CENTER | WINDOW_TITLEBAR)
 
 -- Create world
 local world = CreateWorld()
@@ -98,7 +98,7 @@ This example shows how to use the [World:Pick](World_Pick.md) command:
 local displays = GetDisplays()
 
 -- Create window
-local window = CreateWindow("Leadwerks", 0, 0, 1280, 720, displays[1], WINDOW_CENTER | WINDOW_TITLEBAR)
+local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_CENTER | WINDOW_TITLEBAR)
 
 -- Create world
 local world = CreateWorld()
@@ -198,7 +198,7 @@ This example shows how we can set closest to true, and the Pick function will re
 local displays = GetDisplays()
 
 -- Create window
-local window = CreateWindow("Leadwerks", 0, 0, 1280, 720, displays[1], WINDOW_CENTER | WINDOW_TITLEBAR)
+local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_CENTER | WINDOW_TITLEBAR)
 
 -- Create world
 local world = CreateWorld()
@@ -284,7 +284,7 @@ Using our newfound knowledge of raycasting, we can now make a much more robust l
 local displays = GetDisplays()
 
 -- Create window
-local window = CreateWindow("Leadwerks", 0, 0, 1280, 720, displays[1], WINDOW_CENTER | WINDOW_TITLEBAR)
+local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_CENTER | WINDOW_TITLEBAR)
 
 -- Create world
 local world = CreateWorld()
@@ -390,7 +390,7 @@ One common use of the raycast feature is controlling the camera's distance from 
 local displays = GetDisplays()
 
 -- Create window
-local window = CreateWindow("Leadwerks", 0, 0, 1280, 720, displays[1], WINDOW_CENTER | WINDOW_TITLEBAR)
+local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_CENTER | WINDOW_TITLEBAR)
 
 -- Create framebuffer
 local framebuffer = CreateFramebuffer(window)
