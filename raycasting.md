@@ -229,6 +229,7 @@ box2:SetPosition(1.5,0,0)
 local model = CreateSphere(world, 0.5)
 model:SetColor(1,0,0)
 model:SetPosition(8,0,0)
+model:SetPickMode(PICK_NONE)
 
 while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
 
