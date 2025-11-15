@@ -114,6 +114,8 @@ if window:KeyDown(KEY_UP) then wall:Move(0,0,0.1) end
 if window:KeyDown(KEY_DOWN) then wall:Move(0,0,-0.1) end
 ```
 
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/dynamicnavigation.gif?raw=true)
+
 ## Crowds
 
 The pathfinding system is capable of handling large numbers of characters with realistic crowding behavior. This is perfect for making hordes of zombies, or other enemies. Here is our example modified to handle multiple characters:
