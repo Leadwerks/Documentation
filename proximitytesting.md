@@ -259,7 +259,9 @@ This shows an efficient way to test if a point is inside a box volume that can b
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/proximity_box.gif?raw=true)
 
-## Volume Intersection Test
+## Convex Volume Intersection Test
+
+Using a [Brush](Brush.md) entity, we can test the intersection of each object's position with a solid volume.
 
 ```lua
 -- Get the displays
@@ -375,6 +377,10 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
 	
 end
 ```
+
+This technique can perform intersections testing on any convex volume.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/proximity_volume.gif?raw=true)
 
 ## Entity Visibility Test
 
