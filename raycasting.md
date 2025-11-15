@@ -89,6 +89,10 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
 end
 ```
 
+Use the arrow keys to move one of the boxes up and down. You can see the boxes change color based on their visibility.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/lineofsight.gif?raw=true)
+
 ## Raycast
 
 This example shows how to use the [World:Pick](World_Pick.md) command:
