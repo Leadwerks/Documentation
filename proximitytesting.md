@@ -602,6 +602,10 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
 end
 ```
 
+Now the player can only see objects if there is a clear line of sight to the object.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/proximity_visibility2.gif?raw=true)
+
 
 
 
