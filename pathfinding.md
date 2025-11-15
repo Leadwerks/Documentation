@@ -321,7 +321,7 @@ In this example some interesting behaviors emerge:
 - The smaller characters make way for the larger character.
 - The smaller characters take a shorter route between the walls that the larger character cannot pass.
 
-![](https://github.com/UltraEngine/Documentation/blob/master/Images/multinavmeshes.gif?raw=true)
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/multinavmesh.gif?raw=true)
 
 ## Top-Down Shooter Example
 
