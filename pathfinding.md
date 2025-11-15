@@ -606,4 +606,4 @@ end
 
 This example produces a simple but fun playable game in less than 300 lines of code.
 
-![](https://github.com/UltraEngine/Documentation/blob/master/Images/topdownshooter.jpg?raw=true)
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/topdownshooter.gif?raw=true)
