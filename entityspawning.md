@@ -181,7 +181,7 @@ In this example we have added a horde of enemies that stays at the same size. Wh
 There are many other ways you could time the enemies:
 - Enemies come in waves, with a fixed number of enemies each wave.
 - Enemies are spawned at a constant rate, regardless of how many already exist.
-- An enemy wave attack is triggered by an invisibile collision object the player activates.
+- An enemy wave attack is triggered by an invisible collision object the player activates.
 
 This example simply spawns a new enemy far from the origin. You could spawn enemies in specific locations, or check some pre-defined spots to see which are not visible to the player.
 
