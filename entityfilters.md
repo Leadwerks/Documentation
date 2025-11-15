@@ -160,3 +160,7 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
 
 end
 ```
+
+When you run the example, the hunters will choose a target based on the criteria they are looking for.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/entityfilters.gif?raw=true)
