@@ -232,9 +232,9 @@ camera:Move(0,0,-10)
 
 --Create light
 local light = CreateBoxLight(world)
-light:SetRange(-20, 20)
-light:SetArea(30, 30)
-light:SetRotation(35, 35, 0)
+light:SetRange(-5, 5)
+light:SetArea(40, 40)
+light:SetRotation(65, 45, 0)
 
 --Create scene
 local ground = CreateBox(world, 20, 1, 20)
@@ -315,6 +315,13 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
 
 end
 ```
+
+In this example some interesting behaviors emerge:
+
+- The smaller characters make way for the larger character.
+- The smaller characters take a shorter route between the walls that the larger character cannot pass.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/multinavmeshes.gif?raw=true)
 
 ## Top-Down Shooter Example
 
