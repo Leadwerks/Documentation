@@ -199,7 +199,7 @@ When we are interested in the intersected object, the closest parameter should b
 
 If we are not interested in the intersected object, and only want to know if there is an unbroken line of sight between two objects, then the closest parameter can be set to false.
 
-This example shows how we can set closest to true, and the Pick function will return once any object is hit, without finding the closest intersection:
+This example shows that if we set the closest parameter to false, the function returns after the first intersection occurs, and does not attempt to find the closest object.
 
 ```lua
 -- Get the displays
@@ -234,7 +234,7 @@ model:SetPickMode(PICK_NONE)
 while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
 
 	if window:KeyHit(KEY_SPACE) then
-		local pickinfo = world:Pick(Vec3(8,0,0), Vec3(-8,0,0), 0.5, true)
+		local pickinfo = world:Pick(Vec3(8,0,0), Vec3(-8,0,0), 0.5, false)
 		model:SetPosition(pickinfo.position)
 	end
 	
@@ -244,6 +244,12 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
     -- Render the world
     world:Render(framebuffer)
 end
+```
+
+If we change the closest parameter to true then the closest hit object will be the one returned.
+
+```lua
+local pickinfo = world:Pick(Vec3(8,0,0), Vec3(-8,0,0), 0.5, true)
 ```
 
 ## Pick Mode
