@@ -145,7 +145,7 @@ end
 
 ## Dynamic Array Removal
 
-If we want the ability to remove items from an array-style table in Lua while we are iterating through the table, we must iterate backwards like so:
+If you want the ability to remove items from an array-style table in Lua while we are iterating through the table, you must iterate backwards like so:
 
 ```lua
 for n = #enemies, 1, -1 do
