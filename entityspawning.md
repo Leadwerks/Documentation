@@ -166,7 +166,13 @@ local framebuffer = CreateFramebuffer(window)
 
 -- Create world
 local world = CreateWorld()
-world:SetAmbientLight(1)
+
+-- Create a light
+local light = CreateBoxLight(world)
+light:SetRotation(45,45,0)
+light:SetRange(-20,20)
+light:SetArea(60,60)
+light:SetShadowmapSize(1024)
 
 -- Create the ground
 local ground = CreateBox(world, 50, 1, 50)
