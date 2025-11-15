@@ -4,6 +4,8 @@ Proximity testing is an important technique that allows us to detect nearby obje
 
 ## Box Test
 
+The [World:GetEntitiesInArea](World_GetEntitiesInArea.md) command returns all the objects that intersect a box volume.
+
 ```lua
 -- Get the displays
 local displays = GetDisplays()
@@ -80,6 +82,10 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
 	
 end
 ```
+
+Click the left mouse button to gather all the objects within a box around the picked point in the scene.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/proximity_box.gif?raw=true)
 
 ## Sphere Test
 
