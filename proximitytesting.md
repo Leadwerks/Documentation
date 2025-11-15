@@ -89,6 +89,8 @@ Click the left mouse button to gather all the objects within a box around the pi
 
 ## Sphere Test
 
+We can add a distance check to our entities in a box volume to implement a sphere proximity test.
+
 ```lua
 -- Get the displays
 local displays = GetDisplays()
@@ -170,6 +172,10 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
 	
 end
 ```
+
+When you click the scene with the left mouse button, a force will be applied to all objects within range of a blast radius. The applied force will be proportional to distance, so closer objects will be more strongly affected.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/proximity_sphere.gif?raw=true)
 
 ## Rotated Box Test
 
