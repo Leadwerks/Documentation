@@ -384,6 +384,8 @@ This technique can perform intersections testing on any convex volume.
 
 ## Entity Visibility Test
 
+A cone volume test can be performed to tell which objects are in an entity's view range.
+
 ```lua
 -- Get the displays
 local displays = GetDisplays()
@@ -485,6 +487,10 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
 
 end
 ```
+
+Use the arrow keys to turn and move the player.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/proximity_visibility.gif?raw=true)
 
 We can modify our example to include line-of-sight testing.
 
