@@ -143,6 +143,37 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
 end
 ```
 
+## Dynamic Array Removal
+
+If we want the ability to remove items from an array-style table in Lua while we are iterating through the table, we must iterate backwards like so:
+
+```lua
+for n = #enemies, 1, -1 do
+	if enemies[n].health <= 0 then
+		table.remove(enemies, n)
+	end
+end
+```
+
+This will prevent items from being skipped in the loop, or overrunning the length of the array.
+
+Alternatively, you could also store objects as keys in a table, and assign any value to the key other than nil:
+
+```lua
+enemies[enemy] = true
+```
+
+When you iterate through the loop, use pairs instead of an array index:
+
+```
+local k, v
+for k, v in pairs(enemies) do
+	if k.health <= 0 then
+		enemies[k] = nil-- removes the key from the table
+	end
+end
+```
+
 ## Enemy Hordes
 
 In this example we have added a horde of enemies that stays at the same size. When one enemy is killed, another will spawn to replace it.
