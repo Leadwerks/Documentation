@@ -31,15 +31,14 @@ camera:SetRotation(Vec3(35, 0, 0))
 
 --Create light
 local light = CreateBoxLight(world)
-light:SetRange(-20, 20)
-light:SetArea(20, 20)
+light:SetRange(-10, 10)
+light:SetArea(15, 15)
 light:SetRotation(35, 35, 0)
-light:SetColor(3, 3, 3)
 
 --Create scene
 local ground = CreateBox(world, 10, 1, 10)
 ground:SetPosition(Vec3(0, -0.5, 0))
-ground:SetColor(0, 1, 0)
+ground:SetColor(0.5)
 local wall = CreateBox(world, 1, 2, 4)
 
 --Create navmesh
