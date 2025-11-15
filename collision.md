@@ -63,6 +63,8 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
 end
 ```
 
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/collision.gif?raw=true)
+
 Alternatively, we can enable collisions recording on the box model and iterate through all collisions that occur in the world. This will only contain collisions in which at least one of the colliding entities has collision recording enabled:
 
 ```lua
