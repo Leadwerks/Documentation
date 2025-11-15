@@ -179,8 +179,6 @@ end
 
 The example shows a raycast with a vector that slowly rotates. A sphere is positioned at the raycast hit position to show where it intersects the scene.
 
-![](https://raw.githubusercontent.com/UltraEngine/Documentation/master/Images/World_Pick.gif)
-
 ## Sphere Casting
 
 Raycasts can include an optional radius parameter. When a non-zero radius is specified, the raycast becomes a **sphere cast**, which checks for intersections within a spherical volume. This is especially useful for detecting wider objects or simulating a more forgiving collision area.
@@ -190,6 +188,8 @@ If we add the sphere radius into the pick command, the picked position will now 
 ```lua
 local pick_info = world:Pick(pivot:GetPosition(true), target_pos, 0.25, true)
 ```
+
+![](https://raw.githubusercontent.com/UltraEngine/Documentation/master/Images/World_Pick.gif)
 
 ## Closest Intersection
 
