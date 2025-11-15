@@ -152,7 +152,7 @@ The following collision types and their behavior are defined by default:
 | COLLISION_PROP | COLLISION_PROJECTILE | COLLISION_COLLIDE |
 | COLLISION_PLAYER | COLLISION_TRIGGER | COLLISION_DETECT |
 
-You may add your own if you wish, using the [World:SetCollisionResponse](World_SetCollisionResponse.md) command.
+You may add your own custom collision responses if you wish, using the [World:SetCollisionResponse](World_SetCollisionResponse.md) command.
 
 ## Collision Triggers
 
