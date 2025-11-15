@@ -285,5 +285,5 @@ end
 
 You can use the arrow keys to move the player around and collect all the coins to "win" this simple game.
 
-![](https://github.com/UltraEngine/Documentation/blob/master/Images/collisiongame.png?raw=true)
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/collect.gif?raw=true)
 
