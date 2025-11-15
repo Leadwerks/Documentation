@@ -179,6 +179,8 @@ When you click the scene with the left mouse button, a force will be applied to 
 
 ## Rotated Box Test
 
+If we transform the position of each object to local space, we can determine if the object's center is within a rotated box.
+
 ```lua
 -- Get the displays
 local displays = GetDisplays()
@@ -252,6 +254,10 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
 	
 end
 ```
+
+This shows an efficient way to test if a point is inside a box volume that can be oriented any way. Make sure you understand [space transformations](3dtransform.md) if you don't understand how this works.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/proximity_box.gif?raw=true)
 
 ## Volume Intersection Test
 
