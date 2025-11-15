@@ -257,7 +257,7 @@ end
 
 This shows an efficient way to test if a point is inside a box volume that can be oriented any way. Make sure you understand [space transformations](3dtransform.md) if you don't understand how this works.
 
-![](https://github.com/UltraEngine/Documentation/blob/master/Images/proximity_box.gif?raw=true)
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/proximity_rbox.gif?raw=true)
 
 ## Convex Volume Intersection Test
 
