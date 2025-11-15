@@ -14,7 +14,7 @@ Here is a simple example that demonstrates how to create a navigation mesh, add 
 local displays = GetDisplays();
 
 --Create a window
-local window = CreateWindow("Leadwerks", 0, 0, 1280, 720, displays[1], WINDOW_CENTER | WINDOW_TITLEBAR)
+local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_CENTER | WINDOW_TITLEBAR)
 
 --Create a framebuffer
 local framebuffer = CreateFramebuffer(window)
@@ -119,7 +119,7 @@ The pathfinding system is capable of handling large numbers of characters with r
 local displays = GetDisplays();
 
 --Create a window
-local window = CreateWindow("Leadwerks", 0, 0, 1280, 720, displays[1], WINDOW_CENTER | WINDOW_TITLEBAR)
+local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_CENTER | WINDOW_TITLEBAR)
 
 --Create a framebuffer
 local framebuffer = CreateFramebuffer(window)
@@ -206,7 +206,7 @@ Each navigation mesh is built using the parameters you specify in the [CreateNav
 local displays = GetDisplays();
 
 --Create a window
-local window = CreateWindow("Leadwerks", 0, 0, 1280, 720, displays[1], WINDOW_CENTER | WINDOW_TITLEBAR)
+local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_CENTER | WINDOW_TITLEBAR)
 
 --Create a framebuffer
 local framebuffer = CreateFramebuffer(window)
