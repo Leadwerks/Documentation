@@ -23,7 +23,7 @@ In the example below, we retrieve a filtered list of all entities on team two th
 local displays = GetDisplays()
 
 -- Create window
-local window = CreateWindow("Leadwerks", 0, 0, 1280, 720, displays[1], WINDOW_CENTER | WINDOW_TITLEBAR)
+local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_CENTER | WINDOW_TITLEBAR)
 
 -- Create framebuffer
 local framebuffer = CreateFramebuffer(window)
