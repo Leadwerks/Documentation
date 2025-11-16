@@ -252,7 +252,7 @@ If we change the closest parameter to true then the closest hit object will be t
 local pickinfo = world:Pick(Vec3(8,0,0), Vec3(-8,0,0), 0.5, true)
 ```
 
-## Pick Mode
+## Entity Pick Mode
 
 Entities can be individually set to be pickable or not, using the [Entity:SetPickMode](Entity_SetPickMode.md) command. Three possible modes are available:
 
