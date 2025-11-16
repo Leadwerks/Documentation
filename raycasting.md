@@ -1,8 +1,4 @@
-# Game Mechanics
-
-This tutorial series will explore some common tools in game programming that enable the creation of any 3D game you can imagine. We'll learn what these tools are, how to utilize them, and demonstrate practical examples of how to apply them to make playable games.
-
-## Raycasting
+# Raycasting
 
 Raycasting is an important technique in game development, used for detecting objects and interactions within a 3D environment. It allows you to "cast" an invisible line, or ray, through the scene to determine what it intersects with.
 
