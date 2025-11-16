@@ -218,6 +218,7 @@
                 },
                 {
                     "title": "3D Spatialization",
+                    "filename": "3dspatialization",
                     "topics": [
                         {
                             "title": "1D Space",
