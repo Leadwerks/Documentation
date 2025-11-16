@@ -14,5 +14,5 @@ We will cover some mathematics in the series, but not very much. It's more impor
 6. [Vectors](3dvectors.md)
 7. [Camera Projection](cameraprojection.md)
 8. [Hierarchies and Transformations](3dtransform.md)
-9. [Planes](3dplanes,md)
+9. [Planes](3dplanes.md)
 10. [4x4 Matrices](4x4matrices.md)
