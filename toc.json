@@ -278,8 +278,8 @@
                             "filename": "proximitytesting"
                         },
                         {
-                            "title": "Entity Filters",
-                            "filename": "entityfilters"
+                            "title": "Entity Queries",
+                            "filename": "entityqueries"
                         },
                         {
                             "title": "Entity Spawning and Management",
