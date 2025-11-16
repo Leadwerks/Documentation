@@ -5,8 +5,8 @@ This tutorial series will explore some common tools in game programming that ena
 ## Contents
 
 1. [Raycasting](raycasting.md)
-2. [Collision](raycasting.md)
-3. [Proximity Testing](raycasting.md)
-4. [Entity Queries](raycasting.md)
-5. [Entity Spawning and Management](raycasting.md)
-6. [Pathfinding](raycasting.md)
+2. [Collision](collision.md)
+3. [Proximity Testing](proximitytesting.md)
+4. [Entity Queries](entityqueries.md)
+5. [Entity Spawning and Management](entityspawning.md)
+6. [Pathfinding](pathfinding.md)
