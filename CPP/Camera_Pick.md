@@ -4,8 +4,8 @@ This method performs a raycast at the specified screen coordinate.
 
 ## Syntax
 
-- [PickInfo](PickInfo.md) Pick(shared_ptr<[Framebuffer](Framebuffer.md)\> framebuffer, float x, float y, float radius = 0.0, bool closest = false, bool filter(shared_ptr<[Entity](Entity.md)\>, shared_ptr<[Object](Object.md)\>) = NULL, shared_ptr<[Object](Object.md)\> extra = NULL)
-- [PickInfo](PickInfo.md) Pick(shared_ptr<[Framebuffer](Framebuffer.md)\> buffer, [Vec2](Vec2.md) screencoord, float radius = 0.0, bool closest = false, bool filter(shared_ptr<[Entity](Entity.md)\>, shared_ptr<[Object](Object.md)\>) = NULL, shared_ptr<[Object](Object.md)\> extra = NULL)
+- [PickInfo](PickInfo.md) **Pick**(shared_ptr<[Framebuffer](Framebuffer.md)\> framebuffer, float x, float y, float radius = 0.0, bool closest = false, bool filter(shared_ptr<[Entity](Entity.md)\>, shared_ptr<[Object](Object.md)\>) = NULL, shared_ptr<[Object](Object.md)\> extra = NULL)
+- [PickInfo](PickInfo.md) **Pick**(shared_ptr<[Framebuffer](Framebuffer.md)\> buffer, [Vec2](Vec2.md) screencoord, float radius = 0.0, bool closest = false, bool filter(shared_ptr<[Entity](Entity.md)\>, shared_ptr<[Object](Object.md)\>) = NULL, shared_ptr<[Object](Object.md)\> extra = NULL)
 
 | Parameter | Description |
 | ----- | ----- |
