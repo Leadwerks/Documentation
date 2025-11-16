@@ -263,6 +263,7 @@
                 },
                 {
                     "title": "Game Mechanics",
+                    "file": "gamemechanics",
                     "topics": [
                         {
                             "title": "Raycasting",
