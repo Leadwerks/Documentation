@@ -230,111 +230,120 @@ ground:SetPosition(0,-0.5,0)
 ground:SetColor(0.5)
 
 -- Create a camera
-local camera = CreateCamera(world)
+camera = CreateCamera(world)
 camera:SetClearColor(0.125)
-camera:SetRotation(35,0,0)
-camera:Move(0,0,-10)
+camera:SetRotation(45,0,0)
+camera:Move(0,0,-6)
+camera:Listen()
 
--- Create the player
-player = CreateCylinder(world, 0.5, 2)
-player:SetCollider(nil)
-player:SetPosition(0,1,0)
-player:SetColor(0,0,1)
-player.lastfiretime = 0
-player:SetPickMode(PICK_NONE)
-
---Table for storing bullets
-player.bullets = {}
+-- Load turret model
+local turret = LoadModel(world, "https://github.com/Leadwerks/Documentation/raw/refs/heads/master/Assets/Models/Turret/Turret01.mdl")
+turret.lastfiretime = 0
+turret:SetPickMode(PICK_NONE)
+turret.bullets = {}-- table for storing bullets
+turret.angle = 0
+turret.smoothangle = 0
+turret.health = 100
+turret.score = 0
+--Gun Sound 3 by TheNikonProductions -- https://freesound.org/s/337698/ -- License: Attribution 3.0
+turret.sound_shoot = LoadSound("https://github.com/Leadwerks/Documentation/raw/refs/heads/master/Assets/Sound/shoot.wav")
 
 --Player update function, gets called once per loop
-function player:Update()
-
-	local window = ActiveWindow()
-	if window == nil then return end
-
-    -- Control the player with the arrow keys
-    if window:KeyDown(KEY_RIGHT) then player:Turn(0,1,0) end
-    if window:KeyDown(KEY_LEFT) then player:Turn(0,-1,0) end
-    if window:KeyDown(KEY_UP) then player:Move(0,0,0.1) end
-    if window:KeyDown(KEY_DOWN) then player:Move(0,0,-0.1) end
+function turret:Update()
 	
-	local now = self.world:GetTime()
+    local now = self.world:GetTime()
 	
-	if window:KeyDown(KEY_SPACE) then		
-		if now - self.lastfiretime > 200 then
-			self.lastfiretime = now
-			
-			local bullet = CreateSphere(world)
-			bullet:SetPosition(player.position)
-			bullet:SetRotation(player.rotation)
-			bullet:SetPickMode(PICK_NONE)
-			bullet:SetColor(0.25)
-			bullet.spawntime = now
-			
-			table.insert(self.bullets, bullet)
-			
-		end
+    -- Update bullets
+    for n = #self.bullets, 1, -1 do
+		
+        local dir = TransformNormal(0,0,1,self.bullets[n],nil)
+		
+        -- Perform a raycast to see if the bullet will hit anything
+        local pick = world:Pick(self.bullets[n].position, self.bullets[n].position + dir, 0, true)
+        if pick.entity then
+            -- Object hit; Apply some force, subtract some health, and hide the bullet
+            pick.entity:AddPointForce(dir * 5, pick.position, true)
+			if isnumber(pick.entity.health) then pick.entity.health = pick.entity.health - 10 end
+            self.bullets[n]:SetHidden(true)
+        else
+            -- Nothing hit, so move bullet forward
+            self.bullets[n]:Move(0, 0, 0.25)
+        end
+		
+        -- Hide the bullet if it times out
+        if now - self.bullets[n].spawntime > 2000 then
+            self.bullets[n]:SetHidden(true)
+        end
+		
+        -- If the bullet was hidden for any reason, remove it from the list
+        if self.bullets[n]:GetHidden() then
+            self.bullets[n]:SetHidden(true)
+            table.remove(self.bullets, n)
+        end
+
+    end
+	
+	if self.health <= 0 then return end
+	
+    local window = ActiveWindow()
+    if window == nil then return end
+	
+	-- Get the articulated child for the gun
+	local gun = self.kids[1]
+	
+	local p = Plane(0,1,0,0)
+	local mousepos = window:GetMousePosition()
+	local projpoint = camera:ScreenToWorld(Vec3(mousepos.x, mousepos.y, 1000), window.framebuffer)
+	local intersection = Vec3(0)
+	if p:IntersectsLine(camera.position, projpoint, intersection) then
+		self.angle = 90 - Angle(intersection.x - self.position.x, intersection.z - self.position.z)
 	end
 	
-	-- Update bullets
-	for n = #self.bullets, 1, -1 do
-		
-		local dir = TransformNormal(0,0,1,self.bullets[n],nil)
-		
-		-- Perform a raycast to see if the bullet will hit anything
-		local pick = world:Pick(self.bullets[n].position, self.bullets[n].position + dir, 0, true)
-		if pick.entity then
-			-- Object hit; Apply some force and hide the bullet
-			pick.entity:AddPointForce(dir * 2, pick.position, true)
+	self.smoothangle = MixAngle(self.smoothangle, self.angle, 0.25)
+	gun:SetRotation(90, self.smoothangle, 0)
+	
+    if window:MouseDown(MOUSE_LEFT) then       
+        if now - self.lastfiretime > 100 then
+            self.lastfiretime = now
 			
-			--Apply damage, if it has health
-			if isnumber(pick.entity.health) then
-				pick.entity.health = pick.entity.health - 10
-			end
+			if self.sound_shoot then self.sound_shoot:Play() end
 			
-			self.bullets[n]:SetHidden(true)
-		else
-			-- Nothing hit, so move bullet forward
-			self.bullets[n]:Move(0, 0, 1)
-		end
-		
-		-- Hide the bullet if it times out
-		if now - self.bullets[n].spawntime > 3000 then
-			self.bullets[n]:SetHidden(true)
-		end
-		
-		-- If the bullet was hidden for any reason, remove it from the list
-		if self.bullets[n]:GetHidden() then
-			self.bullets[n]:SetHidden(true)
-			table.remove(self.bullets, n)
-		end
-		
-	end
+            local bullet = CreateSphere(world, 0.1)
+            bullet:SetPosition(gun.position + Vec3(0,0.4,0))
+            bullet:SetRotation(0, self.smoothangle, 0)
+            bullet:SetPickMode(PICK_NONE)
+            bullet:SetColor(0.25)
+            bullet.spawntime = now
+
+            table.insert(self.bullets, bullet)
+
+        end
+    end
 	
 end
 
---Add some things to shoot
-local boxes = {}
-for n = 1, 10 do
-	local box = CreateBox(world, 1,4,1)
-	box:SetRotation(0,Random(360),0)
-	box:SetMass(1)
-	box:SetPosition(Random(-10,10), 2, Random(-10,10))
-	box:SetColor(0, Random(1), Random(1))
-	table.insert(boxes, box)
-end
+-- Text to display play health
+local font = LoadFont("Fonts/arial.ttf")
+local healthtile = CreateTile(world, font, "Health: 100", 24)
+local scoretile = CreateTile(world, font, "Score: 0", 24, TEXT_RIGHT)
+scoretile:SetPosition(framebuffer.size.x, 0)
 
+-- Table to store enemies in
 local enemies = {}
+local enemyspeed = 0.025
 
 -- Main loop
 while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
-	
+
 	-- Remove entities from the table if their health reaches zero	
 	for n = #enemies, 1, -1 do
 		if enemies[n].health <= 0 then
 			enemies[n].Update = nil
+			if enemies[n].sound_death then enemies[n].sound_death:Play() end
 			enemies[n]:SetHidden(true)
 			table.remove(enemies, n)
+			turret.score = turret.score + 1
+			scoretile:SetText("Score: "..tostring(turret.score))
 		end
 	end
 	
@@ -346,19 +355,38 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
 		enemy:Move(0,0,20)
 		enemy:SetColor(1,0,0)
 		enemy.health = 10
+		enemy.speed = enemyspeed
+		enemyspeed = enemyspeed * 1.02-- continuously increase the difficulty!
+		
+		--Zombie Roar by gneube -- https://freesound.org/s/315846/ -- License: Attribution 4.0
+        enemy.sound_death = LoadSound("https://github.com/Leadwerks/Documentation/raw/refs/heads/master/Assets/Sound/zombie-roar.wav")
 		
 		function enemy:Update()
-			local dir = player.position - self.position
+
+			if turret.health <= 0 then return end
+			
+			local dir = turret.position - self.position
 			dir.y = 0
-			dir = dir:Normalize() * 0.01
+			
+			if dir:Length() < 0.5 then
+				turret.health = turret.health - 10
+				if turret.health > 0 then
+					healthtile:SetText("Health: " .. tostring(turret.health))
+				else
+					healthtile:SetText("Game Over!")
+				end
+				self.health = 0
+			end
+			
+			dir = dir:Normalize() * self.speed
 			self:Translate(dir)
 		end
 		
 		table.insert(enemies, enemy)
 	end
-	
-	-- Garbage collection step
-	collectgarbage()
+
+    -- Garbage collection step
+    collectgarbage()
 
     -- Update the world
     world:Update()
@@ -368,3 +396,7 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
 
 end
 ```
+
+When you run the code, you can use the mouse to aim the turret and kill the attackers. What is your highest score?
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/turret2.gif?raw=true)
