@@ -4,8 +4,8 @@ This function performs a raycast at the specified screen coordinate.
 
 ## Syntax
 
-- PickInfo Pick(framebuffer, x, y, radius = 0.0, closest = false, filter(entity, object) = nil, extra = nil)
-- PickInfo Pick(buffer, screencoord, radius = 0.0, closest = false, filter(entity, object) = nil, extra = nil)
+- [PickInfo](PickInfo,md) Pick(framebuffer, x, y, radius = 0.0, closest = false, filter(entity, object) = nil, extra = nil)
+- [PickInfo](PickInfo,md) Pick(buffer, screencoord, radius = 0.0, closest = false, filter(entity, object) = nil, extra = nil)
 
 | Parameter | Description |
 | ----- | ----- |
