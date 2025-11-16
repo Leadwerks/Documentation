@@ -1,0 +1,22 @@
+{
+	"metadata":
+	{
+		"materialfiles":
+		[
+			"./turret01.mat"
+		],
+		"model":
+		{
+			"indices": 8910,
+			"limbs": 3,
+			"materials": 1,
+			"meshes": 2,
+			"primitives": 2970,
+			"textureextensions":
+			[
+				"dds"
+			],
+			"vertices": 3024
+		}
+	}
+}

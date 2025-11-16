@@ -1,0 +1,9 @@
+{
+	"material": {
+		"metallic": 1.0,
+		"texture0": "./Turret01_BaseColor.dds",
+		"texture1": "./turret01_normal.dds",
+		"texture2": "./turret01_MetallicRoughness.dds",
+		"texture4": "./turret01_emissive.dds"
+	}
+}
