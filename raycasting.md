@@ -524,4 +524,6 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
 end
 ```
 
+When the code is run, a raycast is used to ensure a clear line of sight is maintained between the camera and the player.
+
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/thirdpersoncamera.gif?raw=true)
