@@ -524,4 +524,4 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
 end
 ```
 
-![](https://github.com/UltraEngine/Documentation/blob/master/Images/thirdpersoncamera.jpg?raw=true)
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/thirdpersoncamera.gif?raw=true)
