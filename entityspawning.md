@@ -158,6 +158,10 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
 end
 ```
 
+Notice that the bullets are all stored in a table that is attached to the turret entity. The turret has _ownership_ of the bullets, and is responsible for managing and cleaning them up.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/turret1.gif?raw=true)
+
 ## Dynamic Array Removal
 
 If you want the ability to remove items from an array-style table in Lua while we are iterating through the table, you must iterate backwards like so:
