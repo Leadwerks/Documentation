@@ -186,7 +186,7 @@ This works because the entity univeral unique identifier is always guaranteed to
 
 When you iterate through the loop, use [pairs](Tables.md) instead of an array index:
 
-```
+```lua
 local id, entity
 for id, entity in pairs(enemies) do
 	if entity.health <= 0 then
