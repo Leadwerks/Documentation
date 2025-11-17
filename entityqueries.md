@@ -172,6 +172,6 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
 end
 ```
 
-When you run the example, the hunters will choose a target based on the criteria they are looking for.
+When you run the example, the hunters will choose a target by selecting entities with a health value greater than zero and a team value equal to two.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/entityfilters.gif?raw=true)
