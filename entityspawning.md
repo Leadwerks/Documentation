@@ -204,6 +204,8 @@ There are many other ways you could time the enemies:
 
 This example simply spawns a new enemy far from the origin. You could spawn enemies in specific locations, or check some pre-defined spots to see which are not visible to the player.
 
+Here, we create a pivot called hordemanager that only exists to take ownership of and manages all the enemies. This is just a way of compartmentalizing code so that we can add more features without things getting too complicated.
+
 ```lua
 -- Get the displays
 local displays = GetDisplays()
@@ -237,7 +239,7 @@ camera:Move(0,0,-6)
 camera:Listen()
 
 -- Load turret model
-local turret = LoadModel(world, "https://github.com/Leadwerks/Documentation/raw/refs/heads/master/Assets/Models/Turret/Turret01.mdl")
+turret = LoadModel(world, "https://github.com/Leadwerks/Documentation/raw/refs/heads/master/Assets/Models/Turret/Turret01.mdl")
 turret.lastfiretime = 0
 turret:SetPickMode(PICK_NONE)
 turret.bullets = {}-- table for storing bullets
@@ -250,31 +252,31 @@ turret.sound_shoot = LoadSound("https://github.com/Leadwerks/Documentation/raw/r
 
 --Player update function, gets called once per loop
 function turret:Update()
-	
+
     local now = self.world:GetTime()
-	
+
     -- Update bullets
     for n = #self.bullets, 1, -1 do
-		
+
         local dir = TransformNormal(0,0,1,self.bullets[n],nil)
-		
+
         -- Perform a raycast to see if the bullet will hit anything
         local pick = world:Pick(self.bullets[n].position, self.bullets[n].position + dir, 0, true)
         if pick.entity then
             -- Object hit; Apply some force, subtract some health, and hide the bullet
             pick.entity:AddPointForce(dir * 5, pick.position, true)
-			if isnumber(pick.entity.health) then pick.entity.health = pick.entity.health - 10 end
+            if isnumber(pick.entity.health) then pick.entity.health = pick.entity.health - 10 end
             self.bullets[n]:SetHidden(true)
         else
             -- Nothing hit, so move bullet forward
             self.bullets[n]:Move(0, 0, 0.25)
         end
-		
+
         -- Hide the bullet if it times out
         if now - self.bullets[n].spawntime > 2000 then
             self.bullets[n]:SetHidden(true)
         end
-		
+
         -- If the bullet was hidden for any reason, remove it from the list
         if self.bullets[n]:GetHidden() then
             self.bullets[n]:SetHidden(true)
@@ -282,32 +284,32 @@ function turret:Update()
         end
 
     end
-	
-	if self.health <= 0 then return end
-	
+
+    if self.health <= 0 then return end
+
     local window = ActiveWindow()
     if window == nil then return end
-	
-	-- Get the articulated child for the gun
-	local gun = self.kids[1]
-	
-	local p = Plane(0,1,0,0)
-	local mousepos = window:GetMousePosition()
-	local projpoint = camera:ScreenToWorld(Vec3(mousepos.x, mousepos.y, 1000), window.framebuffer)
-	local intersection = Vec3(0)
-	if p:IntersectsLine(camera.position, projpoint, intersection) then
-		self.angle = 90 - Angle(intersection.x - self.position.x, intersection.z - self.position.z)
-	end
-	
-	self.smoothangle = MixAngle(self.smoothangle, self.angle, 0.25)
-	gun:SetRotation(90, self.smoothangle, 0)
-	
+
+    -- Get the articulated child for the gun
+    local gun = self.kids[1]
+
+    local p = Plane(0,1,0,0)
+    local mousepos = window:GetMousePosition()
+    local projpoint = camera:ScreenToWorld(Vec3(mousepos.x, mousepos.y, 1000), window.framebuffer)
+    local intersection = Vec3(0)
+    if p:IntersectsLine(camera.position, projpoint, intersection) then
+        self.angle = 90 - Angle(intersection.x - self.position.x, intersection.z - self.position.z)
+    end
+
+    self.smoothangle = MixAngle(self.smoothangle, self.angle, 0.25)
+    gun:SetRotation(90, self.smoothangle, 0)
+
     if window:MouseDown(MOUSE_LEFT) then       
         if now - self.lastfiretime > 100 then
             self.lastfiretime = now
-			
-			if self.sound_shoot then self.sound_shoot:Play() end
-			
+
+            if self.sound_shoot then self.sound_shoot:Play() end
+
             local bullet = CreateSphere(world, 0.1)
             bullet:SetPosition(gun.position + Vec3(0,0.4,0))
             bullet:SetRotation(0, self.smoothangle, 0)
@@ -319,71 +321,76 @@ function turret:Update()
 
         end
     end
+
+end
+
+-- Entity for horde management
+local hordemanager = CreatePivot(world)
+hordemanager.enemies = {}
+hordemanager.enemyspeed = 0.025
+
+function hordemanager:Update()
+	
+    -- Remove entities from the table if their health reaches zero  
+    for n = #self.enemies, 1, -1 do
+        if self.enemies[n].health <= 0 then
+            self.enemies[n].Update = nil
+            if self.enemies[n].sound_death then self.enemies[n].sound_death:Play() end
+            self.enemies[n]:SetHidden(true)
+            table.remove(self.enemies, n)
+            turret.score = turret.score + 1
+            scoretile:SetText("Score: "..tostring(turret.score))
+        end
+    end
+	
+    -- Spawn another enemy if there aren't enough
+    if #self.enemies < 10 then
+        local enemy = CreateCylinder(world, 0.5, 2)
+        enemy:SetPosition(0,1,0)
+        enemy:SetRotation(0,Random(360),0)
+        enemy:Move(0,0,20)
+        enemy:SetColor(1,0,0)
+        enemy.health = 10
+        enemy.speed = self.enemyspeed
+        self.enemyspeed = self.enemyspeed * 1.02-- continuously increase the difficulty!
+
+        --Zombie Roar by gneube -- https://freesound.org/s/315846/ -- License: Attribution 4.0
+        enemy.sound_death = LoadSound("https://github.com/Leadwerks/Documentation/raw/refs/heads/master/Assets/Sound/zombie-roar.wav")
+
+        function enemy:Update()
+
+            if turret.health <= 0 then return end
+
+            local dir = turret.position - self.position
+            dir.y = 0
+
+            if dir:Length() < 0.5 then
+                turret.health = turret.health - 10
+                if turret.health > 0 then
+                    healthtile:SetText("Health: " .. tostring(turret.health))
+                else
+                    healthtile:SetText("Game Over!")
+                end
+                self.health = 0
+            end
+
+            dir = dir:Normalize() * self.speed
+            self:Translate(dir)
+        end
+
+        table.insert(self.enemies, enemy)
+    end
 	
 end
 
 -- Text to display play health
 local font = LoadFont("Fonts/arial.ttf")
-local healthtile = CreateTile(world, font, "Health: 100", 24)
-local scoretile = CreateTile(world, font, "Score: 0", 24, TEXT_RIGHT)
+healthtile = CreateTile(world, font, "Health: 100", 24)
+scoretile = CreateTile(world, font, "Score: 0", 24, TEXT_RIGHT)
 scoretile:SetPosition(framebuffer.size.x, 0)
-
--- Table to store enemies in
-local enemies = {}
-local enemyspeed = 0.025
 
 -- Main loop
 while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
-
-	-- Remove entities from the table if their health reaches zero	
-	for n = #enemies, 1, -1 do
-		if enemies[n].health <= 0 then
-			enemies[n].Update = nil
-			if enemies[n].sound_death then enemies[n].sound_death:Play() end
-			enemies[n]:SetHidden(true)
-			table.remove(enemies, n)
-			turret.score = turret.score + 1
-			scoretile:SetText("Score: "..tostring(turret.score))
-		end
-	end
-	
-	-- Spawn another enemy if there aren't enough
-	if #enemies < 10 then
-		local enemy = CreateCylinder(world, 0.5, 2)
-		enemy:SetPosition(0,1,0)
-		enemy:SetRotation(0,Random(360),0)
-		enemy:Move(0,0,20)
-		enemy:SetColor(1,0,0)
-		enemy.health = 10
-		enemy.speed = enemyspeed
-		enemyspeed = enemyspeed * 1.02-- continuously increase the difficulty!
-		
-		--Zombie Roar by gneube -- https://freesound.org/s/315846/ -- License: Attribution 4.0
-        enemy.sound_death = LoadSound("https://github.com/Leadwerks/Documentation/raw/refs/heads/master/Assets/Sound/zombie-roar.wav")
-		
-		function enemy:Update()
-
-			if turret.health <= 0 then return end
-			
-			local dir = turret.position - self.position
-			dir.y = 0
-			
-			if dir:Length() < 0.5 then
-				turret.health = turret.health - 10
-				if turret.health > 0 then
-					healthtile:SetText("Health: " .. tostring(turret.health))
-				else
-					healthtile:SetText("Game Over!")
-				end
-				self.health = 0
-			end
-			
-			dir = dir:Normalize() * self.speed
-			self:Translate(dir)
-		end
-		
-		table.insert(enemies, enemy)
-	end
 
     -- Garbage collection step
     collectgarbage()
