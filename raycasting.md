@@ -4,9 +4,9 @@ Raycasting is an important technique in game development, used for detecting obj
 
 Raycasting is widely used in game development for:
 
-- **Object Interaction**: Checking what the player is looking at or pointing to, such as selecting objects or NPCs.
-- **Shooting**: Detecting hits when firing projectiles or bullets.
-- **Line-of-Sight Checks**: Verifying if an enemy can see the player.
+- _Object Interaction_: Checking what the player is looking at or pointing to, such as selecting objects or NPCs.
+- _Shooting_: Detecting hits when firing projectiles or bullets.
+- _Line-of-Sight Checks_: Verifying if an enemy can see the player.
 
 ## Commands
 
