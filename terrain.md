@@ -78,7 +78,7 @@ Next we will add a grass layer. Add the material "Materials/Ground/sparse_grass.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/terraingrass.png?raw=true)
 
-Finally, let's add some snow at the top of the hills. Add the material "Materials/Ground/snow008A.mat" to the terrain. Set the maximum slope to 15 degrees. Next, set the minimum height to 75 meters. Press the **Fill** button and snow will appear on top of the hills.
+Now let's add some snow on the top of the hills. Add the material "Materials/Ground/snow008A.mat" to the terrain. Set the maximum slope to 15 degrees. Next, set the minimum height to 75 meters. Press the **Fill** button and snow will appear on top of the hills.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/terrainsnow.png?raw=true)
 
