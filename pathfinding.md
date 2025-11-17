@@ -528,14 +528,6 @@ function hordemanager:Update()
 
 end
 
-function TableSize(t)
-    local count = 0
-    for k, v in pairs(t) do
-        count = count + 1
-    end
-    return count
-end
-
 function hordemanager:SpawnWave(count)
 
     -- Create zombies
