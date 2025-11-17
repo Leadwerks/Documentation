@@ -176,19 +176,21 @@ end
 
 This will prevent items from being skipped in the loop, or overrunning the length of the array.
 
-Alternatively, you could also store objects as keys in a table, and assign any value to the key other than nil:
+Alternatively, you could also store entities as values in the table, and use the entity [UUID](Entity_GetUuid.md) as the key:
 
 ```lua
-enemies[enemy] = true
+enemies[ enemy:GetUuid() ] = enemy
 ```
+
+This works because the entity univeral unique identifier is always guaranteed to be unique.
 
 When you iterate through the loop, use [pairs](Tables.md) instead of an array index:
 
 ```
-local k, v
-for k, v in pairs(enemies) do
-	if k.health <= 0 then
-		enemies[k] = nil-- removes the key from the table
+local id, entity
+for id, entity in pairs(enemies) do
+	if entity.health <= 0 then
+		enemies[id] = nil-- removes the entity from the table
 	end
 end
 ```
