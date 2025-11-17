@@ -325,7 +325,9 @@ In this example some interesting behaviors emerge:
 
 ## Top-Down Shooter Example
 
-Let's take everything we have learned about game mechanics and put it all together in one example. This example will use raycasting, collision, entity filters, proximity testing, entity spawning, and pathfinding to provide a simple playable game:
+Let's take everything we have learned about game mechanics and put it all together in one example. This example will use raycasting, collision, entity filters, proximity testing, entity spawning, and pathfinding to provide a simple playable game.
+
+Note that we handled removal of the zombies from the hordemanager.zombies table a little differently here. Because the zombie is being removed in the zombie:Update function, we don't have an index to the table. Instead of using an array-style Lua table here, it makes sense to use the entity [UUID](Entity_GetUuid.md) as the table key, and the entity as the value. This allows us the remove entities from the table without an index.
 
 ```lua
 local displays = GetDisplays();
@@ -625,5 +627,3 @@ end
 This example produces a simple but fun playable game in less than 300 lines of code.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/topdownshooter.gif?raw=true)
-
-Note that we handled removal of the zombies from the hordemanager.zombies table a little differently here. Because the zombie is being removed in the zombie:Update function, we don't have an index to the table. Instead of using an array-style Lua table here, it makes sense to use the entity [UUID](Entity_GetUuid.md) as the table key, and the entity as the value. This allows us the remove entities from the table without an index.
