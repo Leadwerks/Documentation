@@ -133,9 +133,9 @@ Each entity has a collision type. The types are just constant values with no int
 
 There are three possible responded.
 
-- _COLLISION_COLLIDE_ will register a collision and cause the physics to react to the interpenetration of objects.
-- _COLLISION_DETECT_ will register a collision you can detect, but physics will be unaffected.
-- _COLLISION_NONE_ will not register any collision or affect physics.
+- _COLLISION\_COLLIDE_ will register a collision and cause the physics to react to the interpenetration of objects.
+- _COLLISION\_DETECT_ will register a collision you can detect, but physics will be unaffected.
+- _COLLISION\_NONE_ will not register any collision or affect physics.
 
 The following collision types and their behavior are defined by default:
 
