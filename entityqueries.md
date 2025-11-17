@@ -7,8 +7,19 @@ You can define any number of filter arguments, in sets of three. Each set must i
 | Property | Type | Description |
 |---|---|---|
 | field | string | the name of a field to check |
-| operation | string | the operation to perform. This can be set to "==", "~=", "<", ">", "<=", or ">="
+| operator | string | the operation to perform. This can be set to any of the values in the table below.
 | value | any | the value to compare the entity field value to. This can be any Lua value. |
+
+These operators may be used in a function call:
+
+| Operator | Description |
+|---|---|
+| == | equal to |
+| ~= | not equal |
+| < | less than |
+| > | greater than |
+| <= | less than or equal to |
+| >= | greater than or equal to |
 
 We can also add these filtering criteria to the end of any call to  [World:GetEntitiesInArea](World_GetEntitiesInArea.md).
 
