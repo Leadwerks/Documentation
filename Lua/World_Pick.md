@@ -4,11 +4,7 @@ This method performs a line segment intersection test on all the entities in the
 
 ## Syntax
 
-- [PickInfo](PickInfo.md) **Pick**([xVec3](xVec3.md) p0, [xVec3](xVec3.md) p1)
-- [PickInfo](PickInfo.md) **Pick**([xVec3](xVec3.md) p0, [xVec3](xVec3.md) p1, number radius = 0.0)
-- [PickInfo](PickInfo.md) **Pick**([xVec3](xVec3.md) p0, [xVec3](xVec3.md) p1, number radius = 0.0, boolean closest = false)
-- [PickInfo](PickInfo.md) **Pick**([xVec3](xVec3.md) p0, [xVec3](xVec3.md) p1, number radius = 0.0, boolean closest = false, function filter = nil)
-- [PickInfo](PickInfo.md) **Pick**([xVec3](xVec3.md) p0, [xVec3](xVec3.md) p1, number radius = 0.0, boolean closest = false, function filter = nil, extra = nil)
+- [PickInfo](PickInfo.md) **Pick**([Vec3](Vec3.md) p0, [Vec3](Vec3.md) p1, number radius = 0.0, boolean closest = false, function filter = nil, extra = nil)
 
 | Parameter | Description |
 | --- | --- |
