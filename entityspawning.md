@@ -350,7 +350,6 @@ function hordemanager:SpawnEnemy()
 	enemy.health = 10
 	enemy.speed = self.enemyspeed
 	enemy.manager = self
-	self.enemyspeed = self.enemyspeed * 1.02-- continuously increase the difficulty!
 	
 	--Zombie Roar by gneube -- https://freesound.org/s/315846/ -- License: Attribution 4.0
 	enemy.sound_death = LoadSound("https://github.com/Leadwerks/Documentation/raw/refs/heads/master/Assets/Sound/zombie-roar.wav")
@@ -359,14 +358,20 @@ function hordemanager:SpawnEnemy()
 		if self.health > 0 then
 			self.health = self.health - damage
 			if self.health <= 0 then
+				
 				--Kill this enemy when the health reaches zero
-				self.Update = nil-- Update function will no longer be called
 				if self.sound_death then self.sound_death:Play() end
-				self:SetHidden(true)
-				self.manager.enemies[ self:GetUuid() ] = nil --Remove self from hordemanager table
+				
+				--Reset this enemy
+				self.health = 10
+				self.manager.enemyspeed = self.manager.enemyspeed * 1.02-- continuously increase the difficulty!
+				self.speed = self.manager.enemyspeed
+				self:SetPosition(0,1,0)
+				self:SetRotation(0,Random(360),0)
+				self:Move(0,0,20)
+				
 				turret.score = turret.score + 1
 				scoretile:SetText("Score: "..tostring(turret.score))
-				self.manager:SpawnEnemy()
 			end
 		end
 	end
@@ -392,7 +397,7 @@ function hordemanager:SpawnEnemy()
 		self:Translate(dir)
 	end
 	
-	self.enemies[ enemy:GetUuid() ] = enemy
+	table.insert(self.enemies, enemy)
 end
 
 -- Text to display play health
