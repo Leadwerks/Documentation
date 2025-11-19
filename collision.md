@@ -2,6 +2,8 @@
 
 Collision is an important feature in that acts on both game physics and as an interaction method. In this lesson we will be focusing on collision as a method of initializing interactions between objects.
 
+www.youtube.com/watch?v=rktwwhyp2Gc
+
 ## Entity Collision Detection
 
 Collision is most commonly handled in the [Collide](https://www.leadwerks.com/learn/Entity_Collide?lang=lua&nocpp=1) function in an entity script. You can read a tutorial using this approach [here](entityscripts.md).
