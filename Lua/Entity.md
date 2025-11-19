@@ -37,7 +37,6 @@ This class serves as the foundation for all 3D objects in a world. It provides a
 | [GetAngularVelocity](Entity_GetAngularVelocity.md) | Method | returns the entity angular velocity |
 | [GetBounds](Entity_GetBounds.md) | Method | returns an axis-aligned bounding box |
 | [GetCollider](Entity_GetCollider.md) | Method | returns the physics collider |
-| [GetComponent](Entity_GetComponent.md) | Method | gets an entity component |
 | [GetCollisionType](Entity_GetCollisionType.md) | Method | returns the collision type |
 | [GetColor](Entity_GetColor.md) | Method | returns the entity color |
 | [GetCrouched](Entity_GetCrouched.md) | Method | returns the crouched state of a player |
