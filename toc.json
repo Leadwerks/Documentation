@@ -1091,7 +1091,8 @@
                         },
                         {
                             "title": "GetComponent",
-                            "filename": "Entity_GetComponent"
+                            "filename": "Entity_GetComponent",
+                            "hideFromLua": true
                         },
                         {
                             "title": "GetCrouched",
