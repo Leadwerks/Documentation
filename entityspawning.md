@@ -70,7 +70,7 @@ function turret:Update()
         local pick = world:Pick(self.bullets[n].position, self.bullets[n].position + dir, 0, true)
         if pick.entity then
             -- Object hit; Apply some force and hide the bullet
-            pick.entity:AddPointForce(dir * 5, pick.position, true)
+            pick.entity:AddPointForce(dir * 6, pick.position, true)
             self.bullets[n]:SetHidden(true)
         else
             -- Nothing hit, so move bullet forward
