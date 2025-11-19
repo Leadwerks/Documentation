@@ -6,7 +6,6 @@ This class provides an interface to control the way a sound behaves when played.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| [GetHandle](Speaker_GetHandle.md) | Method | returns the OpenAL alsource for the speaker |
 | [GetPitch](Speaker_GetPitch.md) | Method | gets the speaker pitch |
 | [GetRange](Speaker_GetRange.md) | Method | gets the speaker range |
 | [GetState](Speaker_GetState.md) | Method | gets the speaker state |
