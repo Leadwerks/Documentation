@@ -363,7 +363,7 @@ function hordemanager:SpawnEnemy()
 				self.Update = nil-- Update function will no longer be called
 				if self.sound_death then self.sound_death:Play() end
 				self:SetHidden(true)
-				self.manager[ self:GetUuid() ] = nil --Remove self from hordemanager table
+				self.manager.enemies[ self:GetUuid() ] = nil --Remove self from hordemanager table
 				turret.score = turret.score + 1
 				scoretile:SetText("Score: "..tostring(turret.score))
 				self.manager:SpawnEnemy()
