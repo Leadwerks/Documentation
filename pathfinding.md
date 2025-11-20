@@ -513,7 +513,7 @@ local navmesh = CreateNavMesh(world, 5, 8, 8)
 navmesh:Build()
 
 local hordemanager = CreatePivot(world)
-hordemanager.wave = 1
+hordemanager.wave = 0
 hordemanager.zombiecount = 5
 hordemanager.zombies = {}
 
