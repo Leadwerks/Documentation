@@ -2,7 +2,7 @@
 
 This lesson will discuss the concept of "spawning" and ownership of entities. There's no special commands here to review, but rather it's a way of thinking about object relationships.
 
-
+www.youtube.com/watch?v=uLAQAE0BDe8
 
 Many games dynamically create entities that exist temporarily in the game. Bullets, particle effects, and hordes of enemies are examples. These objects can either have a temporary lifespan based on time, or they can expire based on specific conditions, like a bullet hitting a wall.
 
