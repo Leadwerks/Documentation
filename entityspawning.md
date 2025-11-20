@@ -267,15 +267,15 @@ function turret:Update()
         if pick.entity then
             -- Object hit; Apply some force, subtract some health, and hide the bullet
             pick.entity:AddPointForce(dir * 5, pick.position, true)
-            
-			--Check to see if the picked entity has a function called TakeDamage
-			if isfunction(pick.entity.TakeDamage) then
-				
-				--Call the function, if it exists
-				pick.entity:TakeDamage(10)
-				
-			end
-			
+
+            --Check to see if the picked entity has a function called TakeDamage
+            if isfunction(pick.entity.TakeDamage) then
+
+                --Call the function, if it exists
+                pick.entity:TakeDamage(10)
+
+            end
+
             self.bullets[n]:SetHidden(true)
         else
             -- Nothing hit, so move bullet forward
@@ -340,64 +340,68 @@ hordemanager.enemies = {}
 hordemanager.enemyspeed = 0.025
 
 function hordemanager:SpawnEnemy()
-	
+
     -- Spawn another enemy if there aren't enough
-	local enemy = CreateCylinder(world, 0.5, 2)
-	enemy:SetPosition(0,1,0)
-	enemy:SetRotation(0,Random(360),0)
-	enemy:Move(0,0,20)
-	enemy:SetColor(1,0,0)
-	enemy.health = 10
-	enemy.speed = self.enemyspeed
-	enemy.manager = self
-	
-	--Zombie Roar by gneube -- https://freesound.org/s/315846/ -- License: Attribution 4.0
-	enemy.sound_death = LoadSound("https://github.com/Leadwerks/Documentation/raw/refs/heads/master/Assets/Sound/zombie-roar.wav")
+    local enemy = CreateCylinder(world, 0.5, 2)
+    enemy:SetPosition(0,1,0)
+    enemy:SetRotation(0,Random(360),0)
+    enemy:Move(0,0,20)
+    enemy:SetColor(1,0,0)
+    enemy.health = 10
+    enemy.speed = self.enemyspeed
+    enemy.manager = self
 
-	function enemy:TakeDamage(damage)
-		if self.health > 0 then
-			self.health = self.health - damage
-			if self.health <= 0 then
-				
-				--Kill this enemy when the health reaches zero
-				if self.sound_death then self.sound_death:Play() end
-				
-				--Reset this enemy
-				self.health = 10
-				self.manager.enemyspeed = self.manager.enemyspeed * 1.02-- continuously increase the difficulty!
-				self.speed = self.manager.enemyspeed
-				self:SetPosition(0,1,0)
-				self:SetRotation(0,Random(360),0)
-				self:Move(0,0,20)
-				
-				turret.score = turret.score + 1
-				scoretile:SetText("Score: "..tostring(turret.score))
-			end
-		end
+    --Zombie Roar by gneube -- https://freesound.org/s/315846/ -- License: Attribution 4.0
+    enemy.sound_death = LoadSound("https://github.com/Leadwerks/Documentation/raw/refs/heads/master/Assets/Sound/zombie-roar.wav")
+
+	function enemy:Reset()
+		self.health = 10
+		self.manager.enemyspeed = self.manager.enemyspeed * 1.02-- continuously increase the difficulty!
+		self.speed = self.manager.enemyspeed
+		self:SetPosition(0,1,0)
+		self:SetRotation(0,Random(360),0)
+		self:Move(0,0,20)
 	end
 
-	function enemy:Update()
+    function enemy:TakeDamage(damage)
+        if self.health > 0 then
+            self.health = self.health - damage
+            if self.health <= 0 then
 
-		if turret.health <= 0 then return end
+                --Kill this enemy when the health reaches zero
+                if self.sound_death then self.sound_death:Play() end
 
-		local dir = turret.position - self.position
-		dir.y = 0
+                --Reset this enemy
+				self:Reset()
 
-		if dir:Length() < 0.5 then
-			turret.health = turret.health - 10
-			if turret.health > 0 then
-				healthtile:SetText("Health: " .. tostring(turret.health))
-			else
-				healthtile:SetText("Game Over!")
-			end
-			self.health = 0
-		end
+                turret.score = turret.score + 1
+                scoretile:SetText("Score: "..tostring(turret.score))
+            end
+        end
+    end
 
-		dir = dir:Normalize() * self.speed
-		self:Translate(dir)
-	end
-	
-	table.insert(self.enemies, enemy)
+    function enemy:Update()
+
+        if turret.health <= 0 then return end
+
+        local dir = turret.position - self.position
+        dir.y = 0
+
+        if dir:Length() < 0.5 then
+            turret.health = turret.health - 10
+            if turret.health > 0 then
+                healthtile:SetText("Health: " .. tostring(turret.health))
+            else
+                healthtile:SetText("Game Over!")
+            end
+			self:Reset()
+        end
+
+        dir = dir:Normalize() * self.speed
+        self:Translate(dir)
+    end
+
+    table.insert(self.enemies, enemy)
 end
 
 -- Text to display play health
@@ -408,7 +412,7 @@ scoretile:SetPosition(framebuffer.size.x, 0)
 
 -- Spawn initial horde
 for n = 1, 10 do
-	hordemanager:SpawnEnemy()	
+    hordemanager:SpawnEnemy()   
 end
 
 -- Main loop
