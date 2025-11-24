@@ -50,7 +50,7 @@ Use of an environment variable makes it easier for developers to share C++ proje
 You can quickly explore C++ programming in Ultra Engine by trying out example projects. Follow these steps:
 
 1. **Copy Example Code:**
-   - Visit the [examples section](https://www.ultraengine.com/learn/LoadModel?lang=cpp) of the documentation.
+   - Navigate to the page for [any command](https://www.ultraengine.com/learn/LoadModel?lang=cpp) in the documentation.
    - Copy the code from any example you wish to try.
 
 2. **Paste into Your main.cpp File:**
