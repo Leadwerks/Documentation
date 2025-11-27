@@ -9,6 +9,10 @@ Here's an in-depth look at its features and functionality:
 ## Scene Hierarchy Display
 The top half of the Map Browser presents a hierarchical view of your scene, making it easy to navigate through the various elements that compose your 3D environment. This hierarchy represents the relationship between different objects, offering a visual representation of the structure of your scene.
 
+You can adjust the scene hierarchy by dragging nodes. When you drag an entity's node onto another, the entity will become a child of the other node.
+
+![](https://github.com/UltraEngine/Documentation/blob/master/Images/parenting.gif?raw=true)
+
 ### Object Properties Panel
 The bottom half of the Map Browser is dedicated to displaying the properties of the selected objects. This Properties Panel dynamically updates to provide you with insights into the characteristics and settings of the currently selected object, facilitating efficient object customization.
 
