@@ -1,4 +1,4 @@
-# Terrain::SetLayerWeight
+# Terrain:SetLayerWeight
 
 This method sets the terrain material at any point on the heightmap. 
 
@@ -93,8 +93,7 @@ local paintlayer = terrain:AddLayer(rocks)
 terrain:SetLayerScale(paintlayer, 8)
 
 -- Camera controls
-require "Components/Player/CameraControls"
-camera: AddComponent(CameraControls)
+camera:AddComponent(CameraControls)
 
 -- Main loop
 while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
