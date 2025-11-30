@@ -947,6 +947,10 @@
                                     "filename": "Terrain_GetLayerHeightConstraints"
                                 },
                                 {
+                                    "title": "GetLayerMaterial",
+                                    "filename": "Terrain_GetLayerMaterial"
+                                },
+                                {
                                     "title": "GetLayers",
                                     "filename": "Terrain_GetLayers"
                                 },
