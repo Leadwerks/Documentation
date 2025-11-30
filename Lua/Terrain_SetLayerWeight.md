@@ -67,7 +67,7 @@ light:SetRotation(45, 35, 0)
 light:SetColor(2)
 
 -- Create terrain
-local terrain = CreateTerrain(world, 512)
+local terrain = CreateTerrain(world, 512, 512)
 terrain:LoadHeightmap("https://raw.githubusercontent.com/UltraEngine/Documentation/master/Assets/Terrain/512.r16")
 terrain:SetScale(1, 100, 1)
 
@@ -86,7 +86,7 @@ local rocks = CreateMaterial()
 diffusemap = LoadTexture("https://raw.githubusercontent.com/UltraEngine/Documentation/master/Assets/Materials/Ground/Rocks_Dirt_Ground_2k.dds")
 normalmap = LoadTexture("https://raw.githubusercontent.com/UltraEngine/Documentation/master/Assets/Materials/Ground/Rocks_Dirt_Ground_2k_dot3.dds")
 local dispmap = LoadTexture("https://raw.githubusercontent.com/UltraEngine/Documentation/master/Assets/Materials/Ground/Rocks_Dirt_Ground_2k_disp.dds")
-rocks:SetTexture(diffusemap, TEXTURE_DIFFUSE)
+rocks:SetTexture(diffusemap, TEXTURE_BASE)
 rocks:SetTexture(normalmap, TEXTURE_NORMAL)
 rocks:SetTexture(dispmap, TEXTURE_DISPLACEMENT)
 local paintlayer = terrain:AddLayer(rocks)
