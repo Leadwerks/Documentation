@@ -16,9 +16,6 @@ You can adjust the scene hierarchy by dragging nodes. When you drag an entity's 
 ### Object Properties Panel
 The bottom half of the Map Browser is dedicated to displaying the properties of the selected objects. This Properties Panel dynamically updates to provide you with insights into the characteristics and settings of the currently selected object, facilitating efficient object customization.
 
-### Environment Properties
-When you select the root scene node, the Properties Panel showcases the environment properties. These settings allow you to control critical world-level configurations, including ambient light levels, gravity, and the environment maps utilized for background visuals and the handling of specular and diffuse reflections.
-
 ### Entity Properties
 When an entity is selected within the hierarchy, the Properties Panel will reveal the entity's properties.
 
