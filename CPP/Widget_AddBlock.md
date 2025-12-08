@@ -31,9 +31,9 @@ Returns the index of the new widget block.
 ## Example
 
 ```c++
-#include "UltraEngine.h"
+#include "Leadwerks.h"
 
-using namespace UltraEngine;
+using namespace Leadwerks;
 
 //Declare new style constants
 enum CustomWidgetStyle
@@ -48,6 +48,12 @@ class CustomWidget : public Widget
     bool hover;
 
 protected:
+
+    // Initialize the widget
+    virtual bool Initialize(const WString& text, const int x, const int y, const int width, const int height, shared_ptr<Widget> parent, const int style)
+    {
+        return Widget::Initialize(text, x, y, width, height, parent, style);
+    }
 
     //Called when the mouse moves if this widget has the focus
     virtual void MouseMove(const int x, const int y) {}
@@ -88,7 +94,7 @@ protected:
     virtual void GainFocus() {}
 
     //Called when key is pressed
-    virtual void KeyDown(const KeyCode key) {}
+    virtual bool KeyDown(const KeyCode key) { return false; }
 
     //Called when key is released
     virtual void KeyUp(const KeyCode key) {}
@@ -116,7 +122,10 @@ public:
 
     //Constructor
     CustomWidget() : hover(false)
-    {}
+    {
+    }
+
+    friend shared_ptr<Widget> CreateCustomWidget(const WString&, const int, const int, const int, const int, shared_ptr<Widget>, const CustomWidgetStyle);
 };
 
 //Create function
@@ -133,13 +142,13 @@ int main(int argc, const char* argv[])
     auto displays = GetDisplays();
 
     //Create a window
-    auto window = CreateWindow("Ultra Engine", 0, 0, 800, 600, displays[0]);
+    auto window = CreateWindow("Leadwerks", 0, 0, 800, 600, displays[0]);
 
     //Create User Interface
     auto ui = CreateInterface(window);
 
     //Create widget
-    auto widget = CreateCustomWidget("Custom",20,20,120,36,ui->root, CUSTOMWIDGET_DEFAULT);
+    auto widget = CreateCustomWidget("Custom", 20, 20, 120, 36, ui->root, CUSTOMWIDGET_DEFAULT);
 
     while (true)
     {
