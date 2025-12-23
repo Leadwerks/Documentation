@@ -19,6 +19,7 @@ This class provides an interface to control the way a sound behaves when played.
 | [SetRange](Speaker_SetRange.md) | Method | sets the speaker range |
 | [SetTime](Speaker_SetTime.md) | Method | jumps to the specified sound time |
 | [SetFilter](Speaker_SetFilter.md) | Method | adds an audio filter |
+| [SetPosition](Speaker_SetPosition.md) | Method | sets the speaker position in 3D space |
 | [SetVolume](Speaker_SetVolume.md) | Method | sets the speaker volume |
 | [Stop](Speaker_Stop.md) | Method | stops the speaker |
 | [CreateSpeaker](CreateSpeaker.md) | Function | creates a new speaker object |
