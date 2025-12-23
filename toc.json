@@ -405,6 +405,10 @@
                                     "filename": "Speaker_SetTime"
                                 },
                                 {
+                                    "title": "SetPosition",
+                                    "filename": "Speaker_SetPosition"
+                                },
+                                {
                                     "title": "SetVolume",
                                     "filename": "Speaker_SetVolume"
                                 },
