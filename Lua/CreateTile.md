@@ -24,6 +24,8 @@ This function creates a new tile for 2D drawing. Tiles can be rectangles or text
 
 ## Remarks
 
+If the tile is created on a camera it will be drawn after the camera is rendered. If the tile is created on a world, it will be drawn after all cameras are rendered.
+
 The text alignment flags can be used to control the orientation of the text around the tile handle. The default orientation is top-left.
 
 ![](https://github.com/UltraEngine/Documentation/blob/master/Images/textalignment.png?raw=true)
