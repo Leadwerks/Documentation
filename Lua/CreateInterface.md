@@ -20,6 +20,10 @@ This function creates a new graphical user interface for desktop applications or
 
 Returns a new interface object.
 
+## Remarks
+
+If the interface is created on a camera or world, it will be rendered using [Tile](Tile.md) objects. If the interface is created on a camera it will be drawn after the camera is rendered. If the interface is created on a world, it will be drawn after all cameras are rendered.
+
 ## Example
 
 Several examples are shown below to demonstrate different types of programs you can create.
