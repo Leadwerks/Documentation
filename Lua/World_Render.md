@@ -4,9 +4,7 @@ This method sends all queued rendering instructions to the rendering thread and 
 
 ## Syntax
 
-- **Render**([Framebuffer](Framebuffer.md) framebuffer)
-- **Render**([Framebuffer](Framebuffer.md) framebuffer, boolean vsync)
-- **Render**([Framebuffer](Framebuffer.md) framebuffer, boolean vsync, number maxframerate)
+- **Render**([Framebuffer](Framebuffer.md) framebuffer, boolean vsync = true, number maxframerate = 0)
 
 | Parameter | Description |
 |---|---|
