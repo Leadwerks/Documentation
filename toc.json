@@ -4113,6 +4113,10 @@
                             "filename": "World_SetIblIntensity"
                         },
                         {
+                            "title": "SetIblIntensity",
+                            "filename": "World_SetShadowQuality"
+                        },
+                        {
                             "title": "Update",
                             "filename": "World_Update"
                         }
