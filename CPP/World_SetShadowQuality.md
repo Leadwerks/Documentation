@@ -14,4 +14,4 @@ Lights use a 1024 x 1024 shadow map size by default, so if a quality setting of 
 | 1.0 | 100% | Medium |
 | 2.0 | 200% | High |
 
-Any value greater than zero can be used, but take caution that higher quality settings may cause the GPU to run out of video memory.
+Any value greater than zero can be used, but take caution that higher quality settings may cause the GPU to run out of video memory, and values that result in power-of-two shadowmap sizes are preferred.
