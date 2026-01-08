@@ -708,6 +708,10 @@
                                     "filename": "Light_SetRange"
                                 },
                                 {
+                                    "title": "SetShadowCascadeDistance",
+                                    "filename": "Light_SetShadowCascadeDistance"
+                                }
+                                {
                                     "title": "SetShadowmapSize",
                                     "filename": "Light_SetShadowmapSize"
                                 }
