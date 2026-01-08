@@ -1,11 +1,11 @@
-# Light::SetCascadeDistance
+# Light::SetShadowCascadeDistance
 
 For directional lights, this method sets the distance that each cascaded shadow map partition covers.
 
 ## Syntax
 
-- **SetCascadeDistance**(const float p0)
-- **SetCascadeDistance**(const float p0, const float p1, const float p2, const float p3)
+- **SetShadowCascadeDistance**(const float p0)
+- **SetShadowCascadeDistance**(const float p0, const float p1, const float p2, const float p3)
 
 | Parameter | Description |
 |---|---|
