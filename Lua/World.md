@@ -26,5 +26,6 @@ The world class is a container for entities.
 | [SetEnvironmentMap](World_SetEnvironmentMap.md) | Method | sets the skybox or specular and diffuse reflection maps |
 | [SetGravity](World_SetGravity.md) | Method | sets the world gravity force |
 | [SetIblIntensity](World_SetIblIntensity.md) | Method | adjusts the strength of environment map reflections |
+| [SetShadowQuality](World_SetShadowQuality.md) | Method | scales the resolution of all lights in the world |
 | [Update](World_Update.md) | Method | updates physics, pathfinding, and other systems |
 | [CreateWorld](CreateWorld.md) | Function | creates a new world |
