@@ -4,12 +4,14 @@ This method plots a path to the specified point and directs the navigation agent
 
 ## Syntax
 
-- bool **Navigate**(const [Vec3](Vec3.md)& position)
-- bool **Navigate**(const dFloat x, const dFloat y, const dFloat z)
+- bool **Navigate**(const [Vec3](Vec3.md)& position, int maxsteps = 100, float maxdistance = 1.0)
+- bool **Navigate**(const dFloat x, const dFloat y, const dFloat z, int maxsteps = 100, float maxdistance = 1.0)
 
 | Parameter | Description |
 |---|---|
 | position (x, y, z) | destination position to navigate to |
+| maxsteps | the maximum number of steps allowed for the path to take, or zero for no limit |
+| maxdistance | the maximum distance that can exist between the specified point and the closest point on the navmesh, or zero for no limit |
 
 ## Returns
 
