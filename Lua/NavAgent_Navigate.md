@@ -4,12 +4,14 @@ This method plots a path to the specified point and directs the navigation agent
 
 ## Syntax
 
-- boolean **Navigate**([xVec3](xVec3.md) destination)
-- boolean **Navigate**(number x, number y, number z)
+- boolean **Navigate**([xVec3](xVec3.md) destination, number maxsteps = 100, number maxdistance = 1.0)
+- boolean **Navigate**(number x, number y, number z, number maxsteps = 100, number maxdistance = 1.0)
 
 | Parameter | Description |
 |---|---|
 | position (x, y, z) | destination position to navigate to |
+| maxsteps | the maximum number of steps allowed for the path to take, or zero for no limit |
+| maxdistance | the maximum distance that can exist between the specified point and the closest point on the navmesh, or zero for no limit |
 
 ## Returns
 
