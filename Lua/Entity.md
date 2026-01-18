@@ -30,6 +30,7 @@ This class serves as the foundation for all 3D objects in a world. It provides a
 | [ClearTags](Entity_ClearTags.md) | Method | removes all tags |
 | [Copy](Entity_Copy.md) | Method | duplicates the entity |
 | [Collide](Entity_Collide.md) | Method | called when an entity collides with another object |
+| [CollisionTest](Entity_CollisionTest.md) | Method | performs a static or swept collision test |
 | [Detach](Entity_Detach.md) | Method | detaches the entity from a bone or navigation agent |
 | [EmitSound](Entity_EmitSound.md) | Method | plays a sound at the entity's position |
 | [FindChild](Entity_FindChild.md) | Method | searches for a child by name |
