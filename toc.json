@@ -1060,7 +1060,11 @@
                             "title": "Collide",
                             "filename": "Entity_Collide",
                             "hideFromCPP": true
-                        },                           
+                        },
+                        {
+                            "title": "CollisionTest",
+                            "filename": "Entity_CollisionTest"
+                        },                        
                         {
                             "title": "Copy",
                             "filename": "Entity_Copy"
