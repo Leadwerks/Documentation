@@ -17,10 +17,6 @@ This function creates a new texture buffer, for render-to-texture operations.
 
 Returns a new texture buffer object.
 
-## Remarks
-
-Note that if you are rendering to this texture buffer with post-processing effects, samples must be 1 or greater, to create multisample textures the post-processing shaders can read.
-
 ## Example
 
 ```lua
