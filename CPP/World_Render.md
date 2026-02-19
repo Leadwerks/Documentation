@@ -20,8 +20,6 @@ Rendering in Leadwerks is asychronous, meaning it is executed on a separate thre
 
 If your game spendsa significant amount of time initializing a scene, you can save a few seconds of loading time by calling this method immediately after creating a framebuffer so that initialization is performed at the same time your game is loading.
 
-Changing the vsync parameter forces recreation of the framebuffer swapchain. Applications should not frequently switch this setting.
-
 The syncedframes parameter lets you control the exact number of frames that are drawn for each world update. If your game updates at 60 hz, and your display refresh rate is 60 hz, you can set this value to 1 and exactly one frame will be rendered for each game update, without any object interapolation. If the screen refresh rate is 144 you can set this value to 2 and use 72 as the world update frequency, and exactly two frames will be rendered for each game update.
 
 ## Example
