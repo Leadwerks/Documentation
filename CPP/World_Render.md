@@ -10,7 +10,7 @@ This method sends all queued rendering instructions to the rendering thread and 
 |---|---|
 | framebuffer | framebuffer to render to |
 | vsync | if set to true vertical sync is enabled |
-| syncedframes | maximum allowed framerate, or -1 to let the engine choose |
+| syncedframes | number of frames to render for each world update, or -1 to let the engine choose |
 
 ## Remarks
 
