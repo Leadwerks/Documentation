@@ -596,6 +596,10 @@
                                     "filename": "Camera_SetFov"
                                 },
                                 {
+                                    "title": "SetMouseLook",
+                                    "filename": "Camera_SetMouseLook"
+                                },     
+                                {
                                     "title": "SetMsaa",
                                     "filename": "Camera_SetMsaa"
                                 },                                
