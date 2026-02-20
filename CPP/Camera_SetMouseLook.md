@@ -4,7 +4,7 @@ Thie command enables mouse looking behavior for a camera. Low-latency mouse inpu
 
 ## Syntax
 
-- **SetMouseLook**(bool mode, float lookspeed = 0.1f, float smoothing = 1.0f, bool invertmouse = false, Vec2 pitchlimits = Vec2(-90.0f,90.0f) )
+- void **SetMouseLook**(bool mode, float lookspeed = 0.1f, float smoothing = 1.0f, bool invertmouse = false, Vec2 pitchlimits = Vec2(-90.0f,90.0f) )
 
 | Parameter | Description | 
 |---|---|
