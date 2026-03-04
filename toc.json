@@ -1288,6 +1288,10 @@
                             "filename": "Entity_SetPickMode"
                         },
                         {
+                            "title": "SetPlayerSize",
+                            "filename": "Entity_SetPlayerSize"
+                        },
+                        {
                             "title": "SetPosition",
                             "filename": "Entity_SetPosition"
                         },
