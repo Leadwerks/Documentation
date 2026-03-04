@@ -1,4 +1,4 @@
-# Entity::SetPlayerSize
+# Entity:SetPlayerSize
 
 This method sets the size when player physics mode is in use.
 
