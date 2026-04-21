@@ -36,13 +36,15 @@ The following inputs are available for all vertex shaders. You shader should inc
 
 The vertex data structure packs a lot of data into just 36 bytes.
 
-vec3 VertexPosition
-vec2 VertexTexCoords
-vec2 VertexLightmapCoords
-vec3 VertexTangent
-vec3 VertexNormal
-vec3 VertexBitangent
-uvec4 VertexBoneIndices
-vec4 VertexBoneWeights
-vec4 VertexMaterialWeights
-vec4 VertexColors
+| | |
+|---|---|
+| vec3 | VertexPosition |
+| vec2 | VertexTexCoords |
+| vec2 | VertexLightmapCoords |
+| vec3 | VertexTangent |
+| vec3 | VertexNormal |
+| vec3 | VertexBitangent |
+| uvec4 | VertexBoneIndices |
+| vec4 | VertexBoneWeights |
+| vec4 | VertexMaterialWeights |
+| vec4 | VertexColors |
