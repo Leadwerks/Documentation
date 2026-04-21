@@ -44,6 +44,7 @@ The vertex data structure packs a lot of data into just 36 bytes.
 | vec3 | VertexTangent |
 | vec3 | VertexNormal |
 | vec3 | VertexBitangent |
+| float | VertexDisplacement |
 | uvec4 | VertexBoneIndices |
 | vec4 | VertexBoneWeights |
 | vec4 | VertexMaterialWeights |
