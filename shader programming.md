@@ -14,14 +14,18 @@ Albedo and emission are combined into a single color in the first color attachme
 
 ## Transparency Buffer Layout
 
-Textures 5 and 6 are the color attachments 1 and 2 from the main GBuffer. These will only be written to when screen-space reflection is enabled.
 
 | Index | Format | R | G | B | A |
 |---|---|---|---|---|---|
 | 0 | R11G11B10 | albedo.r | albedo.g | albedo.b | _alpha_* |
-| 1 | R10G10B10A4 | normal.x | normal.y | normal.z | flags |
+| 1 | R10G10B10A4 | normal.x | normal.y | normal.z | alpha |
 | 2 | R32F | depth | -- | -- | -- |
 | 3 | RGB8 | IOR | roughness | optical density | _alpha_* |
 | 4 | R8 | flags | -- | -- | -- |
 | 5 | R10G10B10A4 | normal.x | normal.y | normal.z | flags |
 | 6 | RGBA8 | occlusion | roughness | metalness | emission |
+
+Textures 5 and 6 are the color attachments 1 and 2 from the main GBuffer. These will only be written to when screen-space reflection is enabled.
+
+Although color attachments 0 and 3 do not store an alpha component, the alpha value should still be written by the shader for blending to work correctly.
+
