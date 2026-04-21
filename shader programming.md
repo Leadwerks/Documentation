@@ -30,3 +30,19 @@ Textures 5 and 6 are the color attachments 1 and 2 from the main GBuffer. These 
 
 Although color attachments 0 and 3 do not store an alpha component, the alpha value should still be written by the shader for blending to work correctly.
 
+## Vertex Inputs
+
+The following inputs are available for all vertex shaders. You shader should include the file "Shaders/Common/VertexLayout.glsl" to access these.
+
+The vertex data structure packs a lot of data into just 36 bytes.
+
+vec3 VertexPosition
+vec2 VertexTexCoords
+vec2 VertexLightmapCoords
+vec3 VertexTangent
+vec3 VertexNormal
+vec3 VertexBitangent
+uvec4 VertexBoneIndices
+vec4 VertexBoneWeights
+vec4 VertexMaterialWeights
+vec4 VertexColors
