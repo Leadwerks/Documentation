@@ -22,7 +22,7 @@ Albedo and emission are combined into a single color in the first color attachme
 | 1 | R10G10B10A4 | normal.x | normal.y | normal.z | alpha |
 | 2 | R32F | depth | -- | -- | -- |
 | 3 | RG | IOR | roughness | -- | _alpha_* |
-| 4 | Luminance | Reflectivity | -- | -- | -- |
+| 4 | Luminance | Reflectivity | -- | -- | _alpha_* |
 | 5 | R10G10B10A4 | normal.x | normal.y | normal.z | flags |
 | 6 | RGBA8 | occlusion | roughness | metalness | emission |
 
