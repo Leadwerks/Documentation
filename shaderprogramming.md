@@ -21,8 +21,8 @@ Albedo and emission are combined into a single color in the first color attachme
 | 0 | R11G11B10 | albedo.r | albedo.g | albedo.b | _alpha_* |
 | 1 | R10G10B10A4 | normal.x | normal.y | normal.z | alpha |
 | 2 | R32F | depth | -- | -- | -- |
-| 3 | RGB8 | IOR | roughness | optical density | _alpha_* |
-| 4 | R8 | flags | -- | -- | -- |
+| 3 | RG | IOR | roughness | -- | _alpha_* |
+| 4 | Luminance | Reflectivity | -- | -- | -- |
 | 5 | R10G10B10A4 | normal.x | normal.y | normal.z | flags |
 | 6 | RGBA8 | occlusion | roughness | metalness | emission |
 
