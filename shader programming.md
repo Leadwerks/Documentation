@@ -49,3 +49,17 @@ The vertex data structure packs a lot of data into just 36 bytes.
 | vec4 | VertexBoneWeights |
 | vec4 | VertexMaterialWeights |
 | vec4 | VertexColors |
+
+## Build-in Uniforms
+
+The following uniform values are available in all shaders that declare them, or include the file "Common/Uniforms.glsl".
+
+| Name | Type | Description |
+|---|---|---|
+| IBLIntensoty | float | Intensity of the specular and diffuse environment maps |
+| CameraPosition | vec3 | Global position of the current camera |
+| CurrentTime | uint | Current time in milliseconds |
+| CameraMatrix | mat4 | 4x4 matrix of the current camera |
+| CameraNormalMatrix | mat3 | 3x3 matrix of the current camera |
+| AmbientLight | vec3 | world ambient lighting level |
+
