@@ -24,7 +24,7 @@ The alpha channel of the second color attachment (1) can store two bitwise flags
 
 | Flag | Description |
 |---|---|
-| PIXELFLAGS_BACKFACING | indicates that the pixel faces away from the camera |
+| PIXELFLAGS_BACKFACING | indicates that the pixel faces away from the camera, for two-sided materials |
 | PIXELFLAGS_IGNORENORMALS | indicates that normals should be ignored in the lighting calculation |
 
 ## Transparency Buffer Layout
