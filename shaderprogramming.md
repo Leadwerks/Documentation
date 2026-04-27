@@ -22,7 +22,7 @@ The alpha channel of the second color attachment (1) can store two bitwise flags
 
 | Index | Format | R | G | B | A |
 |---|---|---|---|---|---|
-| 0 | R11G11B10 | albedo.r | albedo.g | albedo.b | _alpha_* |
+| 0 | R11G11B10F | albedo.r | albedo.g | albedo.b | _alpha_* |
 | 1 | R10G10B10A4 | normal.x | normal.y | normal.z | alpha |
 | 2 | R32F | depth | -- | -- | -- |
 | 3 | RG | IOR | roughness | -- | _alpha_* |
@@ -39,6 +39,21 @@ If the material depth mask is enabled, the following additional color attachment
 Textures 5 and 6 are the color attachments 1 and 2 from the main GBuffer. These will only be written to when screen-space reflection is enabled.
 
 Although color attachments 0 and 3 do not store an alpha component, the alpha value should still be written by the shader for blending to work correctly.
+
+In addition to the color buffers, a depth/stencil texture using format DEPTH24_STENCIL8 is also attached.
+
+The stencil bits are used to optimize some parts of the renderer:
+
+| Bit | Description |
+|---|---|
+| 0 | This is always set for any pixel that is drawn, and distinguishes between a pixel that requires lighting and the empty background |
+| 1 | Reserved |
+| 2 | Reserved |
+| 3 | Reserved |
+| 4 | Decal layer 0 |
+| 5 | Decal layer 1 |
+| 6 | Decal layer 2 |
+| 7 | Decal layer 3 |
 
 ## Vertex Inputs
 
