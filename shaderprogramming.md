@@ -27,6 +27,21 @@ The alpha channel of the second color attachment (1) can store two bitwise flags
 | PIXELFLAGS_BACKFACING | indicates that the pixel faces away from the camera, for two-sided materials |
 | PIXELFLAGS_IGNORENORMALS | indicates that normals should be ignored in the lighting calculation |
 
+In addition to the color buffers, a depth/stencil texture using format DEPTH24_STENCIL8 is also attached.
+
+The stencil buffer is used for some optimization, and also controls which decals appear on which surfaces, as set with the [Entity::SetDecalLayers](Entity_SetDecalLayers.md) command.
+
+| Bit | Description |
+|---|---|
+| 0 | This is always set for any pixel that is drawn, and distinguishes between a pixel that requires lighting and the empty background |
+| 1 | Reserved |
+| 2 | Reserved |
+| 3 | Reserved |
+| 4 | Indicates that decal layer 0 is active at this pixel |
+| 5 | Indicates that decal layer 1 is active at this pixel |
+| 6 | Indicates that decal layer 2 is active at this pixel |
+| 7 | Indicates that decal layer 3 is active at this pixel |
+
 ## Transparency Buffer Layout
 
 
@@ -54,21 +69,6 @@ If screen-space reflections are enabled *and* the material depth mask is enabled
 Textures 5 and 6 are the color attachments 1 and 2 from the main GBuffer. These will only be written to when screen-space reflection is enabled.
 
 Although color attachments 0 and 3 do not store an alpha component, the alpha value should still be written by the shader for blending to work correctly.
-
-In addition to the color buffers, a depth/stencil texture using format DEPTH24_STENCIL8 is also attached.
-
-The stencil buffer is used for some optimization, and also controls which decals appear on which surfaces, as set with the [Entity::SetDecalLayers](Entity_SetDecalLayers.md) command.
-
-| Bit | Description |
-|---|---|
-| 0 | This is always set for any pixel that is drawn, and distinguishes between a pixel that requires lighting and the empty background |
-| 1 | Reserved |
-| 2 | Reserved |
-| 3 | Reserved |
-| 4 | Indicates that decal layer 0 is active at this pixel |
-| 5 | Indicates that decal layer 1 is active at this pixel |
-| 6 | Indicates that decal layer 2 is active at this pixel |
-| 7 | Indicates that decal layer 3 is active at this pixel |
 
 ## Vertex Inputs
 
