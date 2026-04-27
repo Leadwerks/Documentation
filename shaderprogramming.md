@@ -34,7 +34,7 @@ The alpha channel of the second color attachment (1) can store two bitwise flags
 |---|---|---|---|---|---|
 | 0 | RGBA16F | albedo.r | albedo.g | albedo.b | alpha |
 | 1 | R10G10B10A4 | normal.x | normal.y | normal.z | alpha |
-| 2 | R32F | depth | -- | -- | -- |
+| 2 | R32F | Z-position | -- | -- | -- |
 | 3 | RG | IOR | roughness | -- | _alpha_* |
 | 4 | Luminance | Reflectivity | -- | -- | _alpha_* |
 
