@@ -42,7 +42,7 @@ Although color attachments 0 and 3 do not store an alpha component, the alpha va
 
 In addition to the color buffers, a depth/stencil texture using format DEPTH24_STENCIL8 is also attached.
 
-The stencil bits are used to optimize some parts of the renderer:
+The stencil bits are used to optimize some parts of the renderer. The stencil buffer is used for some optimization, and also controls which decals appear on which surfaces, as set with the [Entity::SetDecalLayers](Entity_SetDecalLayers.md) command.
 
 | Bit | Description |
 |---|---|
