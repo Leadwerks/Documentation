@@ -20,7 +20,12 @@ Albedo and emission are combined into a single color in the first color attachme
 
 One of four possible decal layer values are store in the alpha channel of the first (0) color attachment. This controls which decals can appear on which objects.
 
-The alpha channel of the second color attachment (1) can store two bitwise flags. Currently these are unused.
+The alpha channel of the second color attachment (1) can store two bitwise flags defined in "Common/Constants.glsl", and can be any combination of the following flags:
+
+| Flag | Description |
+|---|---|
+| PIXELFLAGS_BACKFACING | indicates that the pixel faces away from the camera |
+| PIXELFLAGS_IGNORENORMALS | indicates that normals should be ignored in the lighting calculation |
 
 ## Transparency Buffer Layout
 
