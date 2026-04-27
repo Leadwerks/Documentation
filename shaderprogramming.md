@@ -93,6 +93,17 @@ The vertex data structure packs a lot of data into just 36 bytes. Some data is a
 | float | VertexDisplacement | Vertex dispacement value, stored in a 16-bit float |
 | vec2 | VertexMaterialWeights | Vertex material weights for multi-material surfaces, stored as normalized bytes |
 
+The actual data structure passed to the shader looks like this:
+
+| Name | Type | Elements | Description |
+|---|---|---|---|
+| position | float | 3 | vertex position in local space |
+| texcoords | float | 2 | vertex texture coordinates |
+| lightmapcoords | unsigned short | 2 | vertex texture coordinates for lightmaps or other uses |
+| qtangent | signed char | 4 | encoded normal, tangent, and bitangent values |
+| boneindices | unsigned char | 4 | bone indices for mesh skinning, or vertex displacement |
+| boneweights | unsigned char | 4 | values can be used for bone weights, vertex colors, or material weights |
+
 ## Built-in Uniforms
 
 The following uniform values are available in all shaders that declare them, or include the file "Common/Uniforms.glsl".
