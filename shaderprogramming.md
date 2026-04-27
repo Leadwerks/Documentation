@@ -71,19 +71,19 @@ The following inputs are available for all vertex shaders. You shader should inc
 
 The vertex data structure packs a lot of data into just 36 bytes. Some data is adjusted based on current settings. For example, meshes that use vertex skinning will have vertex colors removed to save space. However, you can always rely on these inputs providing appropriate values when authoring new shaders.
 
-| | |
-|---|---|
-| vec3 | VertexPosition |
-| vec2 | VertexTexCoords |
-| vec2 | VertexLightmapCoords |
-| vec3 | VertexTangent |
-| vec3 | VertexBitangent |
-| vec3 | VertexNormal |
-| float | VertexDisplacement |
-| uvec4 | VertexBoneIndices |
-| vec4 | VertexBoneWeights |
-| vec4 | VertexMaterialWeights |
-| vec4 | VertexColors |
+| Name | Type | Description |
+|---|---|---|
+| vec3 | VertexPosition | Position in local space, with three 32-bit floats |
+| vec2 | VertexTexCoords | Vertex texture coordinate stored in two 32-bit floats |
+| vec2 | VertexLightmapCoords | Vertex lightmap coordinates, normalized short values |
+| vec3 | VertexTangent | Vertex tangent extracted from QTangent quaternion |
+| vec3 | VertexBitangent | Vertex bitangent extracted from QTangent quaternion |
+| vec3 | VertexNormal | Vertex normal extracted from QTangent quaternion |
+| float | VertexDisplacement | Vertex dispacement value, stored in a 16-bit float |
+| uvec4 | VertexBoneIndices | Vertex bone indices, stored as unsigned bytes |
+| vec4 | VertexBoneWeights | Vertex bone weights, stored as normalized bytes |
+| vec2 | VertexMaterialWeights | Vertex material weights for multi-material surfaces, stored as normalized bytes |
+| vec4 | VertexColors | Vertex colors, stored as normalized bytes |
 
 ## Built-in Uniforms
 
