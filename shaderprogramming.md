@@ -43,7 +43,7 @@ If screen-space reflections are enabled, then the following additional color att
 |---|---|---|---|---|---|
 | 4 | Luminance | Reflectivity | -- | -- | _alpha_* |
 
-If the material depth mask is enabled *and* screen-space reflections are enabled, then the following additional color attachments will also be written to.
+If screen-space reflections are enabled *and* the material depth mask is enabled, then the following additional color attachments will also be written to.
 
 | Index | Format | R | G | B | A |
 |---|---|---|---|---|---|
