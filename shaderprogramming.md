@@ -27,6 +27,8 @@ The alpha channel of the second color attachment (1) can store two bitwise flags
 | PIXELFLAGS_BACKFACING | indicates that the pixel faces away from the camera, for two-sided materials |
 | PIXELFLAGS_IGNORENORMALS | indicates that normals should be ignored in the lighting calculation |
 
+### Depth / Stencil Attachment
+
 In addition to the color buffers, a depth/stencil texture using format DEPTH24_STENCIL8 is also attached.
 
 The stencil buffer is used for some optimization, and also controls which decals appear on which surfaces, as set with the [Entity::SetDecalLayers](Entity_SetDecalLayers.md) command.
