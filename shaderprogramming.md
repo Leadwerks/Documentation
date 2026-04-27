@@ -46,6 +46,7 @@ The stencil buffer is used for some optimization, and also controls which decals
 
 ## Transparency Buffer Layout
 
+The transparency buffer uses a similar but larger buffer. Some textures from the gbuffer may also be attached and written to, depending on the current settings.
 
 | Index | Format | R | G | B | A |
 |---|---|---|---|---|---|
