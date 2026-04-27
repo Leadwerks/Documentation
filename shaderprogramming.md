@@ -8,7 +8,7 @@ Leadwerks provides a robust shader programming system and integrated development
 |---|---|---|---|---|---|
 | 0 | R11G11B10F | albedo.r | albedo.g | albedo.b | -- |
 | 1 | R10G10B10A2 | normal.x | normal.y | normal.z | flags |
-| 2 | RGBA8 | occlusion | roughness | metalness | emission |
+| 2 | RGBA | occlusion | roughness | metalness | emission |
 
 When the terrain-mesh blending feature is enabled, an additional color attachment will be present:
 
@@ -43,7 +43,7 @@ If the material depth mask is enabled *and* screen-space reflections are enabled
 | Index | Format | R | G | B | A |
 |---|---|---|---|---|---|
 | 5 | R10G10B10A4 | normal.x | normal.y | normal.z |  _alpha_* |
-| 6 | RGBA8 | occlusion | roughness | metalness |  _alpha_* |
+| 6 | RGBA | occlusion | roughness | metalness |  _alpha_* |
 | 7 | R11G11B10F | albedo.r | albedo.g | albedo.b |  _alpha_* |
 
 Textures 5 and 6 are the color attachments 1 and 2 from the main GBuffer. These will only be written to when screen-space reflection is enabled.
