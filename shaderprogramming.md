@@ -69,7 +69,7 @@ If screen-space reflections are enabled *and* the material depth mask is enabled
 | 6 | RGBA | occlusion | roughness | metalness |  _alpha_* |
 | 7 | R11G11B10F | albedo.r | albedo.g | albedo.b |  _alpha_* |
 
-Although color attachments 0 and 3 do not store an alpha component, the alpha value should still be written by the shader for blending to work correctly.
+*Although some color attachments do not store an alpha component, the alpha value should still be written by the shader for blending to work correctly.
 
 ## Vertex Inputs
 
