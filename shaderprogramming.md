@@ -16,7 +16,7 @@ When the terrain-mesh blending feature is enabled, an additional color attachmen
 |---|---|---|---|---|---|
 | 3 | RG | color blend | normal blend | -- | -- |
 
-Albedo and emission are combined into a single color in the first color attachment. The emission term in color attachment 2 indicates what percentage of the color should be treat as albedo, with the rest treated as additive emission.
+Albedo and emission are combined into a single color in the first color attachment. The emission term in color attachment 2 indicates what percentage of the color should be treat as albedo, with the rest treated as additive emission. This allows the renderer to pack more data into a smaller memory size.
 
 One of four possible decal layer values are store in the alpha channel of the first (0) color attachment. This controls which decals can appear on which objects.
 
