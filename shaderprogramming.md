@@ -50,10 +50,10 @@ The stencil bits are used to optimize some parts of the renderer:
 | 1 | Reserved |
 | 2 | Reserved |
 | 3 | Reserved |
-| 4 | Decal layer 0 |
-| 5 | Decal layer 1 |
-| 6 | Decal layer 2 |
-| 7 | Decal layer 3 |
+| 4 | Indicates that decal layer 0 is active at this pixel |
+| 5 | Indicates that decal layer 1 is active at this pixel |
+| 6 | Indicates that decal layer 2 is active at this pixel |
+| 7 | Indicates that decal layer 3 is active at this pixel |
 
 ## Vertex Inputs
 
