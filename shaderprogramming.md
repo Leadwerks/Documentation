@@ -76,14 +76,14 @@ The vertex data structure packs a lot of data into just 36 bytes. Some data is a
 | vec3 | VertexPosition | Position in local space, with three 32-bit floats |
 | vec2 | VertexTexCoords | Vertex texture coordinate stored in two 32-bit floats |
 | vec2 | VertexLightmapCoords | Vertex lightmap coordinates, normalized short values |
+| vec3 | VertexNormal | Vertex normal extracted from QTangent quaternion |
 | vec3 | VertexTangent | Vertex tangent extracted from QTangent quaternion |
 | vec3 | VertexBitangent | Vertex bitangent extracted from QTangent quaternion |
-| vec3 | VertexNormal | Vertex normal extracted from QTangent quaternion |
-| float | VertexDisplacement | Vertex dispacement value, stored in a 16-bit float |
+| vec4 | VertexColors | Vertex colors, stored as normalized bytes |
 | uvec4 | VertexBoneIndices | Vertex bone indices, stored as unsigned bytes |
 | vec4 | VertexBoneWeights | Vertex bone weights, stored as normalized bytes |
+| float | VertexDisplacement | Vertex dispacement value, stored in a 16-bit float |
 | vec2 | VertexMaterialWeights | Vertex material weights for multi-material surfaces, stored as normalized bytes |
-| vec4 | VertexColors | Vertex colors, stored as normalized bytes |
 
 ## Built-in Uniforms
 
