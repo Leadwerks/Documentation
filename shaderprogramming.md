@@ -8,7 +8,7 @@ Leadwerks provides a robust shader programming system and integrated development
 |---|---|---|---|---|---|
 | 0 | R11G11B10F | albedo.r | albedo.g | albedo.b | -- |
 | 1 | R10G10B10A2 | normal.x | normal.y | normal.z | flags |
-| 2 | RGBA | occlusion | roughness | metalness | emission |
+| 2 | RGB | emission | roughness | metalness | -- |
 
 When the terrain-mesh blending feature is enabled, an additional color attachment will be present:
 
