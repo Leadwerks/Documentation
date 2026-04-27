@@ -54,7 +54,7 @@ The vertex data structure packs a lot of data into just 36 bytes.
 | vec4 | VertexMaterialWeights |
 | vec4 | VertexColors |
 
-## Build-in Uniforms
+## Built-in Uniforms
 
 The following uniform values are available in all shaders that declare them, or include the file "Common/Uniforms.glsl".
 
