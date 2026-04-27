@@ -6,7 +6,7 @@ Leadwerks provides a robust shader programming system and integrated development
 
 | Index | Format | R | G | B | A |
 |---|---|---|---|---|---|
-| 0 | R10G10B10A2 | albedo.r | albedo.g | albedo.b | -- |
+| 0 | R11G11B10F | albedo.r | albedo.g | albedo.b | -- |
 | 1 | R10G10B10A2 | normal.x | normal.y | normal.z | flags |
 | 2 | RGBA8 | occlusion | roughness | metalness | emission |
 | 3 | RG8 | color blend | normal blend | -- | -- |
