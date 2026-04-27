@@ -37,7 +37,7 @@ The alpha channel of the second color attachment (1) can store two bitwise flags
 | 2 | R32F | Z-position | -- | -- | -- |
 | 3 | RG | IOR | roughness | -- | _alpha_* |
 
-If screen-space reflections are enabled, then the following additional color attachments will also be written to.
+If screen-space reflections are enabled, an additional color attachment will be written to.
 
 | Index | Format | R | G | B | A |
 |---|---|---|---|---|---|
