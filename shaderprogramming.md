@@ -91,7 +91,7 @@ The vertex data structure packs a lot of data into just 36 bytes. Some data is a
 | float | VertexDisplacement | Vertex dispacement value, stored in a 16-bit float |
 | vec2 | VertexMaterialWeights | Vertex material weights for multi-material surfaces, stored as normalized bytes |
 
-The actual data structure passed to the shader looks like this:
+The actual data structure passed to the shader is extremely compact:
 
 | Name | Type | Elements | Description |
 |---|---|---|---|
