@@ -13,7 +13,7 @@ Leadwerks provides a robust shader programming system and integrated development
 
 Albedo and emission are combined into a single color in the first color attachment. The emission term in color attachment 2 indicates what percentage of the color should be treat as albedo, with the rest treated as additive emission.
 
-One of eight possible decal layer values are store in the alpha channel of the first (0) color attachment. This controls which decals can appear on which objects.
+One of four possible decal layer values are store in the alpha channel of the first (0) color attachment. This controls which decals can appear on which objects.
 
 The alpha channel of the second color attachment (1) can store two bitwise flags. Currently these are unused.
 
