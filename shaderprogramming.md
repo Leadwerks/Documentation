@@ -6,12 +6,16 @@ Leadwerks provides a robust shader programming system and integrated development
 
 | Index | Format | R | G | B | A |
 |---|---|---|---|---|---|
-| 0 | R10G10B10A4 | albedo.r * 0.25 | albedo.g * 0.25 | albedo.b * 0.25 | flags |
-| 1 | R10G10B10A4 | normal.x | normal.y | normal.z | decallayer |
+| 0 | R10G10B10A2 | albedo.r * 0.25 | albedo.g * 0.25 | albedo.b * 0.25 | flags |
+| 1 | R10G10B10A2 | normal.x | normal.y | normal.z | decallayer |
 | 2 | RGBA8 | occlusion | roughness | metalness | emission |
 | 3 | RG8 | color blend | normal blend | -- | -- |
 
 Albedo and emission are combined into a single color in the first color attachment. The emission term in color attachment 2 indicates what percentage of the color should be treat as albedo, with the rest treated as additive emission.
+
+Two bitwise flags can be encoded in the alpha channel of the first (0) color attachment.
+
+The alpha channel of the second color attachment (1) can store two bitwise flags. Currently these are unused.
 
 ## Transparency Buffer Layout
 
