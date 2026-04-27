@@ -61,15 +61,13 @@ If screen-space reflections are enabled, an additional color attachment will be 
 |---|---|---|---|---|---|
 | 4 | Luminance | Reflectivity | -- | -- | _alpha_* |
 
-If screen-space reflections are enabled *and* the material depth mask is enabled, then the following additional color attachments will also be written to.
+If screen-space reflections are enabled *and* the material depth mask is enabled, then the following additional color attachments will also be written to. These are the same textures used in the GBuffer, and their values will be overwritten before screen-space reflections are rendered.
 
 | Index | Format | R | G | B | A |
 |---|---|---|---|---|---|
 | 5 | R10G10B10A4 | normal.x | normal.y | normal.z |  _alpha_* |
 | 6 | RGBA | occlusion | roughness | metalness |  _alpha_* |
 | 7 | R11G11B10F | albedo.r | albedo.g | albedo.b |  _alpha_* |
-
-Textures 5 and 6 are the color attachments 1 and 2 from the main GBuffer. These will only be written to when screen-space reflection is enabled.
 
 Although color attachments 0 and 3 do not store an alpha component, the alpha value should still be written by the shader for blending to work correctly.
 
