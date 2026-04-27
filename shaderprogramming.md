@@ -69,7 +69,7 @@ The stencil buffer is used for some optimization, and also controls which decals
 
 The following inputs are available for all vertex shaders. You shader should include the file "Shaders/Common/VertexLayout.glsl" to access these.
 
-The vertex data structure packs a lot of data into just 36 bytes.
+The vertex data structure packs a lot of data into just 36 bytes. Some data is adjusted based on current settings. For example, meshes that use vertex skinning will have vertex colors removed to save space. However, you can always rely on these inputs providing appropriate values when authoring new shaders.
 
 | | |
 |---|---|
