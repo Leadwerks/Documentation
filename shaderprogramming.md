@@ -27,6 +27,11 @@ The alpha channel of the second color attachment (1) can store two bitwise flags
 | 2 | R32F | depth | -- | -- | -- |
 | 3 | RG | IOR | roughness | -- | _alpha_* |
 | 4 | Luminance | Reflectivity | -- | -- | _alpha_* |
+
+If the material depth mask is enabled, the following additional color attachments will be written to.
+
+| Index | Format | R | G | B | A |
+|---|---|---|---|---|---|
 | 5 | R10G10B10A4 | normal.x | normal.y | normal.z | -- |
 | 6 | RGBA8 | occlusion | roughness | metalness | emission |
 | 7 | R10G10B10A4 | albedo.r * 0.25 | albedo.g * 0.25 | albedo.b * 0.25 | -- |
