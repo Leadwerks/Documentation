@@ -36,6 +36,11 @@ The alpha channel of the second color attachment (1) can store two bitwise flags
 | 1 | R10G10B10A4 | normal.x | normal.y | normal.z | alpha |
 | 2 | R32F | Z-position | -- | -- | -- |
 | 3 | RG | IOR | roughness | -- | _alpha_* |
+
+If screen-space reflections are enabled, then the following additional color attachments will also be written to.
+
+| Index | Format | R | G | B | A |
+|---|---|---|---|---|---|
 | 4 | Luminance | Reflectivity | -- | -- | _alpha_* |
 
 If the material depth mask is enabled *and* screen-space reflections are enabled, then the following additional color attachments will also be written to.
