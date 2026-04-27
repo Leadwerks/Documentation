@@ -39,7 +39,7 @@ If the material depth mask is enabled *and* screen-space reflections are enabled
 |---|---|---|---|---|---|
 | 5 | R10G10B10A4 | normal.x | normal.y | normal.z |  _alpha_* |
 | 6 | RGBA8 | occlusion | roughness | metalness |  _alpha_* |
-| 7 | R10G10B10A4 | albedo.r * 0.25 | albedo.g * 0.25 | albedo.b * 0.25 |  _alpha_* |
+| 7 | R10G10B10A4 | albedo.r | albedo.g | albedo.b |  _alpha_* |
 
 Textures 5 and 6 are the color attachments 1 and 2 from the main GBuffer. These will only be written to when screen-space reflection is enabled.
 
