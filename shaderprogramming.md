@@ -30,7 +30,7 @@ The stencil buffer is used for some optimization, and also controls which decals
 | Bit | Description |
 |---|---|
 | 0 | This is always set for any pixel that is drawn, and distinguishes between a pixel that requires lighting and the empty background |
-| 1 | Reserved |
+| 1 | Indicates the terrain blend feature is in use at this pixel |
 | 2 | Reserved |
 | 3 | Reserved |
 | 4 | Indicates that decal layer 0 is active at this pixel |
