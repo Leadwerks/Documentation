@@ -60,7 +60,7 @@ If screen-space reflections are enabled *and* the material depth mask is enabled
 | Index | Format | R | G | B | A |
 |---|---|---|---|---|---|
 | 5 | R10G10B10A4 | normal.x | normal.y | normal.z |  _alpha_* |
-| 6 | RGBA | occlusion | roughness | metalness |  _alpha_* |
+| 6 | RGBA | -- | roughness | -- |  _alpha_* |
 | 7 | R11G11B10F | albedo.r | albedo.g | albedo.b |  _alpha_* |
 
 *Although some color attachments do not store an alpha component, the alpha value should still be written by the shader for blending to work correctly.
