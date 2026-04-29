@@ -12,7 +12,7 @@ The best place to start is the [Crash Course](https://www.leadwerks.com/learn/cr
 
 ### Additional Recommended Software
 
-- [Microsoft Visual Studio 2026](https://visualstudio.microsoft.com/downloads/) is used for C++ programming. A free version ("Community Edition") is available.
+- [Microsoft Visual Studio 2026](https://visualstudio.microsoft.com/downloads/) is used for C++ programming. A free version called the "Community Edition" is available.
 
 ## Installation
 
