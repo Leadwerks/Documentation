@@ -14,7 +14,6 @@ This example shows how a scene can be optimized to make non-moving objects stati
 
 ```c++
 #include "Leadwerks.h"
-#include "Components/Motion/Mover.hpp"
 
 using namespace Leadwerks;
 
