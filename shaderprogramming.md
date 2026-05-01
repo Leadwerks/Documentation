@@ -96,6 +96,22 @@ The actual vertex data structure passed to the shader is extremely compact:
 | boneindices | unsigned char | 4 | bone indices for mesh skinning, or vertex displacement |
 | boneweights | unsigned char | 4 | values can be used for bone weights, vertex colors, or material weights |
 
+## Vertex Outputs
+
+The following values are output from the vertex shader, and are available across all shader stages.
+
+| Name | Type | Interpolation | Description |
+|---|---|---|---|
+| EntityIndex | uint | flat | Entity index |
+| EntityFlags | uint | flat |  Entity flags |
+| Position |vec3 | smooth | Position in global space |
+| TexCoords | vec4 | smooth | Texture and lightmap coordinates |
+| TBN | mat3 | smooth | Tangent, bitangent, normal matrix |
+| Displacement | float | smooth | Dispacement value |
+| Color | vec4 | smooth | Entity color |
+| EmissionColor | vec3 | smooth | Entity emission color |
+| MaterialWeights | vec2 | smooth | Material weights for multi-material surfaces |
+
 ## Built-in Uniforms
 
 The following uniform values are available in all shaders that declare them, or include the file "Common/Uniforms.glsl".
