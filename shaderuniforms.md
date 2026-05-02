@@ -26,11 +26,6 @@
 | BaseTextureLodBias       | float                        | Base texture LOD bias                           |
 | SelectionColor            | vec4                         | Selection color                                |
 | DisplayScale             | float                        | Display scale                                  |
-| AmbientLight              | vec3                         | Ambient light color                            |
-| IBLIntensity             | float                        | Image-based lighting intensity                 |
-| SkyColor                   | vec3                         | Sky color                                      |
-| BackgroundColor             | vec4                         | Background color                               |
-| MeshDisplacementScale    | float                        | Mesh displacement scale                        |
 | BlendMode                 | uint                         | Blend mode                                     |
 | RenderFlags               | uint                         | Render flags                                   |
 | RenderTween              | float                        | Render tween (animation factor)                |
@@ -38,6 +33,15 @@
 | BufferSize                        | vec2                         | Buffer size (derived from DrawViewport)        |
 | ToneMappingMode              | int                          | Tone mapping mode                              |
 | RenderMode                   | int                          | Render mode                                    |
+
+## Environment Settings
+
+| Name                          | Type                         | Description                                     |
+|----------------------------------------|------------------------------|------------------------------------------------|
+| AmbientLight              | vec3                         | Ambient light color                            |
+| IBLIntensity             | float                        | Image-based lighting intensity                 |
+| SkyColor                   | vec3                         | Sky color                                      |
+| BackgroundColor             | vec4                         | Background color                               |
 
 ## Fog Settings
 
@@ -47,6 +51,16 @@
 | FogRange                   | vec2                         | Fog range (near and far)                       |
 | FogAngles                  | vec2                         | Fog angles (directional)                       |
 | FogDensity                 | float                        | Fog density                                    |
+
+## Sea Settings
+
+| Name                          | Type                         | Description                                     |
+|----------------------------------------|------------------------------|------------------------------------------------|
+| SeaLevel             | float                         | Background color                               |
+| SeaMaterial              | uint                         | Ambient light color                            |
+| SeaWaveAmplitude             | float                        | Image-based lighting intensity                 |
+| SeaWaveSpeed                   | float                         | Sky color                                      |
+| SeaWaveIterations             | int                         | Background color                               |
 
 ## Miscellaneous
 
