@@ -8,6 +8,7 @@
 | CameraRange               | vec2                         | Camera near and far range                      |
 | CameraZoom               | float                        | Camera zoom level                              |
 | CameraProjectionMode       | int                          | Camera projection mode                         |
+| CameraTessellation        | float                        | Camera tessellation factor                     |
 | CameraMatrix              | mat4                         | Camera transformation matrix                   |
 | CameraNormalMatrix        | mat3                         | Normal matrix for camera transformations       |
 | InverseCameraMatrix       | mat4                         | Inverse of the camera matrix                     |
@@ -36,7 +37,6 @@
 | DrawViewport              | ivec4                        | Draw viewport (x, y, width, height)            |
 | BufferSize                        | vec2                         | Buffer size (derived from DrawViewport)        |
 | ToneMappingMode              | int                          | Tone mapping mode                              |
-|  CameraTessellation        | float                        | Camera tessellation factor                     |
 | RenderMode                   | int                          | Render mode                                    |
 
 ## Fog Settings
