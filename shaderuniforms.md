@@ -36,7 +36,7 @@ The following uniform values are available to all shaders that declare them or i
 | ToneMappingMode              | int                          | Tone mapping mode                              |
 | RenderMode                   | int                          | Render mode                                    |
 
-## Environment Settings
+## Atmospheric Settings
 
 | Name                          | Type                         | Description                                     |
 |----------------------------------------|------------------------------|------------------------------------------------|
