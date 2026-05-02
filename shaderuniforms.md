@@ -68,3 +68,4 @@
 |----------------------------------------|------------------------------|------------------------------------------------|
 | CurrentTime               | uint                         | Current time in milliseconds                     |
 | PassIndex                    | int                          | Current rendering pass index, for point lights and VR                    |
+| TerrainIndex                    | uint                          | Current rendering pass index, for point lights and VR                    |
