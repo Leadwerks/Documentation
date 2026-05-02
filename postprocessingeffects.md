@@ -18,11 +18,18 @@ Let's take a look at a simple effect.
 ```
 
 Shader
+
 ```glsl
 #version 450
 
 // Samplers
-layout(binding = 0) uniform sampler2D ColorBuffer;
+uniform layout(binding = 0) sampler2D ColorBuffer;
+uniform layout(binding = 15) sampler2D DitherTexture;
+
+// Includes
+#include "../../Common/Constants.glsl"
+#include "../../Common/Uniforms.glsl"
+#include "../../Common/Dither.glsl"
 
 // Inputs
 in vec2 TexCoords;
@@ -34,6 +41,9 @@ void main()
 {
     ivec2 coord = ivec2(gl_FragCoord.x, gl_FragCoord.y);
     outColor = texelFetch(ColorBuffer, coord, 0);
+	
+	//Dither final pass
+    if ((RenderFlags & RENDERFLAGS_FINALPASS) != 0) outColor.rgb += dither(DitherTexture);
 }
 ```
 
