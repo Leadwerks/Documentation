@@ -4,16 +4,16 @@
 
 | Name                          | Type                         | Description                                     |
 |----------------------------------------|------------------------------|------------------------------------------------|
-| CameraMatrix              | mat4                         | Camera transformation matrix                   |
-| CameraNormalMatrix        | mat3                         | Normal matrix for camera transformations       |
-| CameraProjectionMatrix    | mat4                         | Camera projection matrix                       |
-| InverseCameraMatrix       | mat4                         | Inverse of the camera matrix                     |
-| InverseCameraNormalMatrix  | mat3                         | Inverse normal matrix for camera transformations |
-| InverseCameraProjectionMatrix | mat4                      | Inverse of the camera projection matrix        |
 | CameraPosition            | vec3                         | Position of the camera                         |
 | CameraRange               | vec2                         | Camera near and far range                      |
 | CameraZoom               | float                        | Camera zoom level                              |
 | CameraProjectionMode       | int                          | Camera projection mode                         |
+| CameraMatrix              | mat4                         | Camera transformation matrix                   |
+| CameraNormalMatrix        | mat3                         | Normal matrix for camera transformations       |
+| InverseCameraMatrix       | mat4                         | Inverse of the camera matrix                     |
+| InverseCameraNormalMatrix  | mat3                         | Inverse normal matrix for camera transformations |
+| InverseCameraProjectionMatrix | mat4                      | Inverse of the camera projection matrix        |
+| CameraProjectionMatrix    | mat4                         | Camera projection matrix                       |
 
 ## Render Settings
 
