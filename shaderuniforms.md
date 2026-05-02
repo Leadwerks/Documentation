@@ -1,5 +1,7 @@
 # Shader Uniforms
 
+The following uniform values are available to all shaders that declare them or include the file "Shaders/Common/Uniforms".
+
 ## Camera Settings
 
 | Name                          | Type                         | Description                                     |
