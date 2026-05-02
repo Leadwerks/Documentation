@@ -43,6 +43,8 @@ The following uniform values are available to all shaders that declare them or i
 | AmbientLight              | vec3                         | Ambient light color                            |
 | IBLIntensity             | float                        | Image-based lighting intensity                 |
 | SkyColor                   | vec3                         | Sky color                                      |
+| SunColor                   | vec4                         | Sun color                                      |
+| SunDirection             | vec3                         | Sun direction                               |
 | BackgroundColor             | vec4                         | Background color                               |
 
 ## Fog Settings
