@@ -36,3 +36,8 @@ void main()
     outColor = texelFetch(ColorBuffer, coord, 0);
 }
 ```
+
+## Dithering
+
+The last pass the renderer draws should apply a dither effect to the screen. This applies a small amount of noise that breaks up visible banding on color gradients. Rather than waste an extra full-screen pass on this simple effect, the engine will indicate when a rendering pass is the last one by including the RENDERFLAGS_FINALPASS flags in the RenderFlags uniform. This tells the shader to apply a dither effect to the final color it outputs.
+
