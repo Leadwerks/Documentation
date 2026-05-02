@@ -19,7 +19,7 @@
 
 | Name                          | Type                         | Description                                     |
 |----------------------------------------|------------------------------|------------------------------------------------|
-| MaterialIndex            | uvec4                        | Material index                                 |
+| MaterialIndex            | uvec3                        | Material index                                 |
 | TextureFlags              | uint                         | Texture flags                                  |
 | TextureLodBias           | float                        | Texture Level of Detail bias                    |
 | BaseTextureLodBias       | float                        | Base texture LOD bias                           |
