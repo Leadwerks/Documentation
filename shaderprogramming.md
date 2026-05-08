@@ -8,7 +8,8 @@ Leadwerks provides a robust shader programming system and integrated development
 |---|---|---|---|---|---|
 | 0 | R11G11B10F | albedo.r | albedo.g | albedo.b | -- |
 | 1 | R10G10B10A2 | normal.x | normal.y | normal.z | flags |
-| 2 | RGBA | emission | roughness | metalness | blend |
+| 2 | RGB | emission | roughness | metalness | -- |
+| 3 | RG | color blend | normal blend | -- | -- |
 
 Albedo and emission are combined into a single color in the first color attachment. The emission term in color attachment 2 indicates what percentage of the color should be treat as albedo, with the rest treated as additive emission. This allows the renderer to pack more data into a smaller memory size.
 
