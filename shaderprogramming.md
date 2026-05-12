@@ -126,3 +126,42 @@ The following uniform values are available in all shaders that declare them, or 
 | CameraNormalMatrix | mat3 | 3x3 matrix of the current camera |
 | AmbientLight | vec3 | world ambient lighting level |
 
+## Shader Programming Tips
+
+### Varying and Uniform Locations
+
+**Never** explicitly number varyings or uniforms:
+```glsl
+in layout(location = 0) vec4 Position;
+in layout(location = 1) vec4 TexCoords;
+```
+Any mismatches between your numbering in shader stages can cause shaders to silently fail. Instead, let the shader compiler match the varyings by name:
+```glsl
+in vec4 Position;
+in vec4 TexCoords;
+```
+
+### Fragment Shader Output Locations
+
+**Always** explicitly number fragment shader outputs. Some graphics hardware won't write the the right color attachment without this:
+```glsl
+out layout(location = 0) vec4 fragColor;
+out layout(location = 1) vec4 fragNormal;
+out layout(location = 2) vec4 fragData;
+```
+
+### Data Arrays
+
+**Don't** declare data in large arrays in your code:
+```glsl
+int pattern[64] = {
+    0, 32,  8, 40,  2, 34, 10, 42, 
+    48, 16, 56, 24, 50, 18, 58, 26, 
+    12, 44,  4, 36, 14, 46,  6, 38,  
+    60, 28, 52, 20, 62, 30, 54, 22, 
+    3, 35, 11, 43,  1, 33,  9, 41,  
+    51, 19, 59, 27, 49, 17, 57, 25,
+    15, 47,  7, 39, 13, 45,  5, 37,
+    63, 31, 55, 23, 61, 29, 53, 21 };
+```
+This can cause some integrated graphics to run very slowly. Instead, use a texture to pass data to the shader.
