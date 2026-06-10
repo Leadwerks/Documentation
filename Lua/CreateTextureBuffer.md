@@ -4,7 +4,7 @@ This function creates a new texture buffer, for render-to-texture operations.
 
 ## Syntax
 
-- [TextureBuffer](TextureBuffer.md) **CreateTextureBuffer**(number width, number height, number colorattachments = 1, boolean depthattachment = true, number samples = 0)
+- [TextureBuffer](TextureBuffer.md) **CreateTextureBuffer**(number width, number height, number colorattachments = 1, boolean depthattachment = false, number samples = 0)
 
 | Parameter | Description |
 |---|---|
