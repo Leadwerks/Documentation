@@ -4,7 +4,7 @@ This method controls the camera screen-space reflection settings.
 
 ## Syntax
 
-- **SetSsr**(boolean mode, number scale = 0.5, number stepsize = 0.01, number stepdelta = 1.1, number maxsteps = 100, boolean reflecttransparency = false)
+- **SetSsr**(boolean mode, number scale = 0.75, number stepsize = 0.01, number stepdelta = 1.1, number maxsteps = 100, boolean reflecttransparency = false)
 
 | Parameter | Description |
 |---|---|
