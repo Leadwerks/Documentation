@@ -4,7 +4,7 @@ This function creates a new texture buffer, for render-to-texture operations.
 
 ## Syntax
 
-- shared_ptr<[TextureBuffer](TextureBuffer.md)> **CreateTextureBuffer**(const int width, const int height, const int colorattachments = 1, const bool depthattachment = true, const int samples = 0)
+- shared_ptr<[TextureBuffer](TextureBuffer.md)> **CreateTextureBuffer**(const int width, const int height, const int colorattachments = 1, const bool depthattachment = false, const int samples = 0)
 
 | Parameter | Description |
 |---|---|
