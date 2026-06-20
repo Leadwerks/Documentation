@@ -66,9 +66,9 @@ int main(int argc, const char* argv[])
 The second example shows how to create an interface that appears in a 3D rendering viewport on top of the scene. Note that in this example you must send events to the interface with the [ProcessEvent](Interface_ProcessEvent.md) method.
 
 ```c++
-#include "UltraEngine.h"
+#include "Leadwerks.h"
 
-using namespace UltraEngine;
+using namespace Leadwerks;
 
 int main(int argc, const char* argv[])
 {
@@ -76,7 +76,7 @@ int main(int argc, const char* argv[])
     auto displays = GetDisplays();
 
     //Create window
-    auto window = CreateWindow("Ultra Engine", 0, 0, 1280, 720, displays[0]);
+    auto window = CreateWindow("Leadwerks", 0, 0, 1280, 720, displays[0]);
 
     //Create framebuffer
     auto framebuffer = CreateFramebuffer(window);
@@ -106,15 +106,6 @@ int main(int argc, const char* argv[])
     //Create widget
     iVec2 sz = ui->background->ClientSize();
     auto button = CreateButton("Button", sz.x / 2 - 75, sz.y / 2 - 15, 150, 30, ui->background);
-
-    //Create camera
-    auto orthocamera = CreateCamera(world, PROJECTION_ORTHOGRAPHIC);
-    orthocamera->SetClearMode(CLEAR_DEPTH);
-    orthocamera->SetPosition(float(framebuffer->size.x) * 0.5f, float(framebuffer->size.y) * 0.5f, 0);
-
-    //UI will only appear in orthographic camera
-    orthocamera->SetRenderLayers(2);
-    ui->SetRenderLayers(2);
 
     while (true)
     {
