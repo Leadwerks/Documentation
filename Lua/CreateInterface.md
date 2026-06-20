@@ -137,12 +137,6 @@ ui.background:SetColor(0,0,0,0.5)
 local sz = ui.background:ClientSize()
 local button = CreateButton("Button", sz.x / 2 - 75, sz.y / 2 - 15, 150, 30, ui.background)
 
---Create a camera for the UI
-local uicam = CreateCamera(world, PROJECTION_ORTHOGRAPHIC)
-uicam:SetPosition(framebuffer.size.x * 0.5, framebuffer.size.y * 0.5, 0)
-uicam:SetClearMode(CLEAR_DEPTH)
-uicam:SetRenderLayers(2)
-
 while not window:KeyDown(KEY_ESCAPE) do
     while (PeekEvent()) do
         local ev = WaitEvent()
