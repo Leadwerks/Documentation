@@ -193,7 +193,7 @@ int main(int argc, const char* argv[])
     
     // Create widget
     iVec2 sz = ui->background->ClientSize();
-    auto button = CreateButton("Button", sz.x / 2 - 75, sz.y / 2 - 15, 150, 30, ui->root);
+    auto button = CreateButton("Button", sz.x / 2 - 75, sz.y / 2 - 15, 150, 30, ui->background);
 
     // Main loop
     while (window->Closed() == false and window->KeyDown(KEY_ESCAPE) == false)
