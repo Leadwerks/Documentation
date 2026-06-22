@@ -153,3 +153,80 @@ while not window:KeyDown(KEY_ESCAPE) do
 end
 ```
 
+```lua
+-- Get displays
+local displays = GetDisplays()
+
+-- Create window
+local window = CreateWindow("Leadwerks", 0, 0, 1280, 720, displays[1])
+
+-- Create framebuffer
+local framebuffer = CreateFramebuffer(window)
+
+-- Create world
+local world = CreateWorld()
+
+-- Load font
+local font = LoadFont("Fonts/arial.ttf")
+
+-- Create camera
+local camera = CreateCamera(world)
+camera:SetPosition(0, 0, -2)
+camera:SetZoom(2)
+camera:SetClearColor(0.125)
+
+-- Create a box model
+local box = CreateBox(world)
+box:SetRotation(0, 45, 0)
+box:SetPickMode(PICK_MESH)
+
+-- Create a light
+local light = CreateBoxLight(world)
+light:SetRotation(45, 35, 0)
+light:SetRange(-10, 10)
+light:SetColor(2)
+
+-- Create orthographic camera for UI
+local uicamera = CreateCamera(world, PROJECTION_ORTHOGRAPHIC)
+uicamera:SetRealtime(false)
+uicamera:SetLighting(false)
+
+-- Create texture buffer for render target
+local texbuffer = CreateTextureBuffer(TEXTURE_RGBA, 256, 256)
+uicamera:SetRenderTarget(texbuffer)
+
+-- Create material and assign texture
+local mtl = CreateMaterial()
+mtl:SetTexture(texbuffer:GetColorAttachment(0))
+box:SetMaterial(mtl)
+
+-- Create UI
+local ui = CreateInterface(uicamera, font, texbuffer.size)
+
+-- Create button
+local sz = ui.background:ClientSize()
+local button = CreateButton("Button", sz.x / 2 - 75, sz.y / 2 - 15, 150, 30, ui.background)
+
+-- Main loop
+while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
+    -- Handle events
+    while PeekEvent() do
+        local ev = WaitEvent()
+        if ev.id == EVENT_MOUSEDOWN or ev.id == EVENT_MOUSEUP or ev.id == EVENT_MOUSEMOVE then
+            local pick = camera:Pick(framebuffer, ev.position.x, ev.position.y, 0, true)
+            if pick.entity == box then
+                ev.position.x = Round(pick.texcoords[1].x * 256)
+                ev.position.y = Round(pick.texcoords[1].y * 256)
+                ProcessEvent(ev)
+                uicamera:Render()
+            end
+        end
+    end
+
+    -- Update world
+    world:Update()
+
+    -- Render scene to framebuffer
+    world:Render(framebuffer)
+end
+```
