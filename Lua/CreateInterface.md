@@ -152,7 +152,7 @@ while not window:KeyDown(KEY_ESCAPE) do
     world:Render(framebuffer)
 end
 ```
-
+The next example will display an interface inside the 3D world. This can be used to display an interface on a panel in the game, or a menu floating in the air in VR.
 ```lua
 -- Get displays
 local displays = GetDisplays()
