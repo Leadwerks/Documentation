@@ -1123,6 +1123,10 @@
                             "filename": "Entity_GetDistance"
                         },
                         {
+                            "title": "GetEmissionColor",
+                            "filename": "Entity_GetEmissionColor"
+                        },
+                        {
                             "title": "GetHidden",
                             "filename": "Entity_GetHidden"
                         },
@@ -1234,6 +1238,10 @@
                         {
                             "title": "SetElasticity",
                             "filename": "Entity_SetElasticity"
+                        },
+                        {
+                            "title": "SetEmissionColor",
+                            "filename": "Entity_SetEmissionColor"
                         },
                         {
                             "title": "SetFriction",
