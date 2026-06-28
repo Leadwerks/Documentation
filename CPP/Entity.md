@@ -44,6 +44,7 @@ This class serves as the foundation for all 3D objects in a world. It provides a
 | [GetCrouched](Entity_GetCrouched.md) | Method | returns the crouched state of a player |
 | [GetDecalLayers](Entity_GetDecalLayers.md) | Method | gets the decal filtering flags |
 | [GetDistance](Entity_GetDistance.md) | Method | calculates distance to another entity |
+| [GetEmissionColor](Entity_GetEmissionColor.md) | Method | gets the entity emission color |
 | [GetHidden](Entity_GetHidden.md) | Method | returns the entity hide state |
 | [GetMass](Entity_GetMass.md) | Method | returns the entity mass |
 | [GetMatrix](Entity_GetMatrix.md) | Method | returns the entity 4x4 matrix |
@@ -72,6 +73,7 @@ This class serves as the foundation for all 3D objects in a world. It provides a
 | [SetDamping](Entity_SetDamping.md) | Method | sets the entity physics damping |
 | [SetDecalLayers](Entity_SetDecalLayers.md) | Method | sets the decal filtering flags |
 | [SetElasticity](Entity_SetElasticity.md) | Method | sets the entity physics elasticity |
+| [SetEmissionColor](Entity_SetEmissionColor.md) | Method | sets the entity emission color |
 | [SetFriction](Entity_SetFriction.md) | Method | sets the entity physics friction |
 | [SetFog](Entity_SetFog.md) | Method | controls whether distance fog affects the entity |
 | [SetGravity](Entity_SetGravity.md) | Method | defines a special gravity value for this entity |
