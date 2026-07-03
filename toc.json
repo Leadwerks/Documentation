@@ -1030,7 +1030,8 @@
                         },
                         {
                             "title": "AddComponent",
-                            "filename": "Entity_AddComponent"
+                            "filename": "Entity_AddComponent",
+                            "hideFromLua": true
                         },
                         {
                             "title": "AddForce",
