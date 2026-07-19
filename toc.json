@@ -548,6 +548,10 @@
                                     "filename": "Camera_GetRange"
                                 },
                                 {
+                                    "title": "GetUpscaling",
+                                    "filename": "Camera_GetUpscaling"
+                                },                                
+                                {
                                     "title": "GetZoom",
                                     "filename": "Camera_GetZoom"
                                 },
@@ -642,6 +646,10 @@
                                 {
                                     "title": "SetUniform",
                                     "filename": "Camera_SetUniform"
+                                },
+                                {
+                                    "title": "SetUpscaling",
+                                    "filename": "Camera_SetUpscaling"
                                 },
                                 {
                                     "title": "SetZoom",
