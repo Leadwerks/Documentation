@@ -636,10 +636,6 @@
                                     "filename": "Camera_SetSsr"
                                 },
                                 {
-                                    "title": "SetSweptCulling",
-                                    "filename": "Camera_SetSweptCulling"
-                                },
-                                {
                                     "title": "SetTessellation",
                                     "filename": "Camera_SetTessellation"
                                 },
