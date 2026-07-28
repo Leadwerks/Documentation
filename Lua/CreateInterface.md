@@ -6,7 +6,7 @@ This function creates a new graphical user interface for desktop applications or
 
 - [Interface](Interface.md) **CreateInterface**([Window](Window.md) window)
 - [Interface](Interface.md) **CreateInterface**([Camera](Camera.md) camera, [Font](Font.md) font, [iVec2](iVec2.md) size)
-- [Interface](Interface.md) **CreateInterface**([World](World.md) camera, [Font](Font.md) font, [iVec2](iVec2.md) size)
+- [Interface](Interface.md) **CreateInterface**([World](World.md) world, [Font](Font.md) font, [iVec2](iVec2.md) size)
 
 | Parameter | Description |
 | --- | --- |
