@@ -6,7 +6,7 @@ This function creates a new graphical user interface for desktop applications or
 
 - shared_ptr<[Interface](Interface.md)\> **CreateInterface**(shared_ptr<[Window](Window.md)\> window)
 - shared_ptr<[Interface](Interface.md)\> **CreateInterface**(shared_ptr<[Camera](Camera.md)\> camera, shared_ptr<[Font](Font.md)\> font, [iVec2](iVec2.md)\> size)
-- shared_ptr<[Interface](Interface.md)\> **CreateInterface**(shared_ptr<[World](World.md)\> camera, shared_ptr<[Font](Font.md)\> font, [iVec2](iVec2.md)\> size)
+- shared_ptr<[Interface](Interface.md)\> **CreateInterface**(shared_ptr<[World](World.md)\> world, shared_ptr<[Font](Font.md)\> font, [iVec2](iVec2.md)\> size)
 
 | Parameter | Description |
 | --- | --- |
