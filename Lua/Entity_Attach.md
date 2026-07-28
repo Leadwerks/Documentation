@@ -13,6 +13,7 @@ This method attaches an entity to a model bone or a navigation agent. This provi
 | agent | navigation agent to attach entity to |
 | model | model to attach entity to |
 | bone | skeleton bone to attach entity to |
+| device | VR device to attach entity to |
 
 ## Returns
 
