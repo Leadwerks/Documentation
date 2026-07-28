@@ -6,6 +6,7 @@ This method attaches an entity to a model bone or a navigation agent. This provi
 
 - **Entity:Attach**([NavAgent](NavAgent.md) navagent)
 - **Entity:Attach**([Model](Model.md) model, [Bone](Bone.md) bone)
+- **Entity:Attach**([VrDevice](VrDevice.md) device)
 
 | Parameter | Description |
 | --- | --- |
