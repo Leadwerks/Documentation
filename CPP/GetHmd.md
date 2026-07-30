@@ -48,8 +48,8 @@ int main(int argc, const char* argv[])
     auto hmd = GetHmd(world);
 
     //Environment maps
-    auto specmap = LoadTexture("https://github.com/UltraEngine/Assets/raw/main/Materials/Environment/footprint_court/specular.dds");
-    auto diffmap = LoadTexture("https://github.com/UltraEngine/Assets/raw/main/Materials/Environment/footprint_court/diffuse.dds");
+    auto specmap = LoadTexture("https://github.com/Leadwerks/Documentation/raw/master/Assets/Materials/Environment/footprint_court/specular.dds");
+    auto diffmap = LoadTexture("https://github.com/Leadwerks/Documentation/raw/master/Assets/Materials/Environment/footprint_court/diffuse.dds");
     world->SetEnvironmentMap(specmap, ENVIRONMENTMAP_BACKGROUND);
     world->SetEnvironmentMap(specmap, ENVIRONMENTMAP_SPECULAR);
     world->SetEnvironmentMap(diffmap, ENVIRONMENTMAP_DIFFUSE);
