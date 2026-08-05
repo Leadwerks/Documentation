@@ -4,11 +4,12 @@ This function loads a model from a file.
 
 ## Syntax
 
-- shared_ptr<[Model](Model.md)\> **LoadModel**(const [WString](WString.md)& path, const LoadFlags flags = LOAD_DEFAULT)
-- shared_ptr<[Model](Model.md)\> **LoadModel**(shared_ptr<[Stream](Stream.md)\> stream, const LoadFlags flags = LOAD_DEFAULT)
+- shared_ptr<[Model](Model.md)\> **LoadModel**(shared_ptr<[World](World.md)\> world, const [WString](WString.md)& path, const LoadFlags flags = LOAD_DEFAULT)
+- shared_ptr<[Model](Model.md)\> **LoadModel**(shared_ptr<[World](World.md)\> world, shared_ptr<[Stream](Stream.md)\> stream, const LoadFlags flags = LOAD_DEFAULT)
 
 | Parameter | Description |
 |---|---|
+| world | world to load the model into |
 | path | file path to read from |
 | stream | stream to read from |
 
