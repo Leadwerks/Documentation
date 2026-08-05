@@ -4,15 +4,14 @@ This function loads a model from a file.
 
 ## Syntax
 
-- [Model](Model.md) **LoadModel**([string](https://www.lua.org/manual/5.4/manual.html#6.4) path)
-- [Model](Model.md) **LoadModel**([string](https://www.lua.org/manual/5.4/manual.html#6.4) path, number flags)
-- [Model](Model.md) **LoadModel**([Stream](Stream.md) stream)
-- [Model](Model.md) **LoadModel**([Stream](Stream.md) stream, number flags)
+- [Model](Model.md) **LoadModel**([World](World.md) world, [string](https://www.lua.org/manual/5.4/manual.html#6.4) path, number flags = LOAD_DEFAULT)
+- [Model](Model.md) **LoadModel**([World](World.md) world, [Stream](Stream.md) stream, number flags = LOAD_DEFAULT)
 
 ### Parameters
 
 | Parameter | Description |
 |---|---|
+| world | world to load the model into |
 | path | file path to read from |
 | stream | stream to read from |
 
