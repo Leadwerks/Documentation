@@ -1,11 +1,11 @@
-## Sound:GetLength
+# Sound:GetLength
 
 This method returns the length of the sound file.
 
-### Syntax
+## Syntax
 
 - **`number` GetLength()**
 
-### Returns
+## Returns
 
 Returns the length of the sound file, in seconds.
