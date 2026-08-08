@@ -35,7 +35,7 @@ The following button constants can be used:
 
 ## Example
 
-``lua
+```lua
 local displays = GetDisplays()
 
 local window = CreateWindow("Leadwerks", 0, 0, 1280, 720, displays[1], WINDOW_CENTER | WINDOW_TITLEBAR)
