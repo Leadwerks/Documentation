@@ -4,9 +4,7 @@ This method adds a physical force to the object, measured in Newtons.
 
 ## Syntax
 
-- **AddForce**(number x, number y, number z)
 - **AddForce**(number x, number y, number z, boolean global = true)
-- **AddForce**([xVec3](xVec3.md) force)
 - **AddForce**([xVec3](xVec3.md) force, boolean global = true)
 
 | Parameter | Description |
