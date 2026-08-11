@@ -2,7 +2,7 @@
 
 Welcome to the official Leadwerks 5 documentation. This will teach you everything you need to know to use the software to create your own games. This is the first place to look for answers, and if you have further questions, you can ask on the [forum](https://www.leadwerks.com/community) or on our [Discord](https://discord.gg/qTVR55BgGt) server.
 
-The best place to start is the [Crash Course](https://www.leadwerks.com/learn/crashcourse) series of tutorials.
+The best place to start is the [Crash Course](https://www.leadwerks.com/learn/crashcourse) series of tutorials. The full table of contents is available [here](https://www.leadwerks.com/learn/contents) or in the sidebar, if you are viewing this page on a computer.
 
 ## System Requirements
 
