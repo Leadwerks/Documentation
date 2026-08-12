@@ -4,10 +4,11 @@ This function creates a new texture buffer, for render-to-texture operations.
 
 ## Syntax
 
-- shared_ptr<[TextureBuffer](TextureBuffer.md)> **CreateTextureBuffer**(const int width, const int height, const int colorattachments = 1, const bool depthattachment = false, const int samples = 0)
+- shared_ptr<[TextureBuffer](TextureBuffer.md)> **CreateTextureBuffer**(const TextureFormat format, const int width, const int height, const int colorattachments = 1, const bool depthattachment = false, const int samples = 0)
 
 | Parameter | Description |
 |---|---|
+| format | texture format of color attachments, usually TEXTURE_RGBA or TEXTURE_RGBA16F |
 | width, height | dimensions of the texture buffer |
 | colorattachments | number of color textures to add, between 0 and 6 |
 | depthattachment | set to true to add a depth texture |
