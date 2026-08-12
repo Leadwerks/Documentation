@@ -49,7 +49,7 @@ sphere = CreateSphere(world)
 sphere:SetPosition(-1.25, 0, 0)
 sphere:SetColor(1, 0, 0)
 
-texbuffer = CreateTextureBuffer(256, 256)
+texbuffer = CreateTextureBuffer(TEXTURE_RGBA, 256, 256)
 cam2 = CreateCamera(world)
 cam2:SetClearColor(1, 1, 1)
 cam2:SetRenderTarget(texbuffer)
