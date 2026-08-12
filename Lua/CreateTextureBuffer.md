@@ -4,10 +4,11 @@ This function creates a new texture buffer, for render-to-texture operations.
 
 ## Syntax
 
-- [TextureBuffer](TextureBuffer.md) **CreateTextureBuffer**(number width, number height, number colorattachments = 1, boolean depthattachment = false, number samples = 0)
+- [TextureBuffer](TextureBuffer.md) **CreateTextureBuffer**(number format, number width, number height, number colorattachments = 1, boolean depthattachment = false, number samples = 0)
 
 | Parameter | Description |
 |---|---|
+| format | texture format of color attachments, usually TEXTURE_RGBA or TEXTURE_RGBA16F |
 | width, height | dimensions of the texture buffer |
 | colorattachments | number of color textures to add, between 0 and 6 |
 | depthattachment | set to true to add a depth texture |
