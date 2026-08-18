@@ -14,7 +14,7 @@ Vertex colors are normally part of the [Mesh](Mesh.md) object and are shared acr
 
 ## Remarks
 
-The color value will be packed into a compressed high-precision value which allows the red, green, and blue channels to be set to values greater than 1.0.
+The color value will be packed into a compressed high-precision value which allows the red, green, and blue colors to be set to numbers greater than 1.0.
 
 ## Example
 
