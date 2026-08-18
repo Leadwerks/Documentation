@@ -10,7 +10,11 @@ Vertex colors are normally part of the [Mesh](Mesh.md) object and are shared acr
 | lod | lod index | 
 | mesh | mesh index | 
 | v | vertex index | 
-| color | color to set |
+| color | RGBA color to set |
+
+## Remarks
+
+The color value will be packed into a compressed high-precision value which allows values greater than 1.0 to be set.
 
 ## Example
 
