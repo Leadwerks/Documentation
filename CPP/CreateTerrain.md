@@ -48,7 +48,7 @@ int main(int argc, const char* argv[])
     light->SetColor(2);
 
     //Create terrain
-    auto terrain = CreateTerrain(world, 512, 512, 2048);
+    auto terrain = CreateTerrain(world, 512, 512);
     terrain->LoadHeightmap("https://raw.githubusercontent.com/UltraEngine/Documentation/master/Assets/Terrain/512.r16");
     terrain->SetScale(1, 100, 1);
 
