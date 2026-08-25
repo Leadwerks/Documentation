@@ -20,6 +20,7 @@ This class serves as the foundation for all 3D objects in a world. It provides a
 | speakers | [Speaker](Speaker.md)[] | read-only list of managed speakers created by a call to [EmitSound](Entity_EmitSound.md) |
 | tags | string[] | read-only container of tags |
 | velocity | [xVec3](xVec3.md) | read-only linear velocity |
+| world | [World](World.md) | read-only world object |
 | [AddForce](Entity_AddForce.md) | Method | apply linear force to the entity |
 | [AddPointForce](Entity_AddPointForce.md) | Method | apply linear force at a specific point |
 | [AddTag](Entity_AddTag.md) | Method | adds a tag |
