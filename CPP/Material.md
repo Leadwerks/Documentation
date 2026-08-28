@@ -6,8 +6,8 @@ This class is used to control the appearance of rendered surfaces.
 
 | Property | Type | Description |
 |---|---|---|
-| color | const [Vec4](Vec4)& | read-only material color |
-| textures | const vector<shared_ptr<[Texture](Texture.md)> >& | read-only list of material textures |
+| color | [Vec4](Vec4)& | read-only material color |
+| textures | vector<shared_ptr<[Texture](Texture.md)> > | read-only list of material textures |
 | [GetColor](Material_GetColor.md) | Method | gets the material color |
 | [GetMetalness](Material_GetMetalness.md) | Method | gets the material metalness |
 | [GetRoughness](Material_GetRoughness.md) | Method | gets the material rougness |
