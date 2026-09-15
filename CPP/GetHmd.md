@@ -40,6 +40,7 @@ int main(int argc, const char* argv[])
 
     //Get the VR headset
     auto hmd = GetHmd(world);
+    hmd->Start(framebuffer)
 
     //Environment maps
     auto specmap = LoadTexture("https://github.com/Leadwerks/Documentation/raw/master/Assets/Materials/Environment/footprint_court/specular.dds");
