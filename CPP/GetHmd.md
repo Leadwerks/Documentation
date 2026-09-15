@@ -4,7 +4,7 @@ This function returns the head-mounted display, for virtual reality rendering.
 
 ## Syntax
 
-- shared_ptr<[Hmd](Hmd.md)\> **GetHmd**(shared_ptr<[World](World.md)\> world, bool initialize = true)
+- shared_ptr<[Hmd](Hmd.md)\> **GetHmd**(shared_ptr<[World](World.md)\> world = NULL)
 
 | Parameter | Description |
 |---|---|
@@ -13,15 +13,9 @@ This function returns the head-mounted display, for virtual reality rendering.
 
 ## Returns
 
-Returns an object representing the user's head-mounted display. This will always be returned, regardless of whether the headset is plugged in or active.
+Returns an object representing the user's head-mounted display. If the world parameter is non-NULL, this will always be returned, regardless of whether the headset is plugged in or active.
 
-## Remarks
-
-If the initialize argument is set to true, this function must be called before the first call to [World:Render](World_Render.md).
-
-This function can be used to check if an HMD is in use by setting the initialize argument to false.
-
-The world parameter will be ignored after the first call to this function that as the initialize argument set to true.
+If the world parameter is NULL or not defined, the function will only return an HMD object if the HMD has already been initialized. This can be used to check if an application is running in VR mode.
 
 ## Example
 
