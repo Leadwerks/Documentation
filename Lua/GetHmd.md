@@ -34,6 +34,7 @@ local world = CreateWorld()
 
 --Get the VR headset
 local hmd = GetHmd(world)
+hmd:Start(framebuffer)
 
 --Environment maps
 local specmap = LoadTexture("https://github.com/Leadwerks/Documentation/raw/master/Assets/Materials/Environment/footprint_court/specular.dds")
