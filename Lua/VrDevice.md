@@ -6,9 +6,6 @@ This class handles objects that appear in both the virtual and real world, such 
 
 | Property | Type | Description |
 | --- | --- | --- |
-| model | [Model](Model.md) | 3D model representing the real object |
-| [Connected](VrDevice_Connected.md) | Method | returns true if the device is connected |
-| [GetMatrix](VrDevice_GetMatrix.md) | Method | returns the device 4x4 matrix |
-| [GetPosition](VrDevice_GetPosition.md) | Method | returns the device position |
-| [GetQuaternion](VrDevice_GetQuaternion.md) | Method | returns the device quaternion |
-| [GetRotation](VrDevice_GetRotation.md) | Method | returns the device rotation |
+| [GetActive](VrDevice_GetActive.md) | Method | returns true if the device is active |
+| [GetState](VrDevice_GetState.md) | Method | returns the device state |
+| [GetPose](VrDevice_GetPose.md) | Method | returns a device pose |
