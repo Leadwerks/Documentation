@@ -6,6 +6,5 @@ This class handles objects that appear in both the virtual and real world, such 
 
 | Property | Type | Description |
 | --- | --- | --- |
-| [GetActive](VrDevice_GetActive.md) | Method | returns true if the device is active |
 | [GetState](VrDevice_GetState.md) | Method | returns the device state |
 | [GetPose](VrDevice_GetPose.md) | Method | returns a device pose |
