@@ -4038,8 +4038,8 @@
                                     "filename": "VrController_ButtonHit"
                                 },
                                 {
-                                    "title": "ButtonTouched",
-                                    "filename": "VrController_ButtonTouched"
+                                    "title": "GetTouch",
+                                    "filename": "VrController_GetTouch"
                                 },
                                 {
                                     "title": "GetAxis",
@@ -4052,24 +4052,16 @@
                             ]
                         },
                         {
-                            "title": "Connected",
-                            "filename": "VrDevice_Connected"
+                            "title": "GetActive",
+                            "filename": "VrDevice_GetActive"
                         },
                         {
-                            "title": "GetMatrix",
-                            "filename": "VrDevice_GetMatrix"
+                            "title": "GetPose",
+                            "filename": "VrDevice_GetPose"
                         },
                         {
-                            "title": "GetPosition",
-                            "filename": "VrDevice_GetPosition"
-                        },
-                        {
-                            "title": "GetQuaternion",
-                            "filename": "VrDevice_GetQuaternion"
-                        },
-                        {
-                            "title": "GetRotation",
-                            "filename": "VrDevice_GetRotation"
+                            "title": "GetState",
+                            "filename": "VrDevice_GetState"
                         }
                     ]
                 },
