@@ -6,7 +6,7 @@ Base class: [Object](Object)
 
 | Property | Type | Description |
 |---|---|---|
-| window | const shared_ptr<[Window](Window.md)\>& | read-only window object |
+| window | shared_ptr<[Window](Window.md)\> | read-only window object |
 | [Capture](Framebuffer_Capture.md) | Method | captures a rendering frame |
 | [GetCaptures](Framebuffer_GetCaptures.md) | Method | retrieves any captured screen images |
 | [GetSize](FrameBuffer_GetSize.md) | Method | gets the framebuffer dimensions |
