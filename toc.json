@@ -4016,12 +4016,12 @@
                             "filename": "Hmd",
                             "topics": [
                                 {
-                                    "title": "SetOffset",
-                                    "filename": "Hmd_SetOffset"
-                                },
-                                {
                                     "title": "GetHmd",
                                     "filename": "GetHmd"
+                                },
+                                {
+                                    "title": "SetOffset",
+                                    "filename": "Hmd_SetOffset"
                                 },
                                 {
                                     "title": "Start",
