@@ -4022,6 +4022,14 @@
                                 {
                                     "title": "GetHmd",
                                     "filename": "GetHmd"
+                                },
+                                {
+                                    "title": "Start",
+                                    "filename": "Hmd_Start"
+                                },
+                                {
+                                    "title": "Stop",
+                                    "filename": "Hmd_Stop"
                                 }
                             ]
                         },
