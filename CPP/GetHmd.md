@@ -9,7 +9,6 @@ This function returns the head-mounted display, for virtual reality rendering.
 | Parameter | Description |
 |---|---|
 | world | world to display the VR controllers in |
-| initialize | if set to true VR mode will be initialized |
 
 ## Returns
 
