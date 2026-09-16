@@ -4060,10 +4060,6 @@
                             ]
                         },
                         {
-                            "title": "GetActive",
-                            "filename": "VrDevice_GetActive"
-                        },
-                        {
                             "title": "GetPose",
                             "filename": "VrDevice_GetPose"
                         },
