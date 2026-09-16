@@ -8,7 +8,7 @@ This method gets the current axis position of the controller.
 
 | Parameter | Description |
 |---|---|
-| axis | axis to detect, can be VRAXIS_TRIGGER, VRAXIS_TOUCHPAD, VRAXIS_GRIP, or any number from 0 to 5 |
+| axis | axis to detect, can be VRAXIS_TRIGGER, VRAXIS_THUMBSTICK, or VRAXIS_GRIP |
 
 ## Returns
 
