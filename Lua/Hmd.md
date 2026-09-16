@@ -8,7 +8,7 @@ The Hmd (head-mounted display) class provide access to virtual reality features.
 | --- | --- | --- |
 | cameras | [Camera](Camera.md)[] | array containing left and right eye cameras |
 | controllers | [VrController](VrController.md)[] | array containing left and right hand controllers |
-| [GetRefreshRate](GetRefreshRate.md) | Method | returns the headset refresh rate |
+| [GetRefreshRate](Hmd_GetRefreshRate.md) | Method | returns the headset refresh rate |
 | [SetOffset](Hmd_SetOffset.md) | Method | sets an offset position and rotation |
 | [Start](Hmd_Start.md) | Method | starts a VR session |
 | [Stop](Hmd_Stop.md) | Method | stops a VR session |
