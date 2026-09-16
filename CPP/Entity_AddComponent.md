@@ -5,7 +5,7 @@ This method adds a component to the entity.
 ## Syntax
 
 - shared_ptr<T\> **AddComponent**<T\>()
-- shared_ptr<[Component](Component.md)\> **AddComponent**(const [WString](WString.md)& name)
+- shared_ptr<[Component](Component.md)\> **AddComponent**([WString](WString.md) name)
 
 | Parameter | Description |
 |---|---|
