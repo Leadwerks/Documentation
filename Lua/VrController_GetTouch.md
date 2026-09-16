@@ -4,11 +4,11 @@ This method gets the current touch state of the controller.
 
 ## Syntax
 
-- boolean **GetTouch**(number button)
+- boolean **GetTouch**(number surface)
 
 | Parameter | Description |
 |---|---|
-| button | can be VRTOUCH_PRIMARY, VRTOUCH_SECONDARY, VRTOUCH_TRIGGER, or VRTOUCH_THUMBSTICK |
+| surface | can be VRTOUCH_PRIMARY, VRTOUCH_SECONDARY, VRTOUCH_TRIGGER, or VRTOUCH_THUMBSTICK |
 
 ## Returns
 
