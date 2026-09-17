@@ -15,6 +15,8 @@ This method retrieves a device pose. This is a predefined point of interest on t
 
 Returns a 4x4 matrix describing the requested pose.
 
+## Example
+
 ```cpp
 #include "Leadwerks.h"
 
