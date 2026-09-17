@@ -14,6 +14,8 @@ This method gets the current axis position of the controller.
 
 Returns the current position for the specified axis.
 
+## Example
+
 ```cpp
 #include "Leadwerks.h"
 
