@@ -14,6 +14,8 @@ This method gets the current button pressed state of the controller.
 
 Returns true if the specified button is pressed, otherwise false is returned.
 
+## Example
+
 ```cpp
 #include "Leadwerks.h"
 
