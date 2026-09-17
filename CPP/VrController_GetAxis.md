@@ -13,3 +13,114 @@ This method gets the current axis position of the controller.
 ## Returns
 
 Returns the current position for the specified axis.
+
+```cpp
+#include "Leadwerks.h"
+
+using namespace Leadwerks;
+
+String StateName(const VrDeviceState state)
+{
+    if (state == VRDEVICESTATE_STARTING) return "Starting";
+    if (state == VRDEVICESTATE_ACTIVE) return "Active";
+    if (state == VRDEVICESTATE_IDLE) return "Idle";
+    return "Inactive";
+}
+
+int main(int argc, const char* argv[])
+{
+    // Get the displays
+    auto displays = GetDisplays();
+
+    // Create a window
+    auto window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[0]->scale, 720 * displays[0]->scale, displays[0], WINDOW_CLIENTCOORDS | WINDOW_CENTER | WINDOW_TITLEBAR);
+
+    // Create a framebuffer
+    auto framebuffer = CreateFramebuffer(window);
+
+    // Create a world
+    auto world = CreateWorld();
+
+    // Get the VR headset
+    auto hmd = GetHmd(world);
+    hmd->Start(framebuffer);
+
+    // Environment maps
+    auto specmap = LoadTexture("Materials/Environment/Default/specular.dds");
+    auto diffmap = LoadTexture("Materials/Environment/Default/diffuse.dds");
+    auto skymap = LoadTexture("Materials/Environment/Default/skybox.dds");
+    world->SetEnvironmentMap(skymap, ENVIRONMENTMAP_BACKGROUND);
+    world->SetEnvironmentMap(specmap, ENVIRONMENTMAP_SPECULAR);
+    world->SetEnvironmentMap(diffmap, ENVIRONMENTMAP_DIFFUSE);
+
+    // Create a light
+    auto light = CreateBoxLight(world);
+    light->SetRotation(55, 35, 0);
+    light->SetRange(-10, 10);
+    light->SetArea(15, 15);
+
+    // Add a floor
+    auto floor = CreateBox(world, 10, 1, 10);
+    floor->SetPosition(0, -0.5, 0);
+    floor->SetColor(0.5, 0.5, 0.5);
+
+    // Create visual models for controllers
+    std::array<shared_ptr<Model>, 2> models;
+    for (int n = 0; n < 2; ++n)
+    {
+        models[n] = CreateBox(world, 0.1f);
+        models[n]->SetShadows(false);
+        models[n]->Attach(hmd->controllers[n], VRPOSE_GRIP);
+    }
+
+    // Main loop
+    while (window->Closed() == false and window->KeyDown(KEY_ESCAPE) == false)
+    {
+        // Display color changes based on controller input
+        for (int n = 0; n < 2; ++n)
+        {
+            models[n]->SetColor(0.5f);
+
+            // Display thumbstick axis
+            Vec2 axis = hmd->controllers[n]->GetAxis(VRAXIS_THUMBSTICK);
+            if (axis != 0.0f) models[n]->SetColor(axis.x * 0.5f + 0.5f, axis.y * 0.5f + 0.5f, 0.0f);
+
+            // DIsplay trigger axis
+            axis = hmd->controllers[n]->GetAxis(VRAXIS_TRIGGER);
+            if (axis != 0.0f) models[n]->SetColor(axis.x, 0, 0);
+        }
+
+        // Update the world
+        world->Update();
+
+        // Render the world
+        world->Render(framebuffer);
+
+        // Evaluate HMD events
+        while (PeekEvent())
+        {
+            const auto ev = WaitEvent();
+            switch (ev.id)
+            {
+            case EVENT_VRSTART:
+
+                // Session has started
+                if (ev.data == 0)
+                {
+                    Notify("HMD failed to start\n\n" + ev.text, "OpenXR Error", true);
+                    Shutdown();
+                    return 0;
+                }
+                else
+                {
+                    Print("HMD started");
+                }
+                break;
+            }
+        }
+    }
+
+    Shutdown();
+    return 0;
+}
+```
