@@ -4,7 +4,7 @@ This method gets the button hit state.
 
 ## Syntax
 
-- bool **ButtonHit**(const VrControllerButton button)
+- bool **ButtonHit**(VrControllerButton button)
 
 | Parameter | Description |
 |---|---|
