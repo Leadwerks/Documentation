@@ -12,6 +12,8 @@ This method triggers a haptic pulse for force feedback.
 | amplitude | amplitude of the pulse, from 0 to 1 |
 | frequency | pulse frequency in Hz, or 0 for default |
 
+## Example
+
 ```cpp
 #include "Leadwerks.h"
 
