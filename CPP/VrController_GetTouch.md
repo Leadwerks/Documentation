@@ -14,6 +14,8 @@ This method gets the current touch state of the controller.
 
 Returns true if the specified surface is touched, otherwise false is returned.
 
+## Example
+
 ```cpp
 #include "Leadwerks.h"
 
