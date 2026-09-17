@@ -84,6 +84,7 @@ int main(int argc, const char* argv[])
                 if (ev.data == 0)
                 {
                     Notify("HMD failed to start\n\n" + ev.text, "OpenXR Error", true);
+                    Shutdown();
                     return 0;
                 }
                 else
