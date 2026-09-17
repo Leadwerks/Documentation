@@ -4,7 +4,7 @@ This method triggers a haptic pulse for force feedback.
 
 ## Syntax
 
-- void **Rumble**( int duration, float amplitude = 1, float frequency = 0)
+- void **Rumble**(int duration, float amplitude = 1, float frequency = 0)
 
 | Parameter | Description |
 |---|---|
