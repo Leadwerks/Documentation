@@ -4,7 +4,7 @@ This method triggers a haptic pulse for force feedback.
 
 ## Syntax
 
-- **Rumble**( number duration, number amplitude = 1, number frequency = 0)
+- **Rumble**(number duration, number amplitude = 1, number frequency = 0)
 
 | Parameter | Description |
 |---|---|
