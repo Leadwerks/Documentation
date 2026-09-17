@@ -5,7 +5,7 @@ This method ends a running VR session.
 ## Syntax
 
 - void **Stop**()
-- 
+
 ## Remarks
 
 At the time of this writing, SteamVR cannot start a new OpenXR session on a different framebuffer once a previous session has started and ended. This is a bug in SteamVR and has been reported to Valve.
