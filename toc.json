@@ -4020,8 +4020,8 @@
                                     "filename": "GetHmd"
                                 },
                                 {
-                                    "title": "GetRefreshRate",
-                                    "filename": "GetRefreshRate"
+                                    "title": "Hmd_GetRefreshRate",
+                                    "filename": "Hmd_GetRefreshRate"
                                 },
                                 {
                                     "title": "SetOffset",
