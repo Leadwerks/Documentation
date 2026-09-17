@@ -19,14 +19,6 @@ Returns the current position for the specified axis.
 
 using namespace Leadwerks;
 
-String StateName(const VrDeviceState state)
-{
-    if (state == VRDEVICESTATE_STARTING) return "Starting";
-    if (state == VRDEVICESTATE_ACTIVE) return "Active";
-    if (state == VRDEVICESTATE_IDLE) return "Idle";
-    return "Inactive";
-}
-
 int main(int argc, const char* argv[])
 {
     // Get the displays
