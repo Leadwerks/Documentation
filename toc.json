@@ -4020,7 +4020,7 @@
                                     "filename": "GetHmd"
                                 },
                                 {
-                                    "title": "Hmd_GetRefreshRate",
+                                    "title": "GetRefreshRate",
                                     "filename": "Hmd_GetRefreshRate"
                                 },
                                 {
