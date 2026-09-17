@@ -4,7 +4,7 @@ This method gets the current axis position of the controller.
 
 ## Syntax
 
-- [Vec2](Vec2.md) **GetAxis**(const VrAxis axis)
+- [Vec2](Vec2.md) **GetAxis**(VrAxis axis)
 
 | Parameter | Description |
 |---|---|
