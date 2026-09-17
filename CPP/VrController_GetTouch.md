@@ -1,4 +1,4 @@
-# VrController:GetTouch
+# VrController::GetTouch
 
 This method gets the current touch state of the controller.
 
