@@ -2,7 +2,7 @@
 
 This method starts a VR session.
 
-# Syntax
+## Syntax
 
 - boolean **Start**([Framebuffer](Framebuffer.md) framebuffer)
 
@@ -13,3 +13,7 @@ This method starts a VR session.
 ## Returns
 
 Returns true if the HMD is capable of starting a new session.
+
+## Remarks
+
+At the time of this writing, SteamVR cannot start a new OpenXR session on a different framebuffer once a previous session has started and ended. This is a bug in SteamVR and has been reported to Valve.
