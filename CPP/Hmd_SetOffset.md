@@ -101,7 +101,7 @@ int main(int argc, const char* argv[])
                 float angle = 45;
                 if (axis.x < 0.0) angle = -45;
 
-                Mat4 offsetmatrix = Mat4(position, rotation, 1.0f);
+                Mat4 offsetmatrix = Mat4(position, rotation, Vec3(1));
                 Vec3 hmdpos = (hmd->GetPose(VRPOSE_EYELEFT)[3].xyz() + hmd->GetPose(VRPOSE_EYERIGHT)[3].xyz()) * 0.5f;
 
                 // Recenter the offset space around the headset
