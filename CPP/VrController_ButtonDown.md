@@ -4,7 +4,7 @@ This method gets the current button pressed state of the controller.
 
 ## Syntax
 
-- bool **ButtonDown**(const VrControllerButton button)
+- bool **ButtonDown**(VrControllerButton button)
 
 | Parameter | Description |
 |---|---|
