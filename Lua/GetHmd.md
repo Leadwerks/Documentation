@@ -16,6 +16,10 @@ Returns an object representing the user's head-mounted display. If the world par
 
 If the world parameter is nil or not defined, the function will only return an HMD object if the HMD has already been initialized. This can be used to check if an application is running in VR mode.
 
+## Remarks
+
+You must call [Hmd:Start](Hmd_Start.md) to start a new OpenXR session before the headset will be usable.
+
 ## Example
 
 ```lua
