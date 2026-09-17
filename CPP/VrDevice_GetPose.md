@@ -4,7 +4,7 @@ This method retrieves a device pose. This is a predefined point of interest on t
 
 ## Syntax
 
-- [Mat4](Mat4.md) **GetPose**(const VrPose pose, const bool adjusted = true)
+- [Mat4](Mat4.md) **GetPose**(VrPose pose, bool adjusted = true)
 
 | Parameter | Description |
 |---|---|
