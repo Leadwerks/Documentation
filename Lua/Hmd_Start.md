@@ -18,100 +18,77 @@ Returns true if the HMD is capable of starting a new session.
 
 At the time of this writing, SteamVR cannot start a new OpenXR session once a previous session has started and ended. This is a bug in SteamVR and has been reported to Valve.
 
-## Exanoke
+## Example
 
-```cpp
-#include "Leadwerks.h"
+```lua
+-- Get the displays
+local displays = GetDisplays()
 
-using namespace Leadwerks;
+-- Create a window
+local window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[1].scale, 720 * displays[1].scale, displays[1], WINDOW_CLIENTCOORDS | WINDOW_CENTER | WINDOW_TITLEBAR)
 
-int main(int argc, const char* argv[])
-{
-    //Get the displays
-    auto displays = GetDisplays();
+-- Create a framebuffer
+local framebuffer = CreateFramebuffer(window)
 
-    //Create a window
-    auto window = CreateWindow("Leadwerks", 0, 0, 1280 * displays[0]->scale, 720 * displays[0]->scale, displays[0], WINDOW_CLIENTCOORDS | WINDOW_CENTER | WINDOW_TITLEBAR);
+-- Create a world
+local world = CreateWorld()
 
-    //Create a framebuffer
-    auto framebuffer = CreateFramebuffer(window);
+-- Get the VR headset
+local hmd = GetHmd(world)
+hmd:Start(framebuffer)
 
-    //Create a world
-    auto world = CreateWorld();
+-- Environment maps
+local specmap = LoadTexture("Materials/Environment/Default/specular.dds")
+local diffmap = LoadTexture("Materials/Environment/Default/diffuse.dds")
+local skymap = LoadTexture("Materials/Environment/Default/skybox.dds")
+world:SetEnvironmentMap(skymap, ENVIRONMENTMAP_BACKGROUND)
+world:SetEnvironmentMap(specmap, ENVIRONMENTMAP_SPECULAR)
+world:SetEnvironmentMap(diffmap, ENVIRONMENTMAP_DIFFUSE)
 
-    // Get the VR headset
-    auto hmd = GetHmd(world);
-    hmd->Start(framebuffer);
+-- Create a light
+local light = CreateBoxLight(world)
+light:SetRotation(55, 35, 0)
+light:SetRange(-10, 10)
+light:SetArea(15, 15)
 
-    //Environment maps
-    auto specmap = LoadTexture("Materials/Environment/Default/specular.dds");
-    auto diffmap = LoadTexture("Materials/Environment/Default/diffuse.dds");
-    auto skymap = LoadTexture("Materials/Environment/Default/skybox.dds");
-    world->SetEnvironmentMap(skymap, ENVIRONMENTMAP_BACKGROUND);
-    world->SetEnvironmentMap(specmap, ENVIRONMENTMAP_SPECULAR);
-    world->SetEnvironmentMap(diffmap, ENVIRONMENTMAP_DIFFUSE);
+-- Add a floor
+local floor = CreateBox(world, 10, 1, 10)
+floor:SetPosition(0, -0.5, 0)
+floor:SetColor(0.5, 0.5, 0.5)
 
-    //Create a light
-    auto light = CreateBoxLight(world);
-    light->SetRotation(55, 35, 0);
-    light->SetRange(-10, 10);
-    light->SetArea(15, 15);
+-- Main loop
+while window:Closed() == false and window:KeyDown(KEY_ESCAPE) == false do
 
-    //Add a floor
-    auto floor = CreateBox(world, 10, 1, 10);
-    floor->SetPosition(0, -0.5, 0);
-    floor->SetColor(0.5, 0.5, 0.5);
+	-- Start and stop an OpenXR session
+	if window:KeyHit(KEY_SPACE) then
+		if hmd:GetState() == VRDEVICESTATE_INACTIVE then
+			hmd:Start(framebuffer)
+		else
+			hmd:Stop()
+		end
+	end
 
-    //Main loop
-    while (window->Closed() == false and window->KeyDown(KEY_ESCAPE) == false)
-    {
-        // Start and stop an OpenXR session
-        if (window->KeyHit(KEY_SPACE))
-        {
-            if (hmd->GetState() == VRDEVICESTATE_INACTIVE)
-            {
-                hmd->Start(framebuffer);
-            }
+    -- Update the world
+    world:Update()
+
+    -- Render the world
+    world:Render(framebuffer)
+
+    -- Evaluate HMD events
+    while PeekEvent() do
+        local ev = WaitEvent()
+        if ev.id == EVENT_VRSTART then
+			
+            -- Session has started
+            if ev.data == 0 then
+                Notify("HMD failed to start\n\n" .. ev.text, "OpenXR Error", true)
+                Shutdown()
+                return
             else
-            {
-                hmd->Stop();
-            }
-        }
+                Print("HMD started")
+            end
+        end
+    end
 
-        // Update the world
-        world->Update();
-
-        // Render the world
-        world->Render(framebuffer);
-
-        // Evaluate HMD events
-        while (PeekEvent())
-        {
-            const auto ev = WaitEvent();
-            switch (ev.id)
-            {
-            case EVENT_VRSTART:
-                // Session has started
-                if (ev.data == 0)
-                {
-                    Notify("HMD failed to start\n\n" + ev.text, "OpenXR Error", true);
-                    return 0;
-                }
-                else
-                {
-                    Print("HMD started");
-                }
-                break;
-
-            case EVENT_VRSTOP:
-                // Session has ended
-                Print("HMD stopped");
-                break;
-            }
-        }
-    }
-
-    Shutdown();
-    return 0;
-}
+end
 ```
