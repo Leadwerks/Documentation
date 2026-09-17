@@ -4,9 +4,10 @@ This method triggers a haptic pulse for force feedback.
 
 ## Syntax
 
-- void **Rumble**(const VrControllerAxis axis, const int duration)
+- void **Rumble**( int duration, float amplitude = 1, float frequency = 0)
 
 | Parameter | Description |
 |---|---|
-| axis | axis to detect, can be VRAXIS_TRIGGER, VRAXIS_TOUCHPAD, VRAXIS_GRIP, or any number from 0 to 5 |
-| duration | length of pulse, in microseconds |
+| duration | length of pulse, in milliseconds |
+| amplitude | amplitude of the pulse, from 0 to 1 |
+| frequency | pulse frequency in Hz, or 0 for default |
