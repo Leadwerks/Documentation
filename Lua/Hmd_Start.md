@@ -82,7 +82,6 @@ while window:Closed() == false and window:KeyDown(KEY_ESCAPE) == false do
             -- Session has started
             if ev.data == 0 then
                 Notify("HMD failed to start\n\n" .. ev.text, "OpenXR Error", true)
-                Shutdown()
                 return
             else
                 Print("HMD started")
