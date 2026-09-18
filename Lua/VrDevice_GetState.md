@@ -1,4 +1,4 @@
-# VRDevice:GetState
+# VrDevice:GetState
 
 This method returns the current state of the device.
 
