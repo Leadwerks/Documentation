@@ -58,9 +58,9 @@ local limit = 0.99
 -- Main loop
 while window:Closed() == false and window:KeyDown(KEY_ESCAPE) == false do
 
-    -- -----------------------------------------------------------------------
+    -------------------------------------------------------------------------
     -- See the VRPlayer class for full locomotion support
-    -- -----------------------------------------------------------------------
+    -------------------------------------------------------------------------
 	
     -- Simple example movement on the Z axis with the left controller
     local axis = hmd.controllers[1]:GetAxis(VRAXIS_THUMBSTICK)
