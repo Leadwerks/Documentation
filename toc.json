@@ -431,28 +431,34 @@
                     "topics": [
                         {
                             "title": "CallMethod",
+                            "hideFromLua": true,
                             "filename": "Component_CallMethod",
                             "hideFromLua": true
                         },
                         {
                             "title": "Collide",
+                            "hideFromLua": true,
                             "filename": "Component_Collide"
                         },
                         {
                             "title": "GetEntity",
+                            "hideFromLua": true,
                             "filename": "Component_GetEntity",
                             "hideFromLua": true
                         },
                         {
                             "title": "Load",
+                            "hideFromLua": true,
                             "filename": "Component_Load"
                         },
                         {
                             "title": "Start",
+                            "hideFromLua": true,
                             "filename": "Component_Start"
                         },
                         {
                             "title": "Update",
+                            "hideFromLua": true,
                             "filename": "Component_Update"
                         }
                     ]
