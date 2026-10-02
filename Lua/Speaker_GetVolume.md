@@ -1,13 +1,11 @@
-## speaker:GetVolume()
+# Speaker:GetVolume
 
-This method returns the speaker volume.
+This method gets the speaker volume.
 
-### Syntax
+## Syntax
 
-```lua
-local volume = speaker:GetVolume()
-```
+- number **GetVolume**()
 
-### Returns
+## Returns
 
-- `volume` (number): The speaker volume.
+Returns the speaker volume.
