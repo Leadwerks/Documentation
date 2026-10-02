@@ -887,7 +887,7 @@
                                 },
                                 {
                                     "title": "SetParticleViewMode",
-                                    "filename": "ParticleEmitter_SetParticleViewModey"
+                                    "filename": "ParticleEmitter_SetParticleViewMode"
                                 },
                                 {
                                     "title": "SetLooping",
