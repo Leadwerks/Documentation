@@ -4,7 +4,7 @@ This function gets the scale a newly emitted particle will use.
 
 ## Syntax
 
-- [Vec2](Vec2.md) **GetParticleScale**(number index)
+- [Vec2](Vec2.md) **GetParticleScale**(int index)
 
 | Parameter | Description |
 |---|---|
