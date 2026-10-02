@@ -6,3 +6,7 @@ This method sets the acceleration value for a newly emitted particle.
 
 - **SetParticleAcceleration**(number x, number y, number z)
 - **SetParticleAcceleration**([Vec3](Vec3.md) acceleration)
+
+| Parameter | Description |
+|---|---|
+| acceleration, (x, y, z) | particle acceleration |
