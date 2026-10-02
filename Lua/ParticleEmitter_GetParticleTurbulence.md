@@ -1,10 +1,14 @@
 # ParticleEmitter:GetParticleTurbulence
 
-This function gets the turbulence a newly emitted particle will use.
+This function gets the turbulence of the specified particle.
 
 ## Syntax
 
-- number **GetParticleTurbulence**()
+- number **GetParticleTurbulence**(number index)
+
+| Parameter | Description |
+|---|---|
+| index | particle index, starting with 1 |
 
 ## Returns
 
