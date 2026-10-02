@@ -8,7 +8,7 @@ This function gets the colors a newly emitted particle will be set to use.
 
 | Parameter | Description |
 |---|---|
-| index | 0 for start color, 1 for end color |
+| index | particle index, starting with 1 |
 
 ## Returns
 
