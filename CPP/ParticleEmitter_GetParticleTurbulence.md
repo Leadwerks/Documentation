@@ -1,6 +1,6 @@
 # ParticleEmitter::GetParticleTurbulence
 
-This function gets the turbulence a newly emitted particle will use.
+This function gets the turbulence of the specified particle.
 
 ## Syntax
 
