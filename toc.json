@@ -862,8 +862,8 @@
                                     "filename": "ParticleEmitter_SetEmissionArea"
                                 },
                                 {
-                                    "title": "SetEmissionAcceleration",
-                                    "filename": "ParticleEmitter_SetEmissionAcceleration"
+                                    "title": "SetParticleAcceleration",
+                                    "filename": "ParticleEmitter_SetParticleAcceleration"
                                 },
                                 {
                                     "title": "SetParticleColor",
