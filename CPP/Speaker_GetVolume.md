@@ -4,7 +4,7 @@ This method gets the speaker volume.
 
 ## Syntax
 
-float **GetVolume**()
+- float **GetVolume**()
 
 ## Returns
 
