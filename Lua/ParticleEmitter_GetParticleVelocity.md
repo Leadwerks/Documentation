@@ -4,7 +4,7 @@ This function gets the velocity of the specified particle.
 
 ## Syntax
 
-- [Vec3](Vec3.md) **GetParticleVelocity()**
+- [Vec3](Vec3.md) **GetParticleVelocity**(number index)
 
 | Parameter | Description |
 |---|---|
