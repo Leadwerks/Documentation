@@ -3277,18 +3277,22 @@
                         {
                             "title": "Mutex",
                             "filename": "Mutex",
+                            "hideFromLua": true,
                             "topics": [
                                 {
                                     "title": "CreateMutex",
-                                    "filename": "CreateMutex"
+                                    "filename": "CreateMutex",
+                                    "hideFromLua": true
                                 },
                                 {
                                     "title": "Lock",
-                                    "filename": "Mutex_Lock"
+                                    "filename": "Mutex_Lock",
+                                    "hideFromLua": true
                                 },
                                 {
                                     "title": "Unlock",
-                                    "filename": "Mutex_Unlock"
+                                    "filename": "Mutex_Unlock",
+                                    "hideFromLua": true
                                 }
                             ]
                         },
@@ -3298,45 +3302,55 @@
                             "topics": [
                                 {
                                     "title": "CreateSemaphore",
-                                    "filename": "CreateSemaphore"
+                                    "filename": "CreateSemaphore",
+                                    "hideFromLua": true
                                 },
                                 {
                                     "title": "Signal",
-                                    "filename": "Semaphore_Signal"
+                                    "filename": "Semaphore_Signal",
+                                    "hideFromLua": true
                                 },
                                 {
                                     "title": "Wait",
-                                    "filename": "Semaphore_Wait"
+                                    "filename": "Semaphore_Wait",
+                                    "hideFromLua": true
                                 }
                             ]
                         },
                         {
                             "title": "Thread",
                             "filename": "Thread",
+                            "hideFromLua": true,
                             "topics": [
                                 {
                                     "title": "CreateThread",
-                                    "filename": "CreateThread"
+                                    "filename": "CreateThread",
+                                    "hideFromLua": true
                                 },
                                 {
                                     "title": "GetResult",
-                                    "filename": "Thread_GetResult"
+                                    "filename": "Thread_GetResult",
+                                    "hideFromLua": true
                                 },
                                 {
                                     "title": "GetState",
-                                    "filename": "Thread_GetState"
+                                    "filename": "Thread_GetState",
+                                    "hideFromLua": true
                                 },
                                 {
                                     "title": "MaxThreads",
-                                    "filename": "MaxThreads"
+                                    "filename": "MaxThreads",
+                                    "hideFromLua": true
                                 },
                                 {
                                     "title": "Start",
-                                    "filename": "Thread_Start"
+                                    "filename": "Thread_Start",
+                                    "hideFromLua": true
                                 },
                                 {
                                     "title": "Wait",
-                                    "filename": "Thread_Wait"
+                                    "filename": "Thread_Wait",
+                                    "hideFromLua": true
                                 }
                             ]
                         }
