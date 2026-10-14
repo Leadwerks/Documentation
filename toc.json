@@ -325,11 +325,6 @@
                             "filename": "Sound",
                             "topics": [
                                 {
-                                    "title": "GetHandle",
-                                    "filename": "Sound_GetHandle",
-                                    "hideFromLua": true
-                                },
-                                {
                                     "title": "GetLength",
                                     "filename": "Sound_GetLength"
                                 },
@@ -350,11 +345,6 @@
                                 {
                                     "title": "CreateSpeaker",
                                     "filename": "CreateSpeaker"
-                                },
-                                {
-                                    "title": "GetHandle",
-                                    "filename": "Speaker_GetHandle",
-                                    "hideFromLua": true
                                 },
                                 {
                                     "title": "GetPitch",
