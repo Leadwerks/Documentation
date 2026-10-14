@@ -51,7 +51,7 @@ while true do
         end
         local px = Random(0, pixmap.size.x - 1 - 100)
         local py = Random(0, pixmap.size.y - 1 - 100)
-        local color = RGBA(Random(255), Random(255), Random(255), 255)
+        local color = Rgba(Random(255), Random(255), Random(255), 255)
         for x = 0, 99 do
             for y = 0, 99 do
                 pixmap2:WritePixel(px + x, py + y, color)
