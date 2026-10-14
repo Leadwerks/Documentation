@@ -1,6 +1,6 @@
 # Component
 
-The Ultra Engine entity component system allows you to easily add behavior to game objects. This class can be extended to add behavior and properties to an [Entity](Entity.md).
+The Leadwerks entity component system allows you to easily add behavior to game objects. This class can be extended to add behavior and properties to an [Entity](Entity.md).
 
 | Property | Type | Description |
 |---|---|---|
@@ -11,134 +11,46 @@ The Ultra Engine entity component system allows you to easily add behavior to ga
 | [Start](Component_Start.md) | Method | called when a component is added |
 | [Update](Component_Update.md) | Method | called once each time [World::Update](World_Update.md) is called |
 
-You can override these methods or add your own in your component class. To add a new component, just create a new .hpp file in any subfolder in your "Source\Components" folder. You can use separate header and code files if you want, but it is more convenient to put everything in a single file that automatically gets included into your project. 
+You can override these methods or add your own in your component class. To add a new component, press the **+** button at the top of the asset browser and select the "New Component" popup menu item.
 
-Open the file "Source\ComponentSystem.h" and add your component into the list of includes, as well as in the **RegisterComponents** function:
-```c++
-#pragma once
-#include "UltraEngine.h"
+![](https://raw.githubusercontent.com/Leadwerks/Documentation/refs/heads/master/Images/newcomponent.png)
 
-#include "Components/Motion/Mover.hpp"
-#include "Components/Motion/SlidingDoor.hpp"
-#include "Components/Player/CameraControls.hpp"
-#include "Components/Player/FirstPersonControls.hpp"
-#include "Components/Player/ThirdPersonControls.hpp"
-#include "Components/Player/VRPlayer.hpp"
-#include "Components/Triggers/CollisionTrigger.hpp"
+Select the group the component should be placed in and enter the name of your new component, then press the OK button.
 
-//Include user-defined component
-#include "Components/Custom/MyComponent.hpp"
+![](https://raw.githubusercontent.com/Leadwerks/Documentation/refs/heads/master/Images/newcomponentok.png)
 
-void RegisterComponents()
-{
-    RegisterComponent<Mover>();
-    RegisterComponent<SlidingDoor>();
-    RegisterComponent<CameraControls>();
-    RegisterComponent<FirstPersonControls>();
-    RegisterComponent<ThirdPersonControls>();
-    RegisterComponent<VRPlayer>();
-    RegisterComponent<CollisionTrigger>();
-
-    //Register user-defined component
-    RegisterComponent<MyComponent>();
-}
-```
-
-## Using Components
-
-To use components in C++, include the component system header file and add the component to an entity with [Entity::AddComponent](Entity_AddComponent.md). Call the **RegisterComponents** function at the start of your program to make it so the map loader is able to add components to entities that are loaded in a map. 
-
-```c++
-#include "UltraEngine.h"
-#include "ComponentSystem.h"
-
-using namespace UltraEngine;
-
-int main(int argc, const char* argv[])
-{
-    RegisterComponents();
-
-    //Get the displays
-    auto displays = GetDisplays();
-
-    //Create a window
-    auto window = CreateWindow("Ultra Engine", 0, 0, 1280, 720, displays[0], WINDOW_CENTER | WINDOW_TITLEBAR);
-
-    //Create a world
-    auto world = CreateWorld();
-
-    //Create a framebuffer
-    auto framebuffer = CreateFramebuffer(window);
-
-    //Create a camera
-    auto camera = CreateCamera(world);
-    camera->SetClearColor(0.125);
-    camera->SetFov(70);
-    camera->SetPosition(0, 0, -3);
-
-    //Create a light
-    auto light = CreateBoxLight(world);
-    light->SetRotation(35, 45, 0);
-    light->SetRange(-10, 10);
-
-    //Create a box
-    auto box = CreateBox(world);
-    box->SetColor(0,0,1);
-
-    //Entity component system
-    auto component = box->AddComponent<Mover>();
-    component->rotationspeed.y = 45;
-
-    //Main loop
-    while (window->Closed() == false and window->KeyDown(KEY_ESCAPE) == false)
-    {
-        world->Update();
-        world->Render(framebuffer);
-    }
-    return 0;
-}
-```
+This will create the new code files, and update your Visual Studio project automatically so they are included in the project filters.
 
 ## Example Component
 
 The Mover component is about as simple as it gets. It just stores some motion parameters and moves or turns the entity each time Update is called:
+
 ```c++
 #pragma once
-#include "UltraEngine.h"
+#include "Leadwerks.h"
+#include "../BaseComponent.h"
 
-class Mover : public Component
+using namespace Leadwerks;
+
+class Mover : public BaseComponent//Component
 {
 public: 
-     
-    Vec3 movementspeed;
-    Vec3 rotationspeed = Vec3(0, 10, 0);
-    bool globalcoords = false;
-    
-    //Update method, called once per loop
-    virtual void Update()
-    {
-        if (globalcoords)
-        {
-            this->entity->Translate(movementspeed / 60.0f, true);
-        }
-        else
-        {
-            this->entity->Move(movementspeed / 60.0f);
-        }
-        this->entity->Turn(rotationspeed / 60.0f, globalcoords);
-    }
-
-    //This method will work with simple components
-    virtual shared_ptr<Component> Copy()
-    {
-        return std::make_shared<Mover>(*this);
-    }
-}; 
+    Vec3 movementspeed = Vec3(0,0,0);//"Movement speed"
+    Vec3 rotationspeed = Vec3(0,1,0);//"Rotation speed"
+    bool globalcoords = false;//"World space"
+	
+    Mover();
+    virtual void Update();
+    virtual bool Load(table& properties, shared_ptr<Stream> binstream, shared_ptr<Scene> scene, const LoadFlags flags, shared_ptr<Object> extra);
+    virtual bool Save(table& properties, shared_ptr<Stream> binstream, shared_ptr<Scene> scene, const SaveFlags flags, shared_ptr<Object> extra);
+    virtual std::shared_ptr<Component> Copy();
+};
 ```
 
 ## Component Methods and Members
 
 To call a component method or get a value, first check if a component of the desired type is attached to the entity, and then call the method:
+
 ```c++
 auto component = entity->GetComponent<HealthManager>();
 if (component) component->TakeDamage(10);
@@ -146,75 +58,76 @@ if (component) component->TakeDamage(10);
 
 ## Exposing Components to the Editor
 
-To display components in the editor, each component must have a JSON file with the same base name as the code file. The format of the JSON data is the same for every supported programming language. Here is the contents of the Mover.json file:
+You can place a comment after a member declaration in the component header file to indicate the name that should be displayed in the editor for the property, like in the code below. The editor will automatically detect the member type and display a widget that is appropriate for the value:
 
-```json
-{
-    "component":
-    {
-        "properties":
-        [
-            {
-                "name": "movementspeed",
-                "label": "Movement",
-                "value": [0.0,0.0,0.0]
-            },
-            {
-                "name": "rotationspeed",
-                "label": "Rotation",
-                "value": [0.0,0.0,0.0]
-            },
-            {
-                "name": "globalcoords",
-                "label": "Global",
-                "value": false
-            }
-        ]
-    }
-}
+```cpp
+int integervalue = 0;//"Integer value"
+float floatvalue = 0.0f;//"Float value"
+WString stringvalue = "";//"String value"
+bool booleanvalue = false;//"Boolean value"
+Vec2 vec2value = Vec2(0,0);//"Vec2 value"
+Vec3 vec3value = Vec3(0,0,0);//"Vec3 value"
+Vec4 vec4value = Vec4(0,0,0,0);//"Vec4 value"
+std::shared_ptr<Entity> entityvalue;//"Entity value"
 ```
 
+To display a drop-down box for use with an integer member, you can place the option names in square brackets after the display name:
+```cpp
+int optionvalue = 0;//"Option value" ["Option 1", "Option 2", "Option 3"]
+```
+
+A Vec3 or Vec4 member can display a color picker by adding the text COLOR after the display name:
+```cpp
+Vec3 rgbvalue = Vec3(1,1,1);//"RGB value" COLOR
+Vec4 rgbavalue = Vec4(1,1,1,1);//"RGBA value" COLOR
+```
+
+A file select dialog can be display with a string value by adding the text SOUND, PREFAB, MODEL, or TEXTURE after the display name:
+
+```cpp
+WString pathvalue;//"Path value" SOUND
+```
 Each property entry represents an editable value that will be displayed in the component properties when it is attached to an entity. The default value of the property determines what type of interface element will be used to control the value.
 
 ![](https://raw.githubusercontent.com/UltraEngine/Documentation/master/Images/component_properties.png)
 
-We can add input and output functions to the component definition.
+## Exposing Methods to the Flowgraph Editor
 
-```json
+We can add a comment after a method declaration to expose to make it act as an input, output, or both, in the flowgraph editor.
+
+To make a method act as an input add the comment "in" in the same line as the method declaration:
+```cpp
+virtual void MyMethod();//in
+```
+
+To make a method act as an output add the comment "out" in the same line as the method declaration.
+```cpp
+virtual void MyMethod();//out
+```
+
+In the implementation (the .cpp file) you must also add a call to FireOutputs with the name of the method:
+```cpp
+void MyComponent::MyMethod()
 {
-    "component":
-    {
-        "outputs":
-        [
-            {
-                "name": "Open"
-            },
-            {
-                "name": "Close"
-            }
-        ],
-        "inputs":
-        [
-            {
-                "name": "Open"
-            },
-            {
-                "name": "Close"
-            },
-            {
-                "name": "Enable"
-            },
-            {
-                "name": "Disable"
-            }
-        ]
-    }
+    FireOutputs("MyMethod");
 }
 ```
 
-This will control which component methods can be connected in the flowgraph editor.
+To make a method act as both an input and an output add the comment "inout" in the same line as the method declaration:
+
+```cpp
+virtual void MyMethod();//inout
+```
+
+Again, you must also add a call to FireOutputs with the name of the method in the method implementation:
+```cpp
+void MyComponent::MyMethod()
+{
+    FireOutputs("MyMethod");
+}
+```
+
+This will allow you to control which component methods can be connected in the flowgraph editor.
 
 ![](https://raw.githubusercontent.com/UltraEngine/Documentation/master/Images/component_outputs.png)
-
-
 
