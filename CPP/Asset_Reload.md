@@ -59,7 +59,7 @@ int main(int argc, const char* argv[])
                 if (pixmap2->format != TEXTURE_RGBA) pixmap2 = pixmap2->Convert(TEXTURE_RGBA);
                 int px = Random(0, pixmap->size.x - 1 - 100);
                 int py = Random(0, pixmap->size.y - 1 - 100);
-                int color = RGBA(Random(255), Random(255), Random(255), 255);
+                int color = Rgba(Random(255), Random(255), Random(255), 255);
                 for (int x = 0; x < 100; ++x)
                 {
                     for (int y = 0; y < 100; ++y)
