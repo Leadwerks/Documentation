@@ -6,6 +6,7 @@ The Leadwerks entity component system allows you to easily add behavior to game 
 |---|---|---|
 | [CallMethod](Component_CallMethod.md) | Method | allows a method to be called by name, for use with the flowgraph |
 | [Collide](Component_Collide.md) | Method | called whenever a physics collision occurs |
+| [FireOutputs](Component_FireOutputs.md) | Method | manually triggers connected outputs |
 | [GetEntity](Component_GetEntity.md) | Method | retrieves the entity this component is attached to |
 | [Load](Component_Load.md) | Method | called when an actor is loaded or copied |
 | [Start](Component_Start.md) | Method | called when a component is added |
