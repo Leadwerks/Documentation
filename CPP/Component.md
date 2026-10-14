@@ -11,6 +11,8 @@ The Leadwerks entity component system allows you to easily add behavior to game 
 | [Start](Component_Start.md) | Method | called when a component is added |
 | [Update](Component_Update.md) | Method | called once each time [World::Update](World_Update.md) is called |
 
+## Creating Components
+
 You can override these methods or add your own in your component class. To add a new component, press the **+** button at the top of the asset browser and select the "New Component" popup menu item.
 
 ![](https://raw.githubusercontent.com/Leadwerks/Documentation/refs/heads/master/Images/newcomponent.png)
