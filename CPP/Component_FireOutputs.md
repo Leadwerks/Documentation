@@ -5,7 +5,7 @@ This method is used to manually trigger any outputs that are connected to this c
 ## Syntax
 
 - int **FireOutputs**(const WString& name);
-- int **FireOutputs**(const WString& name, const std::vector<std::any> args);
+- int **FireOutputs**(const WString& name, const std::vector<std\::any\> args);
 
 | Parameter | Description |
 |---|---|
