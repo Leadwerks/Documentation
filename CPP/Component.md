@@ -91,14 +91,38 @@ Each property entry represents an editable value that will be displayed in the c
 
 ![](https://raw.githubusercontent.com/UltraEngine/Documentation/master/Images/component_properties.png)
 
+## Loading Member Values
+
+The values of any members you expose to the editor must be manually loaded from the components properties table in C++, in the [Component::Load](Component_Load,md) method.
+
+```cpp
+bool MyComponent::Load(table& properties, shared_ptr<Stream> binstream, shared_ptr<Scene> scene, const LoadFlags flags, std::shared_ptr<Object> extra)
+{
+    if (properties["integervalue"].is_number()) integervalue = properties["integervalue"];
+    if (properties["floatvalue"].is_number()) floatvalue = properties["floatvalue"];
+    if (properties["booleanvalue"].is_boolean()) booleanvalue = properties["booleanvalue"];
+    if (properties["entityvalue"].is_string())
+    {
+        entityvalue = scene->GetEntity(std::string(properties["entityvalue"]));
+    }
+    return BaseComponent::Load(properties, binstream, scene, flags, extra);
+}
+```
+
+Upcoming additions to the C++ language may allow this step to be automated in the future.
+
 ## Exposing Methods to the Flowgraph Editor
 
 We can add a comment after a method declaration to expose to make it act as an input, output, or both, in the flowgraph editor.
+
+### Inputs
 
 To make a method act as an input add the comment "in" in the same line as the method declaration:
 ```cpp
 virtual void MyMethod();//in
 ```
+
+### Outputs
 
 To make a method act as an output add the comment "out" in the same line as the method declaration.
 ```cpp
@@ -112,6 +136,8 @@ void MyComponent::MyMethod()
     FireOutputs("MyMethod");
 }
 ```
+
+### Input + Output
 
 To make a method act as both an input and an output add the comment "inout" in the same line as the method declaration:
 
