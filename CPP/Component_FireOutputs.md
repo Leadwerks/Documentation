@@ -1,6 +1,6 @@
 # Component::FireOutputs
 
-This method is used to manually trigger any outputs that are connected to this component in the [flowgraph editor](flowgrapheditor.md).
+This method is used to manually trigger any outputs that are connected to this component in the [Flowgraph Editor](flowgrapheditor.md).
 
 ## Syntax
 
