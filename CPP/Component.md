@@ -124,6 +124,19 @@ To make a method act as an input add the comment "in" in the same line as the me
 virtual void MyMethod();//in
 ```
 
+In order to allow C++ to call the method by name, a condition must be added in the [Component::CallMethod](Component_CallMethod.md) method to handle this:
+
+```cpp
+std::any MyComponent::CallMethod(shared_ptr<Component> caller, const WString& name, const std::vector<std::any>& args)
+{
+    if (name == "MyMethod")
+    {
+        MyMethod();// no arguments are used here
+    }
+    return BaseComponent::CallMethod(caller, name, args);
+}
+```
+
 ### Outputs
 
 To make a method act as an output add the comment "out" in the same line as the method declaration.
@@ -147,15 +160,12 @@ To make a method act as both an input and an output add the comment "inout" in t
 virtual void MyMethod();//inout
 ```
 
-Again, you must also add a call to FireOutputs with the name of the method in the method implementation:
-```cpp
-void MyComponent::MyMethod()
-{
-    FireOutputs("MyMethod");
-}
-```
+The requirements for both input and output functions must also be fulfilled, as shown above.
 
-This will allow you to control which component methods can be connected in the flowgraph editor.
+- Add a condition check for the method name in the [Component::CallMethod](Component_CallMethod.md) method.
+- Add a call to FireOutputs with the name of the method in the method implementation.
+
+This will allow you to control which component methods can be connected in the flowgraph editor, so the level design can set up interesting game interactions for each map:
 
 ![](https://raw.githubusercontent.com/UltraEngine/Documentation/master/Images/component_outputs.png)
 
