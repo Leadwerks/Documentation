@@ -248,7 +248,7 @@ int main(int argc, const char* argv[])
     auto displays = GetDisplays();
 
     // Create window
-    auto window = CreateWindow("Leadwerks", 0, 0, 1280, 720, displays[0]);
+    auto window = CreateWindow("Leadwerks", 0, 0, 1920, 1080, displays[0], WINDOW_FULLSCREEN);
 
     // Create framebuffer
     auto framebuffer = CreateFramebuffer(window);
@@ -313,6 +313,7 @@ int main(int argc, const char* argv[])
     auto beam = CreateSprite(world, 1, 1);
     beam->SetColor(2, 0, 0);
     beam->SetViewMode(SPRITEVIEW_YROTATION);
+    beam->SetHidden(true);
 
     iVec2 mousepos;// Simulated mouse position
     std::array<bool, 2> triggerpressed = { false, false };// for keeping track of simulated mouse button state
@@ -320,7 +321,8 @@ int main(int argc, const char* argv[])
     // Main loop
     while (window->Closed() == false and window->KeyDown(KEY_ESCAPE) == false)
     {
-        int hand = 0;
+        int hand = 1;// Right hand
+
         if (hmd->controllers[hand]->GetState() == VRDEVICESTATE_ACTIVE)
         {
             // Simulated mouse movement
