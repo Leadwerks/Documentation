@@ -28,6 +28,8 @@ If the interface is created on a camera or world, it will be rendered using [Til
 
 Several examples are shown below to demonstrate different types of programs you can create.
 
+### Desktop Applications
+
 The first example shows how to create an interface directly on a window for an event-based desktop application.
 
 ```lua
@@ -51,6 +53,8 @@ while (true) do
     end
 end
 ```
+
+### Game Menus
 
 The second example shows how to create an interface that appears in a 3D rendering viewport. Note that in this example you must send events to the interface with the `ProcessEvent` method.
 
@@ -96,63 +100,10 @@ while not window:KeyDown(KEY_ESCAPE) do
 end
 ```
 
-This example shows how to use two cameras to display a GUI on top of a 3D world.
+### In-game Interfaces
 
-```lua
---Get the displays
-local displays = GetDisplays()
-
---Create window
-local window = CreateWindow("Ultra Engine", 0, 0, 1280, 720, displays[1])
-
---Create framebuffer
-local framebuffer = CreateFramebuffer(window)
-
---Create world
-local world = CreateWorld()
-
---Create camera
-local camera = CreateCamera(world)
-camera:SetClearColor(0.125)
-camera:Move(0,0,-4)
-
---Create a model
-local box = CreateBox(world)
-
---Create a light
-local light = CreateBoxLight(world);
-light:SetRotation(45, 35, 0)
-light:SetRange(-10,10)
-light:SetArea(10,10)
-
---Load a font
-local font = LoadFont("Fonts/arial.ttf")
-
---Create user interface
-local ui = CreateInterface(camera, font, framebuffer.size)
-ui:SetRenderLayers(2)
-ui.background:SetColor(0,0,0,0.5)
-
---Create widget
-local sz = ui.background:ClientSize()
-local button = CreateButton("Button", sz.x / 2 - 75, sz.y / 2 - 15, 150, 30, ui.background)
-
-while not window:KeyDown(KEY_ESCAPE) do
-    while (PeekEvent()) do
-        local ev = WaitEvent()
-        if (ev.id == EVENT_WINDOWCLOSE and ev.source == window) then
-            return 0
-        else
-            ui:ProcessEvent(ev)
-        end
-    end
-
-    box:Turn(0,1,0)
-    world:Update()
-    world:Render(framebuffer)
-end
-```
 The next example will display an interface inside the 3D world. This can be used to display an interface on a panel in the game, or a menu floating in the air in VR.
+
 ```lua
 -- Get displays
 local displays = GetDisplays()
