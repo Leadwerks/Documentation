@@ -24,9 +24,7 @@ Ultra Engine natively supports glTF, OBJ, and Leadwerks MDL files. JPEG and PNG 
 
 ```csharp
 using System;
-using UltraEngine;
-using UltraEngine.Renderer;
-using UltraEngine.Scripting;
+using static Leadwerks.Engine;
 
 namespace Example
 {
