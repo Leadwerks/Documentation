@@ -1009,6 +1009,10 @@
                                     "filename": "Terrain_LoadHeightmap"
                                 },
                                 {
+                                    "title": "SetLayerHeightConstraints",
+                                    "filename": "Terrain_SetLayerHeightConstraints"
+                                },
+                                {
                                     "title": "SetHeight",
                                     "filename": "Terrain_SetHeight"
                                 },
