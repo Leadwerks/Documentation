@@ -642,6 +642,10 @@
                                     "filename": "Camera_SetTessellation"
                                 },
                                 {
+                                    "title": "SetTerrainClipmaps",
+                                    "filename": "Camera_SetTerrainClipmaps"
+                                },                                
+                                {
                                     "title": "SetUniform",
                                     "filename": "Camera_SetUniform"
                                 },
