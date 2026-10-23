@@ -1,8 +1,8 @@
-# Camera::SetTerrainClipmaps
+# Camera:SetTerrainClipmaps
 
  This method controls the terrain clipmap rendering properties for this camera.
 
-- void **SetTerrainClipmaps**(int resolution, float basearea, int count)
+- **SetTerrainClipmaps**(number resolution, number basearea, number count)
 
 | Parameter | Descripion |
 |---|---|
