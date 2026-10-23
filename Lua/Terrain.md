@@ -23,12 +23,12 @@ Ultra Engine supports a powerful heightmap terrain system for rendering large la
 | [GetSlope](Terrain_GetSlope.md) | Method | returns the slope of the terrain at the specified position |
 | [GetTileHidden](Terrain_GetTileHidden.md) | Method | gets the visibility of a single terrain tile |
 | [LoadHeightmap](Terrain_LoadHeightmap.md) | Method | loads a heightmap from a file |
+| [SetBasemapSize](Terrain_SetBasemapSize.md) | Method | sets the terrain basemap resolution |
 | [SetHeight](Terrain_SetHeight.md) | Method | sets the terrain height at the specified point |
 | [SetLayerHeightConstraints](Terrain_SetLayerHeightConstraints.md) | Method | sets the terrain layer height constraints |
 | [SetLayerMapping](Terrain_SetLayerMapping.md) | Method | sets the terrain layer texture mapping mode |
 | [SetLayerScale](Terrain_SetLayerScale.md) | Method | sets the terrain layer texture mapping scale |
 | [SetLayerSlopeConstraints](Terrain_SetLayerSlopeConstraints.md) | Method | sets the layer slope constraints |
 | [SetLayerWeight](Terrain_SetLayerWeight.md) | Method | sets the layer to be used at the specified point |
-| [SetBasemapSize](Terrain_SetBasemapSize.md) | Method | sets the terrain basemap resolution |
 | [SetTileHidden](Terrain_SetTileHidden.md) | Method | hides or shows a single terrain tile |
 | [CreateTerrain](CreateTerrain.md) | Function | creates a new terrain entity |
