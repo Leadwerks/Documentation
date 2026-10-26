@@ -4,7 +4,7 @@ This method retrieves the framebuffer drawable area.
 
 ## Syntax
 
-- [Vec2](Vec2) **GetSize**()
+- [iVec2](iVec2) **GetSize**()
 
 ## Returns
 
