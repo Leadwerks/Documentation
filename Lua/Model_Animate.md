@@ -3,18 +3,9 @@
 This method causes an animation sequence to play.
 
 ## Syntax
-- **Animate**(number sequence)
-- **Animate**(number sequence, number speed)
-- **Animate**(number sequence, number speed, number blendtime)
-- **Animate**(number sequence, number speed, number blendtime, number mode)
-- **Animate**(number sequence, number speed, number blendtime, number mode, number frame)
-- **Animate**(number sequence, number speed, number blendtime, number mode, number frame, number track)
-- **Animate**(string name)
-- **Animate**(string name, number speed)
-- **Animate**(string name, number speed, number blendtime)
-- **Animate**(string name, number speed, number blendtime, number mode)
-- **Animate**(string name, number speed, number blendtime, number mode, number frame)
-- **Animate**(string name, number speed, number blendtime, number mode, number frame, number track)
+
+- **Animate**(number sequence, number speed = 1.0, number blendtime = 250, number mode = ANIMATION_LOOP, number frame = 0, number track = 0)
+- **Animate**(string name, number speed = 1.0, number blendtime = 250, number mode = ANIMATION_LOOP, number frame = 0, number track = 0)
 
 | Parameter | Description |
 | ---- | ----------- |
