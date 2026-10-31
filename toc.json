@@ -2107,6 +2107,10 @@
                             "filename": "Scene",
                             "topics": [
                                 {
+                                    "title": "Clear",
+                                    "filename": "Scene_Clear"
+                                },                                
+                                {
                                     "title": "GetEntity",
                                     "filename": "Scene_GetEntity"
                                 },                                
