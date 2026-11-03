@@ -4,6 +4,8 @@ www.youtube.com/watch?v=1hLvEjr0z2U
 
 Lua is a fun and easy scripting language widely employed in a variety of games, ranging from popular titles like Angry Birds to Call of Duty. Its simplicity and flexibility make it an excellent choice for both novice developers and experienced programmers looking to swiftly bring their ideas to life.
 
+A built-in script editor is included with Leadwerks, or you can use the Visual Studio Code editor.
+
 ## Using the Integrated Script Editor
 
 The [script editor](scripteditor.md) will open any time you double-click on a code file in the [project panel](assetbrowser.md), or you can select the **Scripting > Script Editor** item in the main menu.
@@ -16,7 +18,7 @@ The [programming reference](https://www.leadwerks.com/learn/LoadModel?lang=lua) 
 
 If you prefer, it is possible to use Visual Studio Code for Lua programming. To begin programming with Lua and Visual Studio Code, follow these steps:
 
-1. **Install Visual Studio Code:** Lua development for Ultra Engine is most convenient when using Visual Studio Code. If you don't have it installed, you can download it from [Visual Studio Code](https://code.visualstudio.com).
+1. **Install Visual Studio Code:** Lua development for Ultra Engine is most convenient when using Visual Studio Code. If you don't have it installed, you can download it [here](https://code.visualstudio.com).
 
 2. **Open Your Ultra Engine Lua Project:**
    - Locate the batch file named "Open in VSCode.bat" within your Ultra Engine project directory.
