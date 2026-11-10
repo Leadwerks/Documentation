@@ -168,7 +168,7 @@ while not window:Closed() and not window:KeyDown(KEY_ESCAPE) do
             if pick.entity == box then
                 ev.position.x = Round(pick.texcoords[1].x * 256)
                 ev.position.y = Round(pick.texcoords[1].y * 256)
-                ProcessEvent(ev)
+                ui:ProcessEvent(ev)
                 uicamera:Render()
             end
         end
