@@ -148,7 +148,7 @@ uicamera:SetRenderTarget(texbuffer)
 
 -- Create material and assign texture
 local mtl = CreateMaterial()
-mtl:SetTexture(texbuffer:GetColorAttachment(0))
+mtl:SetTexture(texbuffer:GetColorAttachment(1))
 box:SetMaterial(mtl)
 
 -- Create UI
