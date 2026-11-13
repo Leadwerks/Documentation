@@ -21,52 +21,48 @@ This example will load and display an animated model, but we will add code to gi
 ![](https://raw.githubusercontent.com/UltraEngine/Documentation/master/Images/bone_setscale.jpg)
 
 ```lua
-function main()
-    -- Get the displays
-    local displays = ultraengine.GetDisplays()
+-- Get the displays
+local displays = GetDisplays()
 
-    -- Create a window
-    local window = ultraengine.CreateWindow("Ultra Engine", 0, 0, 1280, 720, displays[1], ultraengine.WINDOW_CENTER + ultraengine.WINDOW_TITLEBAR)
+-- Create a window
+local window = CreateWindow("Ultra Engine", 0, 0, 1280, 720, displays[1], WINDOW_CENTER + WINDOW_TITLEBAR)
 
-    -- Create a framebuffer
-    local framebuffer = ultraengine.CreateFramebuffer(window)
+-- Create a framebuffer
+local framebuffer = CreateFramebuffer(window)
 
-    -- Create a world
-    local world = ultraengine.CreateWorld()
+-- Create a world
+local world = CreateWorld()
 
-    -- Create a camera
-    local camera = ultraengine.CreateCamera(world)
-    camera:SetClearColor(0.125)
-    camera:SetFOV(70)
-    camera:Move(0, 2, -8)
+-- Create a camera
+local camera = CreateCamera(world)
+camera:SetClearColor(0.125)
+camera:SetFOV(70)
+camera:Move(0, 2, -8)
 
-    -- Create light
-    local light = ultraengine.CreateBoxLight(world)
-    light:SetRotation(45, 35, 0)
-    light:SetRange(-10, 10)
+-- Create light
+local light = CreateBoxLight(world)
+light:SetRotation(45, 35, 0)
+light:SetRange(-10, 10)
 
-    -- Model by PixelMannen
-    -- https://opengameart.org/content/fox-and-shiba
-    local model = ultraengine.LoadModel(world, "https://github.com/UltraEngine/Documentation/raw/master/Assets/Models/Characters/Fox.glb")
-    model:SetScale(0.05)
-    model:Animate(1)
-    model:SetRotation(0, -90, 0)
+-- Model by PixelMannen
+-- https://opengameart.org/content/fox-and-shiba
+local model = LoadModel(world, "https://github.com/UltraEngine/Documentation/raw/master/Assets/Models/Characters/Fox.glb")
+model:SetScale(0.05)
+model:Animate(1)
+model:SetRotation(0, -90, 0)
 
-    local neck = model.skeleton:FindBone("b_Neck_04")
-    local rotation = ultraengine.Vec3()
+local neck = model.skeleton:FindBone("b_Neck_04")
+local rotation = Vec3(0)
 
-    -- Main loop
-    while (window:Closed() == false)
-    do
-        world:Update()
+-- Main loop
+while (window:Closed() == false)
+do
+    world:Update()
 
-        rotation.y = ultraengine.Cos(ultraengine.Millisecs() / 10.0) * 65.0
-        neck:SetRotation(rotation)
-        neck:SetScale(2)
+    rotation.y = Cos(Millisecs() / 10.0) * 65.0
+    neck:SetRotation(rotation)
+    neck:SetScale(2)
 
-        world:Render(framebuffer)
-    end
+    world:Render(framebuffer)
 end
-
-main()
 ```
