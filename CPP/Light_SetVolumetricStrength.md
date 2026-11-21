@@ -4,7 +4,7 @@ This method sets the strength of the light's volumetric effect. This effect is o
 
 ## Syntax
 
-- **SetVolumetricStrength**(const float transmission)
+- void **SetVolumetricStrength**(const float transmission)
 
 | Parameter | Description |
 |---|---|
