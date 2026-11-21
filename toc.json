@@ -728,7 +728,12 @@
                                 {
                                     "title": "SetShadowmapSize",
                                     "filename": "Light_SetShadowmapSize"
+                                },
+                                {
+                                    "title": "SetVolumetricStrength",
+                                    "filename": "Light_SetVolumetricStrength"
                                 }
+
                             ]
                         },
                         {
