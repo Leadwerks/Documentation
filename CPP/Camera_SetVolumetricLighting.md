@@ -4,7 +4,7 @@ This method controls the camera volumetric lighting effect. When this effect is 
 
 ## Syntax
 
-- **SetVolumetricLighting**(const bool mode, const float quality)
+- void **SetVolumetricLighting**(const bool mode, const float quality)
 
 | Parameter | Description |
 |---|---|
