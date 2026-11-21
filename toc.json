@@ -654,6 +654,10 @@
                                     "filename": "Camera_SetUpscaling"
                                 },
                                 {
+                                    "title": "SetVolumetricLighting",
+                                    "filename": "Camera_SetVolumetricLighting"
+                                },
+                                {
                                     "title": "SetZoom",
                                     "filename": "Camera_SetZoom"
                                 },
