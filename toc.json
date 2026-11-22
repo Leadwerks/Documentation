@@ -962,6 +962,10 @@
                                     "filename": "CreateTerrain"
                                 },
                                 {
+                                    "title": "CountLayers",
+                                    "filename": "Terrain_CountLayers"
+                                },
+                                {
                                     "title": "Fill",
                                     "filename": "Terrain_Fill"
                                 },
@@ -980,10 +984,6 @@
                                 {
                                     "title": "GetLayerMaterial",
                                     "filename": "Terrain_GetLayerMaterial"
-                                },
-                                {
-                                    "title": "GetLayers",
-                                    "filename": "Terrain_GetLayers"
                                 },
                                 {
                                     "title": "GetLayerScale",
