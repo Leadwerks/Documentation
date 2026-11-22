@@ -4,9 +4,10 @@ This method controls the camera volumetric lighting effect. When this effect is 
 
 ## Syntax
 
-- **SetVolumetricLighting**(boolean mode, number quality)
+- **SetVolumetricLighting**(boolean mode, number scale = 0.5, number stepsize = 0.25)
 
 | Parameter | Description |
 |---|---|
 | mode | if true the effect is enabled, otherwise it will be disabled |
-| quality | resolution scale for the effect, usually between 0.25 to 1.0 |
+| scale | resolution scale for the effect, usually between 0.25 to 1.0 |
+| stepsize | size of each ray marching step, in meters |
