@@ -4,9 +4,10 @@ This method controls the camera volumetric lighting effect. When this effect is 
 
 ## Syntax
 
-- void **SetVolumetricLighting**(const bool mode, const float quality)
+- void **SetVolumetricLighting**(const bool mode, const float scale = 0.5f, const float stepsize = 0.25f)
 
 | Parameter | Description |
 |---|---|
 | mode | if true the effect is enabled, otherwise it will be disabled |
-| quality | resolution scale for the effect, usually between 0.25 to 1.0 |
+| scale | resolution scale for the effect, usually between 0.25 to 1.0 |
+| stepsize | size of each ray marching step, in meters |
