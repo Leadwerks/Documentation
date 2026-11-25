@@ -1956,6 +1956,10 @@
                                     "filename": "Material_SetDisplacement"
                                 },
                                 {
+                                    "title": "SetEmissionColor",
+                                    "filename": "Material_SetEmissionColor"
+                                },
+                                {
                                     "title": "SetMetalness",
                                     "filename": "Material_SetMetalness"
                                 },
