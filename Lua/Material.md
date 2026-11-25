@@ -16,6 +16,7 @@ This class is used to control the appearance of rendered surfaces.
 | [GetTransparent](Material_GetTransparent.md) | Method | gets the material transparency mode |
 | [SetColor](Material_SetColor.md) | Method | sets the material color |
 | [SetDisplacement](Material_SetDisplacement.md) | Method | controls the maximum vertex displacement |
+| [SetEmissionColor](Material_SetEmissionColor.md) | Method | sets the material emission color |
 | [SetMetalness](Material_SetMetalness.md) | Method | sets the material metalness |
 | [SetRoughness](Material_SetRoughness.md) | Method | sets the material rougness |
 | [SetShaderFamily](Material_SetShaderFamily.md) | Method | sets the material shader family |
