@@ -1225,10 +1225,6 @@
                             "filename": "Entity_Instantiate"
                         },
                         {
-                            "title": "Listen",
-                            "filename": "Entity_Listen"
-                        },
-                        {
                             "title": "Load",
                             "filename": "Entity_Load",
                             "hideFromCPP": true
@@ -1241,6 +1237,11 @@
                             "title": "Point",
                             "filename": "Entity_Point"
                         },
+                        {
+                            "title": "ProcessEvent",
+                            "filename": "Entity_ProcessEvent",
+                            "hideFromCPP": true
+                        },                        
                         {
                             "title": "RecordCollisions",
                             "filename": "Entity_RecordCollisions"
@@ -1365,6 +1366,11 @@
                         {
                             "title": "Staticize",
                             "filename": "Entity_Staticize"
+                        },
+                        {
+                            "title": "Subscribe",
+                            "filename": "Entity_Subscribe",
+                            "hideFromCPP": true
                         },
                         {
                             "title": "Sync",
