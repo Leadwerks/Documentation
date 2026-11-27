@@ -443,9 +443,19 @@
                             "hideFromLua": true
                         },
                         {
+                            "title": "Listen",
+                            "hideFromLua": true,
+                            "filename": "Component_Listen"
+                        },
+                        {
                             "title": "Load",
                             "hideFromLua": true,
                             "filename": "Component_Load"
+                        },
+                        {
+                            "title": "Load",
+                            "hideFromLua": true,
+                            "filename": "Component_ProcessEvent"
                         },
                         {
                             "title": "Start",
