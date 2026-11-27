@@ -1,10 +1,10 @@
-# Component::Listen
+# Component::Subscribe
 
 This method adds a listener that will call the [ProcessEvent](Component_ProcessEvent.md) method when the specified event occurs.
 
 ## Syntax
 
-- void **Listen**(const EventId id, shared_ptr<[Widget](Widget.md)\> source),  shared_ptr<[Object](Object.md)\> extra = NULL)
+- void **Subscribe**(const EventId id, shared_ptr<[Widget](Widget.md)\> source),  shared_ptr<[Object](Object.md)\> extra = NULL)
 
 | Parameter | Description |
 |---|---|
