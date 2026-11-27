@@ -1,0 +1,5 @@
+# Entity:Subscribe
+
+## Syntax
+
+
