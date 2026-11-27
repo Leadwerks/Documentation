@@ -9,6 +9,7 @@ The Leadwerks entity component system allows you to easily add behavior to game 
 | [FireOutputs](Component_FireOutputs.md) | Method | manually triggers connected outputs |
 | [GetEntity](Component_GetEntity.md) | Method | retrieves the entity this component is attached to |
 | [Load](Component_Load.md) | Method | called when an actor is loaded or copied |
+| [ProcessEvent](Component_ProcessEvent.md) | Method | responds to an event |
 | [Start](Component_Start.md) | Method | called when a component is added |
 | [Update](Component_Update.md) | Method | called once each time [World::Update](World_Update.md) is called |
 
