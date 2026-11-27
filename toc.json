@@ -443,9 +443,9 @@
                             "hideFromLua": true
                         },
                         {
-                            "title": "Listen",
+                            "title": "Subscribe",
                             "hideFromLua": true,
-                            "filename": "Component_Listen"
+                            "filename": "Component_Subscribe"
                         },
                         {
                             "title": "Load",
