@@ -443,11 +443,6 @@
                             "hideFromLua": true
                         },
                         {
-                            "title": "Subscribe",
-                            "hideFromLua": true,
-                            "filename": "Component_Subscribe"
-                        },
-                        {
                             "title": "Load",
                             "hideFromLua": true,
                             "filename": "Component_Load"
@@ -461,6 +456,11 @@
                             "title": "Start",
                             "hideFromLua": true,
                             "filename": "Component_Start"
+                        },
+                        {
+                            "title": "Subscribe",
+                            "hideFromLua": true,
+                            "filename": "Component_Subscribe"
                         },
                         {
                             "title": "Update",
