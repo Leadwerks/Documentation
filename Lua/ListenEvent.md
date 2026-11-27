@@ -4,7 +4,7 @@ This function sets a callback function that will be executed when an event occur
 
 ## Syntax
 
-- **ListenEvent**(number id, [Widget](Widget.md) source, function callback, [Object](Object.md) extra = nil)
+- **ListenEvent**(number id, [Object](Object.md) source, function callback, [Object](Object.md) extra = nil)
 
 | Parameter | Description |
 |---|---|
