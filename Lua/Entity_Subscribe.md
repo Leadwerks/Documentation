@@ -4,14 +4,11 @@ This function sets a callback function that will be executed when an event occur
 
 ## Syntax
 
-- **Subscribe**(number id, [Widget](Widget.md) source, function callback, [Object](Object.md) extra = nil)
+- **Subscribe**(number id, [Object](Object.md) source)
 
 | Parameter | Description |
 |---|---|
 | id | event ID to listen for, or EVENT_NONE to listen for all events |
-| source | event source to listen for, or nil for events emitted from any source |
-| callback | function to call when event is triggered |
-| extra | extra object to pass to the callback function |
 
 ## Remarks
 
