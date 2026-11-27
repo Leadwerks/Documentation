@@ -63,6 +63,7 @@ This class serves as the foundation for all 3D objects in a world. It provides a
 | [Load](Entity_Load.md) | Method | called when the entity is loaded from a scene file |
 | [Move](Entity_Move.md) | Method | moves the entity |
 | [Point](Entity_Point.md) | Method | points one entity at another |
+| [ProcessEvent](Entity_ProcessEvent.md) | Method | responds to an event |
 | [RecordCollisions](Entity_RecordCollisions.md) | Method | enables collision recording |
 | [RemoveTag](Entity_RemoveTag.md) | Method | removes a tag |
 | [SetAngularVelocity](Entity_SetAngularVelocity.md) | Method |sets the entity angular velcoty |
