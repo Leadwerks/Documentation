@@ -453,7 +453,7 @@
                             "filename": "Component_Load"
                         },
                         {
-                            "title": "Load",
+                            "title": "ProcessEvent",
                             "hideFromLua": true,
                             "filename": "Component_ProcessEvent"
                         },
