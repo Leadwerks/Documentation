@@ -1,6 +1,6 @@
 # Component::ProcessEvent
 
-This method can be overridden to respond to events listened for with the [Listen](Component_Listen.md) method.
+This method can be overridden to respond to events listened for with the [Listen](Component_Subscribe.md) method.
 
 ## Syntax
 
