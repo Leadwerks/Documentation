@@ -4,7 +4,7 @@ This function sets a callback function that will be executed when an event occur
 
 ## Syntax
 
-- void **ListenEvent**(const EventId id, shared_ptr<[Widget](Widget.md)\> source, bool callback(const [Event](Event.md)& event, shared_ptr<[Object](Object.md)\> extra),  shared_ptr<[Object](Object.md)\> extra = NULL)
+- void **ListenEvent**(const EventId id, shared_ptr<[Object](Object.md)\> source, bool callback(const [Event](Event.md)& event, shared_ptr<[Object](Object.md)\> extra),  shared_ptr<[Object](Object.md)\> extra = NULL)
 
 | Parameter | Description |
 |---|---|
