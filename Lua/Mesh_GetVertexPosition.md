@@ -8,7 +8,7 @@ This method gets the position of the specified vertex.
 
 | Parameter | Description |
 |---|---|
-| index | the vertex index |
+| index | the vertex index, starting at 1  |
 
 ## Returns
 
