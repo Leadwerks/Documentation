@@ -8,7 +8,7 @@ This method gets the texture coordinates of the specified vertex.
 
 | Parameter | Description |
 |------|-------------|
-| index | The vertex index. |
+| index | The vertex index, starting at 1 |
 | texcoordset | The texture coordinate set to return, can be 1 or 2 |
 
 ## Returns
