@@ -8,7 +8,7 @@ This method gets the normal of the specified vertex.
 
 | Parameter | Description |
 |-----------|-------------|
-| index     | vertex index |
+| index     | vertex index, starting at 1  |
 
 ## Returns
 
