@@ -8,7 +8,7 @@ This method returns the color of the specified mesh vertex.
 
 | Parameter | Description |
 |---|---|
-| index | the vertex index to use |
+| index | the vertex index to use, starting at 1 |
 
 ## Returns
 
